@@ -36,16 +36,12 @@ In each meeting, you are required to discuss:
    - SFML 
       - Sound effect
 
-### Quan 
-   - Box2D had
+### Quan n Huyen
+   - Box2D 
 
 ## Plan: 
-   - Library 
-   - 
-   - Game logic 
-
-
-
+   - Use Latex
+   - Divide part to write individually 
 
 # Project schedule: 
    - First draft plan (Sat 28-10)
@@ -58,17 +54,37 @@ In each meeting, you are required to discuss:
    - Finalize and commit (8-12) 
 
 # Summary of individual works
-
 ## Challenges
-
-
 ## Actions
 
-## Project status 
-Short summary of current project status. 
+Write plan *Sunday 22* 
+
+### Introduction: 
+Duy
+
+### Scope of work:
+Linh 
+### High level structure:
+Quan Hoang 
+
+### External library:
+Duy 
+
+### Division of work and responsibility:
+Huyen
+### Schedule and milestone: 
+Huyen
+
+
+## Project status  
+   - Finish game logic (how to play this game)
+   - Basic project structure 
+   - External library decided 
+   - Currently writing project plan  
 
 ### TODOs
-1. Learn and take note how to use Box2D before *12pm Fri 27/10* (E)
-2. Draft individual plan 
-3. Meeting and finalize the plan by Latex (10am Sun 29-10 at school)
-4. 
+1. Finish plan by Sunday 22:00
+2. Details plan for documentation
+3. Implement and document abstract class of Player, Map, Vehicle, Item and their children classes 
+4. Try to do 1 basic Box2D project (especially the topdown car race code) 
+5. Review plan feedback 
