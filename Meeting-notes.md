@@ -8,7 +8,7 @@ In each meeting, you are required to discuss:
 4. Deviations and changes to the project plan, if any
 
 
-# Meeting 25.10.2023 15.30
+# Meeting 28.10.2023 11.30
 
 **Participants**: 
 1. Huyen Do
@@ -17,47 +17,37 @@ In each meeting, you are required to discuss:
 4. Duy To
 
 # Meeting agenda
-   - Game concept
-   - Scope of the work: what features and functionalities will be implemented, how is the program used, and how does it work
-   - The high-level structure of the software: main modules, main classes (according to current understanding)
-   - The planned use of external libraries
-   - Division of work and responsibilities between the group members
-   - Project schedule 
+   - Present what we have learned
+   - Decide the library 
+   - Decide project architect 
+   - Plan layout 
 
 # Notes
 
-## Game concept: 
-   - Animals worlds 
-   - Get use of AI GAN to create images objects 
+## What we have learned?
 
-## Scope of the work: 
+### Duy 
+   - Box2D: 
+      - have many predefined classes (body, world)
+      - Topdown world: turn off gravity...
+      - Can set user data
 
-### Basic feature:
-   - Basic gameplay with simple driving physics and multiple players
-   - Multiple tracks loaded from files 
-   - Game objects which affect gameplay (Oil spills, jams, boosts etc.)
-   - Fun gameplay
+### Linh
+   - SFML 
+      - Sound effect
 
-### Additional feature: 
-   - Sound effect 
-   - Weapon
-   - Different kind of vehicles
+### Quan 
+   - Box2D had
 
-### Advanced feature: 
-   - Networked multiplayer: online deploy
-   - Random generated map
+## Plan: 
+   - Library 
+   - 
+   - Game logic 
 
-## UML classes and modules: 
-   - Abstract class: 
-      + Maps
-      + Vehicles 
-      + Effects 
-      + Items
 
-## External library: 
-   - Box2D  
 
-## Project schedule: 
+
+# Project schedule: 
    - First draft plan (Sat 28-10)
    - Complete plan (Mon 30-10)
    - Create project template code (name and functions descriptions) (Sun 5-11)
