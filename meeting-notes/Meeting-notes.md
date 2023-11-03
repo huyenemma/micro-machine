@@ -8,7 +8,7 @@ In each meeting, you are required to discuss:
 4. Deviations and changes to the project plan, if any
 
 
-# Meeting 28.10.2023 11.30
+# Meeting 03.11.2023 17.30
 
 **Participants**: 
 1. Huyen Do
