@@ -17,63 +17,33 @@ In each meeting, you are required to discuss:
 4. Duy To
 
 # Meeting agenda
-   - Present what we have learned
-   - Decide the library 
-   - Decide project architect 
-   - Plan layout 
+   - Basic properties of every basic class
 
 # Notes
+## Next week goal TUES 7/11
+1. A car running around with Box2D GUI
+2. Implementation of basic class
+- Vehicle: 
+   - Keyboard control: arrow key
+   - Speed: Hold key = car run; key release = car slow down and stop
+   - Max speed: How to integrate this feature with Box2D. Wish: We can use max speed to control max performance of vehicle in different environment
+   - Speed change: When called by Collectable => Change speed up/down
+   - How collision works in a world for vehicle with vehicle.
+   - How collision works in a world for vehicle and obstacle.
 
-## What we have learned?
+- Test for Vehicle: Testbed
 
-### Duy 
-   - Box2D: 
-      - have many predefined classes (body, world)
-      - Topdown world: turn off gravity...
-      - Can set user data
+- Collectable:
+   - Detect collision: When collided, object get destroyed
+   - Call some function in Vehicle to modify speed
 
-### Linh
-   - SFML 
-      - Sound effect
+- Obstacle: 
+   - (Static) object: where and how to put in world
+   - How collision works in a world for obstacle.
 
-### Quan n Huyen
-   - Box2D 
-
-## Plan: 
-   - Use Latex
-   - Divide part to write individually 
-
-# Project schedule: 
-   - First draft plan (Sat 28-10)
-   - Complete plan (Mon 30-10)
-   - Create project template code (name and functions descriptions) (Sun 5-11)
-   - Implement functions and GUI draft, for only 1 player (Sun 12-11)
-   - Test basic functions and implement multiplayers and feautures (Sun 19-11) 
-   - Illustrative and deploy, document draft (Sun 26-11)
-   - Demo (1-12)
-   - Finalize and commit (8-12) 
-
-# Summary of individual works
-## Challenges
-## Actions
-
-Write plan *Sunday 22* 
-
-### Introduction: 
-Duy
-
-### Scope of work:
-Linh 
-### High level structure:
-Quan Hoang 
-
-### External library:
-Duy 
-
-### Division of work and responsibility:
-Huyen
-### Schedule and milestone: 
-Huyen
+- World:
+   - Have somewhere to put things in
+   - Handle collision
 
 
 ## Project status  
@@ -83,8 +53,16 @@ Huyen
    - Currently writing project plan  
 
 ### TODOs
-1. Finish plan by Sunday 22:00
-2. Details plan for documentation
-3. Implement and document abstract class of Player, Map, Vehicle, Item and their children classes 
-4. Try to do 1 basic Box2D project (especially the topdown car race code) 
-5. Review plan feedback 
+1. Flow for everyone: Study their class => Implement it => Create a void world to test for yourself => Commit everytime a function is done + announce to group chat 
+
+2. Assignment:
+- Huyen: World + generate map/character draft
+- Duy: Obstacle 
+- Quan: Vehicle
+- Linh: Collectable
+- Huyen, Linh, Duy: When Quan finishes abstract Vehicle, other implement concrete vehicle classes
+- Everyone: Testbed
+
+3. Next meeting: TUESDAY 7/11
+- Revise plan
+- Integration + testing 
