@@ -26,6 +26,13 @@ public:
     m_body->ApplyTorque(torque, true);
     }
 
+    std::pair<float, float> GetPosition() {
+    b2Vec2 position = m_body->GetWorldCenter();
+    return std::make_pair(position.x, position.y);
+    }
+
+     
+
 
 
 };
