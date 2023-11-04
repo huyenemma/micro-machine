@@ -8,7 +8,7 @@ class Vehicle
 private:
     bool forceOn=false;
     b2Body* m_body;
-    float maxSpeed=100;
+    float maxSpeed=3;
 public:
     Vehicle(b2World* world, float x,float y);
 
@@ -16,14 +16,15 @@ public:
 
     void UpdateSpeed(){
         b2Vec2 vel = m_body->GetLinearVelocity();
-        float force=0;
+        float forceMagnitude=0;
         if (forceOn && abs(vel.x) < maxSpeed ) {
-            force =40;}
-        m_body->ApplyForce(b2Vec2(force,0),m_body->GetWorldCenter(),true);
+            forceMagnitude =1;}
+        b2Vec2 force = b2Vec2(cos(m_body->GetAngle())*forceMagnitude, sin(m_body->GetAngle())*forceMagnitude) ;
+        m_body->ApplyForceToCenter(force, true);    
     };
 
-    void Rotate(float torque=10) {
-    m_body->ApplyTorque(torque, true);
+    void Rotate(float torque=1) {
+    m_body->ApplyAngularImpulse(torque, true);
     }
 
     std::pair<float, float> GetPosition() {
@@ -31,7 +32,13 @@ public:
     return std::make_pair(position.x, position.y);
     }
 
+    void ToggleForce(bool value){
+        forceOn = value;
+    };
      
+    float GetAngle(){
+        return m_body->GetAngle();
+    }
 
 
 
@@ -43,8 +50,8 @@ Vehicle::Vehicle(b2World* world, float x=0,float y=0)
     bodyDef.type = b2_dynamicBody;
     bodyDef.position.Set(x,y);
     
-    bodyDef.linearDamping = 0.01f;
-    bodyDef.angularDamping = 0.01f;
+    bodyDef.linearDamping = 0.6f;
+    bodyDef.angularDamping = 0.95f;
     bodyDef.awake = true;
     b2PolygonShape dynamicBox;
     dynamicBox.SetAsBox(1.0f, 1.0f);

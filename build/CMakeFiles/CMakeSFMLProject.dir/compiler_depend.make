@@ -306,7 +306,89 @@ CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o: ../src/main.cpp \
   _deps/sfml-src/include/SFML/Graphics/Glsl.inl \
   _deps/sfml-src/include/SFML/Graphics/Sprite.hpp \
   _deps/sfml-src/include/SFML/Graphics/Text.hpp \
-  _deps/sfml-src/include/SFML/Graphics/VertexBuffer.hpp
+  _deps/sfml-src/include/SFML/Graphics/VertexBuffer.hpp \
+  /usr/include/c++/11/iostream \
+  /usr/include/c++/11/istream \
+  /usr/include/c++/11/bits/istream.tcc \
+  ../include/box2d/box2d.h \
+  ../include/box2d/b2_settings.h \
+  ../include/box2d/b2_types.h \
+  ../include/box2d/b2_api.h \
+  ../include/box2d/b2_common.h \
+  /usr/include/assert.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
+  ../include/box2d/b2_draw.h \
+  ../include/box2d/b2_math.h \
+  /usr/include/c++/11/math.h \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/bits/specfun.h \
+  /usr/include/c++/11/limits \
+  /usr/include/c++/11/tr1/gamma.tcc \
+  /usr/include/c++/11/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/bessel_function.tcc \
+  /usr/include/c++/11/tr1/beta_function.tcc \
+  /usr/include/c++/11/tr1/ell_integral.tcc \
+  /usr/include/c++/11/tr1/exp_integral.tcc \
+  /usr/include/c++/11/tr1/hypergeometric.tcc \
+  /usr/include/c++/11/tr1/legendre_function.tcc \
+  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/11/tr1/poly_hermite.tcc \
+  /usr/include/c++/11/tr1/poly_laguerre.tcc \
+  /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  ../include/box2d/b2_timer.h \
+  ../include/box2d/b2_chain_shape.h \
+  ../include/box2d/b2_shape.h \
+  ../include/box2d/b2_collision.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  ../include/box2d/b2_circle_shape.h \
+  ../include/box2d/b2_edge_shape.h \
+  ../include/box2d/b2_polygon_shape.h \
+  ../include/box2d/b2_broad_phase.h \
+  ../include/box2d/b2_dynamic_tree.h \
+  ../include/box2d/b2_growable_stack.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+  ../include/box2d/b2_body.h \
+  ../include/box2d/b2_contact.h \
+  ../include/box2d/b2_fixture.h \
+  ../include/box2d/b2_time_step.h \
+  ../include/box2d/b2_world.h \
+  ../include/box2d/b2_block_allocator.h \
+  ../include/box2d/b2_contact_manager.h \
+  ../include/box2d/b2_stack_allocator.h \
+  ../include/box2d/b2_world_callbacks.h \
+  ../include/box2d/b2_distance_joint.h \
+  ../include/box2d/b2_joint.h \
+  ../include/box2d/b2_friction_joint.h \
+  ../include/box2d/b2_gear_joint.h \
+  ../include/box2d/b2_motor_joint.h \
+  ../include/box2d/b2_mouse_joint.h \
+  ../include/box2d/b2_prismatic_joint.h \
+  ../include/box2d/b2_pulley_joint.h \
+  ../include/box2d/b2_revolute_joint.h \
+  ../include/box2d/b2_weld_joint.h \
+  ../include/box2d/b2_wheel_joint.h \
+  ../src/vehicle.hpp
 
 CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.o: ../src/test.cpp \
   /usr/include/stdc-predef.h
@@ -314,7 +396,95 @@ CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.o: ../src/test.cpp \
 
 ../src/test.cpp:
 
+../include/box2d/b2_revolute_joint.h:
+
+../include/box2d/b2_prismatic_joint.h:
+
+../include/box2d/b2_motor_joint.h:
+
+../include/box2d/b2_joint.h:
+
+../include/box2d/b2_distance_joint.h:
+
+../include/box2d/b2_world_callbacks.h:
+
+../include/box2d/b2_world.h:
+
+../include/box2d/b2_time_step.h:
+
+../include/box2d/b2_fixture.h:
+
+../include/box2d/b2_body.h:
+
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:
+
+/usr/include/strings.h:
+
+../include/box2d/b2_growable_stack.h:
+
+../include/box2d/b2_broad_phase.h:
+
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+../include/box2d/b2_wheel_joint.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
+
+../include/box2d/b2_chain_shape.h:
+
+/usr/include/c++/11/tr1/poly_laguerre.tcc:
+
+/usr/include/c++/11/tr1/modified_bessel_func.tcc:
+
+/usr/include/c++/11/tr1/hypergeometric.tcc:
+
+/usr/include/c++/11/tr1/exp_integral.tcc:
+
+/usr/include/c++/11/tr1/ell_integral.tcc:
+
+/usr/include/c++/11/tr1/bessel_function.tcc:
+
+/usr/include/c++/11/limits:
+
+../include/box2d/b2_contact_manager.h:
+
+/usr/include/c++/11/bits/specfun.h:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/include/c++/11/math.h:
+
+../include/box2d/b2_math.h:
+
+../include/box2d/b2_draw.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
+
+/usr/include/assert.h:
+
+../include/box2d/b2_types.h:
+
+/usr/include/c++/11/bits/istream.tcc:
+
+/usr/include/c++/11/istream:
+
+../include/box2d/b2_circle_shape.h:
+
 _deps/sfml-src/include/SFML/Graphics/VertexBuffer.hpp:
+
+/usr/include/c++/11/tr1/riemann_zeta.tcc:
 
 _deps/sfml-src/include/SFML/Graphics/Text.hpp:
 
@@ -346,9 +516,13 @@ _deps/sfml-src/include/SFML/Graphics/Glyph.hpp:
 
 _deps/sfml-src/include/SFML/Graphics/ConvexShape.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
 _deps/sfml-src/include/SFML/Graphics/PrimitiveType.hpp:
 
 _deps/sfml-src/include/SFML/Graphics/Vertex.hpp:
+
+/usr/include/c++/11/tr1/poly_hermite.tcc:
 
 _deps/sfml-src/include/SFML/Graphics/Shader.hpp:
 
@@ -390,9 +564,13 @@ _deps/sfml-src/include/SFML/System/NonCopyable.hpp:
 
 /usr/include/c++/11/ext/new_allocator.h:
 
+../src/vehicle.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+../include/box2d/b2_polygon_shape.h:
 
 /usr/include/c++/11/ext/atomicity.h:
 
@@ -416,7 +594,11 @@ _deps/sfml-src/include/SFML/System/NonCopyable.hpp:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
+/usr/include/linux/limits.h:
+
 /usr/include/c++/11/bits/basic_string.h:
+
+../include/box2d/b2_timer.h:
 
 _deps/sfml-src/include/SFML/Window/Cursor.hpp:
 
@@ -438,6 +620,8 @@ _deps/sfml-src/include/SFML/Window/Touch.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
+../include/box2d/box2d.h:
+
 /usr/include/c++/11/bits/unordered_map.h:
 
 _deps/sfml-src/include/SFML/System/ThreadLocal.hpp:
@@ -445,6 +629,8 @@ _deps/sfml-src/include/SFML/System/ThreadLocal.hpp:
 /usr/include/c++/11/ext/alloc_traits.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
+
+../include/box2d/b2_gear_joint.h:
 
 _deps/sfml-src/include/SFML/Window/ContextSettings.hpp:
 
@@ -480,15 +666,21 @@ _deps/sfml-src/include/SFML/Graphics/Color.hpp:
 
 /usr/include/c++/11/bits/invoke.h:
 
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
 /usr/include/c++/11/bits/postypes.h:
 
 /usr/include/c++/11/cstdint:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
+../include/box2d/b2_dynamic_tree.h:
+
 /usr/include/ctype.h:
 
 /usr/include/c++/11/locale:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
 
 /usr/include/c++/11/debug/debug.h:
 
@@ -496,11 +688,15 @@ _deps/sfml-src/include/SFML/Graphics/Color.hpp:
 
 /usr/include/c++/11/pstl/pstl_config.h:
 
+/usr/include/c++/11/cmath:
+
 /usr/include/c++/11/bits/allocator.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+../include/box2d/b2_settings.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
@@ -516,9 +712,13 @@ _deps/sfml-src/include/SFML/System/Lock.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
+../include/box2d/b2_edge_shape.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+/usr/include/c++/11/tr1/gamma.tcc:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
@@ -574,6 +774,8 @@ _deps/sfml-src/include/SFML/Graphics/Rect.inl:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
+/usr/include/c++/11/tr1/legendre_function.tcc:
+
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:
@@ -583,6 +785,8 @@ _deps/sfml-src/include/SFML/Graphics/Rect.inl:
 /usr/include/c++/11/bits/unique_ptr.h:
 
 _deps/sfml-src/include/SFML/Graphics.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/c++/11/string:
 
@@ -607,6 +811,10 @@ _deps/sfml-src/include/SFML/System/ThreadLocalPtr.hpp:
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
 /usr/include/c++/11/ctime:
+
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/usr/include/c++/11/iostream:
 
 _deps/sfml-src/include/SFML/Graphics/Transformable.hpp:
 
@@ -642,11 +850,19 @@ _deps/sfml-src/include/SFML/System/Time.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
+/usr/include/math.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+../include/box2d/b2_contact.h:
 
 /usr/include/c++/11/bits/std_function.h:
 
 /usr/include/c++/11/bits/stl_tempbuf.h:
+
+../include/box2d/b2_mouse_joint.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/x86_64-linux-gnu/bits/wchar2.h:
 
@@ -658,9 +874,13 @@ _deps/sfml-src/include/SFML/Window/GlResource.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
 
+../include/box2d/b2_common.h:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
 
 /usr/include/c++/11/bits/exception_defines.h:
+
+../include/box2d/b2_friction_joint.h:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
@@ -726,6 +946,8 @@ _deps/sfml-src/include/SFML/Graphics/Shape.hpp:
 
 /usr/include/c++/11/bits/stl_construct.h:
 
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
@@ -741,6 +963,8 @@ _deps/sfml-src/include/SFML/System/String.hpp:
 /usr/include/c++/11/ext/aligned_buffer.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
+
+../include/box2d/b2_api.h:
 
 _deps/sfml-src/include/SFML/System/Thread.hpp:
 
@@ -771,6 +995,8 @@ _deps/sfml-src/include/SFML/Window/Keyboard.hpp:
 /usr/include/c++/11/cstdio:
 
 /usr/include/stdio.h:
+
+../include/box2d/b2_shape.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio.h:
 
@@ -814,6 +1040,8 @@ _deps/sfml-src/include/SFML/Config.hpp:
 
 /usr/include/c++/11/system_error:
 
+../include/box2d/b2_collision.h:
+
 /usr/include/c++/11/cstddef:
 
 /usr/include/c++/11/bits/stl_vector.h:
@@ -828,11 +1056,15 @@ _deps/sfml-src/include/SFML/Config.hpp:
 
 /usr/include/c++/11/stdexcept:
 
+/usr/include/string.h:
+
 /usr/include/c++/11/bits/streambuf.tcc:
 
 /usr/include/c++/11/bits/uniform_int_dist.h:
 
 /usr/include/c++/11/bits/basic_ios.h:
+
+../include/box2d/b2_pulley_joint.h:
 
 /usr/include/c++/11/bits/exception.h:
 
@@ -856,7 +1088,11 @@ _deps/sfml-src/include/SFML/System/String.inl:
 
 _deps/sfml-src/include/SFML/System/Sleep.hpp:
 
+/usr/include/c++/11/tr1/special_function_util.h:
+
 _deps/sfml-src/include/SFML/System/Utf.hpp:
+
+/usr/include/limits.h:
 
 /usr/include/c++/11/bits/stl_relops.h:
 
@@ -868,11 +1104,15 @@ _deps/sfml-src/include/SFML/Window/Clipboard.hpp:
 
 /usr/include/c++/11/bits/algorithmfwd.h:
 
+/usr/include/c++/11/tr1/beta_function.tcc:
+
 /usr/include/c++/11/array:
 
 /usr/include/c++/11/bits/uses_allocator.h:
 
 /usr/include/c++/11/bits/refwrap.h:
+
+/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
 
 _deps/sfml-src/include/SFML/System/Thread.inl:
 
@@ -896,6 +1136,8 @@ _deps/sfml-src/include/SFML/System/Thread.inl:
 
 /usr/include/c++/11/vector:
 
+../include/box2d/b2_block_allocator.h:
+
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
 /usr/include/c++/11/bits/vector.tcc:
@@ -907,6 +1149,8 @@ _deps/sfml-src/include/SFML/System/Thread.inl:
 /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h:
 
 /usr/include/c++/11/bits/locale_conv.h:
+
+../include/box2d/b2_stack_allocator.h:
 
 /usr/include/c++/11/bits/std_abs.h:
 
@@ -923,5 +1167,7 @@ _deps/sfml-src/include/SFML/System/Vector2.hpp:
 _deps/sfml-src/include/SFML/System/Vector2.inl:
 
 _deps/sfml-src/include/SFML/System/Vector3.hpp:
+
+../include/box2d/b2_weld_joint.h:
 
 _deps/sfml-src/include/SFML/Window/Export.hpp:

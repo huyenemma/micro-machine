@@ -1,58 +1,77 @@
 #include <SFML/Graphics.hpp>
-#include <Box2D/Box2D.h>
-#include "Vehicle.h"  // Assuming Vehicle class is defined in Vehicle.h
+#include <iostream>
+#include <stdio.h>
+#include "../include/box2d/box2d.h"
+#include "vehicle.hpp"
+
 
 int main() {
     // Create the Box2D world
     b2Vec2 gravity(0.0f, 0.0f);
     b2World world(gravity);
 
+    int FPS =24;
+    float timeStep = 1.0f/FPS;      //the length of time passed to simulate (seconds)
+    int velocityIterations = 8;   //how strongly to correct velocity
+    int positionIterations = 3;   //how strongly to correct position
+
     // Create a window for rendering (SFML)
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Vehicle Test");
+    sf::RenderWindow window(sf::VideoMode(1000, 1600), "Vehicle Test");
 
     // Create a Vehicle instance
     Vehicle vehicle(&world, 0, 0);
-
     // Main loop
     while (window.isOpen()) {
         // Handle events
         sf::Event event;
+
         while (window.pollEvent(event)) {
+
             if (event.type == sf::Event::Closed) {
                 window.close();
             }
             else if (event.type == sf::Event::KeyPressed) {
-                if (event.key.code == sf::Keyboard::Up) {
+                if (event.key.code == sf::Keyboard::W) {
                     // Apply a force when the Up arrow key is pressed
                     vehicle.ToggleForce(true);
+                    std::cout<<"KeyPressed"<<std::endl;
                 }
-                else if (event.key.code == sf::Keyboard::Right) {
+                else if (event.key.code == sf::Keyboard::D) {
                     // Apply a torque (rotation) when the Right arrow key is pressed
-                    vehicle.Rotate(10);
+                    std::cout<<"KeyPressed"<<std::endl;
+                    vehicle.Rotate(1);
                 }
             }
             else if (event.type == sf::Event::KeyReleased) {
-                if (event.key.code == sf::Keyboard::Up) {
+                if (event.key.code == sf::Keyboard::W) {
                     // Stop applying force when the Up arrow key is released
                     vehicle.ToggleForce(false);
                 }
             }
         }
-
+        window.clear();
         // Update the vehicle
         vehicle.UpdateSpeed();
+        
+        world.Step( timeStep, velocityIterations, positionIterations);
+
+        world.ClearForces();
 
         // Get the position of the vehicle
         std::pair<float, float> position = vehicle.GetPosition();
 
+        
         // Clear the window
-        window.clear();
-
+        
+        sf::CircleShape triangle(30, 3);
         // Set the position of the square to match the vehicle's position
-        square.setPosition(position.first, position.second);
+        triangle.setPosition(position.first, position.second);
+
+        float angle = vehicle.GetAngle();
+        triangle.setRotation(angle * 180.0f / b2_pi);
 
         // Draw the square at the vehicle's position
-        window.draw(square);
+        window.draw(triangle);
 
 
         // Display the window
