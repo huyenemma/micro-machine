@@ -22,8 +22,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(sfml-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/SFML/SFML.git" "GIT_TAG" "2.6.x"
-                    SOURCE_DIR          "/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/build/_deps/sfml-src"
-                    BINARY_DIR          "/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/build/_deps/sfml-build"
+                    SOURCE_DIR          "/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/build/_deps/sfml-src"
+                    BINARY_DIR          "/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/build/_deps/sfml-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

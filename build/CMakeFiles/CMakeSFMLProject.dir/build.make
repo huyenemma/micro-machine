@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1"
+CMAKE_SOURCE_DIR = "/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/build"
+CMAKE_BINARY_DIR = "/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/CMakeSFMLProject.dir/depend.make
@@ -72,30 +72,30 @@ include CMakeFiles/CMakeSFMLProject.dir/flags.make
 CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o: CMakeFiles/CMakeSFMLProject.dir/flags.make
 CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o: CMakeFiles/CMakeSFMLProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o -MF CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o.d -o CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o -c "/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/src/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o -MF CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o.d -o CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o -c "/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/src/main.cpp"
 
 CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/src/main.cpp" > CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/src/main.cpp" > CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.i
 
 CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/src/main.cpp" -o CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/src/main.cpp" -o CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.s
 
 CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.o: CMakeFiles/CMakeSFMLProject.dir/flags.make
 CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.o: ../src/test.cpp
 CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.o: CMakeFiles/CMakeSFMLProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.o -MF CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.o.d -o CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.o -c "/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/src/test.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.o -MF CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.o.d -o CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.o -c "/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/src/test.cpp"
 
 CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/src/test.cpp" > CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/src/test.cpp" > CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.i
 
 CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/src/test.cpp" -o CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/src/test.cpp" -o CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.s
 
 # Object files for target CMakeSFMLProject
 CMakeSFMLProject_OBJECTS = \
@@ -108,18 +108,18 @@ CMakeSFMLProject_EXTERNAL_OBJECTS =
 bin/CMakeSFMLProject: CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o
 bin/CMakeSFMLProject: CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.o
 bin/CMakeSFMLProject: CMakeFiles/CMakeSFMLProject.dir/build.make
-bin/CMakeSFMLProject: _deps/sfml-build/lib/libsfml-graphics-s.a
+bin/CMakeSFMLProject: _deps/sfml-build/lib/libsfml-graphics.a
 bin/CMakeSFMLProject: ../libs/libbox2d.a
-bin/CMakeSFMLProject: _deps/sfml-build/lib/libsfml-window-s.a
+bin/CMakeSFMLProject: _deps/sfml-build/lib/libsfml-window.a
 bin/CMakeSFMLProject: /usr/lib/x86_64-linux-gnu/libX11.so
 bin/CMakeSFMLProject: /usr/lib/x86_64-linux-gnu/libXrandr.so
 bin/CMakeSFMLProject: /usr/lib/x86_64-linux-gnu/libXcursor.so
-bin/CMakeSFMLProject: _deps/sfml-build/lib/libsfml-system-s.a
+bin/CMakeSFMLProject: _deps/sfml-build/lib/libsfml-system.a
 bin/CMakeSFMLProject: /usr/lib/x86_64-linux-gnu/libGL.so
 bin/CMakeSFMLProject: /usr/lib/x86_64-linux-gnu/libudev.so
 bin/CMakeSFMLProject: /usr/lib/x86_64-linux-gnu/libfreetype.so
 bin/CMakeSFMLProject: CMakeFiles/CMakeSFMLProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable bin/CMakeSFMLProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable bin/CMakeSFMLProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CMakeSFMLProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -131,6 +131,6 @@ CMakeFiles/CMakeSFMLProject.dir/clean:
 .PHONY : CMakeFiles/CMakeSFMLProject.dir/clean
 
 CMakeFiles/CMakeSFMLProject.dir/depend:
-	cd "/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1" "/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1" "/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/build" "/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/build" "/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/build/CMakeFiles/CMakeSFMLProject.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1" "/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1" "/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/build" "/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/build" "/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/build/CMakeFiles/CMakeSFMLProject.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/CMakeSFMLProject.dir/depend
 

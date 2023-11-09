@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DSFML_STATIC
 
-CXX_INCLUDES = -I"/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/include/box2d" -I"/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/build/_deps/sfml-src/include"
+CXX_INCLUDES = -I"/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/include/box2d" -I"/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/build/_deps/sfml-src/include"
 
-CXX_FLAGS = -O3 -DNDEBUG
+CXX_FLAGS = 
 

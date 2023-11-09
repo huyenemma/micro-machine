@@ -4,9 +4,9 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DSFML_STATIC
 
-CXX_INCLUDES = -I"/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/build/_deps/sfml-src/include" -I"/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/build/_deps/sfml-src/src"
+CXX_INCLUDES = -I"/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/build/_deps/sfml-src/include" -I"/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/build/_deps/sfml-src/src"
 
-CXX_FLAGS = -O3 -DNDEBUG -fvisibility=hidden
+CXX_FLAGS = -fvisibility=hidden
 
 # Custom flags: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.o_FLAGS =  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
 

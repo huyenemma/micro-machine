@@ -1,4 +1,4 @@
-# Install script for directory: /home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/build/_deps/sfml-src/src/SFML/Audio
+# Install script for directory: /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/build/_deps/sfml-src/src/SFML/Audio
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -43,6 +43,6 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevelx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/quan/C++ course/Cpp project/micro-machines-tuukka-himanka-1/build/_deps/sfml-build/lib/libsfml-audio-s.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/build/_deps/sfml-build/lib/libsfml-audio.a")
 endif()
 
