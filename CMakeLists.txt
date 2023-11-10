@@ -15,9 +15,12 @@ file(GLOB SOURCES ./src/*.cpp)
 add_executable(MicroMachine ${SOURCES})
 
 # Find SFML libraries
-find_package(SFML 2.5 COMPONENTS graphics window system audio network REQUIRED)
+# Set the path to your SFML installation
+set(SFML_ROOT /opt/homebrew/Cellar/sfml/2.6.1)
 
-target_link_libraries(MicroMachine sfml-system sfml-graphics sfml-window sfml-audio sfml-network)
+# Find the SFML components
+find_package(SFML 2.6 REQUIRED COMPONENTS system window graphics)
+target_link_libraries(MicroMachine sfml-system sfml-window sfml-graphics)
 
 # Link Box2D library
 target_link_libraries(MicroMachine ${PROJECT_SOURCE_DIR}/libs/libbox2d.a)
