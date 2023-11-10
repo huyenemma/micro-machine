@@ -283,29 +283,53 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeSFMLProject.dir/build.make CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/test.o: src/test.cpp.o
-.PHONY : src/test.o
+src/ox.o: src/ox.cpp.o
+.PHONY : src/ox.o
 
 # target to build an object file
-src/test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeSFMLProject.dir/build.make CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.o
-.PHONY : src/test.cpp.o
+src/ox.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeSFMLProject.dir/build.make CMakeFiles/CMakeSFMLProject.dir/src/ox.cpp.o
+.PHONY : src/ox.cpp.o
 
-src/test.i: src/test.cpp.i
-.PHONY : src/test.i
+src/ox.i: src/ox.cpp.i
+.PHONY : src/ox.i
 
 # target to preprocess a source file
-src/test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeSFMLProject.dir/build.make CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.i
-.PHONY : src/test.cpp.i
+src/ox.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeSFMLProject.dir/build.make CMakeFiles/CMakeSFMLProject.dir/src/ox.cpp.i
+.PHONY : src/ox.cpp.i
 
-src/test.s: src/test.cpp.s
-.PHONY : src/test.s
+src/ox.s: src/ox.cpp.s
+.PHONY : src/ox.s
 
 # target to generate assembly for a file
-src/test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeSFMLProject.dir/build.make CMakeFiles/CMakeSFMLProject.dir/src/test.cpp.s
-.PHONY : src/test.cpp.s
+src/ox.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeSFMLProject.dir/build.make CMakeFiles/CMakeSFMLProject.dir/src/ox.cpp.s
+.PHONY : src/ox.cpp.s
+
+src/vehicle.o: src/vehicle.cpp.o
+.PHONY : src/vehicle.o
+
+# target to build an object file
+src/vehicle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeSFMLProject.dir/build.make CMakeFiles/CMakeSFMLProject.dir/src/vehicle.cpp.o
+.PHONY : src/vehicle.cpp.o
+
+src/vehicle.i: src/vehicle.cpp.i
+.PHONY : src/vehicle.i
+
+# target to preprocess a source file
+src/vehicle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeSFMLProject.dir/build.make CMakeFiles/CMakeSFMLProject.dir/src/vehicle.cpp.i
+.PHONY : src/vehicle.cpp.i
+
+src/vehicle.s: src/vehicle.cpp.s
+.PHONY : src/vehicle.s
+
+# target to generate assembly for a file
+src/vehicle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeSFMLProject.dir/build.make CMakeFiles/CMakeSFMLProject.dir/src/vehicle.cpp.s
+.PHONY : src/vehicle.cpp.s
 
 # Help Target
 help:
@@ -330,9 +354,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/test.o"
-	@echo "... src/test.i"
-	@echo "... src/test.s"
+	@echo "... src/ox.o"
+	@echo "... src/ox.i"
+	@echo "... src/ox.s"
+	@echo "... src/vehicle.o"
+	@echo "... src/vehicle.i"
+	@echo "... src/vehicle.s"
 .PHONY : help
 
 

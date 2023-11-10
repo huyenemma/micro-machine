@@ -11,8 +11,8 @@ FetchContent_Declare(SFML
 FetchContent_MakeAvailable(SFML)
 
 # Add the path to your Box2D library and include directory
-set(BOX2D_LIBRARY "${CMAKE_SOURCE_DIR}/libs/libbox2d.a")
-include_directories("${CMAKE_SOURCE_DIR}/include/box2d")
+set(BOX2D_LIBRARY ${CMAKE_SOURCE_DIR}/libs/libbox2d.a)
+include_directories(${CMAKE_SOURCE_DIR}/include/box2d)
 
 # Use the GLOB command to collect all source files in the source directory
 file(GLOB SOURCES src/*.cpp)

@@ -2,7 +2,7 @@
 #include <iostream>
 #include <stdio.h>
 #include "../include/box2d/box2d.h"
-#include "vehicle.hpp"
+#include "ox.hpp"
 
 
 int main() {
@@ -19,46 +19,51 @@ int main() {
     sf::RenderWindow window(sf::VideoMode(1000, 1600), "Vehicle Test");
 
     // Create a Vehicle instance
-    Vehicle vehicle(&world, 0, 0);
+    Ox ox(&world, 0, 0);
+
+                    std::cout<<"1"<<std::endl;
     // Main loop
     while (window.isOpen()) {
         // Handle events
         sf::Event event;
 
+                    std::cout<<"1"<<std::endl;
         while (window.pollEvent(event)) {
-
+            
+                    std::cout<<"1"<<std::endl;
             if (event.type == sf::Event::Closed) {
                 window.close();
             }
             else if (event.type == sf::Event::KeyPressed) {
                 if (event.key.code == sf::Keyboard::W) {
                     // Apply a force when the Up arrow key is pressed
-                    vehicle.ToggleForce(true);
-                    std::cout<<"KeyPressed"<<std::endl;
+                    ox.ToggleForce(true);
                 }
                 else if (event.key.code == sf::Keyboard::D) {
                     // Apply a torque (rotation) when the Right arrow key is pressed
                     std::cout<<"KeyPressed"<<std::endl;
-                    vehicle.Rotate(1);
+                    ox.Rotate(3);
+                }else if (event.key.code == sf::Keyboard::E) {
+                    ox.SuperSkill();
                 }
             }
             else if (event.type == sf::Event::KeyReleased) {
                 if (event.key.code == sf::Keyboard::W) {
                     // Stop applying force when the Up arrow key is released
-                    vehicle.ToggleForce(false);
+                    ox.ToggleForce(false);
                 }
             }
         }
         window.clear();
         // Update the vehicle
-        vehicle.UpdateSpeed();
+        ox.UpdateSpeed();
         
         world.Step( timeStep, velocityIterations, positionIterations);
 
         world.ClearForces();
 
         // Get the position of the vehicle
-        std::pair<float, float> position = vehicle.GetPosition();
+        std::pair<float, float> position = ox.GetPosition();
 
         
         // Clear the window
@@ -67,7 +72,7 @@ int main() {
         // Set the position of the square to match the vehicle's position
         triangle.setPosition(position.first, position.second);
 
-        float angle = vehicle.GetAngle();
+        float angle = ox.GetAngle();
         triangle.setRotation(angle * 180.0f / b2_pi);
 
         // Draw the square at the vehicle's position
