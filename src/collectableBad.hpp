@@ -14,7 +14,7 @@ class CollectableBad: public Collectable{
         if (carBody) {
             // Increase the car's speed or apply other game logic
             b2Vec2 impulse(0.0f, decrease_); // Adjust the impulse as needed
-            carBody->GetUserData()->ApplyLinearImpulse(impulse, carBody->GetWorldCenter(), true);
+            //carBody->GetUserData()->ApplyLinearImpulse(impulse, carBody->GetWorldCenter(), true);
         }
 
         // Delete the collectable
