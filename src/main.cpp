@@ -5,6 +5,7 @@
 
 #include "../include/Box2d/box2d.h"
 #include "collectable.hpp"
+#include "obstacle.hpp"
 #include "vehicle.hpp"
 
 int main() {
@@ -23,6 +24,9 @@ int main() {
 
   // Create a Vehicle instance
   Vehicle vehicle(&world, 0, 0);
+
+  // Create a test Obstacle object
+  Obstacle obstacle(&world, b2Vec2(5.f, 10.f), 5.f);
   // Main loop
   while (window.isOpen()) {
     // Handle events
