@@ -9,7 +9,7 @@ class Vehicle {
  private:
   bool forceOn = false;
   b2Body* m_body;
-  float maxSpeed = 3;
+  float maxSpeed = 20;
 
  public:
   Vehicle(b2World* world, float x, float y);
@@ -52,7 +52,9 @@ Vehicle::Vehicle(b2World* world, float x = 0, float y = 0) {
   bodyDef.angularDamping = 0.95f;
   bodyDef.awake = true;
   b2PolygonShape dynamicBox;
-  dynamicBox.SetAsBox(1.0f, 1.0f);
+  dynamicBox.SetAsBox(2.0f, 2.0f);
+
+  
 
   b2FixtureDef fixtureDef;
   fixtureDef.shape = &dynamicBox;
