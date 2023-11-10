@@ -1,6 +1,8 @@
 #ifndef COLLECTABLE_H
 #define COLLECTABLE_H
-#include <Box2D/Box2D.h>
+
+#include "../libs/include/Box2d/box2d.h"
+#include "vehicle.hpp"
 #include <utility>
 
 class Collectable{
@@ -45,4 +47,5 @@ public:
 private:
     b2Body* body;
 };
+
 #endif

@@ -1,5 +1,5 @@
 
-#include "../include/box2d/box2d.h"
+#include "../libs/include/Box2d/box2d.h"
 
 #include <math.h>
 

@@ -2,7 +2,7 @@
 #define COLLECTABLE_SUPER_H
 
 #include "collectable.hpp"
-#include <Box2D/Box2D.h>
+
 
 class CollectableSuper : public Collectable{
     public:

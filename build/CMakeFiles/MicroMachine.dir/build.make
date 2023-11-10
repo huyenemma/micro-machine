@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.27.7/bin/cmake
+CMAKE_COMMAND = /Applications/CMake.app/Contents/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/Cellar/cmake/3.27.7/bin/cmake -E rm -f
+RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1
+CMAKE_SOURCE_DIR = /Users/linh/micro-machines-tuukka-himanka-1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/build
+CMAKE_BINARY_DIR = /Users/linh/micro-machines-tuukka-himanka-1/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/MicroMachine.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/MicroMachine.dir/progress.make
 include CMakeFiles/MicroMachine.dir/flags.make
 
 CMakeFiles/MicroMachine.dir/src/main.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
-CMakeFiles/MicroMachine.dir/src/main.cpp.o: /Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/src/main.cpp
+CMakeFiles/MicroMachine.dir/src/main.cpp.o: /Users/linh/micro-machines-tuukka-himanka-1/src/main.cpp
 CMakeFiles/MicroMachine.dir/src/main.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MicroMachine.dir/src/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/main.cpp.o -MF CMakeFiles/MicroMachine.dir/src/main.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/main.cpp.o -c /Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MicroMachine.dir/src/main.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/main.cpp.o -MF CMakeFiles/MicroMachine.dir/src/main.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/main.cpp.o -c /Users/linh/micro-machines-tuukka-himanka-1/src/main.cpp
 
 CMakeFiles/MicroMachine.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/src/main.cpp > CMakeFiles/MicroMachine.dir/src/main.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/linh/micro-machines-tuukka-himanka-1/src/main.cpp > CMakeFiles/MicroMachine.dir/src/main.cpp.i
 
 CMakeFiles/MicroMachine.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/src/main.cpp -o CMakeFiles/MicroMachine.dir/src/main.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/linh/micro-machines-tuukka-himanka-1/src/main.cpp -o CMakeFiles/MicroMachine.dir/src/main.cpp.s
 
 # Object files for target MicroMachine
 MicroMachine_OBJECTS = \
@@ -93,11 +93,11 @@ MicroMachine_EXTERNAL_OBJECTS =
 MicroMachine: CMakeFiles/MicroMachine.dir/src/main.cpp.o
 MicroMachine: CMakeFiles/MicroMachine.dir/build.make
 MicroMachine: /opt/homebrew/lib/libsfml-graphics.2.6.1.dylib
-MicroMachine: /Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/libs/libbox2d.a
+MicroMachine: /Users/linh/micro-machines-tuukka-himanka-1/libs/libbox2d.a
 MicroMachine: /opt/homebrew/lib/libsfml-window.2.6.1.dylib
 MicroMachine: /opt/homebrew/lib/libsfml-system.2.6.1.dylib
 MicroMachine: CMakeFiles/MicroMachine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable MicroMachine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable MicroMachine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MicroMachine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -109,6 +109,6 @@ CMakeFiles/MicroMachine.dir/clean:
 .PHONY : CMakeFiles/MicroMachine.dir/clean
 
 CMakeFiles/MicroMachine.dir/depend:
-	cd /Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1 /Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1 /Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/build /Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/build /Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/build/CMakeFiles/MicroMachine.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/linh/micro-machines-tuukka-himanka-1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/linh/micro-machines-tuukka-himanka-1 /Users/linh/micro-machines-tuukka-himanka-1 /Users/linh/micro-machines-tuukka-himanka-1/build /Users/linh/micro-machines-tuukka-himanka-1/build /Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles/MicroMachine.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/MicroMachine.dir/depend
 

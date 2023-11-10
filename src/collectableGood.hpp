@@ -2,7 +2,7 @@
 #define COLLECTABLE_GOOD_H
 
 #include "collectable.hpp"
-#include <Box2D/Box2D.h>
+
 
 class CollectableGood : public Collectable{
     public:

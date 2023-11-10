@@ -3,8 +3,7 @@
 #include <stdio.h>
 #include "../include/box2d/box2d.h"
 #include "vehicle.hpp"
-
-
+#include "collectable.hpp"
 
 
 int main() {

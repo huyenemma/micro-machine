@@ -62,7 +62,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.6"
+					"fragment" : "-g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk"
 				},
 				{
 					"backtrace" : 4,
@@ -77,7 +77,7 @@
 			[
 				{
 					"backtrace" : 5,
-					"path" : "/Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/libs/include"
+					"path" : "/Users/linh/micro-machines-tuukka-himanka-1/libs/include"
 				},
 				{
 					"backtrace" : 2,
@@ -124,7 +124,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "/Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/libs/libbox2d.a",
+				"fragment" : "/Users/linh/micro-machines-tuukka-himanka-1/libs/libbox2d.a",
 				"role" : "libraries"
 			},
 			{

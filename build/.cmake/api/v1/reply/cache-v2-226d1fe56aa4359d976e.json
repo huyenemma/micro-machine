@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/build"
+			"value" : "/Users/linh/micro-machines-tuukka-himanka-1/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -91,7 +91,23 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "7"
+			"value" : "5"
+		},
+		{
+			"name" : "CMAKE_COLOR_MAKEFILE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable/Disable color output during build."
+				}
+			],
+			"type" : "BOOL",
+			"value" : "ON"
 		},
 		{
 			"name" : "CMAKE_COMMAND",
@@ -103,7 +119,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/opt/homebrew/Cellar/cmake/3.27.7/bin/cmake"
+			"value" : "/Applications/CMake.app/Contents/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -115,7 +131,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/opt/homebrew/Cellar/cmake/3.27.7/bin/cpack"
+			"value" : "/Applications/CMake.app/Contents/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -127,7 +143,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/opt/homebrew/Cellar/cmake/3.27.7/bin/ctest"
+			"value" : "/Applications/CMake.app/Contents/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -139,10 +155,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "CXX compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "/usr/bin/clang++"
 		},
 		{
@@ -235,10 +251,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "C compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "/usr/bin/clang"
 		},
 		{
@@ -347,7 +363,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/opt/homebrew/Cellar/cmake/3.27.7/bin/ccmake"
+			"value" : "/Applications/CMake.app/Contents/bin/ccmake"
 		},
 		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
@@ -446,6 +462,10 @@
 			"properties" : 
 			[
 				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
 					"name" : "HELPSTRING",
 					"value" : "No help, variable specified on the command line."
 				}
@@ -475,7 +495,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/build/CMakeFiles/pkgRedirects"
+			"value" : "/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -487,7 +507,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "Ninja"
+			"value" : "Unix Makefiles"
 		},
 		{
 			"name" : "CMAKE_GENERATOR_INSTANCE",
@@ -535,7 +555,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1"
+			"value" : "/Users/linh/micro-machines-tuukka-himanka-1"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -551,7 +571,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/Users/tominhduy/anaconda3/bin/install_name_tool"
+			"value" : "/usr/bin/install_name_tool"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -591,11 +611,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Program used to build from build.ninja files."
+					"value" : "Path to a program."
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/Users/tominhduy/anaconda3/bin/ninja"
+			"value" : "/usr/bin/make"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -759,7 +779,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "12.6"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_OSX_SYSROOT",
@@ -771,7 +791,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk"
+			"value" : "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -863,7 +883,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/opt/homebrew/Cellar/cmake/3.27.7/share/cmake"
+			"value" : "/Applications/CMake.app/Contents/share/cmake-3.27"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1087,7 +1107,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/Library/Developer/CommandLineTools/usr/bin/tapi"
+			"value" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/tapi"
 		},
 		{
 			"name" : "CMAKE_UNAME",
@@ -1127,7 +1147,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/build"
+			"value" : "/Users/linh/micro-machines-tuukka-himanka-1/build"
 		},
 		{
 			"name" : "MicroMachine_IS_TOP_LEVEL",
@@ -1151,7 +1171,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1"
+			"value" : "/Users/linh/micro-machines-tuukka-himanka-1"
 		},
 		{
 			"name" : "SFML_DIR",
