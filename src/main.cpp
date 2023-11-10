@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-#include "../include/Box2d/box2d.h"
+#include "../libs/include/Box2d/box2d.h"
 #include "collectable.hpp"
 #include "obstacle.hpp"
 #include "vehicle.hpp"

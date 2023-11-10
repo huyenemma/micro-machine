@@ -2,7 +2,7 @@
 #define VEHICLE_HPP
 
 #include <math.h>
-
+#include <utility> 
 #include "../libs/include/Box2d/box2d.h"
 
 class Vehicle {
@@ -61,8 +61,12 @@ Vehicle::Vehicle(b2World* world, float x = 0, float y = 0) {
 
   m_body = world->CreateBody(&bodyDef);
   m_body->CreateFixture(&fixtureDef);
-  b2BodyUserData data = m_body->GetUserData();
-  uintptr_t uintptrValue = reinterpret_cast<uintptr_t>(this);
+  //b2BodyUserData data = m_body->GetUserData();
+  //uintptr_t uintptrValue = reinterpret_cast<uintptr_t>(this);
+  //b2BodyUserData data = m_body->GetUserData();
+  //uintptr_t uintptrValue = reinterpret_cast<uintptr_t>(this);
+  //data.pointer = uintptrValue;
+  m_body->GetUserData().pointer = reinterpret_cast<uintptr_t>(this);
 }
 
 Vehicle::~Vehicle() { m_body->GetWorld()->DestroyBody(m_body); }

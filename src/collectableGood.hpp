@@ -1,5 +1,5 @@
-#ifndef COLLECTABLE_GOOD_H
-#define COLLECTABLE_GOOD_H
+#ifndef COLLECTABLE_GOOD_HPP
+#define COLLECTABLE_GOOD_HPP
 
 #include "collectable.hpp"
 

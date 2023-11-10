@@ -28,7 +28,10 @@ public:
         body->CreateFixture(&fixtureDef);
 
         // Set a custom user data to identify the collectable
-        fixtureDef.userData.pointer = reinterpret_cast<uintptr_t>(this);
+        //b2BodyUserData data = body->GetUserData();
+        //uintptr_t uintptrValue = reinterpret_cast<uintptr_t>(this);
+        //data.pointer = uintptrValue;
+        body->GetUserData().pointer = reinterpret_cast<uintptr_t>(this);
     }
 
     std::pair<float, float> getPosition(){

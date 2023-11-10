@@ -1,5 +1,5 @@
-#ifndef COLLECTABLE_SUPER_H
-#define COLLECTABLE_SUPER_H
+#ifndef COLLECTABLE_SUPER_HPP
+#define COLLECTABLE_SUPER_HPP
 
 #include "collectable.hpp"
 
