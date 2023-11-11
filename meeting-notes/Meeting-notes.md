@@ -22,40 +22,40 @@ In each meeting, you are required to discuss:
 
 # Notes
 
+
 ## What we doned in last week: 
 
 ### Huyen 
-   - Learn SFML and Box2D work together 
-   - Generate 1 map, some character 
+- Implement Game class (unfinished)
 
 ### Linh 
-   - Collectable class feautures, onContact function 
-
+- Implement Collectible classes
+ 
 ### Duy 
-   - destroy test file 
+- Implement Obstacle class, fix integration issues
 
 ### Quan 
-   -  Implement Vehicle 
+- Implement Vehicle class
 
 # Todos
 
 ### Linh
-   - Define detail collectibles: depend on color (3 for each type: good, bad. 1 super)
-   - Negociate with Quan 
-### Quan 
-   - Define classes of animals
-### Duy 
-   - Class Obstacle, Wall, học split screen 
-### Huyen 
-   - Class Game  
+- Complete Collectible classes, implement Contact Listener
 
-## Next week goal Sat 11/11
-- Animal running around with basic gui 
+### Quan 
+- Improve Vehicle class and Collectible class, implement Contact Listener
+
+### Duy 
+- Implement CMake and virtual environtment to ensure smootth collaboration and integration, implement Obstacle abstract class and Wall class
+
+### Huyen 
+- Define World class
+
+## Next week goal Sat 14/11
+- Setup virtual environment and CMakeLists for smooth development
+- Complete basic classes
+
 
 ## Project status  
-   - Finish game logic (how to play this game)
-   - Basic project structure 
-   - External library decided 
-   - Currently writing project plan
-   -   
+Basic layout of needed classes, acknowledgement of potential integration issues, implemented some parts of GUI
 
