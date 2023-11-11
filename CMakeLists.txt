@@ -14,8 +14,16 @@ file(GLOB SOURCES ./src/*.cpp)
 # Create the executable
 add_executable(MicroMachine ${SOURCES})
 
+# Detect OS
+if(APPLE)
+  set(SFML_VERSION "2.6") # for macOS
+elseif(UNIX AND NOT APPLE)
+  set(SFML_VERSION "2.5") # for Linux
+endif()
+
 # Find SFML libraries
-find_package(SFML 2.5 COMPONENTS graphics window system audio network REQUIRED)
+# set(CMAKE_PREFIX_PATH "")
+find_package(SFML ${SFML_VERSION} COMPONENTS graphics window system audio network REQUIRED)
 
 target_link_libraries(MicroMachine sfml-system sfml-graphics sfml-window sfml-audio sfml-network)
 

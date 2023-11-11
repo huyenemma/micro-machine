@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <stdio.h>
-#include "../include/box2d/box2d.h"
+#include "../libs/include/Box2d/box2d.h"
 #include "vehicle.hpp"
 
 

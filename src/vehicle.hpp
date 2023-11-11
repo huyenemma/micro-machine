@@ -1,14 +1,15 @@
-
-#include "../include/box2d/box2d.h"
-
+#include "../libs/include/Box2d/box2d.h"
+#include "constant.h"
 #include <math.h>
 
-class Vehicle
+class Vehicle : public sf::Drawable
 {
 private:
     bool forceOn=false;
     b2Body* m_body;
     float maxSpeed=3;
+    mutable sf::Sprite sprite; 
+    sf::Texture texture; 
 public:
     Vehicle(b2World* world, float x,float y);
 
@@ -44,7 +45,7 @@ public:
 
     };
 
-
+    virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 
 };
 
@@ -65,8 +66,6 @@ Vehicle::Vehicle(b2World* world, float x=0,float y=0)
     fixtureDef.shape = &dynamicBox;
     fixtureDef.density = 1.0f;
     fixtureDef.friction = 0.3f;
-    
-
 
     m_body = world->CreateBody(&bodyDef);
     m_body->CreateFixture(&fixtureDef);
@@ -81,4 +80,10 @@ Vehicle::~Vehicle()
 }
 
 
+void Vehicle::draw(sf::RenderTarget& target, sf::RenderStates states) const {
+    std::make_pair<float, float> pos = GetPosition(); 
+    sprite.setPosition(pos.first * SCALE, pos.second * SCALE); 
 
+    target.draw(sprite, states);
+
+} 

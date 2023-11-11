@@ -1,0 +1,3 @@
+/home/huyenemma/cpp/micro-machine/build/CMakeFiles/MicroMachine.dir
+/home/huyenemma/cpp/micro-machine/build/CMakeFiles/edit_cache.dir
+/home/huyenemma/cpp/micro-machine/build/CMakeFiles/rebuild_cache.dir
