@@ -9,7 +9,7 @@
 // Class representing a simple vehicle in a 2D physics world using Box2D
 class Vehicle
 {
-private:
+protected:
     bool forceOn;   // Flag indicating whether a force is applied to the vehicle
     b2Body* m_body; // Box2D body representing the vehicle
     float maxSpeed;  // Maximum speed of the vehicle

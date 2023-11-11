@@ -21,16 +21,13 @@ int main() {
     // Create a Vehicle instance
     Ox ox(&world, 0, 0);
 
-                    std::cout<<"1"<<std::endl;
     // Main loop
     while (window.isOpen()) {
         // Handle events
         sf::Event event;
 
-                    std::cout<<"1"<<std::endl;
         while (window.pollEvent(event)) {
             
-                    std::cout<<"1"<<std::endl;
             if (event.type == sf::Event::Closed) {
                 window.close();
             }

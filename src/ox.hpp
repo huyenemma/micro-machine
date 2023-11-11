@@ -10,9 +10,6 @@
 class Ox : public Vehicle
 {
 private:
-    bool forceOn;
-    b2Body* m_body;
-    float maxSpeed;
     int SuperSkillCoolDown=0;
 
 public:
