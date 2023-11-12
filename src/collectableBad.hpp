@@ -10,7 +10,9 @@ class CollectableBad : public Collectable{
     public:
     CollectableBad(b2World* world, b2Vec2 position, float radius, float decrease) : Collectable(world, position, radius), decrease_(decrease) {}
 
-    void OnContact(Vehicle* carBody) override{
+    void OnContact() override{
+        std::cout << "hit" << std::endl;
+        /*
         if (carBody != nullptr) {
             // Increase the car's speed or apply other game logic
             std::cout << "hit" << std::endl;
@@ -18,7 +20,7 @@ class CollectableBad : public Collectable{
             carBody->CollectableHit(impulse);
             this->Collected();
         }
-        
+        */
     }
 
     private:

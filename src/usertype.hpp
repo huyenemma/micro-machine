@@ -13,12 +13,12 @@ union UserData {
     } info;
 };
 
-bool IsVehicle(UserData userData) {
-    return userData.info.type == UserType::Vehicle;
+bool IsVehicle(UserData* userData) {
+    return userData->info.type == UserType::Vehicle;
 }
 
-bool IsCollectable(UserData userData) {
-    return userData.info.type == UserType::Collectable;
+bool IsCollectable(UserData* userData) {
+    return userData->info.type == UserType::Collectable;
 }
 
 #endif

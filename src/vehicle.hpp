@@ -69,11 +69,11 @@ Vehicle::Vehicle(b2World* world, float x = 0, float y = 0) {
   m_body = world->CreateBody(&bodyDef);
   m_body->CreateFixture(&fixtureDef);
 
-  //set user data
-  UserData userData;
-        userData.info.type = UserType::Vehicle;
-        userData.info.pointer = static_cast<void*>(this);
-        m_body->GetUserData().pointer = userData.data;
+  UserData* data = new UserData(); // Allocate UserData on the heap
+  data->info.type = UserType::Vehicle;
+  data->info.pointer = this;
+  m_body->GetUserData().pointer = reinterpret_cast<uintptr_t>(data);
+
 }
 
 Vehicle::~Vehicle() { m_body->GetWorld()->DestroyBody(m_body); }

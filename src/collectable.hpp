@@ -28,12 +28,11 @@ public:
 
         body->CreateFixture(&fixtureDef);
 
-        // Set a custom user data to identify the collectable
-        UserData userData;
-        userData.info.type = UserType::Collectable;
-        userData.info.pointer = static_cast<void*>(this);
+        UserData* data = new UserData(); // Allocate UserData on the heap
+        data->info.type = UserType::Collectable;
+        data->info.pointer = this;
+        body->GetUserData().pointer = reinterpret_cast<uintptr_t>(data); 
 
-        body->GetUserData().pointer = userData.data;
     }
 
     std::pair<float, float> GetPosition(){
@@ -45,7 +44,7 @@ public:
         return radius_;
     }
 
-    virtual void OnContact(Vehicle* car) = 0;
+    virtual void OnContact() = 0;
 
     bool IsNull(){
         return body == nullptr;
