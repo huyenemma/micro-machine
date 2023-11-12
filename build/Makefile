@@ -307,6 +307,30 @@ src/ox.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeSFMLProject.dir/build.make CMakeFiles/CMakeSFMLProject.dir/src/ox.cpp.s
 .PHONY : src/ox.cpp.s
 
+src/userDataPointer.o: src/userDataPointer.cpp.o
+.PHONY : src/userDataPointer.o
+
+# target to build an object file
+src/userDataPointer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeSFMLProject.dir/build.make CMakeFiles/CMakeSFMLProject.dir/src/userDataPointer.cpp.o
+.PHONY : src/userDataPointer.cpp.o
+
+src/userDataPointer.i: src/userDataPointer.cpp.i
+.PHONY : src/userDataPointer.i
+
+# target to preprocess a source file
+src/userDataPointer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeSFMLProject.dir/build.make CMakeFiles/CMakeSFMLProject.dir/src/userDataPointer.cpp.i
+.PHONY : src/userDataPointer.cpp.i
+
+src/userDataPointer.s: src/userDataPointer.cpp.s
+.PHONY : src/userDataPointer.s
+
+# target to generate assembly for a file
+src/userDataPointer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeSFMLProject.dir/build.make CMakeFiles/CMakeSFMLProject.dir/src/userDataPointer.cpp.s
+.PHONY : src/userDataPointer.cpp.s
+
 src/vehicle.o: src/vehicle.cpp.o
 .PHONY : src/vehicle.o
 
@@ -357,6 +381,9 @@ help:
 	@echo "... src/ox.o"
 	@echo "... src/ox.i"
 	@echo "... src/ox.s"
+	@echo "... src/userDataPointer.o"
+	@echo "... src/userDataPointer.i"
+	@echo "... src/userDataPointer.s"
 	@echo "... src/vehicle.o"
 	@echo "... src/vehicle.i"
 	@echo "... src/vehicle.s"

@@ -1,7 +1,9 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <stdio.h>
+#include "collectable.hpp"
 #include "../include/box2d/box2d.h"
+#include "contactlistener.hpp"
 #include "ox.hpp"
 
 
@@ -9,6 +11,11 @@ int main() {
     // Create the Box2D world
     b2Vec2 gravity(0.0f, 0.0f);
     b2World world(gravity);
+
+    //setting contact listener
+    MyContactListener contactListener;
+    world.SetContactListener(&contactListener);
+
 
     int FPS =24;
     float timeStep = 1.0f/FPS;      //the length of time passed to simulate (seconds)
@@ -20,12 +27,12 @@ int main() {
 
     // Create a Vehicle instance
     Ox ox(&world, 0, 0);
+    Collectable collectable(&world, b2Vec2(200.f, 100.f), 20.f);
 
     // Main loop
     while (window.isOpen()) {
         // Handle events
         sf::Event event;
-
         while (window.pollEvent(event)) {
             
             if (event.type == sf::Event::Closed) {
@@ -38,8 +45,8 @@ int main() {
                 }
                 else if (event.key.code == sf::Keyboard::D) {
                     // Apply a torque (rotation) when the Right arrow key is pressed
-                    std::cout<<"KeyPressed"<<std::endl;
-                    ox.Rotate(3);
+                    
+                    ox.Rotate(400);
                 }else if (event.key.code == sf::Keyboard::E) {
                     ox.SuperSkill();
                 }
@@ -56,6 +63,7 @@ int main() {
         ox.UpdateSpeed();
         
         world.Step( timeStep, velocityIterations, positionIterations);
+        collectable.DeleteBody();
 
         world.ClearForces();
 
@@ -74,7 +82,19 @@ int main() {
 
         // Draw the square at the vehicle's position
         window.draw(triangle);
+        
+        if (!collectable.isNullBody()) {
+        std::pair<float, float> positionC = collectable.GetPosition();
+        sf::CircleShape circle;
+        circle.setRadius(collectable.GetRadius());
+        circle.setPosition(positionC.first, positionC.second);
+        circle.setFillColor(sf::Color::Green);
+        window.draw(circle);
+        }
+        
 
+
+        
 
         // Display the window
         window.display();

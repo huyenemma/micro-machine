@@ -1,16 +1,18 @@
 #include "vehicle.hpp"
 #include "../include/box2d/box2d.h"
 #include <cmath>
+#include "userDataPointer.hpp"
 
 constexpr float MAX_SPEED = 5.0f;
 constexpr float LINEAR_DAMPING = 0.6f;
-constexpr float ANGULAR_DAMPING = 0.95f;
-constexpr float BOX_WIDTH = 1.0f;
-constexpr float BOX_HEIGHT = 1.0f;
+constexpr float ANGULAR_DAMPING = 0.3f;
+constexpr float BOX_WIDTH = 20.0f;
+constexpr float BOX_HEIGHT = 20.0f;
 constexpr float DENSITY = 1.0f;
 constexpr float FRICTION = 0.3f;
-constexpr float FORCE_MAGNITUDE = 3.0f;
+constexpr float FORCE_MAGNITUDE = 2.0f;
 
+using namespace BodyType;
 Vehicle::Vehicle(b2World* world, float x , float y )
     : forceOn(false), m_body(nullptr), maxSpeed(MAX_SPEED)
 {
@@ -31,6 +33,13 @@ Vehicle::Vehicle(b2World* world, float x , float y )
 
     m_body = world->CreateBody(&bodyDef);
     m_body->CreateFixture(&fixtureDef);
+
+
+
+    UserData* data = new UserData(); // Allocate UserData on the heap
+    data->info.type = UserType::Vehicle;
+    data->info.pointer = this;
+    m_body->GetUserData().pointer = reinterpret_cast<uintptr_t>(data);
 }
 
 
@@ -47,7 +56,7 @@ void Vehicle::UpdateSpeed()
 
     if (forceOn && std::abs(vel.x) < maxSpeed)
     {
-        forceMagnitude = FORCE_MAGNITUDE;
+        forceMagnitude = FORCE_MAGNITUDE*m_body->GetMass();
     }
 
     b2Vec2 force = b2Vec2(cos(m_body->GetAngle()) * forceMagnitude, sin(m_body->GetAngle()) * forceMagnitude);
@@ -56,7 +65,7 @@ void Vehicle::UpdateSpeed()
 
 void Vehicle::Rotate(float torque  )
 {
-    m_body->ApplyTorque(torque, true);
+    m_body->ApplyTorque(torque*m_body->GetMass(), true);
 }
 
 std::pair<float, float> Vehicle::GetPosition()

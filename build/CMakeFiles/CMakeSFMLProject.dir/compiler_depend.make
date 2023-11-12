@@ -304,6 +304,7 @@ CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  ../src/collectable.hpp \
   ../include/box2d/box2d.h \
   ../include/box2d/b2_settings.h \
   ../include/box2d/b2_types.h \
@@ -380,8 +381,10 @@ CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o: ../src/main.cpp \
   ../include/box2d/b2_revolute_joint.h \
   ../include/box2d/b2_weld_joint.h \
   ../include/box2d/b2_wheel_joint.h \
-  ../src/ox.hpp \
-  ../src/vehicle.hpp
+  ../src/vehicle.hpp \
+  ../src/userDataPointer.hpp \
+  ../src/contactlistener.hpp \
+  ../src/ox.hpp
 
 CMakeFiles/CMakeSFMLProject.dir/src/ox.cpp.o: ../src/ox.cpp \
   /usr/include/stdc-predef.h \
@@ -642,6 +645,32 @@ CMakeFiles/CMakeSFMLProject.dir/src/ox.cpp.o: ../src/ox.cpp \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc
 
+CMakeFiles/CMakeSFMLProject.dir/src/userDataPointer.cpp.o: ../src/userDataPointer.cpp \
+  /usr/include/stdc-predef.h \
+  ../src/userDataPointer.hpp \
+  /usr/include/c++/11/cstdint \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
+  /usr/include/c++/11/pstl/pstl_config.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+
 CMakeFiles/CMakeSFMLProject.dir/src/vehicle.cpp.o: ../src/vehicle.cpp \
   /usr/include/stdc-predef.h \
   ../src/vehicle.hpp \
@@ -793,7 +822,9 @@ CMakeFiles/CMakeSFMLProject.dir/src/vehicle.cpp.o: ../src/vehicle.cpp \
   ../include/box2d/b2_pulley_joint.h \
   ../include/box2d/b2_revolute_joint.h \
   ../include/box2d/b2_weld_joint.h \
-  ../include/box2d/b2_wheel_joint.h
+  ../include/box2d/b2_wheel_joint.h \
+  ../src/userDataPointer.hpp \
+  /usr/include/c++/11/cstdint
 
 
 ../src/vehicle.cpp:
@@ -801,6 +832,8 @@ CMakeFiles/CMakeSFMLProject.dir/src/vehicle.cpp.o: ../src/vehicle.cpp \
 ../src/ox.cpp:
 
 ../src/ox.hpp:
+
+../src/userDataPointer.hpp:
 
 ../include/box2d/b2_revolute_joint.h:
 
@@ -833,8 +866,6 @@ CMakeFiles/CMakeSFMLProject.dir/src/vehicle.cpp.o: ../src/vehicle.cpp \
 ../include/box2d/b2_wheel_joint.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
 
@@ -886,6 +917,10 @@ CMakeFiles/CMakeSFMLProject.dir/src/vehicle.cpp.o: ../src/vehicle.cpp \
 
 ../include/box2d/b2_types.h:
 
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+../src/collectable.hpp:
+
 /usr/include/c++/11/bits/istream.tcc:
 
 /usr/include/c++/11/istream:
@@ -901,6 +936,8 @@ _deps/sfml-src/include/SFML/Graphics/Text.hpp:
 _deps/sfml-src/include/SFML/Graphics/Glsl.inl:
 
 _deps/sfml-src/include/SFML/Graphics/Glsl.hpp:
+
+../src/contactlistener.hpp:
 
 _deps/sfml-src/include/SFML/Graphics/RenderWindow.hpp:
 
@@ -1059,6 +1096,8 @@ _deps/sfml-src/include/SFML/Window/ContextSettings.hpp:
 /usr/include/c++/11/new:
 
 /usr/include/c++/11/bits/stream_iterator.h:
+
+../src/userDataPointer.cpp:
 
 /usr/include/c++/11/bits/cpp_type_traits.h:
 

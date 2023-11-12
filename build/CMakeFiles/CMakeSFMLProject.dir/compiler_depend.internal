@@ -305,6 +305,7 @@ CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o
  /usr/include/c++/11/iostream
  /usr/include/c++/11/istream
  /usr/include/c++/11/bits/istream.tcc
+ /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/src/collectable.hpp
  /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/include/box2d/box2d.h
  /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/include/box2d/b2_settings.h
  /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/include/box2d/b2_types.h
@@ -381,8 +382,10 @@ CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o
  /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/include/box2d/b2_revolute_joint.h
  /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/include/box2d/b2_weld_joint.h
  /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/include/box2d/b2_wheel_joint.h
- /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/src/ox.hpp
  /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/src/vehicle.hpp
+ /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/src/userDataPointer.hpp
+ /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/src/contactlistener.hpp
+ /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/src/ox.hpp
 
 CMakeFiles/CMakeSFMLProject.dir/src/ox.cpp.o
  /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/src/ox.cpp
@@ -644,6 +647,33 @@ CMakeFiles/CMakeSFMLProject.dir/src/ox.cpp.o
  /usr/include/c++/11/istream
  /usr/include/c++/11/bits/istream.tcc
 
+CMakeFiles/CMakeSFMLProject.dir/src/userDataPointer.cpp.o
+ /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/src/userDataPointer.cpp
+ /usr/include/stdc-predef.h
+ /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/src/userDataPointer.hpp
+ /usr/include/c++/11/cstdint
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h
+ /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h
+ /usr/include/features.h
+ /usr/include/features-time64.h
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h
+ /usr/include/x86_64-linux-gnu/bits/timesize.h
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h
+ /usr/include/x86_64-linux-gnu/bits/long-double.h
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
+ /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h
+ /usr/include/c++/11/pstl/pstl_config.h
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h
+ /usr/include/stdint.h
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
+ /usr/include/x86_64-linux-gnu/bits/types.h
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h
+ /usr/include/x86_64-linux-gnu/bits/time64.h
+ /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+
 CMakeFiles/CMakeSFMLProject.dir/src/vehicle.cpp.o
  /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/src/vehicle.cpp
  /usr/include/stdc-predef.h
@@ -797,4 +827,6 @@ CMakeFiles/CMakeSFMLProject.dir/src/vehicle.cpp.o
  /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/include/box2d/b2_revolute_joint.h
  /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/include/box2d/b2_weld_joint.h
  /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/include/box2d/b2_wheel_joint.h
+ /home/quan/C++ course/Cpp project my branch/micro-machines-tuukka-himanka-1/src/userDataPointer.hpp
+ /usr/include/c++/11/cstdint
 

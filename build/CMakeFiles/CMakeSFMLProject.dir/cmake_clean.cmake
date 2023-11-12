@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o.d"
   "CMakeFiles/CMakeSFMLProject.dir/src/ox.cpp.o"
   "CMakeFiles/CMakeSFMLProject.dir/src/ox.cpp.o.d"
+  "CMakeFiles/CMakeSFMLProject.dir/src/userDataPointer.cpp.o"
+  "CMakeFiles/CMakeSFMLProject.dir/src/userDataPointer.cpp.o.d"
   "CMakeFiles/CMakeSFMLProject.dir/src/vehicle.cpp.o"
   "CMakeFiles/CMakeSFMLProject.dir/src/vehicle.cpp.o.d"
   "bin/CMakeSFMLProject"
