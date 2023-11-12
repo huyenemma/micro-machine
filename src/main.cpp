@@ -22,7 +22,7 @@ int main() {
   int positionIterations = 3;  // how strongly to correct position
 
   // Create a window for rendering (SFML)
-  sf::RenderWindow window(sf::VideoMode(1000, 1600), "Vehicle Test");
+  sf::RenderWindow window(sf::VideoMode(2000, 1600), "Vehicle Test");
 
   // Create a Vehicle instance
   Vehicle vehicle(&world, 0, 0);
@@ -31,11 +31,11 @@ int main() {
   Obstacle obstacle(&world, b2Vec2(5.f, 10.f), 5.f);
 
   //Create a bad collectable object
-  CollectableBad collectable(&world, b2Vec2(200.f, 100.f), 10.f, 5.f);
+  CollectableBad collectable(&world, b2Vec2(100.f, 100.f), 20.f, 5.f);
 
   // Main loop
   while (window.isOpen()) {
-    // Handle events
+    // Handle eventss
     sf::Event event;
 
     while (window.pollEvent(event)) {
@@ -45,11 +45,9 @@ int main() {
         if (event.key.code == sf::Keyboard::W) {
           // Apply a force when the Up arrow key is pressed
           vehicle.ToggleForce(true);
-          std::cout<<"KeyPressed"<<std::endl;
         } else if (event.key.code == sf::Keyboard::D) {
           // Apply a torque (rotation) when the Right arrow key is pressed
-          std::cout<<"KeyPressed"<<std::endl;
-          vehicle.Rotate(1);
+          vehicle.Rotate(100);
         }
       } else if (event.type == sf::Event::KeyReleased) {
         if (event.key.code == sf::Keyboard::W) {
@@ -83,12 +81,15 @@ int main() {
 
 
     //Draw collectable
-    std::pair<float, float> positionC = collectable.GetPosition();
-    sf::CircleShape circle;
-    circle.setRadius(collectable.GetRadius());
-    circle.setPosition(positionC.first, positionC.second);
-    circle.setFillColor(sf::Color::Green);
-    window.draw(circle);
+    if (!collectable.IsNull()){
+      std::pair<float, float> positionC = collectable.GetPosition();
+      sf::CircleShape circle;
+      circle.setRadius(collectable.GetRadius());
+      circle.setPosition(positionC.first, positionC.second);
+      circle.setFillColor(sf::Color::Green);
+      window.draw(circle);
+    }
+    
 
     //setting contact listener
     MyContactListener contactListener;

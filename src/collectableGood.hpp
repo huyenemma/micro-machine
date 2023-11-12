@@ -2,24 +2,24 @@
 #define COLLECTABLE_GOOD_HPP
 
 #include "collectable.hpp"
+#include <iostream>
 
 
 class CollectableGood : public Collectable{
     public:
     CollectableGood(b2World* world, b2Vec2 position, float radius, float boost) : Collectable(world, position, radius), boost_(boost) {}
 
-    void OnContact(b2Body* carBody){
-        // Assuming the car body is passed as a parameter to the method
-        if (carBody) {
+    void OnContact(Vehicle* carBody) override{
+        std::cout << "hit" << std::endl;
+        //Vehicle* vehicle = reinterpret_cast<Vehicle*>(carBody->GetUserData().pointer);
+        
+        if (carBody != nullptr) {
             // Increase the car's speed or apply other game logic
-            b2Vec2 impulse(0.0f, boost_); // Adjust the impulse as needed
-            carBody->ApplyLinearImpulse(impulse, carBody->GetWorldCenter(), true);
+            b2Vec2 impulse(0.0f, boost_*carBody->GetMass()); // Adjust the impulse as needed
+            carBody->CollectableHit(impulse);
+            this->Collected();
         }
-
-        // Delete the collectable
-        Collectable::OnContact();
     }
-
     private:
     float boost_;
     

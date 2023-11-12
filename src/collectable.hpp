@@ -1,8 +1,9 @@
-#ifndef COLLECTABLE_H
-#define COLLECTABLE_H
+#ifndef COLLECTABLE_HPP
+#define COLLECTABLE_HPP
 
 #include "../libs/include/Box2d/box2d.h"
 #include "vehicle.hpp"
+#include "usertype.hpp"
 #include <utility>
 
 class Collectable{
@@ -28,10 +29,11 @@ public:
         body->CreateFixture(&fixtureDef);
 
         // Set a custom user data to identify the collectable
-        //b2BodyUserData data = body->GetUserData();
-        //uintptr_t uintptrValue = reinterpret_cast<uintptr_t>(this);
-        //data.pointer = uintptrValue;
-        body->GetUserData().pointer = reinterpret_cast<uintptr_t>(this);
+        UserData userData;
+        userData.info.type = UserType::Collectable;
+        userData.info.pointer = static_cast<void*>(this);
+
+        body->GetUserData().pointer = userData.data;
     }
 
     std::pair<float, float> GetPosition(){
@@ -42,17 +44,20 @@ public:
     float GetRadius(){
         return radius_;
     }
-    virtual void OnContact(){
-        // Delete the collectable
-        if (body) {
-            body->GetWorld()->DestroyBody(body);
-            body = nullptr;
-        }
+
+    virtual void OnContact(Vehicle* car) = 0;
+
+    bool IsNull(){
+        return body == nullptr;
     }
+
+    //flag to delete item
+    void Collected(){hit = true;}
 
 private:
     b2Body* body;
     float radius_;
+    bool hit;
 };
 
 #endif
