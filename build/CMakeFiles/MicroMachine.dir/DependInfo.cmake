@@ -10,6 +10,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/huyenemma/cpp/micro-machine/src/game.cpp" "CMakeFiles/MicroMachine.dir/src/game.cpp.o" "gcc" "CMakeFiles/MicroMachine.dir/src/game.cpp.o.d"
   "/home/huyenemma/cpp/micro-machine/src/main.cpp" "CMakeFiles/MicroMachine.dir/src/main.cpp.o" "gcc" "CMakeFiles/MicroMachine.dir/src/main.cpp.o.d"
+  "/home/huyenemma/cpp/micro-machine/src/reScale.cpp" "CMakeFiles/MicroMachine.dir/src/reScale.cpp.o" "gcc" "CMakeFiles/MicroMachine.dir/src/reScale.cpp.o.d"
+  "/home/huyenemma/cpp/micro-machine/src/vehicle.cpp" "CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o" "gcc" "CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o.d"
+  "/home/huyenemma/cpp/micro-machine/src/world.cpp" "CMakeFiles/MicroMachine.dir/src/world.cpp.o" "gcc" "CMakeFiles/MicroMachine.dir/src/world.cpp.o.d"
   )
 
 # Targets to which this target links.

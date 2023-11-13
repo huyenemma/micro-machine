@@ -8,5 +8,20 @@
   "directory": "/home/huyenemma/cpp/micro-machine/build",
   "command": "/usr/bin/g++  -I/home/huyenemma/cpp/micro-machine/libs/include -g -Wall -Wextra -std=gnu++17 -o CMakeFiles/MicroMachine.dir/src/main.cpp.o -c /home/huyenemma/cpp/micro-machine/src/main.cpp",
   "file": "/home/huyenemma/cpp/micro-machine/src/main.cpp"
+},
+{
+  "directory": "/home/huyenemma/cpp/micro-machine/build",
+  "command": "/usr/bin/g++  -I/home/huyenemma/cpp/micro-machine/libs/include -g -Wall -Wextra -std=gnu++17 -o CMakeFiles/MicroMachine.dir/src/reScale.cpp.o -c /home/huyenemma/cpp/micro-machine/src/reScale.cpp",
+  "file": "/home/huyenemma/cpp/micro-machine/src/reScale.cpp"
+},
+{
+  "directory": "/home/huyenemma/cpp/micro-machine/build",
+  "command": "/usr/bin/g++  -I/home/huyenemma/cpp/micro-machine/libs/include -g -Wall -Wextra -std=gnu++17 -o CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o -c /home/huyenemma/cpp/micro-machine/src/vehicle.cpp",
+  "file": "/home/huyenemma/cpp/micro-machine/src/vehicle.cpp"
+},
+{
+  "directory": "/home/huyenemma/cpp/micro-machine/build",
+  "command": "/usr/bin/g++  -I/home/huyenemma/cpp/micro-machine/libs/include -g -Wall -Wextra -std=gnu++17 -o CMakeFiles/MicroMachine.dir/src/world.cpp.o -c /home/huyenemma/cpp/micro-machine/src/world.cpp",
+  "file": "/home/huyenemma/cpp/micro-machine/src/world.cpp"
 }
 ]

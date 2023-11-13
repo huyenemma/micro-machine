@@ -1,21 +1,31 @@
-#include "game.hpp"
+#include "./include/game.hpp"
 
-Game::Game() : window(sf::VideoMode(800, 600), "Mirco machine"),
-               world(b2Vec2(0.f, 9.8f)),
-               vehicle(world, 5, 5),
-{};
 
-void Game::run() {
+Game::Game(): window(sf::VideoMode(800, 600), "Mirco machine"), isRunning(false) {
+    world = new World(b2Vec2(0.0f, 0.0f));
+};
+
+Game::~Game() {
+    delete world; 
+}
+
+void Game::Initialize() { 
+    Vehicle* vehicle = new Vehicle(world->GetPhysicWorld(), 0, 0);
+    world->AddVehicle(vehicle);
+}
+
+void Game::Run() {
+    isRunning = true; 
     sf::Clock clock;
-    while (window.isOpen()) {
+    while (window.isOpen() && isRunning) {
         sf::Time deltaTime = clock.restart();
-        processEvents();
-        update(deltaTime);
-        render();
+        ProcessEvents();
+        Update(deltaTime);
+        Render();
     }
 }
 
-void Game::processEvents() {
+void Game::ProcessEvents() {
     sf::Event event;
     while (window.pollEvent(event)) {
         if (event.type == sf::Event::Closed)
@@ -23,29 +33,36 @@ void Game::processEvents() {
     }
 }
 
-void Game::handleInput() {
-    const float speed = 10.0f; // Adjust the speed as needed
+void Game::HandleInput() {
+    const float torque = 5.0f;  
+    Vehicle* vehicle = world->GetVehicle()[0];
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
         // Move car
-        vehicle.ToggleForce(true);
-        vehicle.UpdateSpeed();
+        vehicle->ToggleForce(true);
+        vehicle->UpdateSpeed();
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
         // turn right 
-        vehicle.Rotate(float torque = 1);
+        vehicle->Rotate(torque); 
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+        vehicle->Rotate(-torque); 
     } else {
         // Stop the paddle when no key is pressed
-        vehicle.ToggleForce(false);
+        vehicle->ToggleForce(false);
     }
 }
 
-void Game::update(sf::Time deltaTime) {
+void Game::Update(sf::Time deltaTime) {
     // Update car position
-    handleInput();
-    world.Step(deltaTime.asSeconds(), 8, 3);
+    HandleInput();
+    world->Update(deltaTime.asSeconds(), velocityIterations, positionIterations);
 }
 
-void Game::render() {
+void Game::Render() {
     window.clear();
-    window.draw(vehicle);
+    if (!world->GetVehicle().empty()) {
+        for (auto vehicle : world->GetVehicle()) {
+            window.draw(*vehicle);
+        }
+    }
     window.display();
 }

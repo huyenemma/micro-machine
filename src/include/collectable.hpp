@@ -1,11 +1,13 @@
 #ifndef COLLECTABLE_H
 #define COLLECTABLE_H
-#include <Box2D/Box2D.h>
+
+#include "../libs/include/Box2d/box2d.h"
+#include "./include/vehicle.hpp"
 #include <utility>
 
 class Collectable{
 public:
-    Collectable(b2World* world, b2Vec2 position, float radius) {
+    Collectable(b2World* world, b2Vec2 position, float radius) : radius_(radius){
         // Define the collectable's shape
         b2CircleShape shape;
         shape.m_radius = radius;
@@ -26,14 +28,20 @@ public:
         body->CreateFixture(&fixtureDef);
 
         // Set a custom user data to identify the collectable
-        fixtureDef.userData.pointer = reinterpret_cast<uintptr_t>(this);
+        //b2BodyUserData data = body->GetUserData();
+        //uintptr_t uintptrValue = reinterpret_cast<uintptr_t>(this);
+        //data.pointer = uintptrValue;
+        body->GetUserData().pointer = reinterpret_cast<uintptr_t>(this);
     }
 
-    std::pair<float, float> getPosition(){
+    std::pair<float, float> GetPosition(){
         b2Vec2 position = body->GetWorldCenter();
         return std::make_pair(position.x, position.y);
     }
 
+    float GetRadius(){
+        return radius_;
+    }
     virtual void OnContact(){
         // Delete the collectable
         if (body) {
@@ -44,5 +52,7 @@ public:
 
 private:
     b2Body* body;
+    float radius_;
 };
+
 #endif
