@@ -156,12 +156,7 @@ MicroMachine: CMakeFiles/MicroMachine.dir/src/reScale.cpp.o
 MicroMachine: CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o
 MicroMachine: CMakeFiles/MicroMachine.dir/src/world.cpp.o
 MicroMachine: CMakeFiles/MicroMachine.dir/build.make
-MicroMachine: /opt/homebrew/lib/libsfml-graphics.2.6.1.dylib
-MicroMachine: /opt/homebrew/lib/libsfml-window.2.6.1.dylib
-MicroMachine: /opt/homebrew/lib/libsfml-audio.2.6.1.dylib
-MicroMachine: /opt/homebrew/lib/libsfml-network.2.6.1.dylib
 MicroMachine: /Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/libs/arm64/libbox2d.a
-MicroMachine: /opt/homebrew/lib/libsfml-system.2.6.1.dylib
 MicroMachine: CMakeFiles/MicroMachine.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable MicroMachine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MicroMachine.dir/link.txt --verbose=$(VERBOSE)
