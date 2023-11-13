@@ -1,27 +1,29 @@
-#ifndef  WORLD_H
+#ifndef WORLD_H
 #define WORLD_H
 
-#include "../../libs/include/Box2d/box2d.h"
 #include <vector>
-#include "vehicle.hpp"
+
+#include "box2d/box2d.h"
 #include "constant.h"
+#include "vehicle.hpp"
 
 class World {
-private:
-  b2World* physicWorld;  
-  std::vector<Vehicle*> vehicles; 
-public:
+ private:
+  b2World* physicWorld;
+  std::vector<Vehicle*> vehicles;
+
+ public:
   // contructor
   World(b2Vec2 gravity);
   // destructor
-  ~World(); 
+  ~World();
   // update the physics world
   void Update(float timeStep, int velocityIterations, int positionIterations);
- 
+
   // add a vehicle to the world
   void AddVehicle(Vehicle* vehicle);
-  b2World* GetPhysicWorld() const; 
-  std::vector<Vehicle*>& GetVehicle(); 
+  b2World* GetPhysicWorld() const;
+  std::vector<Vehicle*>& GetVehicle();
 };
 
-#endif // WORLD_H
+#endif  // WORLD_H

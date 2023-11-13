@@ -1,3 +1,3 @@
-/home/huyenemma/cpp/micro-machine/build/CMakeFiles/MicroMachine.dir
-/home/huyenemma/cpp/micro-machine/build/CMakeFiles/edit_cache.dir
-/home/huyenemma/cpp/micro-machine/build/CMakeFiles/rebuild_cache.dir
+/Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/build/CMakeFiles/MicroMachine.dir
+/Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/build/CMakeFiles/edit_cache.dir
+/Users/tominhduy/cpp-course-autumn-2022/micro-machines-tuukka-himanka-1/build/CMakeFiles/rebuild_cache.dir
