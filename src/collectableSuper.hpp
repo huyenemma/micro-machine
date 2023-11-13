@@ -2,19 +2,23 @@
 #define COLLECTABLE_SUPER_HPP
 
 #include "collectable.hpp"
-
+#include <iostream>
 
 class CollectableSuper : public Collectable{
     public:
-    CollectableSuper(b2World* world, b2Vec2 position, float radius) : Collectable(world, position, radius) {}
+    CollectableSuper(b2World* world, b2Vec2 position, float radius) : Collectable(world, position, radius){}
 
-    void OnContact(Vehicle* carBody){
-        // Assuming the car body is passed as a parameter to the method
-        if (carBody) {
-            // Increase the car's speed or apply other game logic
-            //carBody->UpdateMaxSpeed();
+    void OnContact(Vehicle* car) override{
+        std::cout << "hit" << std::endl;
+        if (car != nullptr) {
+            if (!this->getDelete()){
+            car->UpdateMaxSpeed(10);
+            std::cout<<"toBeDeleted"<<std::endl;
+            this->setDelete();
+            }
         }
-    }  
+    }
+    
 };
 
 #endif

@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
@@ -19,7 +19,7 @@
 					]
 				}
 			],
-			"name" : "",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "MicroMachine::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-MicroMachine-87775c1ac6c8d3fef0f5.json",
+					"jsonFile" : "target-MicroMachine-Debug-7f3cf0b69358dbb69a1c.json",
 					"name" : "MicroMachine",
 					"projectIndex" : 0
 				}

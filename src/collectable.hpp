@@ -1,11 +1,14 @@
-#ifndef COLLECTABLE_HPP
-#define COLLECTABLE_HPP
+#ifndef COLLECTABLE_H
+#define COLLECTABLE_H
 
 #include "../libs/include/Box2d/box2d.h"
 #include "vehicle.hpp"
-#include "usertype.hpp"
 #include <utility>
+#include <iostream>
+#include "userDataPointer.hpp"
+#include "vehicle.hpp"
 
+using namespace BodyType;
 class Collectable{
 public:
     Collectable(b2World* world, b2Vec2 position, float radius) : radius_(radius){
@@ -28,35 +31,48 @@ public:
 
         body->CreateFixture(&fixtureDef);
 
+        // Set a custom user data to identify the collectable
+        //b2BodyUserData data = body->GetUserData();
+        //uintptr_t uintptrValue = reinterpret_cast<uintptr_t>(this);
+        //data.pointer = uintptrValue;
         UserData* data = new UserData(); // Allocate UserData on the heap
         data->info.type = UserType::Collectable;
         data->info.pointer = this;
         body->GetUserData().pointer = reinterpret_cast<uintptr_t>(data); 
-
-    }
+        }
 
     std::pair<float, float> GetPosition(){
         b2Vec2 position = body->GetWorldCenter();
         return std::make_pair(position.x, position.y);
     }
 
+    void DeleteBody() {
+
+        if((body != nullptr) && toBeDeleted) {
+            std::cout<<"Deleted"<<std::endl;
+            body->GetWorld()->DestroyBody(body);
+            body =nullptr;
+        }
+    }
+
     float GetRadius(){
         return radius_;
     }
 
-    virtual void OnContact() = 0;
-
-    bool IsNull(){
+    bool IsNullBody(){
         return body == nullptr;
     }
 
-    //flag to delete item
-    void Collected(){hit = true;}
+    void setDelete(){ toBeDeleted = true; }
 
+    bool getDelete(){ return toBeDeleted;}
+    virtual void OnContact(Vehicle* car) = 0;
+
+    
 private:
     b2Body* body;
     float radius_;
-    bool hit;
+    bool  toBeDeleted=false;
 };
 
 #endif

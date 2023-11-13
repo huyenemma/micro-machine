@@ -1,81 +1,53 @@
-#ifndef VEHICLE_HPP
-#define VEHICLE_HPP
 
-#include <math.h>
-#include <utility> 
+#ifndef VEHICLE_H
+#define VEHICLE_H
 #include "../libs/include/Box2d/box2d.h"
-#include "usertype.hpp"
 
-class Vehicle {
- private:
-  bool forceOn = false;
-  b2Body* m_body;
-  float maxSpeed = 40;
 
- public:
-  Vehicle(b2World* world, float x, float y);
 
-  ~Vehicle();
 
-  void UpdateSpeed() {
-    b2Vec2 vel = m_body->GetLinearVelocity();
-    float forceMagnitude = 0;
-    if (forceOn && abs(vel.x) < maxSpeed) {
-      forceMagnitude = 5*m_body->GetMass();
-    }
-    b2Vec2 force = b2Vec2(cos(m_body->GetAngle()) * forceMagnitude,
-                          sin(m_body->GetAngle()) * forceMagnitude);
-    m_body->ApplyForceToCenter(force, true);
-  };
+// Class representing a simple vehicle in a 2D physics world using Box2D
+class Vehicle
+{
+protected:
+    bool forceOn;   // Flag indicating whether a force is applied to the vehicle
+    b2Body* m_body; // Box2D body representing the vehicle
+    float maxSpeed;  // Maximum speed of the vehicle
+    
 
-  void Rotate(float torque = 100) { m_body->ApplyAngularImpulse(torque*m_body->GetMass(), true); }
+public:
+    // Constructor: Creates a new vehicle in the given Box2D world at the specified position (default at the origin)
+    Vehicle(b2World* world, float x = 0, float y = 0);
 
-  std::pair<float, float> GetPosition() {
-    b2Vec2 position = m_body->GetWorldCenter();
-    return std::make_pair(position.x, position.y);
-  }
+    // Destructor: Destroys the Box2D body associated with the vehicle
+    ~Vehicle();
 
-  void ToggleForce(bool value) { forceOn = value; };
+    // Update the speed of the vehicle based on applied force
+    void UpdateSpeed();
 
-  float GetAngle() { return m_body->GetAngle(); }
+    // Rotate the vehicle by applying angular impulse (default torque is 1)
+    void Rotate(float torque = 1);
 
-  float GetMass() {return m_body->GetMass();}
+    // Get the current position of the vehicle
+    std::pair<float, float> GetPosition();
 
-  void CollectableHit(b2Vec2 impulse){ m_body->ApplyLinearImpulse(impulse, m_body->GetWorldCenter(), true);}
+    // Toggle the force applied to the vehicle on/off
+    void ToggleForce(bool value);
 
-  void ProcessItem(){
+    // Get the current angle of the vehicle
+    float GetAngle();
 
-  };
+    // Placeholder function for processing items (to be implemented as needed)
+    void ProcessItem();
+
+    // A skill particular to each vehicle
+    void BoostSpeed(float boost);
+
+    void CrazyRotate(float torque, float boost, int times);
+
+    float GetMass();
+
+    void UpdateMaxSpeed(float speed);
 };
 
-Vehicle::Vehicle(b2World* world, float x = 0, float y = 0) {
-  b2BodyDef bodyDef;
-  bodyDef.type = b2_dynamicBody;
-  bodyDef.position.Set(x, y);
-
-  bodyDef.linearDamping = 0.6f;
-  bodyDef.angularDamping = 0.95f;
-  bodyDef.awake = true;
-  b2PolygonShape dynamicBox;
-  dynamicBox.SetAsBox(25.0f, 25.0f);
-
-  
-  b2FixtureDef fixtureDef;
-  fixtureDef.shape = &dynamicBox;
-  fixtureDef.density = 1.0f;
-  fixtureDef.friction = 0.3f;
-  
-
-  m_body = world->CreateBody(&bodyDef);
-  m_body->CreateFixture(&fixtureDef);
-
-  UserData* data = new UserData(); // Allocate UserData on the heap
-  data->info.type = UserType::Vehicle;
-  data->info.pointer = this;
-  m_body->GetUserData().pointer = reinterpret_cast<uintptr_t>(data);
-
-}
-
-Vehicle::~Vehicle() { m_body->GetWorld()->DestroyBody(m_body); }
-
-#endif
+#endif // VEHICLE_H

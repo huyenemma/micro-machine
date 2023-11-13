@@ -4,27 +4,20 @@
 #include "collectable.hpp"
 #include <iostream>
 
-
-
 class CollectableBad : public Collectable{
     public:
-    CollectableBad(b2World* world, b2Vec2 position, float radius, float decrease) : Collectable(world, position, radius), decrease_(decrease) {}
+    CollectableBad(b2World* world, b2Vec2 position, float radius) : Collectable(world, position, radius){}
 
-    void OnContact() override{
+    void OnContact(Vehicle* car) override{
         std::cout << "hit" << std::endl;
-        /*
-        if (carBody != nullptr) {
-            // Increase the car's speed or apply other game logic
-            std::cout << "hit" << std::endl;
-            b2Vec2 impulse(0.0f, -decrease_*carBody->GetMass()); // Adjust the impulse as needed
-            carBody->CollectableHit(impulse);
-            this->Collected();
+        if (car != nullptr) {
+            if (!this->getDelete()){
+            car->CrazyRotate(360, 20, 5);
+            std::cout<<"toBeDeleted"<<std::endl;
+            this->setDelete();
+            }
         }
-        */
     }
-
-    private:
-    float decrease_;
     
 };
 

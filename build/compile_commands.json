@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/Users/linh/micro-machines-tuukka-himanka-1/build",
+  "command": "/usr/bin/clang++  -I/Users/linh/micro-machines-tuukka-himanka-1/libs/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -Wall -Wextra -o CMakeFiles/MicroMachine.dir/src/main.cpp.o -c /Users/linh/micro-machines-tuukka-himanka-1/src/main.cpp",
+  "file": "/Users/linh/micro-machines-tuukka-himanka-1/src/main.cpp",
+  "output": "CMakeFiles/MicroMachine.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/linh/micro-machines-tuukka-himanka-1/build",
+  "command": "/usr/bin/clang++  -I/Users/linh/micro-machines-tuukka-himanka-1/libs/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -Wall -Wextra -o CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o -c /Users/linh/micro-machines-tuukka-himanka-1/src/userDataPointer.cpp",
+  "file": "/Users/linh/micro-machines-tuukka-himanka-1/src/userDataPointer.cpp",
+  "output": "CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o"
+},
+{
+  "directory": "/Users/linh/micro-machines-tuukka-himanka-1/build",
+  "command": "/usr/bin/clang++  -I/Users/linh/micro-machines-tuukka-himanka-1/libs/include -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -Wall -Wextra -o CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o -c /Users/linh/micro-machines-tuukka-himanka-1/src/vehicle.cpp",
+  "file": "/Users/linh/micro-machines-tuukka-himanka-1/src/vehicle.cpp",
+  "output": "CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o"
+}
+]

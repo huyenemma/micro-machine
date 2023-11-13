@@ -7,8 +7,9 @@
 #include "collectable.hpp"
 #include "obstacle.hpp"
 #include "vehicle.hpp"
+#include "contactlistener.hpp"
+#include "collectableGood.hpp"
 #include "collectableBad.hpp"
-#include "ContactListener.hpp"
 
 int main() {
   // Create the Box2D world
@@ -31,7 +32,7 @@ int main() {
   Obstacle obstacle(&world, b2Vec2(5.f, 10.f), 5.f);
 
   //Create a bad collectable object
-  CollectableBad collectable(&world, b2Vec2(100.f, 100.f), 20.f, 5.f);
+  CollectableBad collectable(&world, b2Vec2(100.f, 100.f), 20.f);
 
   // Main loop
   while (window.isOpen()) {
@@ -47,7 +48,7 @@ int main() {
           vehicle.ToggleForce(true);
         } else if (event.key.code == sf::Keyboard::D) {
           // Apply a torque (rotation) when the Right arrow key is pressed
-          vehicle.Rotate(100);
+          vehicle.Rotate(10);
         }
       } else if (event.type == sf::Event::KeyReleased) {
         if (event.key.code == sf::Keyboard::W) {
@@ -81,13 +82,14 @@ int main() {
 
 
     //Draw collectable
-    if (!collectable.IsNull()){
+    if (!collectable.IsNullBody()){
       std::pair<float, float> positionC = collectable.GetPosition();
       sf::CircleShape circle;
       circle.setRadius(collectable.GetRadius());
       circle.setPosition(positionC.first, positionC.second);
       circle.setFillColor(sf::Color::Green);
       window.draw(circle);
+      collectable.DeleteBody();
     }
     
 

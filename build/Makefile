@@ -153,6 +153,54 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/userDataPointer.o: src/userDataPointer.cpp.o
+.PHONY : src/userDataPointer.o
+
+# target to build an object file
+src/userDataPointer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o
+.PHONY : src/userDataPointer.cpp.o
+
+src/userDataPointer.i: src/userDataPointer.cpp.i
+.PHONY : src/userDataPointer.i
+
+# target to preprocess a source file
+src/userDataPointer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.i
+.PHONY : src/userDataPointer.cpp.i
+
+src/userDataPointer.s: src/userDataPointer.cpp.s
+.PHONY : src/userDataPointer.s
+
+# target to generate assembly for a file
+src/userDataPointer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.s
+.PHONY : src/userDataPointer.cpp.s
+
+src/vehicle.o: src/vehicle.cpp.o
+.PHONY : src/vehicle.o
+
+# target to build an object file
+src/vehicle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o
+.PHONY : src/vehicle.cpp.o
+
+src/vehicle.i: src/vehicle.cpp.i
+.PHONY : src/vehicle.i
+
+# target to preprocess a source file
+src/vehicle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/vehicle.cpp.i
+.PHONY : src/vehicle.cpp.i
+
+src/vehicle.s: src/vehicle.cpp.s
+.PHONY : src/vehicle.s
+
+# target to generate assembly for a file
+src/vehicle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/vehicle.cpp.s
+.PHONY : src/vehicle.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +213,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/userDataPointer.o"
+	@echo "... src/userDataPointer.i"
+	@echo "... src/userDataPointer.s"
+	@echo "... src/vehicle.o"
+	@echo "... src/vehicle.i"
+	@echo "... src/vehicle.s"
 .PHONY : help
 
 

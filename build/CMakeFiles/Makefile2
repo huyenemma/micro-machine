@@ -81,12 +81,12 @@ clean: CMakeFiles/MicroMachine.dir/clean
 CMakeFiles/MicroMachine.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles --progress-num=1,2 "Built target MicroMachine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles --progress-num=1,2,3,4 "Built target MicroMachine"
 .PHONY : CMakeFiles/MicroMachine.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MicroMachine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MicroMachine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles 0
 .PHONY : CMakeFiles/MicroMachine.dir/rule
