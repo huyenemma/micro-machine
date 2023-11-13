@@ -177,6 +177,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/map.o: src/map.cpp.o
+.PHONY : src/map.o
+
+# target to build an object file
+src/map.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/map.cpp.o
+.PHONY : src/map.cpp.o
+
+src/map.i: src/map.cpp.i
+.PHONY : src/map.i
+
+# target to preprocess a source file
+src/map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/map.cpp.i
+.PHONY : src/map.cpp.i
+
+src/map.s: src/map.cpp.s
+.PHONY : src/map.s
+
+# target to generate assembly for a file
+src/map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/map.cpp.s
+.PHONY : src/map.cpp.s
+
 src/reScale.o: src/reScale.cpp.o
 .PHONY : src/reScale.o
 
@@ -264,6 +288,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/map.o"
+	@echo "... src/map.i"
+	@echo "... src/map.s"
 	@echo "... src/reScale.o"
 	@echo "... src/reScale.i"
 	@echo "... src/reScale.s"

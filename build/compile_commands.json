@@ -11,6 +11,11 @@
 },
 {
   "directory": "/home/huyenemma/cpp/micro-machine/build",
+  "command": "/usr/bin/g++  -I/home/huyenemma/cpp/micro-machine/libs/include -g -Wall -Wextra -std=gnu++17 -o CMakeFiles/MicroMachine.dir/src/map.cpp.o -c /home/huyenemma/cpp/micro-machine/src/map.cpp",
+  "file": "/home/huyenemma/cpp/micro-machine/src/map.cpp"
+},
+{
+  "directory": "/home/huyenemma/cpp/micro-machine/build",
   "command": "/usr/bin/g++  -I/home/huyenemma/cpp/micro-machine/libs/include -g -Wall -Wextra -std=gnu++17 -o CMakeFiles/MicroMachine.dir/src/reScale.cpp.o -c /home/huyenemma/cpp/micro-machine/src/reScale.cpp",
   "file": "/home/huyenemma/cpp/micro-machine/src/reScale.cpp"
 },
