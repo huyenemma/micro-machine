@@ -32,5 +32,8 @@ elseif(UNIX AND NOT APPLE)
   target_link_libraries(MicroMachine ${PROJECT_SOURCE_DIR}/libs/unix/libbox2d.a)
 endif()
 
+# Where to find the headers
+target_include_directories(MicroMachine PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/include)
+
 # Add compile options for warnings, etc.
 target_compile_options(MicroMachine PRIVATE -Wall -Wextra)
