@@ -97,16 +97,80 @@ CMakeFiles/MicroMachine.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/main.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/huyenemma/cpp/micro-machine/src/main.cpp -o CMakeFiles/MicroMachine.dir/src/main.cpp.s
 
+CMakeFiles/MicroMachine.dir/src/map.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
+CMakeFiles/MicroMachine.dir/src/map.cpp.o: ../src/map.cpp
+CMakeFiles/MicroMachine.dir/src/map.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/huyenemma/cpp/micro-machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MicroMachine.dir/src/map.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/map.cpp.o -MF CMakeFiles/MicroMachine.dir/src/map.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/map.cpp.o -c /home/huyenemma/cpp/micro-machine/src/map.cpp
+
+CMakeFiles/MicroMachine.dir/src/map.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/map.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/huyenemma/cpp/micro-machine/src/map.cpp > CMakeFiles/MicroMachine.dir/src/map.cpp.i
+
+CMakeFiles/MicroMachine.dir/src/map.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/map.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/huyenemma/cpp/micro-machine/src/map.cpp -o CMakeFiles/MicroMachine.dir/src/map.cpp.s
+
+CMakeFiles/MicroMachine.dir/src/reScale.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
+CMakeFiles/MicroMachine.dir/src/reScale.cpp.o: ../src/reScale.cpp
+CMakeFiles/MicroMachine.dir/src/reScale.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/huyenemma/cpp/micro-machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MicroMachine.dir/src/reScale.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/reScale.cpp.o -MF CMakeFiles/MicroMachine.dir/src/reScale.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/reScale.cpp.o -c /home/huyenemma/cpp/micro-machine/src/reScale.cpp
+
+CMakeFiles/MicroMachine.dir/src/reScale.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/reScale.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/huyenemma/cpp/micro-machine/src/reScale.cpp > CMakeFiles/MicroMachine.dir/src/reScale.cpp.i
+
+CMakeFiles/MicroMachine.dir/src/reScale.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/reScale.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/huyenemma/cpp/micro-machine/src/reScale.cpp -o CMakeFiles/MicroMachine.dir/src/reScale.cpp.s
+
+CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
+CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o: ../src/vehicle.cpp
+CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/huyenemma/cpp/micro-machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o -MF CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o -c /home/huyenemma/cpp/micro-machine/src/vehicle.cpp
+
+CMakeFiles/MicroMachine.dir/src/vehicle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/vehicle.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/huyenemma/cpp/micro-machine/src/vehicle.cpp > CMakeFiles/MicroMachine.dir/src/vehicle.cpp.i
+
+CMakeFiles/MicroMachine.dir/src/vehicle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/vehicle.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/huyenemma/cpp/micro-machine/src/vehicle.cpp -o CMakeFiles/MicroMachine.dir/src/vehicle.cpp.s
+
+CMakeFiles/MicroMachine.dir/src/world.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
+CMakeFiles/MicroMachine.dir/src/world.cpp.o: ../src/world.cpp
+CMakeFiles/MicroMachine.dir/src/world.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/huyenemma/cpp/micro-machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MicroMachine.dir/src/world.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/world.cpp.o -MF CMakeFiles/MicroMachine.dir/src/world.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/world.cpp.o -c /home/huyenemma/cpp/micro-machine/src/world.cpp
+
+CMakeFiles/MicroMachine.dir/src/world.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/world.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/huyenemma/cpp/micro-machine/src/world.cpp > CMakeFiles/MicroMachine.dir/src/world.cpp.i
+
+CMakeFiles/MicroMachine.dir/src/world.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/world.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/huyenemma/cpp/micro-machine/src/world.cpp -o CMakeFiles/MicroMachine.dir/src/world.cpp.s
+
 # Object files for target MicroMachine
 MicroMachine_OBJECTS = \
 "CMakeFiles/MicroMachine.dir/src/game.cpp.o" \
-"CMakeFiles/MicroMachine.dir/src/main.cpp.o"
+"CMakeFiles/MicroMachine.dir/src/main.cpp.o" \
+"CMakeFiles/MicroMachine.dir/src/map.cpp.o" \
+"CMakeFiles/MicroMachine.dir/src/reScale.cpp.o" \
+"CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o" \
+"CMakeFiles/MicroMachine.dir/src/world.cpp.o"
 
 # External object files for target MicroMachine
 MicroMachine_EXTERNAL_OBJECTS =
 
 MicroMachine: CMakeFiles/MicroMachine.dir/src/game.cpp.o
 MicroMachine: CMakeFiles/MicroMachine.dir/src/main.cpp.o
+MicroMachine: CMakeFiles/MicroMachine.dir/src/map.cpp.o
+MicroMachine: CMakeFiles/MicroMachine.dir/src/reScale.cpp.o
+MicroMachine: CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o
+MicroMachine: CMakeFiles/MicroMachine.dir/src/world.cpp.o
 MicroMachine: CMakeFiles/MicroMachine.dir/build.make
 MicroMachine: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1
 MicroMachine: /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1
@@ -115,7 +179,7 @@ MicroMachine: /usr/lib/x86_64-linux-gnu/libsfml-network.so.2.5.1
 MicroMachine: ../libs/libbox2d.a
 MicroMachine: /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
 MicroMachine: CMakeFiles/MicroMachine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/huyenemma/cpp/micro-machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable MicroMachine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/huyenemma/cpp/micro-machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable MicroMachine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MicroMachine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
