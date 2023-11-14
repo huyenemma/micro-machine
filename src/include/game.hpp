@@ -4,16 +4,18 @@
 //#include "../../libs/include/SFML/Graphics.hpp"
 #include <SFML/Graphics.hpp>
 
-#include "constant.h"
+#include "constant.hpp"
 #include "vehicle.hpp"
-#include "constant.h"
+#include "constant.hpp"
+#include "world.hpp"
+#include "map.hpp"
 
 class Game {
 private:
     sf::RenderWindow window;  // The SFML window for rendering
     World* world;             // The physics world
     bool isRunning;           // Flag to check if the game is running
-
+    Map* map;
  public:
   // Constructor
   Game();

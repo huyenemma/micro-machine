@@ -1,9 +1,9 @@
 #ifndef VEHICLE_H
 #define VEHICLE_H
-#include <SFML/Graphics.hpp>
 
-#include "box2d/box2d.h"
-#include "constant.h"
+#include <SFML/Graphics.hpp>
+#include "box2dInclude.hpp"
+#include "constant.hpp"
 #include "reScale.hpp"
 
 // Class representing a simple vehicle in a 2D physics world using Box2D
