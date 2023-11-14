@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Detect OS and include directories accordingly
 if(APPLE)
   include_directories(${PROJECT_SOURCE_DIR}/libs/arm64/include)
-elseif(UNIX AND NOT APPLE)
+else()
   include_directories(${PROJECT_SOURCE_DIR}/libs/unix/include)
 endif()
 
