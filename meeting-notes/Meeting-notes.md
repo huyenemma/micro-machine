@@ -26,30 +26,36 @@ In each meeting, you are required to discuss:
 ## What we doned in last week: 
 
 ### Huyen 
-- Implement Game class (unfinished)
+- Implement Game , and world class
 
 ### Linh 
-- Implement Collectible classes
+- Implement Collectable
  
 ### Duy 
-- Implement Obstacle class, fix integration issues
+- Create Cmake file
 
 ### Quan 
-- Implement Vehicle class
+- Implement UserDataPointer
 
 # Todos
 
 ### Linh
-- Complete Collectible classes, implement Contact Listener
+- Implement a container for Buff (efficiency doesn't matter)
+- Refactor your ideas for collectable for Buff
 
 ### Quan 
-- Improve Vehicle class and Collectible class, implement Contact Listener
+- Improve Vehicle class 
+- Implement someBuff and finish the rest number of vehicle
 
 ### Duy 
-- Implement CMake and virtual environtment to ensure smootth collaboration and integration, implement Obstacle abstract class and Wall class
+- Cmake 
+- multiplayer if you have time  
+- Obstacle () stone: (you can use Linh previous work as references )
 
 ### Huyen 
-- Define World class
+- Render according to size of collectable 
+- Make sure the vehicle don't pass map boundary
+- Think ideas for score board game menu
 
 ## Next week goal Sat 14/11
 - Setup virtual environment and CMakeLists for smooth development
