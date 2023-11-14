@@ -46,6 +46,7 @@ In each meeting, you are required to discuss:
 ### Quan 
 - Improve Vehicle class 
 - Implement someBuff and finish the rest number of vehicle
+- check point
 
 ### Duy 
 - Cmake 
@@ -57,10 +58,8 @@ In each meeting, you are required to discuss:
 - Make sure the vehicle don't pass map boundary
 - Think ideas for score board game menu
 
-## Next week goal Sat 14/11
-- Setup virtual environment and CMakeLists for smooth development
-- Complete basic classes
-
+## Next week goal Sat 18/11
+- Finish the basic game:
 
 ## Project status  
 Basic layout of needed classes, acknowledgement of potential integration issues, implemented some parts of GUI
