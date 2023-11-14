@@ -1,15 +1,17 @@
 #include "./include/game.hpp"
 
-Game::Game()
-    : window(sf::VideoMode(800, 600), "Mirco machine"), isRunning(false) {
-  world = new World(b2Vec2(0.0f, 0.0f));
+
+Game::Game(): window(sf::VideoMode(800, 600), "Mirco machine"), isRunning(false) {
+    world = new World(b2Vec2(0.0f, 0.0f));
 };
 
-Game::~Game() { delete world; }
+Game::~Game() {
+    delete world; 
+}
 
-void Game::Initialize() {
-  Vehicle* vehicle = new Vehicle(world->GetPhysicWorld(), 0, 0);
-  world->AddVehicle(vehicle);
+void Game::Initialize() { 
+    Vehicle* vehicle = new Vehicle(world->GetPhysicWorld(), 0, 0);
+    world->AddVehicle(vehicle);
 }
 
 void Game::Run() {
@@ -55,11 +57,11 @@ void Game::Update(sf::Time deltaTime) {
 }
 
 void Game::Render() {
-  window.clear();
-  if (!world->GetVehicle().empty()) {
-    for (auto vehicle : world->GetVehicle()) {
-      window.draw(*vehicle);
+    window.clear();
+    if (!world->GetVehicle().empty()) {
+        for (auto vehicle : world->GetVehicle()) {
+            window.draw(*vehicle);
+        }
     }
-  }
-  window.display();
+    window.display();
 }

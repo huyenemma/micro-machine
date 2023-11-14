@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "box2d/box2d.h"
-#include "constant.h"
+#include "constant.hpp"
 #include "reScale.hpp"
 
 // Class representing a simple vehicle in a 2D physics world using Box2D
