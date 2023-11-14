@@ -69,50 +69,80 @@ include CMakeFiles/MicroMachine.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/MicroMachine.dir/flags.make
 
+CMakeFiles/MicroMachine.dir/src/colletable.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
+CMakeFiles/MicroMachine.dir/src/colletable.cpp.o: /Users/linh/micro-machines-tuukka-himanka-1/src/colletable.cpp
+CMakeFiles/MicroMachine.dir/src/colletable.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MicroMachine.dir/src/colletable.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/colletable.cpp.o -MF CMakeFiles/MicroMachine.dir/src/colletable.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/colletable.cpp.o -c /Users/linh/micro-machines-tuukka-himanka-1/src/colletable.cpp
+
+CMakeFiles/MicroMachine.dir/src/colletable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/colletable.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/linh/micro-machines-tuukka-himanka-1/src/colletable.cpp > CMakeFiles/MicroMachine.dir/src/colletable.cpp.i
+
+CMakeFiles/MicroMachine.dir/src/colletable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/colletable.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/linh/micro-machines-tuukka-himanka-1/src/colletable.cpp -o CMakeFiles/MicroMachine.dir/src/colletable.cpp.s
+
+CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
+CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.o: /Users/linh/micro-machines-tuukka-himanka-1/src/contactlistener.cpp
+CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.o -MF CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.o -c /Users/linh/micro-machines-tuukka-himanka-1/src/contactlistener.cpp
+
+CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/linh/micro-machines-tuukka-himanka-1/src/contactlistener.cpp > CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.i
+
+CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/linh/micro-machines-tuukka-himanka-1/src/contactlistener.cpp -o CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.s
+
 CMakeFiles/MicroMachine.dir/src/main.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
 CMakeFiles/MicroMachine.dir/src/main.cpp.o: /Users/linh/micro-machines-tuukka-himanka-1/src/main.cpp
 CMakeFiles/MicroMachine.dir/src/main.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MicroMachine.dir/src/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/main.cpp.o -MF CMakeFiles/MicroMachine.dir/src/main.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/main.cpp.o -c /Users/linh/micro-machines-tuukka-himanka-1/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MicroMachine.dir/src/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/main.cpp.o -MF CMakeFiles/MicroMachine.dir/src/main.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/main.cpp.o -c /Users/linh/micro-machines-tuukka-himanka-1/src/main.cpp
 
 CMakeFiles/MicroMachine.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/linh/micro-machines-tuukka-himanka-1/src/main.cpp > CMakeFiles/MicroMachine.dir/src/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/linh/micro-machines-tuukka-himanka-1/src/main.cpp > CMakeFiles/MicroMachine.dir/src/main.cpp.i
 
 CMakeFiles/MicroMachine.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/linh/micro-machines-tuukka-himanka-1/src/main.cpp -o CMakeFiles/MicroMachine.dir/src/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/linh/micro-machines-tuukka-himanka-1/src/main.cpp -o CMakeFiles/MicroMachine.dir/src/main.cpp.s
 
 CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
 CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o: /Users/linh/micro-machines-tuukka-himanka-1/src/userDataPointer.cpp
 CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o -MF CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o -c /Users/linh/micro-machines-tuukka-himanka-1/src/userDataPointer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o -MF CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o -c /Users/linh/micro-machines-tuukka-himanka-1/src/userDataPointer.cpp
 
 CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/linh/micro-machines-tuukka-himanka-1/src/userDataPointer.cpp > CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/linh/micro-machines-tuukka-himanka-1/src/userDataPointer.cpp > CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.i
 
 CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/linh/micro-machines-tuukka-himanka-1/src/userDataPointer.cpp -o CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/linh/micro-machines-tuukka-himanka-1/src/userDataPointer.cpp -o CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.s
 
 CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
 CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o: /Users/linh/micro-machines-tuukka-himanka-1/src/vehicle.cpp
 CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o -MF CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o -c /Users/linh/micro-machines-tuukka-himanka-1/src/vehicle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o -MF CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o -c /Users/linh/micro-machines-tuukka-himanka-1/src/vehicle.cpp
 
 CMakeFiles/MicroMachine.dir/src/vehicle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/vehicle.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/linh/micro-machines-tuukka-himanka-1/src/vehicle.cpp > CMakeFiles/MicroMachine.dir/src/vehicle.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/linh/micro-machines-tuukka-himanka-1/src/vehicle.cpp > CMakeFiles/MicroMachine.dir/src/vehicle.cpp.i
 
 CMakeFiles/MicroMachine.dir/src/vehicle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/vehicle.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/linh/micro-machines-tuukka-himanka-1/src/vehicle.cpp -o CMakeFiles/MicroMachine.dir/src/vehicle.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/linh/micro-machines-tuukka-himanka-1/src/vehicle.cpp -o CMakeFiles/MicroMachine.dir/src/vehicle.cpp.s
 
 # Object files for target MicroMachine
 MicroMachine_OBJECTS = \
+"CMakeFiles/MicroMachine.dir/src/colletable.cpp.o" \
+"CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.o" \
 "CMakeFiles/MicroMachine.dir/src/main.cpp.o" \
 "CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o" \
 "CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o"
@@ -120,6 +150,8 @@ MicroMachine_OBJECTS = \
 # External object files for target MicroMachine
 MicroMachine_EXTERNAL_OBJECTS =
 
+MicroMachine: CMakeFiles/MicroMachine.dir/src/colletable.cpp.o
+MicroMachine: CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.o
 MicroMachine: CMakeFiles/MicroMachine.dir/src/main.cpp.o
 MicroMachine: CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o
 MicroMachine: CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o
@@ -129,7 +161,7 @@ MicroMachine: /Users/linh/micro-machines-tuukka-himanka-1/libs/libbox2d.a
 MicroMachine: /opt/homebrew/lib/libsfml-window.2.6.1.dylib
 MicroMachine: /opt/homebrew/lib/libsfml-system.2.6.1.dylib
 MicroMachine: CMakeFiles/MicroMachine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable MicroMachine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable MicroMachine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MicroMachine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

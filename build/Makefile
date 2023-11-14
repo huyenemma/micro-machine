@@ -129,6 +129,54 @@ MicroMachine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/build
 .PHONY : MicroMachine/fast
 
+src/colletable.o: src/colletable.cpp.o
+.PHONY : src/colletable.o
+
+# target to build an object file
+src/colletable.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/colletable.cpp.o
+.PHONY : src/colletable.cpp.o
+
+src/colletable.i: src/colletable.cpp.i
+.PHONY : src/colletable.i
+
+# target to preprocess a source file
+src/colletable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/colletable.cpp.i
+.PHONY : src/colletable.cpp.i
+
+src/colletable.s: src/colletable.cpp.s
+.PHONY : src/colletable.s
+
+# target to generate assembly for a file
+src/colletable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/colletable.cpp.s
+.PHONY : src/colletable.cpp.s
+
+src/contactlistener.o: src/contactlistener.cpp.o
+.PHONY : src/contactlistener.o
+
+# target to build an object file
+src/contactlistener.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.o
+.PHONY : src/contactlistener.cpp.o
+
+src/contactlistener.i: src/contactlistener.cpp.i
+.PHONY : src/contactlistener.i
+
+# target to preprocess a source file
+src/contactlistener.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.i
+.PHONY : src/contactlistener.cpp.i
+
+src/contactlistener.s: src/contactlistener.cpp.s
+.PHONY : src/contactlistener.s
+
+# target to generate assembly for a file
+src/contactlistener.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.s
+.PHONY : src/contactlistener.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -210,6 +258,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MicroMachine"
+	@echo "... src/colletable.o"
+	@echo "... src/colletable.i"
+	@echo "... src/colletable.s"
+	@echo "... src/contactlistener.o"
+	@echo "... src/contactlistener.i"
+	@echo "... src/contactlistener.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

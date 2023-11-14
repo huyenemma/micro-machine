@@ -35,8 +35,6 @@ Vehicle::Vehicle(b2World* world, float x , float y )
     m_body = world->CreateBody(&bodyDef);
     m_body->CreateFixture(&fixtureDef);
 
-
-
     UserData* data = new UserData(); // Allocate UserData on the heap
     data->info.type = UserType::Vehicle;
     data->info.pointer = this;

@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/MicroMachine.dir/src/colletable.cpp.o"
+  "CMakeFiles/MicroMachine.dir/src/colletable.cpp.o.d"
+  "CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.o"
+  "CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.o.d"
   "CMakeFiles/MicroMachine.dir/src/main.cpp.o"
   "CMakeFiles/MicroMachine.dir/src/main.cpp.o.d"
   "CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o"
