@@ -14,6 +14,7 @@ protected:
     b2Body* m_body; // Box2D body representing the vehicle
     float maxSpeed;  // Maximum speed of the vehicle
     
+    
 
 public:
     // Constructor: Creates a new vehicle in the given Box2D world at the specified position (default at the origin)
@@ -48,6 +49,7 @@ public:
     float GetMass();
 
     void UpdateMaxSpeed(float speed);
+
 };
 
 #endif // VEHICLE_H

@@ -42,9 +42,9 @@ Vehicle::Vehicle(b2World* world, float x , float y )
 }
 
 
-
 Vehicle::~Vehicle()
-{
+{   
+    delete reinterpret_cast<UserData*>(m_body->GetUserData().pointer);
     m_body->GetWorld()->DestroyBody(m_body);
 }
 
@@ -97,6 +97,7 @@ void Vehicle::BoostSpeed(float boost){
 
 void Vehicle::CrazyRotate(float torque, float boost, int times){
     for (int i = 0; i < times; i++){
+        std::cout << "hi" <<std::endl;
         b2Vec2 force = b2Vec2(cos(m_body->GetAngle()) * -boost * m_body->GetMass(), sin(m_body->GetAngle()) * -boost * m_body->GetMass());
         m_body->ApplyForceToCenter(force, true);
         this->ToggleForce(true);
@@ -105,6 +106,7 @@ void Vehicle::CrazyRotate(float torque, float boost, int times){
     std::cout << "slow down" << std::endl;
 }
 
+
 float Vehicle::GetMass(){
     return m_body->GetMass();
 }
@@ -112,3 +114,4 @@ float Vehicle::GetMass(){
 void Vehicle::UpdateMaxSpeed(float speed){
     maxSpeed = maxSpeed + speed;
 }
+

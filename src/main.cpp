@@ -7,7 +7,7 @@
 #include "collectable.hpp"
 #include "obstacle.hpp"
 #include "vehicle.hpp"
-#include "contactlistener.hpp"
+#include "ContactListener.hpp"
 #include "collectableGood.hpp"
 #include "collectableBad.hpp"
 
@@ -42,7 +42,7 @@ int main() {
     while (window.pollEvent(event)) {
       if (event.type == sf::Event::Closed) {
         window.close();
-      } else if (event.type == sf::Event::KeyPressed) {
+      } else if (event.type == sf::Event::KeyPressed)  {
         if (event.key.code == sf::Keyboard::W) {
           // Apply a force when the Up arrow key is pressed
           vehicle.ToggleForce(true);

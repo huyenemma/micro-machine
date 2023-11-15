@@ -129,6 +129,30 @@ MicroMachine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/build
 .PHONY : MicroMachine/fast
 
+src/ContactListener.o: src/ContactListener.cpp.o
+.PHONY : src/ContactListener.o
+
+# target to build an object file
+src/ContactListener.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.o
+.PHONY : src/ContactListener.cpp.o
+
+src/ContactListener.i: src/ContactListener.cpp.i
+.PHONY : src/ContactListener.i
+
+# target to preprocess a source file
+src/ContactListener.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.i
+.PHONY : src/ContactListener.cpp.i
+
+src/ContactListener.s: src/ContactListener.cpp.s
+.PHONY : src/ContactListener.s
+
+# target to generate assembly for a file
+src/ContactListener.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.s
+.PHONY : src/ContactListener.cpp.s
+
 src/colletable.o: src/colletable.cpp.o
 .PHONY : src/colletable.o
 
@@ -152,30 +176,6 @@ src/colletable.s: src/colletable.cpp.s
 src/colletable.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/colletable.cpp.s
 .PHONY : src/colletable.cpp.s
-
-src/contactlistener.o: src/contactlistener.cpp.o
-.PHONY : src/contactlistener.o
-
-# target to build an object file
-src/contactlistener.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.o
-.PHONY : src/contactlistener.cpp.o
-
-src/contactlistener.i: src/contactlistener.cpp.i
-.PHONY : src/contactlistener.i
-
-# target to preprocess a source file
-src/contactlistener.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.i
-.PHONY : src/contactlistener.cpp.i
-
-src/contactlistener.s: src/contactlistener.cpp.s
-.PHONY : src/contactlistener.s
-
-# target to generate assembly for a file
-src/contactlistener.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/src/contactlistener.cpp.s
-.PHONY : src/contactlistener.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -258,12 +258,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MicroMachine"
+	@echo "... src/ContactListener.o"
+	@echo "... src/ContactListener.i"
+	@echo "... src/ContactListener.s"
 	@echo "... src/colletable.o"
 	@echo "... src/colletable.i"
 	@echo "... src/colletable.s"
-	@echo "... src/contactlistener.o"
-	@echo "... src/contactlistener.i"
-	@echo "... src/contactlistener.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

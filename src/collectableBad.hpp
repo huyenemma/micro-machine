@@ -12,9 +12,9 @@ class CollectableBad : public Collectable{
         std::cout << "hit" << std::endl;
         if (car != nullptr) {
             if (!this->getDelete()){
-            car->CrazyRotate(360, 20, 5);
-            std::cout<<"toBeDeleted"<<std::endl;
-            this->setDelete();
+                car->CrazyRotate(5, 20, 5);
+                std::cout<<"toBeDeleted"<<std::endl;
+                this->setDelete();
             }
         }
     }
