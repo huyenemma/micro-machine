@@ -15,6 +15,12 @@ class Vehicle : public sf::Drawable {
   mutable sf::Sprite sprite;
   sf::Texture texture;
 
+  //Variable that relate to Buff with 1 as default value
+  float forceBuff     = 1.0f;
+  float MaxSpeedBuff  = 1.0f; 
+  float SizeBuff      = 1.0f;
+  float TorqueBuff    = 1.0f;
+
  public:
   // Constructor: Creates a new vehicle in the given Box2D world at the
   // specified position (default at the origin)
@@ -43,6 +49,7 @@ class Vehicle : public sf::Drawable {
 
   // A skill particular to each vehicle
   // virtual void SuperSkill() = 0;
+<<<<<<< HEAD
 
    // Boost the speed of the vehicle in a certain time
   void BoostSpeed(float boost);
@@ -57,8 +64,14 @@ class Vehicle : public sf::Drawable {
   void UpdateMaxSpeed(float speed);
 
 
+=======
+>>>>>>> 060bdf3 (Add some skeleton file for buff)
   // draw vehicle
   virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+
+  //Multiply 
+  void ApplyBuff(float forceMul, float MaxSpeedMul,float SizeMul,float TorqueMul);
+
 };
 
 #endif  // VEHICLE_H

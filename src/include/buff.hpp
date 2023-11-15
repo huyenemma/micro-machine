@@ -7,8 +7,9 @@
 #include "timer.hpp"
 
 class Buff : public Timer {
-private:
+protected:
     std::string id; 
+    Vehicle* vehicle;
 public:
     Buff(Vehicle* vehicle, std::string id ,int duration); 
 
