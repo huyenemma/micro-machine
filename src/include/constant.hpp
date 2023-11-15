@@ -20,4 +20,7 @@ constexpr float BOX_HEIGHT = 1.0f;
 constexpr float DENSITY = 1.0f;
 constexpr float FRICTION = 0.3f;
 constexpr float FORCE_MAGNITUDE = 5.0f;
+
+//NegativeBuff
+
 #endif
