@@ -44,6 +44,19 @@ class Vehicle : public sf::Drawable {
   // A skill particular to each vehicle
   // virtual void SuperSkill() = 0;
 
+   // Boost the speed of the vehicle in a certain time
+  void BoostSpeed(float boost);
+
+  //Rotate the vehicle multiple rounds
+  void CrazyRotate(float torque, float boost, int times);
+
+  //Get the mass of vehicle
+  float GetMass();
+
+  //Change the max speed of the vehicle
+  void UpdateMaxSpeed(float speed);
+
+
   // draw vehicle
   virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };

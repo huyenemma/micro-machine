@@ -80,3 +80,31 @@ void Vehicle::draw(sf::RenderTarget& target, sf::RenderStates states) const
 //{
     // Implementation for processing items
 //}
+
+void Vehicle::BoostSpeed(float boost){
+    b2Vec2 force = b2Vec2(cos(m_body->GetAngle()) * boost * m_body->GetMass(), sin(m_body->GetAngle()) * boost * m_body->GetMass());
+    m_body->ApplyForceToCenter(force, true);
+    this->ToggleForce(true);
+    std::cout << "speedzz" << std::endl;
+}
+
+void Vehicle::CrazyRotate(float torque, float boost, int times){
+    for (int i = 0; i < times; i++){
+        std::cout << "hi" <<std::endl;
+        b2Vec2 force = b2Vec2(cos(m_body->GetAngle()) * -boost * m_body->GetMass(), sin(m_body->GetAngle()) * -boost * m_body->GetMass());
+        m_body->ApplyForceToCenter(force, true);
+        this->ToggleForce(true);
+        m_body->ApplyAngularImpulse(torque*m_body->GetMass(), true); 
+    }
+    std::cout << "slow down" << std::endl;
+}
+
+
+float Vehicle::GetMass(){
+    return m_body->GetMass();
+}
+
+void Vehicle::UpdateMaxSpeed(float speed){
+    maxSpeed = maxSpeed + speed;
+}
+
