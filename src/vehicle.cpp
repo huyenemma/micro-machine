@@ -5,9 +5,9 @@
 Vehicle::Vehicle(b2World* world, float x , float y )
     : forceOn(false), m_body(nullptr), maxSpeed(MAX_SPEED) 
 {
-    texture.loadFromFile("../img/runninggoat.png");
+    texture.loadFromFile("../img/buffalo.png");
     sprite.setTexture(texture);
-    rescaleSprite(sprite, 80.0f, 40.0f);
+    rescaleSprite(sprite, 60.0f, 60.0f);
 
     b2BodyDef bodyDef;
     bodyDef.type = b2_dynamicBody;
@@ -36,8 +36,7 @@ void Vehicle::UpdateSpeed() {
     b2Vec2 vel = m_body->GetLinearVelocity();
     float forceMagnitude = 0;
 
-    float currentSpeed = vel.Length();
-    std::cout << "Current Speed: " << currentSpeed << std::endl;
+    std::cout << "Current position: " << GetPosition().first * SCALE << "," << GetPosition().second * SCALE << std::endl;
 
     if (forceOn && std::abs(vel.x) < maxSpeed)
     {

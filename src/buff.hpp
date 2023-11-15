@@ -1,4 +1,3 @@
-
 #ifndef BUFF_HPP
 #define BUFF_HPP
 

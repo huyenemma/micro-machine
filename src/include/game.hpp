@@ -38,6 +38,12 @@ private:
   // Update game state
   void Update(sf::Time deltaTime);
 
+  //  Add boundary for game window: 
+  void AddBoundaries();
+
+  // add unpassable wall
+  void CreateWall(const b2Vec2& position, const b2Vec2& size); 
+
   // Render the game
   void Render();
 };

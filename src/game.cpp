@@ -13,6 +13,8 @@ Game::~Game() {
 void Game::Initialize() { 
     Vehicle* vehicle = new Vehicle(world->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE);
     world->AddVehicle(vehicle);
+
+    AddBoundaries();
 }
 
 void Game::Run() {
@@ -56,6 +58,41 @@ void Game::Update(sf::Time deltaTime) {
     // Update car position
     HandleInput();
     world->Update(deltaTime.asSeconds(), velocityIterations, positionIterations);
+}
+
+void Game::AddBoundaries() {
+    float worldWidth = 800.0f / SCALE; // Width of your window in Box2D units
+    float worldHeight = 800.0f / SCALE; // Height of your window in Box2D units
+    float thickness = 0.0005f / SCALE; // Thickness of the boundary walls
+
+    // Define the positions and sizes of the boundary walls
+    b2Vec2 topWallPos(worldWidth / 2, thickness / 2);
+    b2Vec2 bottomWallPos(worldWidth / 2, worldHeight - thickness / 2);
+    b2Vec2 leftWallPos(thickness / 2, worldHeight / 2);
+    b2Vec2 rightWallPos(worldWidth - thickness / 2, worldHeight / 2);
+
+    b2Vec2 horizontalSize(worldWidth, thickness);
+    b2Vec2 verticalSize(thickness, worldHeight);
+
+    // Create each wall as a static body
+    CreateWall(topWallPos, horizontalSize);
+    CreateWall(bottomWallPos, horizontalSize);
+    CreateWall(leftWallPos, verticalSize);
+    CreateWall(rightWallPos, verticalSize);
+}
+
+void Game::CreateWall(const b2Vec2& position, const b2Vec2& size) {
+    b2BodyDef bodyDef;
+    bodyDef.position = position;
+    bodyDef.type = b2_staticBody;
+    b2Body* body = world->GetPhysicWorld()->CreateBody(&bodyDef);
+
+    b2PolygonShape shape;
+    shape.SetAsBox(size.x / 2, size.y / 2);
+
+    b2FixtureDef fixtureDef;
+    fixtureDef.shape = &shape;
+    body->CreateFixture(&fixtureDef);
 }
 
 void Game::Render() {
