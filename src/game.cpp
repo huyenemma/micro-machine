@@ -66,5 +66,11 @@ void Game::Render() {
             window.draw(*vehicle);
         }
     }
+
+    if (!world->GetCollectable().empty()) {
+        for (auto collectable : world->GetCollectable()){
+            window.draw(*collectable);
+        }
+    }
     window.display();
 }

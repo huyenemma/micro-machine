@@ -6,12 +6,19 @@
 #include "vehicle.hpp"
 #include "timer.hpp"
 
+enum buffType {
+    onetime,
+    continuous,
+};
+
 class Buff : public Timer {
 protected:
     std::string id; 
     Vehicle* vehicle;
 public:
-    Buff(Vehicle* vehicle, std::string id ,int duration); 
+    Buff(Vehicle* vehicle, std::string id ,int duration): Timer(id,duration){
+        this->vehicle = vehicle;
+    }; 
 
     virtual ~Buff(){};
 

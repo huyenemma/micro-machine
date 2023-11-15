@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/MicroMachine.dir/src/main.cpp.o.d"
   "CMakeFiles/MicroMachine.dir/src/map.cpp.o"
   "CMakeFiles/MicroMachine.dir/src/map.cpp.o.d"
+  "CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.o"
+  "CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.o.d"
   "CMakeFiles/MicroMachine.dir/src/reScale.cpp.o"
   "CMakeFiles/MicroMachine.dir/src/reScale.cpp.o.d"
   "CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o"

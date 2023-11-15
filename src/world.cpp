@@ -22,6 +22,10 @@ void World::AddVehicle(Vehicle* vehicle) {
   vehicles.push_back(vehicle); 
 }
 
+void World::AddCollectable(Collectable* collectable) {
+  collectables.push_back(collectable);
+}
+
 b2World* World::GetPhysicWorld() const {
   return physicWorld;
 } 
@@ -29,3 +33,7 @@ b2World* World::GetPhysicWorld() const {
 std::vector<Vehicle*>& World::GetVehicle() {
   return vehicles; 
 } 
+
+std::vector<Collectable*>& World::GetCollectable() {
+  return collectables;
+}

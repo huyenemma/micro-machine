@@ -108,3 +108,22 @@ void Vehicle::UpdateMaxSpeed(float speed){
     maxSpeed = maxSpeed + speed;
 }
 
+void Vehicle::AddBuff(Buff* buff) {
+    buffs.push_back(buff);
+}
+
+void Vehicle::UpdateBuff() {
+    std::vector<Buff*>::iterator it = buffs.begin();
+
+    // Iterate until the end of the vector is reached
+    while (it != buffs.end()) {
+        (*it)->Tick();
+        (*it)->ApplyEffect();
+        ++it;
+    };
+}
+
+void Vehicle::Update() {
+    UpdateSpeed();
+    UpdateBuff();
+}

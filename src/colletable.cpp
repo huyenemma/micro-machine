@@ -1,6 +1,6 @@
 #include "collectable.hpp"
 
-Collectable::Collectable(b2World* world, b2Vec2 position, float radius) : radius_(radius){
+Collectable::Collectable(b2World* world, b2Vec2 position, float radius ,Buff* buff) : radius_(radius) ,buff(buff){
     // Define the collectable's shape
     b2CircleShape shape;
     shape.m_radius = radius;
@@ -31,7 +31,7 @@ Collectable::Collectable(b2World* world, b2Vec2 position, float radius) : radius
 }
 
 
-std::pair<float, float> Collectable::GetPosition(){
+std::pair<float, float> Collectable::GetPosition() const {
     b2Vec2 position = body->GetWorldCenter();
     return std::make_pair(position.x, position.y);
 }
@@ -52,3 +52,15 @@ bool Collectable::IsNullBody(){ return body == nullptr; }
 void Collectable::setDelete(){ toBeDeleted = true; }
 
 bool Collectable::getDelete(){ return toBeDeleted; }
+
+
+void Collectable::draw(sf::RenderTarget& target, sf::RenderStates states) const 
+{
+    auto pos = GetPosition(); 
+    sprite.setPosition(pos.first * SCALE, pos.second * SCALE); 
+
+    float angleDegrees = body->GetAngle() * (180 / b2_pi);
+    sprite.setRotation(angleDegrees);
+
+    target.draw(sprite, states);
+}

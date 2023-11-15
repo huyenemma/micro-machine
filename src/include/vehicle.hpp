@@ -5,6 +5,7 @@
 #include "box2dInclude.hpp"
 #include "constant.hpp"
 #include "reScale.hpp"
+#include "buff.hpp"
 
 // Class representing a simple vehicle in a 2D physics world using Box2D
 class Vehicle : public sf::Drawable {
@@ -21,6 +22,10 @@ class Vehicle : public sf::Drawable {
   float SizeBuff      = 1.0f;
   float TorqueBuff    = 1.0f;
 
+  //A collection of Buffs
+
+  std::vector<Buff*> buffs;
+
  public:
   // Constructor: Creates a new vehicle in the given Box2D world at the
   // specified position (default at the origin)
@@ -28,6 +33,8 @@ class Vehicle : public sf::Drawable {
 
   // Destructor: Destroys the Box2D body associated with the vehicle
   ~Vehicle();
+
+  void Update();
 
   // Update the speed of the vehicle based on applied force
   void UpdateSpeed();
@@ -47,9 +54,9 @@ class Vehicle : public sf::Drawable {
   // Placeholder function for processing items (to be implemented as needed)
   void ProcessItem();
 
+  // Nhung function vo tri cua pe linh
   // A skill particular to each vehicle
   // virtual void SuperSkill() = 0;
-<<<<<<< HEAD
 
    // Boost the speed of the vehicle in a certain time
   void BoostSpeed(float boost);
@@ -64,14 +71,15 @@ class Vehicle : public sf::Drawable {
   void UpdateMaxSpeed(float speed);
 
 
-=======
->>>>>>> 060bdf3 (Add some skeleton file for buff)
   // draw vehicle
   virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
   //Multiply 
   void ApplyBuff(float forceMul, float MaxSpeedMul,float SizeMul,float TorqueMul);
 
+  void AddBuff(Buff* buff);
+
+  void UpdateBuff();
 };
 
 #endif  // VEHICLE_H

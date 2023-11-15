@@ -7,14 +7,15 @@
 #include <iostream>
 #include "userDataPointer.hpp"
 #include "vehicle.hpp"
+#include "buff.hpp"
 
 using namespace BodyType;
 class Collectable{
 public:
-    Collectable(b2World* world, b2Vec2 position, float radius);
+    Collectable(b2World* world, b2Vec2 position, float radius,Buff* buff);
 
-    std::pair<float, float> GetPosition();
-
+    std::pair<float, float> GetPosition() const;
+    
     void DeleteBody();
 
     float GetRadius();
@@ -25,10 +26,16 @@ public:
 
     bool getDelete();
     
-    virtual void OnContact(Vehicle* car) = 0;
+    virtual void OnContact(Vehicle* car) ;
+
+
+    virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+
 
     
 private:
+    mutable sf::Sprite sprite;
+    Buff* buff;
     b2Body* body;
     float radius_;
     bool  toBeDeleted=false;

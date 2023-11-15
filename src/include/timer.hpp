@@ -9,7 +9,7 @@ private:
     int timeLeft;
 
 public:
-    Timer(std::string id, int timeLeft);
+    Timer(std::string id, int timeLeft):id(id),timeLeft(timeLeft){};
 
     virtual ~Timer();
 
