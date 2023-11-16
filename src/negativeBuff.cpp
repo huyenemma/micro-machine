@@ -13,3 +13,7 @@ void ReverseMushroom::ReverseEffect(){
 ReverseMushroom::ReverseMushroom(Vehicle* vehicle,std::string id,int duration,float Intensity):Buff(vehicle,id,duration) {
     buffIntensity = Intensity;
 }
+
+ReverseMushroom::~ReverseMushroom() {
+    
+}

@@ -112,6 +112,14 @@ void Vehicle::AddBuff(Buff* buff) {
     buffs.push_back(buff);
 }
 
+void Vehicle::ApplyBuff(float forceMul, float MaxSpeedMul,float SizeMul,float TorqueMul){
+    forceBuff *=forceMul;
+    MaxSpeedBuff *= MaxSpeedMul;
+    SizeBuff    *= SizeMul;
+    TorqueBuff  *= TorqueMul;
+};
+
+
 void Vehicle::UpdateBuff() {
     std::vector<Buff*>::iterator it = buffs.begin();
 

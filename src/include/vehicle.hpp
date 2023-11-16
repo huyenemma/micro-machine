@@ -75,7 +75,7 @@ class Vehicle : public sf::Drawable {
   virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
   //Multiply 
-  void ApplyBuff(float forceMul, float MaxSpeedMul,float SizeMul,float TorqueMul);
+  void ApplyBuff(float forceMu=1.0f, float MaxSpeedMul=1.0f,float SizeMul=1.0f,float TorqueMul=1.0f);
 
   void AddBuff(Buff* buff);
 
