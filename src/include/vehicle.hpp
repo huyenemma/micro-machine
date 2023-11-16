@@ -1,7 +1,6 @@
 #ifndef VEHICLE_H
 #define VEHICLE_H
 
-#include <SFML/Graphics.hpp>
 #include "box2dInclude.hpp"
 #include "constant.hpp"
 #include "reScale.hpp"

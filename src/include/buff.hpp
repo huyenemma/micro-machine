@@ -1,4 +1,3 @@
-
 #ifndef BUFF_HPP
 #define BUFF_HPP
 
@@ -25,6 +24,7 @@ public:
     virtual void ApplyEffect() = 0;
 
     virtual void ReverseEffect() = 0;
+
 };
 
 #endif

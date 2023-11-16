@@ -1,3 +1,3 @@
-/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles/MicroMachine.dir
-/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles/edit_cache.dir
-/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles/rebuild_cache.dir
+/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles/MicroMachine.dir
+/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles/edit_cache.dir
+/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles/rebuild_cache.dir
