@@ -1,4 +1,4 @@
-# Install script for directory: /home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1
+# Install script for directory: /u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

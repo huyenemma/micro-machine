@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1"
+CMAKE_SOURCE_DIR = "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build"
+CMAKE_BINARY_DIR = "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/MicroMachine.dir/clean
 CMakeFiles/MicroMachine.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MicroMachine.dir/build.make CMakeFiles/MicroMachine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target MicroMachine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target MicroMachine"
 .PHONY : CMakeFiles/MicroMachine.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MicroMachine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" 11
+	$(CMAKE_COMMAND) -E cmake_progress_start "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MicroMachine.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" 0
 .PHONY : CMakeFiles/MicroMachine.dir/rule
 
 # Convenience name for target.

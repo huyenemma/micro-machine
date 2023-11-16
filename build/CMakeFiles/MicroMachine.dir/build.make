@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1"
+CMAKE_SOURCE_DIR = "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build"
+CMAKE_BINARY_DIR = "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/MicroMachine.dir/depend.make
@@ -72,142 +72,142 @@ include CMakeFiles/MicroMachine.dir/flags.make
 CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
 CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.o: ../src/ContactListener.cpp
 CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.o -MF CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.o -c "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/ContactListener.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.o -MF CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.o -c "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/ContactListener.cpp"
 
 CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/ContactListener.cpp" > CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/ContactListener.cpp" > CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.i
 
 CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/ContactListener.cpp" -o CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/ContactListener.cpp" -o CMakeFiles/MicroMachine.dir/src/ContactListener.cpp.s
 
 CMakeFiles/MicroMachine.dir/src/colletable.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
 CMakeFiles/MicroMachine.dir/src/colletable.cpp.o: ../src/colletable.cpp
 CMakeFiles/MicroMachine.dir/src/colletable.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MicroMachine.dir/src/colletable.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/colletable.cpp.o -MF CMakeFiles/MicroMachine.dir/src/colletable.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/colletable.cpp.o -c "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/colletable.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MicroMachine.dir/src/colletable.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/colletable.cpp.o -MF CMakeFiles/MicroMachine.dir/src/colletable.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/colletable.cpp.o -c "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/colletable.cpp"
 
 CMakeFiles/MicroMachine.dir/src/colletable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/colletable.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/colletable.cpp" > CMakeFiles/MicroMachine.dir/src/colletable.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/colletable.cpp" > CMakeFiles/MicroMachine.dir/src/colletable.cpp.i
 
 CMakeFiles/MicroMachine.dir/src/colletable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/colletable.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/colletable.cpp" -o CMakeFiles/MicroMachine.dir/src/colletable.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/colletable.cpp" -o CMakeFiles/MicroMachine.dir/src/colletable.cpp.s
 
 CMakeFiles/MicroMachine.dir/src/game.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
 CMakeFiles/MicroMachine.dir/src/game.cpp.o: ../src/game.cpp
 CMakeFiles/MicroMachine.dir/src/game.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MicroMachine.dir/src/game.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/game.cpp.o -MF CMakeFiles/MicroMachine.dir/src/game.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/game.cpp.o -c "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/game.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MicroMachine.dir/src/game.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/game.cpp.o -MF CMakeFiles/MicroMachine.dir/src/game.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/game.cpp.o -c "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/game.cpp"
 
 CMakeFiles/MicroMachine.dir/src/game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/game.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/game.cpp" > CMakeFiles/MicroMachine.dir/src/game.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/game.cpp" > CMakeFiles/MicroMachine.dir/src/game.cpp.i
 
 CMakeFiles/MicroMachine.dir/src/game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/game.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/game.cpp" -o CMakeFiles/MicroMachine.dir/src/game.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/game.cpp" -o CMakeFiles/MicroMachine.dir/src/game.cpp.s
 
 CMakeFiles/MicroMachine.dir/src/main.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
 CMakeFiles/MicroMachine.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/MicroMachine.dir/src/main.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MicroMachine.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/main.cpp.o -MF CMakeFiles/MicroMachine.dir/src/main.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/main.cpp.o -c "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MicroMachine.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/main.cpp.o -MF CMakeFiles/MicroMachine.dir/src/main.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/main.cpp.o -c "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/main.cpp"
 
 CMakeFiles/MicroMachine.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/main.cpp" > CMakeFiles/MicroMachine.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/main.cpp" > CMakeFiles/MicroMachine.dir/src/main.cpp.i
 
 CMakeFiles/MicroMachine.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/main.cpp" -o CMakeFiles/MicroMachine.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/main.cpp" -o CMakeFiles/MicroMachine.dir/src/main.cpp.s
 
 CMakeFiles/MicroMachine.dir/src/map.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
 CMakeFiles/MicroMachine.dir/src/map.cpp.o: ../src/map.cpp
 CMakeFiles/MicroMachine.dir/src/map.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MicroMachine.dir/src/map.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/map.cpp.o -MF CMakeFiles/MicroMachine.dir/src/map.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/map.cpp.o -c "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/map.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MicroMachine.dir/src/map.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/map.cpp.o -MF CMakeFiles/MicroMachine.dir/src/map.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/map.cpp.o -c "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/map.cpp"
 
 CMakeFiles/MicroMachine.dir/src/map.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/map.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/map.cpp" > CMakeFiles/MicroMachine.dir/src/map.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/map.cpp" > CMakeFiles/MicroMachine.dir/src/map.cpp.i
 
 CMakeFiles/MicroMachine.dir/src/map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/map.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/map.cpp" -o CMakeFiles/MicroMachine.dir/src/map.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/map.cpp" -o CMakeFiles/MicroMachine.dir/src/map.cpp.s
 
 CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
 CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.o: ../src/negativeBuff.cpp
 CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.o -MF CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.o -c "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/negativeBuff.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.o -MF CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.o -c "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/negativeBuff.cpp"
 
 CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/negativeBuff.cpp" > CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/negativeBuff.cpp" > CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.i
 
 CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/negativeBuff.cpp" -o CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/negativeBuff.cpp" -o CMakeFiles/MicroMachine.dir/src/negativeBuff.cpp.s
 
 CMakeFiles/MicroMachine.dir/src/reScale.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
 CMakeFiles/MicroMachine.dir/src/reScale.cpp.o: ../src/reScale.cpp
 CMakeFiles/MicroMachine.dir/src/reScale.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MicroMachine.dir/src/reScale.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/reScale.cpp.o -MF CMakeFiles/MicroMachine.dir/src/reScale.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/reScale.cpp.o -c "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/reScale.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MicroMachine.dir/src/reScale.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/reScale.cpp.o -MF CMakeFiles/MicroMachine.dir/src/reScale.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/reScale.cpp.o -c "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/reScale.cpp"
 
 CMakeFiles/MicroMachine.dir/src/reScale.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/reScale.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/reScale.cpp" > CMakeFiles/MicroMachine.dir/src/reScale.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/reScale.cpp" > CMakeFiles/MicroMachine.dir/src/reScale.cpp.i
 
 CMakeFiles/MicroMachine.dir/src/reScale.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/reScale.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/reScale.cpp" -o CMakeFiles/MicroMachine.dir/src/reScale.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/reScale.cpp" -o CMakeFiles/MicroMachine.dir/src/reScale.cpp.s
 
 CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
 CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o: ../src/userDataPointer.cpp
 CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o -MF CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o -c "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/userDataPointer.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o -MF CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.o -c "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/userDataPointer.cpp"
 
 CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/userDataPointer.cpp" > CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/userDataPointer.cpp" > CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.i
 
 CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/userDataPointer.cpp" -o CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/userDataPointer.cpp" -o CMakeFiles/MicroMachine.dir/src/userDataPointer.cpp.s
 
 CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
 CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o: ../src/vehicle.cpp
 CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o -MF CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o -c "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/vehicle.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o -MF CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/vehicle.cpp.o -c "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/vehicle.cpp"
 
 CMakeFiles/MicroMachine.dir/src/vehicle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/vehicle.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/vehicle.cpp" > CMakeFiles/MicroMachine.dir/src/vehicle.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/vehicle.cpp" > CMakeFiles/MicroMachine.dir/src/vehicle.cpp.i
 
 CMakeFiles/MicroMachine.dir/src/vehicle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/vehicle.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/vehicle.cpp" -o CMakeFiles/MicroMachine.dir/src/vehicle.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/vehicle.cpp" -o CMakeFiles/MicroMachine.dir/src/vehicle.cpp.s
 
 CMakeFiles/MicroMachine.dir/src/world.cpp.o: CMakeFiles/MicroMachine.dir/flags.make
 CMakeFiles/MicroMachine.dir/src/world.cpp.o: ../src/world.cpp
 CMakeFiles/MicroMachine.dir/src/world.cpp.o: CMakeFiles/MicroMachine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/MicroMachine.dir/src/world.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/world.cpp.o -MF CMakeFiles/MicroMachine.dir/src/world.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/world.cpp.o -c "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/world.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/MicroMachine.dir/src/world.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MicroMachine.dir/src/world.cpp.o -MF CMakeFiles/MicroMachine.dir/src/world.cpp.o.d -o CMakeFiles/MicroMachine.dir/src/world.cpp.o -c "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/world.cpp"
 
 CMakeFiles/MicroMachine.dir/src/world.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MicroMachine.dir/src/world.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/world.cpp" > CMakeFiles/MicroMachine.dir/src/world.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/world.cpp" > CMakeFiles/MicroMachine.dir/src/world.cpp.i
 
 CMakeFiles/MicroMachine.dir/src/world.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MicroMachine.dir/src/world.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/src/world.cpp" -o CMakeFiles/MicroMachine.dir/src/world.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/src/world.cpp" -o CMakeFiles/MicroMachine.dir/src/world.cpp.s
 
 # Object files for target MicroMachine
 MicroMachine_OBJECTS = \
@@ -238,7 +238,7 @@ MicroMachine: CMakeFiles/MicroMachine.dir/src/world.cpp.o
 MicroMachine: CMakeFiles/MicroMachine.dir/build.make
 MicroMachine: ../libs/unix/libbox2d.a
 MicroMachine: CMakeFiles/MicroMachine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable MicroMachine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable MicroMachine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MicroMachine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -250,6 +250,6 @@ CMakeFiles/MicroMachine.dir/clean:
 .PHONY : CMakeFiles/MicroMachine.dir/clean
 
 CMakeFiles/MicroMachine.dir/depend:
-	cd "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1" "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1" "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build" "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build" "/home/quan/C++ course/C++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles/MicroMachine.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1" "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1" "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build" "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build" "/u/49/hoangq1/unix/Downloads/C++/c++ project/micro-machines-tuukka-himanka-1/build/CMakeFiles/MicroMachine.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/MicroMachine.dir/depend
 
