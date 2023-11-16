@@ -12,7 +12,6 @@ Vehicle::Vehicle(b2World* world, float x , float y )
     b2BodyDef bodyDef;
     bodyDef.type = b2_dynamicBody;
     bodyDef.position.Set(x, y);
-    bodyDef.linearDamping = LINEAR_DAMPING;
     bodyDef.angularDamping = ANGULAR_DAMPING;
     bodyDef.awake = true;
 
@@ -41,7 +40,7 @@ void Vehicle::UpdateSpeed() {
 
     if (forceOn && std::abs(vel.x) < maxSpeed)
     {
-        forceMagnitude = FORCE_MAGNITUDE;
+        forceMagnitude = FORCE_MAGNITUDE*forceBuff;
     }
 
     b2Vec2 force = b2Vec2(cos(m_body->GetAngle()) * forceMagnitude, sin(m_body->GetAngle()) * forceMagnitude);
@@ -49,7 +48,7 @@ void Vehicle::UpdateSpeed() {
 }
 
 void Vehicle::Rotate(float torque  ) {
-    m_body->ApplyTorque(torque, true);
+    m_body->ApplyTorque(torque*TorqueBuff, true);
 }
 
 std::pair<float, float> Vehicle::GetPosition() const {
@@ -58,7 +57,13 @@ std::pair<float, float> Vehicle::GetPosition() const {
 }
 
 void Vehicle::ToggleForce(bool value) {
-    forceOn = value;
+    if (value) {
+        forceOn = true;
+        m_body->SetLinearDamping(0);
+    } else {
+        forceOn = false
+        m_body->SetLinearDamping(LINEAR_DAMPING);
+    }
 }
 
 float Vehicle::GetAngle() {

@@ -12,6 +12,7 @@ Game::~Game() {
 
 void Game::Initialize() { 
     Vehicle* vehicle = new Vehicle(world->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE);
+
     world->AddVehicle(vehicle);
 }
 

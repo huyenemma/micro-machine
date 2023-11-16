@@ -3,7 +3,7 @@
 
 #include "box2dInclude.hpp"
 #include "vehicle.hpp"
-#include <SFML/Graphics.hpp>  // Include SFML graphics header
+#include <SFML/Graphics.hpp>  
 #include "userDataPointer.hpp"
 #include "vehicle.hpp"
 #include "buff.hpp"
@@ -26,9 +26,9 @@ public:
 
     bool getDelete();
     
-    virtual void OnContact(Vehicle* car);
+    void OnContact(Vehicle* car);
 
-    virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+    void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
 private:
     mutable sf::Sprite sprite;

@@ -68,3 +68,11 @@
 
         target.draw(sprite, states);
     }
+
+    void Collectable::OnContact(Vehicle* vehicle) {
+    // Your implementation here
+    // For example, apply the buff to the vehicle
+    if (vehicle != nullptr && buff != nullptr) {
+        vehicle->AddBuff(buff);
+    }
+}
