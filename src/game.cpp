@@ -14,10 +14,11 @@ Game::~Game() {
 using namespace NegativeBuff;
 void Game::Initialize() { 
     Vehicle* vehicle = new Vehicle(world->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE);
-
+    MyContactListener* contactListener =new MyContactListener();
+    world->GetPhysicWorld()->SetContactListener(contactListener);
     ReverseMushroom* buff = new ReverseMushroom("test", 2, 3);
 
-    Collectable* collectable = new Collectable(world->GetPhysicWorld(), b2Vec2(100.0f / SCALE, 200.0f / SCALE), 10.0f, buff);
+    Collectable* collectable = new Collectable(world->GetPhysicWorld(), b2Vec2(400.0f / SCALE, 400.0f / SCALE), 50.0f/SCALE, buff);
 
     world->AddVehicle(vehicle);
     world->AddCollectable(collectable);
@@ -48,7 +49,7 @@ void Game::HandleInput() {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
         // Move car
         vehicle->ToggleForce(true);
-        vehicle->UpdateSpeed();
+        vehicle->Update();
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
         // turn right 
         vehicle->Rotate(torque); 

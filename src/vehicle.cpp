@@ -25,6 +25,12 @@ Vehicle::Vehicle(b2World* world, float x , float y )
 
     m_body = world->CreateBody(&bodyDef);
     m_body->CreateFixture(&fixtureDef);
+
+
+    UserData* data = new UserData(); // Allocate UserData on the heap
+    data->info.type = UserType::Vehicle;
+    data->info.pointer = this;
+    m_body->GetUserData().pointer = reinterpret_cast<uintptr_t>(data); 
 }
 
 Vehicle::~Vehicle() {
@@ -36,7 +42,6 @@ void Vehicle::UpdateSpeed() {
     float forceMagnitude = 0;
 
     float currentSpeed = vel.Length();
-    std::cout << "Current Speed: " << currentSpeed << std::endl;
 
     if (forceOn && std::abs(vel.x) < maxSpeed)
     {
@@ -131,7 +136,6 @@ void Vehicle::UpdateBuff() {
     // Iterate until the end of the vector is reached
     while (it != buffs.end()) {
         (*it)->Tick();
-        (*it)->ApplyEffect(this);
         ++it;
     };
 }

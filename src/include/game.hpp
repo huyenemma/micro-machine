@@ -10,6 +10,7 @@
 #include "world.hpp"
 #include "map.hpp"
 #include "negativebuff.hpp"
+#include "ContactListener.hpp"
 
 class Game {
 private:

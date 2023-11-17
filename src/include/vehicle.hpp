@@ -6,6 +6,7 @@
 #include "constant.hpp"
 #include "reScale.hpp"
 #include "buff.hpp"
+#include "userDataPointer.hpp"
 
 // Class representing a simple vehicle in a 2D physics world using Box2D
 class Vehicle : public sf::Drawable {

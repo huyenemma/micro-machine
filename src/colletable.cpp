@@ -73,8 +73,10 @@
     void Collectable::OnContact(Vehicle* vehicle) {
     // Your implementation here
     // For example, apply the buff to the vehicle
-    if (vehicle != nullptr && buff != nullptr) {
-        vehicle->AddBuff(buff);
+        if (vehicle != nullptr && buff != nullptr) {
+            std::cout<<"Added Buff"<<std::endl;
+            vehicle->AddBuff(buff);
+            buff->ApplyEffect(vehicle);
         if (!this->getDelete()){
             std::cout<<"toBeDeleted"<<std::endl;
             this->setDelete();
