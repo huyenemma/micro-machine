@@ -6,7 +6,7 @@
     #include "timer.hpp"
 
     class Vehicle;
-
+    
     enum buffType {
         onetime,
         continuous,
@@ -15,17 +15,14 @@
     class Buff : public Timer {
     protected:
         std::string id; 
-        Vehicle* vehicle;
     public:
-        Buff(Vehicle* vehicle, std::string id ,int duration): Timer(id,duration){
-            this->vehicle = vehicle;
-        }; 
+        Buff(std::string id ,int duration): Timer(id,duration) {}
 
         ~Buff(){};
 
-        virtual void ApplyEffect() = 0;
+        virtual void ApplyEffect(Vehicle* vehicle) = 0;
 
-        virtual void ReverseEffect() = 0;
+        virtual void ReverseEffect(Vehicle* vehicle) = 0;
     };
 
     #endif

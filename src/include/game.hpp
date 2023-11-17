@@ -9,6 +9,7 @@
 #include "constant.hpp"
 #include "world.hpp"
 #include "map.hpp"
+#include "negativebuff.hpp"
 
 class Game {
 private:

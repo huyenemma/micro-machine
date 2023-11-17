@@ -1,5 +1,6 @@
 #include "./include/game.hpp"
 
+
 Game::Game(): window(sf::VideoMode(800, 800), "Mirco machine"), isRunning(false) {
     world = new World(b2Vec2(0.0f, 0.0f));
     map = new Map("../img/finalmap.png");
@@ -10,10 +11,16 @@ Game::~Game() {
     delete map;
 }
 
+using namespace NegativeBuff;
 void Game::Initialize() { 
     Vehicle* vehicle = new Vehicle(world->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE);
 
+    ReverseMushroom* buff = new ReverseMushroom("test", 2, 3);
+
+    Collectable* collectable = new Collectable(world->GetPhysicWorld(), b2Vec2(100.0f / SCALE, 200.0f / SCALE), 5.0f, buff);
+
     world->AddVehicle(vehicle);
+    world->AddCollectable(collectable);
 }
 
 void Game::Run() {

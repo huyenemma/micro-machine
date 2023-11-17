@@ -131,7 +131,7 @@ void Vehicle::UpdateBuff() {
     // Iterate until the end of the vector is reached
     while (it != buffs.end()) {
         (*it)->Tick();
-        (*it)->ApplyEffect();
+        (*it)->ApplyEffect(this);
         ++it;
     };
 }
