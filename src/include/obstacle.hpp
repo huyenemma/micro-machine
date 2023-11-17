@@ -1,5 +1,5 @@
-#ifndef COLLECTABLE_H
-#define COLLECTABLE_H
+#ifndef OBSTACLE_H
+#define OBSTACLE_H
 
 #include <iostream>
 #include <utility>
@@ -9,9 +9,9 @@
 #include "vehicle.hpp"
 
 using namespace BodyType;
-class Collectable {
+class Obstacle {
  public:
-  Collectable(b2World* world, b2Vec2 position, float radius);
+  Obstacle(b2World* world, b2Vec2 position, float radius);
 
   std::pair<float, float> GetPosition();
 
@@ -21,16 +21,10 @@ class Collectable {
 
   bool IsNullBody();
 
-  void setDelete();
-
-  bool getDelete();
-
-  virtual void OnContact(Vehicle* car) = 0;
+  void OnContact(Vehicle* car);
 
  private:
   b2Body* body;
   float radius_;
-  bool toBeDeleted = false;
 };
-
 #endif

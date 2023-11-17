@@ -1,25 +1,26 @@
-#ifndef NEGATIVE_BUFF_HPP
-#define NEGATIVE_BUFF_HPP
+// #ifndef NEGATIVE_BUFF_HPP
+// #define NEGATIVE_BUFF_HPP
 
-#include <string> 
-#include "buff.hpp"
-#include "vehicle.hpp"
+// #include <string>
 
-namespace NegativeBuff {
-    class ReverseMushroom : public Buff{
-    private:
-        float buffIntensity;    
-    public:
-        ReverseMushroom(Vehicle* Vehicle,std::string id ,int duration,float Intensity);
+// #include "buff.hpp"
+// #include "vehicle.hpp"
 
-        void ApplyEffect() override;
+// namespace NegativeBuff {
+// class ReverseMushroom : public Buff {
+//  private:
+//   float buffIntensity;
 
-        void ReverseEffect() override;
+//  public:
+//   ReverseMushroom(Vehicle* Vehicle, std::string id, int duration,
+//                   float Intensity);
 
-        ~ReverseMushroom() override;
+//   void ApplyEffect() override;
 
-    };
+//   void ReverseEffect() override;
 
+//   // ~ReverseMushroom() override;
+// };
 
-}
-#endif
+// }  // namespace NegativeBuff
+// #endif
