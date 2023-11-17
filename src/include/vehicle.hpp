@@ -49,7 +49,6 @@ class Vehicle : public sf::Drawable {
 
   // A skill particular to each vehicle
   // virtual void SuperSkill() = 0;
-<<<<<<< HEAD
 
    // Boost the speed of the vehicle in a certain time
   void BoostSpeed(float boost);
@@ -63,9 +62,6 @@ class Vehicle : public sf::Drawable {
   //Change the max speed of the vehicle
   void UpdateMaxSpeed(float speed);
 
-
-=======
->>>>>>> 060bdf3 (Add some skeleton file for buff)
   // draw vehicle
   virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
