@@ -5,12 +5,14 @@
 
 #include "box2dInclude.hpp"
 #include "constant.hpp"
+#include "obstacle.hpp"
 #include "vehicle.hpp"
 
 class World {
  private:
   b2World* physicWorld;
   std::vector<Vehicle*> vehicles;
+  std::vector<Obstacle*> obstacles;
 
  public:
   // contructor
@@ -24,6 +26,10 @@ class World {
   void AddVehicle(Vehicle* vehicle);
   b2World* GetPhysicWorld() const;
   std::vector<Vehicle*>& GetVehicle();
+
+  // add a obstacle to the world
+  void AddObstacle(Obstacle* obstacle);
+  std::vector<Obstacle*>& GetObstacle();
 };
 
 #endif  // WORLD_H

@@ -2,6 +2,10 @@
 
 Obstacle::Obstacle(b2World* world, b2Vec2 position, float radius)
     : radius_(radius) {
+  texture.loadFromFile("../img/runninggoat.png");
+  sprite.setTexture(texture);
+  rescaleSprite(sprite, 80.0f, 40.0f);
+
   // Define the obstacle shape
   b2CircleShape shape;
   shape.m_radius = radius;
@@ -32,7 +36,7 @@ Obstacle::Obstacle(b2World* world, b2Vec2 position, float radius)
   body->GetUserData().pointer = reinterpret_cast<uintptr_t>(data);
 }
 
-std::pair<float, float> Obstacle::GetPosition() {
+std::pair<float, float> Obstacle::GetPosition() const {
   b2Vec2 position = body->GetWorldCenter();
   return std::make_pair(position.x, position.y);
 }
@@ -49,8 +53,18 @@ float Obstacle::GetRadius() { return radius_; }
 
 bool Obstacle::IsNullBody() { return body == nullptr; }
 
+void Obstacle::draw(sf::RenderTarget& target, sf::RenderStates states) const {
+  auto pos = GetPosition();
+  sprite.setPosition(pos.first * SCALE, pos.second * SCALE);
+
+  float angleDegrees = body->GetAngle() * (180 / b2_pi);
+  sprite.setRotation(angleDegrees);
+
+  target.draw(sprite, states);
+}
+
 void Obstacle::OnContact(Vehicle* car) {
-  std::cout << "hit" << std::endl;
+  std::cout << "hit obstacle" << std::endl;
   if (car != nullptr) {
     car->BoostSpeed(0.2);
   }
