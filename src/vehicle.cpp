@@ -47,7 +47,7 @@ void Vehicle::UpdateSpeed() {
     m_body->ApplyForceToCenter(force, true);
 }
 
-void Vehicle::Rotate(float torque  ) {
+void Vehicle::Rotate(float torque) {
     m_body->ApplyTorque(torque*TorqueBuff, true);
 }
 
@@ -61,7 +61,7 @@ void Vehicle::ToggleForce(bool value) {
         forceOn = true;
         m_body->SetLinearDamping(0);
     } else {
-        forceOn = false
+        forceOn = false;
         m_body->SetLinearDamping(LINEAR_DAMPING);
     }
 }
