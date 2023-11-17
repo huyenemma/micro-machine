@@ -17,7 +17,7 @@ void Game::Initialize() {
 
     ReverseMushroom* buff = new ReverseMushroom("test", 2, 3);
 
-    Collectable* collectable = new Collectable(world->GetPhysicWorld(), b2Vec2(100.0f / SCALE, 200.0f / SCALE), 5.0f, buff);
+    Collectable* collectable = new Collectable(world->GetPhysicWorld(), b2Vec2(100.0f / SCALE, 200.0f / SCALE), 10.0f, buff);
 
     world->AddVehicle(vehicle);
     world->AddCollectable(collectable);

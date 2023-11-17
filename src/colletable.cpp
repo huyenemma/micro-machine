@@ -1,4 +1,5 @@
     #include "./include/collectable.hpp"
+    #include <iostream>
 
     Collectable::Collectable(b2World* world, b2Vec2 position, float radius,Buff* buff) : radius_(radius) ,buff(buff){
         
@@ -74,5 +75,9 @@
     // For example, apply the buff to the vehicle
     if (vehicle != nullptr && buff != nullptr) {
         vehicle->AddBuff(buff);
+        if (!this->getDelete()){
+            std::cout<<"toBeDeleted"<<std::endl;
+            this->setDelete();
+        }
     }
 }
