@@ -1,22 +1,28 @@
-#ifndef BUFF_HPP
-#define BUFF_HPP
 
-#include <string> 
-#include "vehicle.hpp"
-#include "timer.hpp"
+    #ifndef BUFF_HPP
+    #define BUFF_HPP
 
-class Buff : public Timer {
-protected:
-    std::string id; 
-    Vehicle* vehicle;
-public:
-    Buff(Vehicle* vehicle, std::string id ,int duration); 
+    #include <string> 
+    #include "timer.hpp"
 
-    virtual ~Buff(){};
+    class Vehicle;
+    
+    enum buffType {
+        onetime,
+        continuous,
+    };
 
-    virtual void ApplyEffect() = 0;
+    class Buff : public Timer {
+    protected:
+        std::string id; 
+    public:
+        Buff(std::string id ,int duration): Timer(id,duration) {}
 
-    virtual void ReverseEffect() = 0;
-};
+        ~Buff(){};
 
-#endif
+        virtual void ApplyEffect(Vehicle* vehicle) = 0;
+
+        virtual void ReverseEffect(Vehicle* vehicle) = 0;
+    };
+
+    #endif

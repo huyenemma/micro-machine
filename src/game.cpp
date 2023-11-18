@@ -1,5 +1,6 @@
 #include "./include/game.hpp"
 
+
 Game::Game(): window(sf::VideoMode(800, 800), "Mirco machine"), isRunning(false) {
     world = new World(b2Vec2(0.0f, 0.0f));
     map = new Map("../img/finalmap.png");
@@ -10,8 +11,15 @@ Game::~Game() {
     delete map;
 }
 
+using namespace NegativeBuff;
 void Game::Initialize() { 
     Vehicle* vehicle = new Vehicle(world->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE);
+    MyContactListener* contactListener =new MyContactListener();
+    world->GetPhysicWorld()->SetContactListener(contactListener);
+    ReverseMushroom* buff = new ReverseMushroom("test", 2, 3);
+
+    Collectable* collectable = new Collectable(world->GetPhysicWorld(), b2Vec2(400.0f / SCALE, 400.0f / SCALE), 50.0f/SCALE, buff);
+
     world->AddVehicle(vehicle);
 
     AddBoundaries();
@@ -42,7 +50,7 @@ void Game::HandleInput() {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
         // Move car
         vehicle->ToggleForce(true);
-        vehicle->UpdateSpeed();
+        vehicle->Update();
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
         // turn right 
         vehicle->Rotate(torque); 
@@ -101,6 +109,12 @@ void Game::Render() {
     if (!world->GetVehicle().empty()) {
         for (auto vehicle : world->GetVehicle()) {
             window.draw(*vehicle);
+        }
+    }
+
+    if (!world->GetCollectable().empty()) {
+        for (auto collectable : world->GetCollectable()){
+            window.draw(*collectable);
         }
     }
     window.display();

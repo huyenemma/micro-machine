@@ -6,11 +6,13 @@
 #include "box2dInclude.hpp"
 #include "constant.hpp"
 #include "vehicle.hpp"
+#include "collectable.hpp"
 
 class World {
  private:
   b2World* physicWorld;
   std::vector<Vehicle*> vehicles;
+  std::vector<Collectable*> collectables;
 
  public:
   // contructor
@@ -22,8 +24,11 @@ class World {
 
   // add a vehicle to the world
   void AddVehicle(Vehicle* vehicle);
+
+  void AddCollectable(Collectable* Collectable);
   b2World* GetPhysicWorld() const;
   std::vector<Vehicle*>& GetVehicle();
+  std::vector<Collectable*>& GetCollectable();
 };
 
 #endif  // WORLD_H

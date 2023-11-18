@@ -3,18 +3,17 @@
 
 #include <string> 
 #include "buff.hpp"
-#include "vehicle.hpp"
 
 namespace NegativeBuff {
     class ReverseMushroom : public Buff{
     private:
         float buffIntensity;    
     public:
-        ReverseMushroom(Vehicle* Vehicle,std::string id ,int duration,float Intensity);
+        ReverseMushroom(std::string id ,int duration,float Intensity);
 
-        void ApplyEffect() override;
+        void ApplyEffect(Vehicle* vehicle) override;
 
-        void ReverseEffect() override;
+        void ReverseEffect(Vehicle* vehicle) override;
 
         ~ReverseMushroom() override;
 

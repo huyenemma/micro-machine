@@ -12,7 +12,6 @@ Vehicle::Vehicle(b2World* world, float x , float y )
     b2BodyDef bodyDef;
     bodyDef.type = b2_dynamicBody;
     bodyDef.position.Set(x, y);
-    bodyDef.linearDamping = LINEAR_DAMPING;
     bodyDef.angularDamping = ANGULAR_DAMPING;
     bodyDef.awake = true;
 
@@ -26,6 +25,12 @@ Vehicle::Vehicle(b2World* world, float x , float y )
 
     m_body = world->CreateBody(&bodyDef);
     m_body->CreateFixture(&fixtureDef);
+
+
+    UserData* data = new UserData(); // Allocate UserData on the heap
+    data->info.type = UserType::Vehicle;
+    data->info.pointer = this;
+    m_body->GetUserData().pointer = reinterpret_cast<uintptr_t>(data); 
 }
 
 Vehicle::~Vehicle() {
@@ -40,15 +45,15 @@ void Vehicle::UpdateSpeed() {
 
     if (forceOn && std::abs(vel.x) < maxSpeed)
     {
-        forceMagnitude = FORCE_MAGNITUDE;
+        forceMagnitude = FORCE_MAGNITUDE*forceBuff;
     }
 
     b2Vec2 force = b2Vec2(cos(m_body->GetAngle()) * forceMagnitude, sin(m_body->GetAngle()) * forceMagnitude);
     m_body->ApplyForceToCenter(force, true);
 }
 
-void Vehicle::Rotate(float torque  ) {
-    m_body->ApplyTorque(torque, true);
+void Vehicle::Rotate(float torque) {
+    m_body->ApplyTorque(torque*TorqueBuff, true);
 }
 
 std::pair<float, float> Vehicle::GetPosition() const {
@@ -57,7 +62,13 @@ std::pair<float, float> Vehicle::GetPosition() const {
 }
 
 void Vehicle::ToggleForce(bool value) {
-    forceOn = value;
+    if (value) {
+        forceOn = true;
+        m_body->SetLinearDamping(0);
+    } else {
+        forceOn = false;
+        m_body->SetLinearDamping(LINEAR_DAMPING);
+    }
 }
 
 float Vehicle::GetAngle() {
@@ -107,3 +118,29 @@ void Vehicle::UpdateMaxSpeed(float speed){
     maxSpeed = maxSpeed + speed;
 }
 
+void Vehicle::AddBuff(Buff* buff) {
+    buffs.push_back(buff);
+}
+
+void Vehicle::ApplyBuff(float forceMul, float MaxSpeedMul,float SizeMul,float TorqueMul){
+    forceBuff *=forceMul;
+    MaxSpeedBuff *= MaxSpeedMul;
+    SizeBuff    *= SizeMul;
+    TorqueBuff  *= TorqueMul;
+};
+
+
+void Vehicle::UpdateBuff() {
+    std::vector<Buff*>::iterator it = buffs.begin();
+
+    // Iterate until the end of the vector is reached
+    while (it != buffs.end()) {
+        (*it)->Tick();
+        ++it;
+    };
+}
+
+void Vehicle::Update() {
+    UpdateSpeed();
+    UpdateBuff();
+}
