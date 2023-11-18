@@ -7,7 +7,7 @@ In each meeting, you are required to discuss:
 3. Plan for the next week for everyone
 4. Deviations and changes to the project plan, if any
 
-# Meeting 07.11.2023 17.00
+# Meeting 18.11.2023 11:00
 
 **Participants**:
 
@@ -19,48 +19,54 @@ In each meeting, you are required to discuss:
 # Meeting agenda
    - Show what we have done
    - Plan what to do next 
-
 # Notes
 
 
 ## What we doned in last week: 
 
 ### Huyen 
-- Implement Game , and world class
+- Render collectible 
 
 ### Linh 
-- Implement Collectable
- 
-### Duy 
-- Create Cmake file
+- Timer class 
 
 ### Quan 
 - Implement UserDataPointer
 
+### Duy 
+- Make Obstacle (not done yet)
+
 # Todos
 
 ### Linh
-- Implement a container for Buff (efficiency doesn't matter)
-- Refactor your ideas for collectable for Buff
+
+- Implement more buff 
+- Limit time, test
+- Timer
 
 ### Quan 
-- Improve Vehicle class 
-- Implement someBuff and finish the rest number of vehicle
-- check point
+
+- Object vehicles 
+- Vehicle collisions 
 
 ### Duy 
-- Cmake 
-- multiplayer if you have time  
-- Obstacle () stone: (you can use Linh previous work as references )
 
+- Obstacle classes 
+- Wall 
+  
 ### Huyen 
-- Render according to size of collectable 
-- Make sure the vehicle don't pass map boundary
-- Think ideas for score board game menu
 
-## Next week goal Sat 18/11
-- Finish the basic game:
+- Load from file render 
+- Game menu 
+
+## Next week goal Tue 21/11
+
+- Finish the basic game
 
 ## Project status  
-Basic layout of needed classes, acknowledgement of potential integration issues, implemented some parts of GUI
+
+- World 
+- Game 
+- Buff
+- Vehicle  
 
