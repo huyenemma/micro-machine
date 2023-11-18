@@ -3,7 +3,7 @@
 
 Game::Game(): window(sf::VideoMode(800, 800), "Mirco machine"), isRunning(false) {
     world = new World(b2Vec2(0.0f, 0.0f));
-    map = new Map("../img/finalmap.png");
+    map = new Map("../img/finalMap.png");
 };
 
 Game::~Game() {
@@ -12,15 +12,18 @@ Game::~Game() {
 }
 
 using namespace NegativeBuff;
+
 void Game::Initialize() { 
-    Vehicle* vehicle = new Vehicle(world->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE);
+    Vehicle* vehicle = new Vehicle(world->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE, "../img/buffalo.png");
     MyContactListener* contactListener =new MyContactListener();
     world->GetPhysicWorld()->SetContactListener(contactListener);
-    ReverseMushroom* buff = new ReverseMushroom("test", 2, 3);
+    
+    ReverseMushroom* buff = new ReverseMushroom("test", 2, 3, "../img/buffalo1.png");
 
-    Collectable* collectable = new Collectable(world->GetPhysicWorld(), b2Vec2(400.0f / SCALE, 400.0f / SCALE), 50.0f/SCALE, buff);
+    Collectable* collectable = new Collectable(world->GetPhysicWorld(), b2Vec2(400.0f / SCALE, 400.0f / SCALE), 50.0f/SCALE, buff, "../img/buffalo1.png");
 
     world->AddVehicle(vehicle);
+    world->AddCollectable(collectable);
 
     AddBoundaries();
 }

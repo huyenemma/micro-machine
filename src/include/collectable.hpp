@@ -12,7 +12,7 @@ using namespace BodyType;
 
 class Collectable : public sf::Drawable {
 public:
-    Collectable(b2World* world, b2Vec2 position, float radius, Buff* buff);
+    Collectable(b2World* world, b2Vec2 position, float radius, Buff* buff, const std::string& imagePath);
 
     std::pair<float, float> GetPosition() const;
     
@@ -32,11 +32,13 @@ public:
 
 private:
     mutable sf::Sprite sprite;
-    sf::Texture texture;  // Declare texture as a member
+    sf::Texture texture;  
+    std::string imagePath_;
     Buff* buff;
     b2Body* body;
     float radius_;  
     bool  toBeDeleted = false;
+
 };
 
 #endif

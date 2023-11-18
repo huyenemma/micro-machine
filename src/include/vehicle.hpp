@@ -14,8 +14,9 @@ class Vehicle : public sf::Drawable {
   bool forceOn;    // Flag indicating whether a force is applied to the vehicle
   b2Body* m_body;  // Box2D body representing the vehicle
   float maxSpeed;  // Maximum speed of the vehicle
-  mutable sf::Sprite sprite;
-  sf::Texture texture;
+  mutable sf::Sprite sprite_;
+  sf::Texture texture_;
+  std::string imagePath_;
 
   //Variable that relate to Buff with 1 as default value
   float forceBuff     = 1.0f;
@@ -30,7 +31,7 @@ class Vehicle : public sf::Drawable {
  public:
   // Constructor: Creates a new vehicle in the given Box2D world at the
   // specified position (default at the origin)
-  Vehicle(b2World* world, float x = 0, float y = 0);
+  Vehicle(b2World* world, float x, float y, const std::string& imagePath);
 
   // Destructor: Destroys the Box2D body associated with the vehicle
   ~Vehicle();

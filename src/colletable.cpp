@@ -1,9 +1,9 @@
     #include "./include/collectable.hpp"
     #include <iostream>
 
-    Collectable::Collectable(b2World* world, b2Vec2 position, float radius,Buff* buff) : radius_(radius) ,buff(buff){
+    Collectable::Collectable(b2World* world, b2Vec2 position, float radius,Buff* buff, const std::string& imagePath) : radius_(radius) ,buff(buff), imagePath_(imagePath) {
         
-        texture.loadFromFile("../img/runninggoat.png");
+        texture.loadFromFile(imagePath_);
         sprite.setTexture(texture);
         rescaleSprite(sprite, 80.0f, 40.0f);
         

@@ -2,12 +2,12 @@
 #include <cmath>
 #include <iostream>
 
-Vehicle::Vehicle(b2World* world, float x , float y )
-    : forceOn(false), m_body(nullptr), maxSpeed(MAX_SPEED) 
+Vehicle::Vehicle(b2World* world, float x , float y, const std::string& imagePath)
+    : forceOn(false), m_body(nullptr), maxSpeed(MAX_SPEED), imagePath_(imagePath) 
 {
-    texture.loadFromFile("../img/buffalo.png");
-    sprite.setTexture(texture);
-    rescaleSprite(sprite, 60.0f, 60.0f);
+    texture_.loadFromFile(imagePath_);
+    sprite_.setTexture(texture_);
+    rescaleSprite(sprite_, 60.0f, 60.0f);
 
     b2BodyDef bodyDef;
     bodyDef.type = b2_dynamicBody;
@@ -78,12 +78,12 @@ float Vehicle::GetAngle() {
 void Vehicle::draw(sf::RenderTarget& target, sf::RenderStates states) const 
 {
     auto pos = GetPosition(); 
-    sprite.setPosition(pos.first * SCALE, pos.second * SCALE); 
+    sprite_.setPosition(pos.first * SCALE, pos.second * SCALE); 
 
     float angleDegrees = m_body->GetAngle() * (180 / b2_pi);
-    sprite.setRotation(angleDegrees);
+    sprite_.setRotation(angleDegrees);
 
-    target.draw(sprite, states);
+    target.draw(sprite_, states);
 }
 
 //void Vehicle::ProcessItem()

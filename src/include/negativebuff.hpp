@@ -7,9 +7,10 @@
 namespace NegativeBuff {
     class ReverseMushroom : public Buff{
     private:
-        float buffIntensity;    
+        float buffIntensity;
+        std::string imagePath_;    
     public:
-        ReverseMushroom(std::string id ,int duration,float Intensity);
+        ReverseMushroom(std::string id, int duration, float Intensity, const std::string& imagePath);
 
         void ApplyEffect(Vehicle* vehicle) override;
 
