@@ -61,7 +61,7 @@ void MyContactListener::HandleContact(b2Contact* contact, bool begin) {
       // contact type
       if (begin) {
         std::cout << "cast sucessfully" << std::endl;
-        obstacle->OnContact(vehicle);  // Do something in the Collectable class
+        obstacle->OnContact(vehicle);  // Do something in the Obstacle class
       }
     }
   }

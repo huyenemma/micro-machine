@@ -18,7 +18,7 @@ void Game::Initialize() {
 
   Obstacle* obstacle =
       new Obstacle(world->GetPhysicWorld(),
-                   b2Vec2(400.0f / SCALE, 400.0f / SCALE), 200.0f / SCALE);
+                   b2Vec2(400.0f / SCALE, 400.0f / SCALE), 50.0f / SCALE);
 
   world->AddObstacle(obstacle);
 
