@@ -67,6 +67,6 @@ void Obstacle::draw(sf::RenderTarget& target, sf::RenderStates states) const {
 void Obstacle::OnContact(Vehicle* car) {
   std::cout << "hit obstacle" << std::endl;
   if (car != nullptr) {
-    car->BoostSpeed(0.2);
+    car->CrazyRotate(1, 2, 1);
   }
 }
