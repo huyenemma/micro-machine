@@ -109,6 +109,7 @@ void Game::CreateWall(const b2Vec2& position, const b2Vec2& size) {
 void Game::Render() {
     window.clear();
     map->Draw(window);
+    
     if (!world->GetVehicle().empty()) {
         for (auto vehicle : world->GetVehicle()) {
             window.draw(*vehicle);
