@@ -58,7 +58,7 @@ void MyContactListener::HandleContact(b2Contact* contact, bool begin) {
       // Call the appropriate method in Vehicle and Obstacle based on the
       // contact type
       if (begin) {
-        std::cout << "cast sucessfully" << std::endl;
+        std::cout << "hit obstacle" << std::endl;
         obstacle->OnContact(vehicle);  // Do something in the Obstacle class
       }
     }
