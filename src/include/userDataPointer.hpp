@@ -2,21 +2,21 @@
 #define USER_DATA_POINTER_HPP
 #include <cstdint>
 
-enum class UserType { Vehicle, Collectable };
+enum class UserType { Vehicle, Collectable, Obstacle };
 
 // TODO: manage union memory
 union UserData {
-    uintptr_t data;
-    struct {
-        UserType type;
-        void* pointer;
-    } info;
+  uintptr_t data;
+  struct {
+    UserType type;
+    void* pointer;
+  } info;
 };
 
 namespace BodyType {
-    bool IsVehicle(UserData* userData);
-    bool IsCollectable(UserData* userData);
-}
-
+bool IsVehicle(UserData* userData);
+bool IsCollectable(UserData* userData);
+bool IsObstacle(UserData* userData);
+}  // namespace BodyType
 
 #endif
