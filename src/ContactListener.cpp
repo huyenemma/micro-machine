@@ -40,7 +40,7 @@ void MyContactListener::HandleContact(b2Contact* contact, bool begin) {
       // Call the appropriate method in Vehicle and Collectable based on the
       // contact type
       if (begin) {
-        std::cout << "cast sucessfully" << std::endl;
+        std::cout << "hit collectable" << std::endl;
         collectable->OnContact(
             vehicle);  // Do something in the Collectable class
       }
@@ -52,8 +52,8 @@ void MyContactListener::HandleContact(b2Contact* contact, bool begin) {
           static_cast<Vehicle*>(IsVehicle(userDataA) ? userDataA->info.pointer
                                                      : userDataB->info.pointer);
       Obstacle* obstacle = static_cast<Obstacle*>(
-          IsCollectable(userDataB) ? userDataB->info.pointer
-                                   : userDataA->info.pointer);
+          IsObstacle(userDataB) ? userDataB->info.pointer
+                                : userDataA->info.pointer);
 
       // Call the appropriate method in Vehicle and Obstacle based on the
       // contact type
