@@ -45,6 +45,11 @@ void Game::Run() {
     ProcessEvents();
     Update(deltaTime);
     Render();
+
+    // Get mouse position relative to the window
+    sf::Vector2i position = sf::Mouse::getPosition(window);
+    std::cout << "Mouse position relative to the window: " << position.x << ", "
+              << position.y << std::endl;
   }
 }
 
