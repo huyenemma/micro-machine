@@ -20,18 +20,18 @@ void Game::Initialize() {
   world->GetPhysicWorld()->SetContactListener(contactListener);
 
   ReverseMushroom* buff =
-      new ReverseMushroom("test", 2, 3, "../img/buffalo1.png");
+      new ReverseMushroom("test", 2, 3);
 
-  //   Collectable* collectable = new Collectable(
-  //       world->GetPhysicWorld(), b2Vec2(400.0f / SCALE, 400.0f / SCALE),
-  //       50.0f / SCALE, buff, "../img/buffalo1.png");
+  Collectable* collectable = new Collectable(
+      world->GetPhysicWorld(), b2Vec2(400.0f / SCALE, 400.0f / SCALE),
+      50.0f / SCALE, buff, "../img/mushroom.png");
 
   Obstacle* obstacle = new Obstacle(world->GetPhysicWorld(),
-                                    b2Vec2(400.0f / SCALE, 400.0f / SCALE),
-                                    50.0f / SCALE, "../img/buffalo1.png");
+                                    b2Vec2(124.0f / SCALE, 440.0f / SCALE),
+                                    50.0f / SCALE, "../img/rock.png");
 
   world->AddVehicle(vehicle);
-  //   world->AddCollectable(collectable);
+  //world->AddCollectable(collectable);
   world->AddObstacle(obstacle);
 
   AddBoundaries();
@@ -80,8 +80,8 @@ void Game::Update(sf::Time deltaTime) {
 }
 
 void Game::AddBoundaries() {
-  float worldWidth = 800.0f / SCALE;   // Width of your window in Box2D units
-  float worldHeight = 800.0f / SCALE;  // Height of your window in Box2D units
+  float worldWidth = 800.0f / SCALE;   // Width of window in Box2D units
+  float worldHeight = 800.0f / SCALE;  // Height of  window in Box2D units
   float thickness = 0.0005f / SCALE;   // Thickness of the boundary walls
 
   // Define the positions and sizes of the boundary walls

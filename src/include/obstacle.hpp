@@ -29,7 +29,7 @@ class Obstacle : public sf::Drawable {
 
  private:
   mutable sf::Sprite sprite;
-  sf::Texture texture;  // Declare texture as a member
+  sf::Texture texture;  
   std::string imagePath_;
 
   b2Body* body;

@@ -5,7 +5,7 @@
         
         texture.loadFromFile(imagePath_);
         sprite.setTexture(texture);
-        rescaleSprite(sprite, 80.0f, 40.0f);
+        rescaleSprite(sprite, radius_ * SCALE, radius_ * SCALE);
         
         // Define the collectable's shape
         b2CircleShape shape;

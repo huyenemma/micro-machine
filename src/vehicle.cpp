@@ -7,7 +7,7 @@ Vehicle::Vehicle(b2World* world, float x , float y, const std::string& imagePath
 {
     texture_.loadFromFile(imagePath_);
     sprite_.setTexture(texture_);
-    rescaleSprite(sprite_, 60.0f, 60.0f);
+    rescaleSprite(sprite_, BOX_WIDTH * SCALE, BOX_HEIGHT * SCALE);
 
     b2BodyDef bodyDef;
     bodyDef.type = b2_dynamicBody;

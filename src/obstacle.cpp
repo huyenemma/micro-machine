@@ -5,7 +5,7 @@ Obstacle::Obstacle(b2World* world, b2Vec2 position, float radius,
     : radius_(radius), imagePath_(imagePath) {
   texture.loadFromFile(imagePath_);
   sprite.setTexture(texture);
-  rescaleSprite(sprite, 80.0f, 40.0f);
+  rescaleSprite(sprite, radius_ * SCALE, radius_ * SCALE);
 
   // Define the obstacle shape
   b2CircleShape shape;
