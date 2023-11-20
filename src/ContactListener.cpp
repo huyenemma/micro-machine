@@ -52,14 +52,31 @@ void MyContactListener::HandleContact(b2Contact* contact, bool begin) {
           static_cast<Vehicle*>(IsVehicle(userDataA) ? userDataA->info.pointer
                                                      : userDataB->info.pointer);
       Obstacle* obstacle = static_cast<Obstacle*>(
-          IsCollectable(userDataB) ? userDataB->info.pointer
-                                   : userDataA->info.pointer);
+          IsObstacle(userDataB) ? userDataB->info.pointer
+                                : userDataA->info.pointer);
 
       // Call the appropriate method in Vehicle and Obstacle based on the
       // contact type
       if (begin) {
         std::cout << "hit obstacle" << std::endl;
         obstacle->OnContact(vehicle);  // Do something in the Obstacle class
+      }
+    } else if ((IsVehicle(userDataA) && IsOutsideArea(userDataB)) ||
+               (IsVehicle(userDataB) && IsOutsideArea(userDataA))) {
+      // Handle the collision between Vehicle and Obstacle
+
+      Vehicle* vehicle =
+          static_cast<Vehicle*>(IsVehicle(userDataA) ? userDataA->info.pointer
+                                                     : userDataB->info.pointer);
+      Obstacle* outsideArea = static_cast<Obstacle*>(
+          IsOutsideArea(userDataB) ? userDataB->info.pointer
+                                   : userDataA->info.pointer);
+
+      // Call the appropriate method in Vehicle and Obstacle based on the
+      // contact type
+      if (begin) {
+        std::cout << "out of track" << std::endl;
+        outsideArea->OnContact(vehicle);  // Do something in the Obstacle class
       }
     }
   }
