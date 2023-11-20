@@ -2,7 +2,7 @@
 #define USER_DATA_POINTER_HPP
 #include <cstdint>
 
-enum class UserType { Vehicle, Collectable, Obstacle };
+enum class UserType { Vehicle, Collectable, Obstacle, OutsideArea };
 
 // TODO: manage union memory
 union UserData {
@@ -17,6 +17,7 @@ namespace BodyType {
 bool IsVehicle(UserData* userData);
 bool IsCollectable(UserData* userData);
 bool IsObstacle(UserData* userData);
+bool IsOutsideArea(UserData* userData);
 }  // namespace BodyType
 
 #endif

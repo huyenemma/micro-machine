@@ -78,6 +78,10 @@
     "charconv": "cpp",
     "complex": "cpp",
     "ios": "cpp",
-    "locale": "cpp"
+    "locale": "cpp",
+    "__bits": "cpp",
+    "__nullptr": "cpp",
+    "__string": "cpp",
+    "__tuple": "cpp"
   }
 }
