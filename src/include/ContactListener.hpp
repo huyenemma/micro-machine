@@ -6,6 +6,7 @@
 #include "box2dInclude.hpp"
 #include "collectable.hpp"
 #include "obstacle.hpp"
+#include "outsideArea.hpp"
 #include "userDataPointer.hpp"
 using namespace BodyType;
 class MyContactListener : public b2ContactListener {

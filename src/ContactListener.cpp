@@ -63,20 +63,21 @@ void MyContactListener::HandleContact(b2Contact* contact, bool begin) {
       }
     } else if ((IsVehicle(userDataA) && IsOutsideArea(userDataB)) ||
                (IsVehicle(userDataB) && IsOutsideArea(userDataA))) {
-      // Handle the collision between Vehicle and Obstacle
+      // Handle the collision between Vehicle and OutsideArea
 
       Vehicle* vehicle =
           static_cast<Vehicle*>(IsVehicle(userDataA) ? userDataA->info.pointer
                                                      : userDataB->info.pointer);
-      Obstacle* outsideArea = static_cast<Obstacle*>(
+      OutsideArea* outsideArea = static_cast<OutsideArea*>(
           IsOutsideArea(userDataB) ? userDataB->info.pointer
                                    : userDataA->info.pointer);
 
-      // Call the appropriate method in Vehicle and Obstacle based on the
+      // Call the appropriate method in Vehicle and OutsideArea based on the
       // contact type
       if (begin) {
         std::cout << "out of track" << std::endl;
-        outsideArea->OnContact(vehicle);  // Do something in the Obstacle class
+        outsideArea->OnContact(
+            vehicle);  // Do something in the OutsideArea class
       }
     }
   }
