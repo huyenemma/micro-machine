@@ -1,7 +1,7 @@
 #include "./include/game.hpp"
 
 Game::Game()
-    : window(sf::VideoMode(800, 800), "Mirco machine"), isRunning(false) {
+    : window(sf::VideoMode(800, 800), "Micro machine"), isRunning(false) {
   world = new World(b2Vec2(0.0f, 0.0f));
   map = new Map("../img/finalMap.png");
 };
@@ -26,13 +26,15 @@ void Game::Initialize() {
   //       world->GetPhysicWorld(), b2Vec2(400.0f / SCALE, 400.0f / SCALE),
   //       50.0f / SCALE, buff, "../img/buffalo1.png");
 
-  Obstacle* obstacle = new Obstacle(world->GetPhysicWorld(),
-                                    b2Vec2(400.0f / SCALE, 400.0f / SCALE),
-                                    50.0f / SCALE, "../img/buffalo1.png");
+  // Obstacle* obstacle = new Obstacle(world->GetPhysicWorld(),
+  //                                   b2Vec2(400.0f / SCALE, 400.0f / SCALE),
+  //                                   50.0f / SCALE, "../img/buffalo1.png");
 
+  OutsideArea* middle =
+      new OutsideArea(world->GetPhysicWorld(), b2Vec2(400, 400), 400, 400);
   world->AddVehicle(vehicle);
   //   world->AddCollectable(collectable);
-  world->AddObstacle(obstacle);
+  // world->AddObstacle(obstacle);
 
   AddBoundaries();
 }
@@ -46,10 +48,11 @@ void Game::Run() {
     Update(deltaTime);
     Render();
 
-    // Get mouse position relative to the window
-    sf::Vector2i position = sf::Mouse::getPosition(window);
-    std::cout << "Mouse position relative to the window: " << position.x << ", "
-              << position.y << std::endl;
+    // // Get mouse position relative to the window
+    // sf::Vector2i position = sf::Mouse::getPosition(window);
+    // std::cout << "Mouse position relative to the window: " << position.x <<
+    // ", "
+    //           << position.y << std::endl;
   }
 }
 

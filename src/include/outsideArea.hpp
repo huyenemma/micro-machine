@@ -10,7 +10,7 @@
 #include "vehicle.hpp"
 
 using namespace BodyType;
-class OutsideArea : public sf::Drawable {
+class OutsideArea {
  public:
   OutsideArea(b2World* world, b2Vec2 position, float height, float width);
 

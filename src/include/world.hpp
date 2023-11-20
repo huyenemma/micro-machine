@@ -7,6 +7,7 @@
 #include "collectable.hpp"
 #include "constant.hpp"
 #include "obstacle.hpp"
+#include "outsideArea.hpp"
 #include "vehicle.hpp"
 
 class World {
