@@ -42,6 +42,7 @@ void Game::Run() {
     RealTime counter(1);
     counter.SetUp();
 
+    
     while (window.isOpen() && isRunning && !counter.IsTimeUp()) {
         sf::Time deltaTime = clock.restart();
         ProcessEvents();
