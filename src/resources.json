@@ -1,5 +1,12 @@
 {
-    "vehicles": [
+    "map" : [
+        {
+            "id": "forest",
+            "texturePath" : "../img/finalMap.png"
+        }
+    ],
+    
+    "vehicle": [
         {
             "id": "buffalo",
             "texturePath": "../img/buffalo.png"
@@ -11,10 +18,17 @@
        
     ],
 
-    "buff": [
+    "collectable": [
         {
             "id": "mushroom",
             "texturePath": "../img/mushroom.png"
+        }
+    ],
+
+    "obstacle" : [
+        {
+            "id":"rock", 
+            "texturePath": "../img/rock.png"
         }
     ]
 }
