@@ -64,7 +64,7 @@ class Vehicle : public sf::Drawable {
   void BoostSpeed(float boost);
 
   //Rotate the vehicle multiple rounds
-  void CrazyRotate(float torque, float boost, int times);
+  void CrazyRotate(float torque, float boost);
 
   //Get the mass of vehicle
   float GetMass();

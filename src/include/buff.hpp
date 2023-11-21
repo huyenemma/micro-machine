@@ -16,13 +16,15 @@
     protected:
         std::string id; 
     public:
-        Buff(std::string id ,int duration): Timer(id,duration) {}
+        Buff(std::string id ,int duration) : Timer(id,duration){}
 
         ~Buff(){};
 
         virtual void ApplyEffect(Vehicle* vehicle) = 0;
 
         virtual void ReverseEffect(Vehicle* vehicle) = 0;
+
+        std::string GetId(){ return id;}
     };
 
     #endif

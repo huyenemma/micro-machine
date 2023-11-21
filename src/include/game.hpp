@@ -11,6 +11,8 @@
 #include "obstacle.hpp"
 #include "vehicle.hpp"
 #include "world.hpp"
+#include "ContactListener.hpp"
+#include "realTime.hpp"
 
 class Game {
  private:
