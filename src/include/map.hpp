@@ -7,7 +7,7 @@
 
 class Map {
 public:
-    // Constructor that loads the texture from a file
+    // Constructor that loads the texture from resourceManager 
     Map(const std::string& texturePath);
 
     // Method to draw the map

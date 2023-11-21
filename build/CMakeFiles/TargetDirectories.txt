@@ -1,3 +1,3 @@
-/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles/MicroMachine.dir
-/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles/edit_cache.dir
-/Users/linh/micro-machines-tuukka-himanka-1/build/CMakeFiles/rebuild_cache.dir
+/m/home/home1/14/doh6/unix/cpp/project/micro/build/CMakeFiles/MicroMachine.dir
+/m/home/home1/14/doh6/unix/cpp/project/micro/build/CMakeFiles/edit_cache.dir
+/m/home/home1/14/doh6/unix/cpp/project/micro/build/CMakeFiles/rebuild_cache.dir

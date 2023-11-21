@@ -13,6 +13,9 @@ else()
   include_directories(${PROJECT_SOURCE_DIR}/libs/unix/include)
 endif()
 
+# Add the path to the json.hpp file
+include_directories(${PROJECT_SOURCE_DIR}/libs/nlohmann)
+
 # Where to find binary files
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/SFML)
 

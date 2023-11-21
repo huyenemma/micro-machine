@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "MicroMachine::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-MicroMachine-Debug-96327699e60dedace202.json",
+					"jsonFile" : "target-MicroMachine-Debug-98769133786e560d9637.json",
 					"name" : "MicroMachine",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/linh/micro-machines-tuukka-himanka-1/build",
-		"source" : "/Users/linh/micro-machines-tuukka-himanka-1"
+		"build" : "/m/home/home1/14/doh6/unix/cpp/project/micro/build",
+		"source" : "/m/home/home1/14/doh6/unix/cpp/project/micro"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 3
 	}
 }

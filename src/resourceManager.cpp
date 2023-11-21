@@ -1,9 +1,10 @@
 #include "./include/resourceManager.hpp"
-#include <iostream>
+
 
 ResourceManager::ResourceManager() {}
 
 ResourceManager::~ResourceManager() {}
+
 
 void ResourceManager::LoadImage(const std::string& key, const std::string& filename) {
     sf::Texture texture;
@@ -20,5 +21,31 @@ const sf::Texture& ResourceManager::GetImage(const std::string& key) const {
         return it->second;
     } else {
         throw std::runtime_error("Texture not found: " + key);
+    }
+}
+
+void ResourceManager::LoadFromJson(const std::string& jsonFilePath) {
+    std::ifstream file(jsonFilePath);
+    
+    if (!file.is_open()) {
+        std::cerr << "Unable to open JSON file: " << jsonFilePath << std::endl;
+        return;
+    }
+
+    nlohmann::json json;
+    file >> json;
+
+    for (const auto& item : json["map"]) {
+        LoadImage(item["id"], item["texturePath"]);
+    }
+
+    for (const auto& item : json["vehicle"]) {
+        LoadImage(item["id"], item["texturePath"]);
+    }
+    for (const auto& item : json["collectable"]) {
+        LoadImage(item["id"], item["texturePath"]);
+    }
+    for (const auto& item : json["obstacle"]) {
+        LoadImage(item["id"], item["texturePath"]);
     }
 }

@@ -78,6 +78,15 @@
     "charconv": "cpp",
     "complex": "cpp",
     "ios": "cpp",
-    "locale": "cpp"
+    "locale": "cpp",
+    "csignal": "cpp",
+    "any": "cpp",
+    "strstream": "cpp",
+    "codecvt": "cpp",
+    "iomanip": "cpp",
+    "shared_mutex": "cpp",
+    "cfenv": "cpp",
+    "typeindex": "cpp",
+    "valarray": "cpp"
   }
 }
