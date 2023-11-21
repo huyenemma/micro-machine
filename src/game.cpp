@@ -30,8 +30,9 @@ void Game::Initialize() {
   //                                   b2Vec2(400.0f / SCALE, 400.0f / SCALE),
   //                                   50.0f / SCALE, "../img/buffalo1.png");
 
-  OutsideArea* middle =
-      new OutsideArea(world->GetPhysicWorld(), b2Vec2(400, 400), 400, 400);
+  OutsideArea* middle = new OutsideArea(world->GetPhysicWorld(),
+                                        b2Vec2(400.0f / SCALE, 400.0f / SCALE),
+                                        400.0f / SCALE, 400.0f / SCALE);
   world->AddVehicle(vehicle);
   //   world->AddCollectable(collectable);
   // world->AddObstacle(obstacle);
