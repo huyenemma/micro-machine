@@ -17,7 +17,22 @@ namespace NegativeBuff {
         void ReverseEffect(Vehicle* vehicle) override;
 
         ~ReverseMushroom() override;
+    };
 
+
+    class CrazyRotate : public Buff{
+    private:
+        float buffIntensity;  
+        float torque_;
+
+    public:
+        CrazyRotate(std::string id ,int duration, float torque, float Intensity);
+
+        void ApplyEffect(Vehicle* vehicle) override;
+
+        void ReverseEffect(Vehicle* vehicle) override;
+
+        ~CrazyRotate() override;
     };
 
 

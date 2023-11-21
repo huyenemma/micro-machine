@@ -5,7 +5,6 @@
 #include <string> 
 #include "buff.hpp"
 #include "timer.hpp"
-#include "vehicle.hpp"
 
 namespace PositiveBuff {
 

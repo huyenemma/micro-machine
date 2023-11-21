@@ -98,15 +98,11 @@ void Vehicle::BoostSpeed(float boost){
     std::cout << "speedzz" << std::endl;
 }
 
-void Vehicle::CrazyRotate(float torque, float boost, int times){
-    for (int i = 0; i < times; i++){
-        std::cout << "hi" <<std::endl;
-        b2Vec2 force = b2Vec2(cos(m_body->GetAngle()) * -boost * m_body->GetMass(), sin(m_body->GetAngle()) * -boost * m_body->GetMass());
-        m_body->ApplyForceToCenter(force, true);
-        this->ToggleForce(true);
-        m_body->ApplyAngularImpulse(torque*m_body->GetMass(), true); 
-    }
-    std::cout << "slow down" << std::endl;
+void Vehicle::CrazyRotate(float torque, float boost){
+    b2Vec2 force = b2Vec2(cos(m_body->GetAngle()) * -boost * m_body->GetMass(), sin(m_body->GetAngle()) * -boost * m_body->GetMass());
+    m_body->ApplyForceToCenter(force, true);
+    this->ToggleForce(true);
+    m_body->ApplyAngularImpulse(torque*m_body->GetMass(), true); 
 }
 
 
@@ -123,7 +119,7 @@ void Vehicle::AddBuff(Buff* buff) {
 }
 
 void Vehicle::ApplyBuff(float forceMul, float MaxSpeedMul,float SizeMul,float TorqueMul){
-    forceBuff *=forceMul;
+    forceBuff *= forceMul;
     MaxSpeedBuff *= MaxSpeedMul;
     SizeBuff    *= SizeMul;
     TorqueBuff  *= TorqueMul;
@@ -132,12 +128,18 @@ void Vehicle::ApplyBuff(float forceMul, float MaxSpeedMul,float SizeMul,float To
 
 void Vehicle::UpdateBuff() {
     std::vector<Buff*>::iterator it = buffs.begin();
-
     // Iterate until the end of the vector is reached
     while (it != buffs.end()) {
-        (*it)->Tick();
-        ++it;
-    };
+        if (!(*it)->Tick()){
+            (*it)->ApplyEffect(this);
+            ++it;
+        }
+        else{
+            std::cout << "reverse" << std::endl;
+            (*it)->ReverseEffect(this);
+            it = buffs.erase(it);
+        }
+    }
 }
 
 void Vehicle::Update() {

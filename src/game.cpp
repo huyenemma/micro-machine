@@ -12,40 +12,42 @@ Game::~Game() {
 }
 
 using namespace NegativeBuff;
+void Game::Initialize() { 
+    Vehicle* vehicle = new Vehicle(world->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE);
+    
+    MyContactListener* contactListener =new MyContactListener();
+    world->GetPhysicWorld()->SetContactListener(contactListener);
 
-void Game::Initialize() {
-  Vehicle* vehicle = new Vehicle(world->GetPhysicWorld(), 136.0f / SCALE,
-                                 120.0f / SCALE, "../img/buffalo.png");
-  MyContactListener* contactListener = new MyContactListener();
-  world->GetPhysicWorld()->SetContactListener(contactListener);
+    ReverseMushroom* buff = new ReverseMushroom("test", 2, 3);
 
-  ReverseMushroom* buff =
-      new ReverseMushroom("test", 2, 3);
-
-  Collectable* collectable = new Collectable(
-      world->GetPhysicWorld(), b2Vec2(400.0f / SCALE, 400.0f / SCALE),
-      50.0f / SCALE, buff, "../img/mushroom.png");
+    CrazyRotate* buff2 = new CrazyRotate("rotate", 10, 2, 2);
 
   Obstacle* obstacle = new Obstacle(world->GetPhysicWorld(),
                                     b2Vec2(124.0f / SCALE, 440.0f / SCALE),
-                                    50.0f / SCALE, "../img/rock.png");
+                                    2.0f / SCALE, "../img/rock.png");
+
+    Collectable* collectable2 = new Collectable(world->GetPhysicWorld(), b2Vec2(320.0f / SCALE, 320.0f / SCALE), 2.0f/SCALE, buff2);
 
   world->AddVehicle(vehicle);
   //world->AddCollectable(collectable);
   world->AddObstacle(obstacle);
 
   AddBoundaries();
+    world->AddCollectable(collectable2);
 }
 
 void Game::Run() {
-  isRunning = true;
-  sf::Clock clock;
-  while (window.isOpen() && isRunning) {
-    sf::Time deltaTime = clock.restart();
-    ProcessEvents();
-    Update(deltaTime);
-    Render();
-  }
+    isRunning = true; 
+    sf::Clock clock;
+    RealTime counter(1);
+    counter.SetUp();
+
+    while (window.isOpen() && isRunning && !counter.IsTimeUp()) {
+        sf::Time deltaTime = clock.restart();
+        ProcessEvents();
+        Update(deltaTime);
+        Render();
+    }
 }
 
 void Game::ProcessEvents() {
@@ -126,7 +128,10 @@ void Game::Render() {
 
   if (!world->GetCollectable().empty()) {
     for (auto collectable : world->GetCollectable()) {
-      window.draw(*collectable);
+            if (!collectable->IsNullBody()){
+          window.draw(*collectable);
+                 collectable->DeleteBody();
+            }
     }
   }
 
