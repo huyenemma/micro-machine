@@ -13,7 +13,7 @@ Game::~Game() {
 
 using namespace NegativeBuff;
 void Game::Initialize() { 
-    Vehicle* vehicle = new Vehicle(world->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE);
+    Vehicle* vehicle = new Vehicle(world->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE, "../img/buffalo.png");
     
     MyContactListener* contactListener =new MyContactListener();
     world->GetPhysicWorld()->SetContactListener(contactListener);
@@ -22,18 +22,19 @@ void Game::Initialize() {
 
     CrazyRotate* buff2 = new CrazyRotate("rotate", 10, 2, 2);
 
-  Obstacle* obstacle = new Obstacle(world->GetPhysicWorld(),
-                                    b2Vec2(124.0f / SCALE, 440.0f / SCALE),
-                                    2.0f / SCALE, "../img/rock.png");
+    Obstacle* obstacle = new Obstacle(world->GetPhysicWorld(),
+                                    b2Vec2(140.0f / SCALE, 150.0f / SCALE),
+                                    50.0f / SCALE, "../img/rock.png");
 
-    Collectable* collectable2 = new Collectable(world->GetPhysicWorld(), b2Vec2(320.0f / SCALE, 320.0f / SCALE), 2.0f/SCALE, buff2);
+    Collectable* collectable2 = new Collectable(world->GetPhysicWorld(), b2Vec2(440.0f / SCALE, 440.0f / SCALE),50.0f/SCALE, buff2, "../img/mushroom.png");
 
-  world->AddVehicle(vehicle);
-  //world->AddCollectable(collectable);
-  world->AddObstacle(obstacle);
-
-  AddBoundaries();
+    world->AddVehicle(vehicle);
+    //world->AddCollectable(collectable);
     world->AddCollectable(collectable2);
+    world->AddObstacle(obstacle);
+
+    AddBoundaries();
+
 }
 
 void Game::Run() {
@@ -141,5 +142,6 @@ void Game::Render() {
       window.draw(*obstacle);
     }
   }
+
   window.display();
 }
