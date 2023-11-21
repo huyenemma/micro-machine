@@ -10,6 +10,8 @@ OutsideArea::OutsideArea(b2World* world, b2Vec2 position, float height,
   b2PolygonShape polygonShape;
   b2FixtureDef fixtureDef;
   fixtureDef.shape = &polygonShape;
+  // Set friction in this outside area
+  fixtureDef.friction = 0.8;
   fixtureDef.isSensor = true;
 
   polygonShape.SetAsBox(width_ / 2, height_ / 2, position, 0);
