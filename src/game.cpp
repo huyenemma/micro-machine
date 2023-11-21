@@ -3,7 +3,8 @@
 Game::Game()
     : window(sf::VideoMode(800, 800), "Mirco machine"), isRunning(false) {
   world = new World(b2Vec2(0.0f, 0.0f));
-  map = new Map("../img/finalMap.png");
+  resourceManager_ = new ResourceManager();
+  resourceManager_.LoadFromJson("resources.json");
 };
 
 Game::~Game() {
@@ -13,6 +14,9 @@ Game::~Game() {
 
 using namespace NegativeBuff;
 void Game::Initialize() { 
+
+    Map* map = new Map(resourceManager_.GetImage("forest"))
+    
     Vehicle* vehicle = new Vehicle(world->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE, "../img/buffalo.png");
     
     MyContactListener* contactListener =new MyContactListener();
@@ -28,10 +32,10 @@ void Game::Initialize() {
 
     Collectable* collectable2 = new Collectable(world->GetPhysicWorld(), b2Vec2(440.0f / SCALE, 440.0f / SCALE),50.0f/SCALE, buff2, "../img/mushroom.png");
 
-    world->AddVehicle(vehicle);
+    //world->AddVehicle(vehicle);
     //world->AddCollectable(collectable);
-    world->AddCollectable(collectable2);
-    world->AddObstacle(obstacle);
+    //world->AddCollectable(collectable2);
+    //world->AddObstacle(obstacle);
 
     AddBoundaries();
 

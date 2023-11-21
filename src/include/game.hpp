@@ -13,13 +13,14 @@
 #include "world.hpp"
 #include "ContactListener.hpp"
 #include "realTime.hpp"
+#include "resourceManager.hpp"
 
 class Game {
  private:
   sf::RenderWindow window;  // The SFML window for rendering
   World* world;             // The physics world
   bool isRunning;           // Flag to check if the game is running
-  Map* map;
+  ResourceManager resourceManager_;
 
  public:
   // Constructor
