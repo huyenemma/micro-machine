@@ -25,43 +25,40 @@ In each meeting, you are required to discuss:
 ## What we doned in last week: 
 
 ### Huyen 
-- Render collectible 
+- Rendering
+- Implement loading multiple tracks from files
 
 ### Linh 
-- Timer class 
+- Implement one more Buff
+- Implement new Timer class
+
 
 ### Quan 
-- Implement UserDataPointer
+- Improve Vehicle class
 
 ### Duy 
-- Make Obstacle (not done yet)
+- Obstacle class
+- OutsideArea class
 
 # Todos
 
 ### Linh
-
-- Implement more buff 
-- Limit time, test
-- Timer
+- Implement sound effects
 
 ### Quan 
-
-- Object vehicles 
-- Vehicle collisions 
+- Implement conditions to win
+- Improve vehicle
 
 ### Duy 
-
-- Obstacle classes 
-- Wall 
+- Implement camera view
+- Implement multiplayer
   
 ### Huyen 
-
-- Load from file render 
-- Game menu 
+- Implement GUI for timer
+- Implement menu, and resource manager
 
 ## Next week goal Tue 21/11
-
-- Finish the basic game
+- Finish to-dos
 
 ## Project status  
 
@@ -70,3 +67,6 @@ In each meeting, you are required to discuss:
 - Buff
 - Vehicle  
 
+## Questions
+- Feedback on current progress
+- Testing (GUI?)
