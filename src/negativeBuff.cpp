@@ -16,7 +16,7 @@ ReverseMushroom::ReverseMushroom(std::string id,int duration,float Intensity) : 
 
 ReverseMushroom::~ReverseMushroom() {}
 
-
+/*
 //CrazyRotate buff
 CrazyRotate::CrazyRotate(std::string id, int duration, float torque, float Intensity) : Buff(id,duration), buffIntensity(Intensity), torque_(torque){}
 
@@ -27,3 +27,4 @@ void CrazyRotate::ApplyEffect(Vehicle* vehicle){
 void CrazyRotate::ReverseEffect(Vehicle* vehicle) {}
 
 CrazyRotate::~CrazyRotate(){}
+*/

@@ -17,21 +17,23 @@ void Game::Initialize() {
     
     MyContactListener* contactListener =new MyContactListener();
     world->GetPhysicWorld()->SetContactListener(contactListener);
-
+    
+    /*
     ReverseMushroom* buff = new ReverseMushroom("test", 2, 3);
-
+    
     CrazyRotate* buff2 = new CrazyRotate("rotate", 10, 2, 2);
-
+    
     Obstacle* obstacle = new Obstacle(world->GetPhysicWorld(),
                                     b2Vec2(140.0f / SCALE, 150.0f / SCALE),
                                     50.0f / SCALE, "../img/rock.png");
 
     Collectable* collectable2 = new Collectable(world->GetPhysicWorld(), b2Vec2(440.0f / SCALE, 440.0f / SCALE),50.0f/SCALE, buff2, "../img/mushroom.png");
-
-    world->AddVehicle(vehicle);
-    //world->AddCollectable(collectable);
+    
     world->AddCollectable(collectable2);
     world->AddObstacle(obstacle);
+    */
+    world->AddVehicle(vehicle);
+    //world->AddCollectable(collectable);
 
     AddBoundaries();
 
@@ -65,9 +67,10 @@ void Game::HandleInput() {
   if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
     // Move car
     vehicle->ToggleForce(true);
-    vehicle->Update();
+    
   } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
     // turn right
+    
     vehicle->Rotate(torque);
   } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
     vehicle->Rotate(-torque);
@@ -75,6 +78,7 @@ void Game::HandleInput() {
     // Stop the paddle when no key is pressed
     vehicle->ToggleForce(false);
   }
+  vehicle->Update();
 }
 
 void Game::Update(sf::Time deltaTime) {

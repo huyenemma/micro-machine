@@ -18,6 +18,14 @@ class Vehicle : public sf::Drawable {
   sf::Texture texture_;
   std::string imagePath_;
 
+
+  b2Body* m_frontTire;
+
+  b2Body* m_rearTire;
+
+
+  
+
   //Variable that relate to Buff with 1 as default value
   float forceBuff     = 1.0f;
   float MaxSpeedBuff  = 1.0f; 
@@ -31,12 +39,14 @@ class Vehicle : public sf::Drawable {
  public:
   // Constructor: Creates a new vehicle in the given Box2D world at the
   // specified position (default at the origin)
-  Vehicle(b2World* world, float x, float y, const std::string& imagePath);
+  Vehicle(b2World* world, float x = 0, float y = 0,const std::string& imagePath="../img/buffalo.png");
 
   // Destructor: Destroys the Box2D body associated with the vehicle
   ~Vehicle();
 
   void Update();
+
+  void UpdateLateralVelocity();
 
   // Update the speed of the vehicle based on applied force
   void UpdateSpeed();
@@ -55,22 +65,6 @@ class Vehicle : public sf::Drawable {
 
   // Placeholder function for processing items (to be implemented as needed)
   void ProcessItem();
-
-  // Nhung function vo tri cua pe linh
-  // A skill particular to each vehicle
-  // virtual void SuperSkill() = 0;
-
-   // Boost the speed of the vehicle in a certain time
-  void BoostSpeed(float boost);
-
-  //Rotate the vehicle multiple rounds
-  void CrazyRotate(float torque, float boost);
-
-  //Get the mass of vehicle
-  float GetMass();
-
-  //Change the max speed of the vehicle
-  void UpdateMaxSpeed(float speed);
 
 
   // draw vehicle

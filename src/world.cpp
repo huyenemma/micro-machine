@@ -14,7 +14,11 @@ World::~World() {
 
 void World::Update(float timeStep, int velocityIterations,
                    int positionIterations) {
+  
   physicWorld->Step(timeStep, velocityIterations, positionIterations);
+  
+  physicWorld->ClearForces();
+  
 }
 
 void World::AddVehicle(Vehicle* vehicle) { vehicles.push_back(vehicle); }

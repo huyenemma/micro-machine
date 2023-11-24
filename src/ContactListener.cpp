@@ -59,7 +59,7 @@ void MyContactListener::HandleContact(b2Contact* contact, bool begin) {
       // contact type
       if (begin) {
         std::cout << "hit obstacle" << std::endl;
-        obstacle->OnContact(vehicle);  // Do something in the Obstacle class
+        //obstacle->OnContact(vehicle);  // Do something in the Obstacle class
       }
     }
   }
