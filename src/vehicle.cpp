@@ -185,6 +185,7 @@ void Vehicle::UpdateBuff() {
         else{
             std::cout << "reverse" << std::endl;
             (*it)->ReverseEffect(this);
+            delete *it;
             it = buffs.erase(it);
         }
     }
