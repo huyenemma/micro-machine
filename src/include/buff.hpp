@@ -7,16 +7,24 @@
 
     class Vehicle;
     
-    enum buffType {
+    enum BuffEffect {
         onetime,
         continuous,
+    };
+
+    enum class BuffType {
+        Positive,
+        Negative
     };
 
     class Buff : public Timer {
     protected:
         std::string id; 
+        BuffType type_;
+        BuffEffect effectType_;
+        
     public:
-        Buff(std::string id ,int duration) : Timer(id,duration){}
+        Buff(int duration,BuffType type,BuffEffect effectType): Timer(duration) ,type_(type), effectType_(effectType) {}
 
         ~Buff(){};
 
@@ -24,7 +32,13 @@
 
         virtual void ReverseEffect(Vehicle* vehicle) = 0;
 
-        std::string GetId(){ return id;}
+        bool IsContinuous() {
+            return (effectType_ == BuffEffect::continuous);
+        };
+
+        bool IsNegativeBuff() {
+            return (type_ == BuffType::Negative);
+        }
     };
 
     #endif

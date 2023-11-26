@@ -13,7 +13,7 @@ Game::~Game() {
 
 using namespace NegativeBuff;
 void Game::Initialize() { 
-    Vehicle* vehicle = new Vehicle(world->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE, "../img/buffalo.png");
+    Ox* ox = new Ox(world->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE, "../img/buffalo.png");
     
     MyContactListener* contactListener =new MyContactListener();
     world->GetPhysicWorld()->SetContactListener(contactListener);
@@ -32,7 +32,7 @@ void Game::Initialize() {
     world->AddCollectable(collectable2);
     world->AddObstacle(obstacle);
     */
-    world->AddVehicle(vehicle);
+    world->AddVehicle(ox);
     //world->AddCollectable(collectable);
 
     AddBoundaries();
@@ -44,13 +44,22 @@ void Game::Run() {
     sf::Clock clock;
     RealTime counter(1);
     counter.SetUp();
-
     
+    const sf::Time targetFrameTime = sf::seconds(1.0f / 24.0f);
+
     while (window.isOpen() && isRunning && !counter.IsTimeUp()) {
         sf::Time deltaTime = clock.restart();
+        
         ProcessEvents();
+        
         Update(deltaTime);
+
         Render();
+        sf::Time elapsedTime = clock.getElapsedTime();
+        
+        if (elapsedTime < targetFrameTime) {
+            sf::sleep(targetFrameTime - elapsedTime);
+        }
     }
 }
 
@@ -62,7 +71,7 @@ void Game::ProcessEvents() {
 }
 
 void Game::HandleInput() {
-  const float torque = 5.0f;
+  const float angle = 4.0f;
   Vehicle* vehicle = world->GetVehicle()[0];
   if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
     // Move car
@@ -71,9 +80,11 @@ void Game::HandleInput() {
   } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
     // turn right
     
-    vehicle->Rotate(torque);
+    vehicle->Rotate(angle);
   } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-    vehicle->Rotate(-torque);
+    vehicle->Rotate(-angle);
+  } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
+    vehicle->SuperSkill();
   } else {
     // Stop the paddle when no key is pressed
     vehicle->ToggleForce(false);

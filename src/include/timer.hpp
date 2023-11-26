@@ -6,11 +6,10 @@
 
 class Timer {
 private:
-    std::string id;
     int timeLeft;
 
 public:
-    Timer(std::string id, int timeLeft):id(id),timeLeft(timeLeft){};
+    Timer(int timeLeft):timeLeft(timeLeft){};
 
     virtual ~Timer(){};
 

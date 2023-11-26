@@ -8,6 +8,7 @@
 #include "buff.hpp"
 #include "userDataPointer.hpp"
 
+
 // Class representing a simple vehicle in a 2D physics world using Box2D
 class Vehicle : public sf::Drawable {
  protected:
@@ -18,14 +19,12 @@ class Vehicle : public sf::Drawable {
   sf::Texture texture_;
   std::string imagePath_;
 
+  int superSkillCoolDown=0; 
+
 
   b2Body* m_frontTire;
 
   b2Body* m_rearTire;
-
-
-  
-
   //Variable that relate to Buff with 1 as default value
   float forceBuff     = 1.0f;
   float MaxSpeedBuff  = 1.0f; 
@@ -52,7 +51,7 @@ class Vehicle : public sf::Drawable {
   void UpdateSpeed();
 
   // Rotate the vehicle by applying angular impulse (default torque is 1)
-  void Rotate(float torque = 1);
+  void Rotate(float angle = 1);
 
   // Get the current position of the vehicle
   std::pair<float, float> GetPosition() const;
@@ -66,7 +65,6 @@ class Vehicle : public sf::Drawable {
   // Placeholder function for processing items (to be implemented as needed)
   void ProcessItem();
 
-
   // draw vehicle
   virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
@@ -76,6 +74,8 @@ class Vehicle : public sf::Drawable {
   void AddBuff(Buff* buff);
 
   void UpdateBuff();
+
+  void virtual SuperSkill() ;
 };
 
 #endif  // VEHICLE_H

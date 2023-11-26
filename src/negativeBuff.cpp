@@ -10,7 +10,7 @@ void ReverseMushroom::ReverseEffect(Vehicle* vehicle){
     vehicle->ApplyBuff(-1.0f/buffIntensity,1/buffIntensity,1/buffIntensity,-1.0f/buffIntensity);
 }
 
-ReverseMushroom::ReverseMushroom(std::string id,int duration,float Intensity) : Buff(id, duration) {
+ReverseMushroom::ReverseMushroom(int duration,float Intensity) : Buff( duration,BuffType::Negative,BuffEffect::onetime) {
     buffIntensity = Intensity;
 }
 

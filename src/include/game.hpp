@@ -7,12 +7,15 @@
 #include "ContactListener.hpp"
 #include "constant.hpp"
 #include "map.hpp"
+
+#include "ox.hpp"
 #include "negativebuff.hpp"
 #include "obstacle.hpp"
 #include "vehicle.hpp"
 #include "world.hpp"
 #include "ContactListener.hpp"
 #include "realTime.hpp"
+#include "positivebuff.hpp"
 
 class Game {
  private:

@@ -70,7 +70,7 @@ void Vehicle::UpdateSpeed() {
 
 void Vehicle::Rotate(float angleInDegrees) {
     // Convert the angle to radians
-    float angleInRadians = angleInDegrees*180.0f/3.14f;
+    float angleInRadians = angleInDegrees* b2_pi/180.0f;
 
     // Get the current position of the body
     b2Vec2 currentPosition = m_body->GetPosition();
@@ -118,10 +118,7 @@ void Vehicle::draw(sf::RenderTarget& target, sf::RenderStates states) const
     target.draw(sprite_, states);
 }
 
-//void Vehicle::ProcessItem()
-//{
-    // Implementation for processing items
-//}
+
 
 
 void Vehicle::UpdateLateralVelocity() {
@@ -134,8 +131,7 @@ void Vehicle::UpdateLateralVelocity() {
     m_body->ApplyLinearImpulse(impulse, m_body->GetWorldCenter(),true);
     if ( impulse.Length() > MAX_LATERAL_IMPULSE )
       impulse *= MAX_LATERAL_IMPULSE / impulse.Length();
-    std::cout<<impulse.Length()<<std::endl;
-    m_body->ApplyAngularImpulse( 0.001f * m_body->GetInertia() * -m_body->GetAngularVelocity() ,true);
+    m_body->ApplyAngularImpulse( 0.1f * m_body->GetInertia() * -m_body->GetAngularVelocity() ,true);
 }
 
 /*
@@ -163,6 +159,9 @@ void Vehicle::UpdateMaxSpeed(float speed){
 */
 void Vehicle::AddBuff(Buff* buff) {
     buffs.push_back(buff);
+    if ( !(buff)->IsContinuous() ) {
+        buff->ApplyEffect(this);  
+        }
 }
 
 void Vehicle::ApplyBuff(float forceMul, float MaxSpeedMul,float SizeMul,float TorqueMul){
@@ -178,7 +177,9 @@ void Vehicle::UpdateBuff() {
     // Iterate until the end of the vector is reached
     while (it != buffs.end()) {
         if (!(*it)->Tick()){
-            (*it)->ApplyEffect(this);
+            if ( (*it)->IsContinuous() ) {
+                (*it)->ApplyEffect(this);
+            }
             ++it;
         }
         else{
@@ -190,7 +191,11 @@ void Vehicle::UpdateBuff() {
 }
 
 void Vehicle::Update() {
-
     UpdateSpeed();
+    UpdateLateralVelocity();
     UpdateBuff();
+}
+
+void Vehicle::SuperSkill() {
+    std::cout<<"HI"<<std::endl;
 }
