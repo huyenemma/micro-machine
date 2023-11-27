@@ -123,7 +123,7 @@ void Game::HandleInput() {
       // Stop the paddle when no key is pressed
       vehicle2->ToggleForce(false);
     }
-    vehicle->Update();
+    vehicle2->Update();
   }
 }
 
