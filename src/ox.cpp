@@ -7,8 +7,8 @@ constexpr float OX_ANGULAR_DAMPING = 0.95f;
 constexpr float OX_BOOST_IMPULSE = 10.0f;
 constexpr int OX_SKILL_COOLDOWN = 0;
 
-Ox::Ox(b2World* world, float x /*= 0*/, float y /*= 0*/,const std::string& imagePath)
-    : Vehicle(world, x, y,imagePath)
+Ox::Ox(b2World* world, float x /*= 0*/, float y /*= 0*/, const sf::Texture& texture)
+    : Vehicle(world, x, y, texture)
 {
     // Additional setup specific to the Ox with the Ox constants
     maxSpeed = OX_MAX_SPEED;

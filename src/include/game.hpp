@@ -1,8 +1,8 @@
 #ifndef GAME_H
 #define GAME_H
 
-// #include "../../libs/include/SFML/Graphics.hpp"
 #include <SFML/Graphics.hpp>
+#include "resourceManager.hpp"
 
 #include "ContactListener.hpp"
 #include "constant.hpp"
@@ -19,10 +19,12 @@
 
 class Game {
  private:
-  sf::RenderWindow window;  // The SFML window for rendering
-  World* world;             // The physics world
-  bool isRunning;           // Flag to check if the game is running
-  Map* map;
+  sf::RenderWindow window_;  // The SFML window for rendering
+  World* world_;             // The physics world
+  bool isRunning_;           // Flag to check if the game is running
+  ResourceManager* resourceManager_; 
+  RealTime* counterClock_; 
+  Map* map_; 
 
  public:
   // Constructor

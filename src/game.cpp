@@ -1,59 +1,68 @@
 #include "./include/game.hpp"
 
 Game::Game()
-    : window(sf::VideoMode(800, 800), "Mirco machine"), isRunning(false) {
-  world = new World(b2Vec2(0.0f, 0.0f));
-  map = new Map("../img/finalMap.png");
+    : window_(sf::VideoMode(800, 800), "Mirco machine"), isRunning_(false) {
+  world_ = new World(b2Vec2(0.0f, 0.0f));
+  resourceManager_ = new ResourceManager(); 
 };
 
 Game::~Game() {
-  delete world;
-  delete map;
+  delete world_;
+  delete resourceManager_;
+  delete counterClock_;  
+  delete map_;
 }
 
 using namespace NegativeBuff;
 void Game::Initialize() { 
-    Ox* ox = new Ox(world->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE, "../img/buffalo.png");
+  
+    resourceManager_->LoadFromJson("../src/resources.json");
+
+    const sf::Font& font = resourceManager_->GetFont("clockFont"); 
+    counterClock_ = new RealTime(2, font);
+    counterClock_->SetUp();
+
+    const sf::Texture& map_Texture = resourceManager_->GetImage("forest");
+    map_ = new Map(map_Texture); 
+
+    const sf::Texture& oxTexture = resourceManager_->GetImage("buffalo");
+    Ox* ox = new Ox(world_->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE, oxTexture);
     
     MyContactListener* contactListener =new MyContactListener();
-    world->GetPhysicWorld()->SetContactListener(contactListener);
+    world_->GetPhysicWorld()->SetContactListener(contactListener);
     
     /*
     ReverseMushroom* buff = new ReverseMushroom("test", 2, 3);
     
     CrazyRotate* buff2 = new CrazyRotate("rotate", 10, 2, 2);
     
-    Obstacle* obstacle = new Obstacle(world->GetPhysicWorld(),
+    Obstacle* obstacle = new Obstacle(world_->GetPhysicworld_(),
                                     b2Vec2(140.0f / SCALE, 150.0f / SCALE),
                                     50.0f / SCALE, "../img/rock.png");
 
-    Collectable* collectable2 = new Collectable(world->GetPhysicWorld(), b2Vec2(440.0f / SCALE, 440.0f / SCALE),50.0f/SCALE, buff2, "../img/mushroom.png");
+    Collectable* collectable2 = new Collectable(world_->GetPhysicworld_(), b2Vec2(440.0f / SCALE, 440.0f / SCALE),50.0f/SCALE, buff2, "../img/mushroom.png");
     
-    world->AddCollectable(collectable2);
-    world->AddObstacle(obstacle);
+    world_->AddCollectable(collectable2);
+    world_->AddObstacle(obstacle);
     */
-    world->AddVehicle(ox);
-    //world->AddCollectable(collectable);
+    world_->AddVehicle(ox);
+    //world_->AddCollectable(collectable);
 
     AddBoundaries();
 
 }
 
 void Game::Run() {
-    isRunning = true; 
+    isRunning_ = true; 
     sf::Clock clock;
-    RealTime counter(1);
-    counter.SetUp();
     
     const sf::Time targetFrameTime = sf::seconds(1.0f / 24.0f);
 
-    while (window.isOpen() && isRunning && !counter.IsTimeUp()) {
+    while (window_.isOpen() && isRunning_ && !counterClock_->IsTimeUp()) {
         sf::Time deltaTime = clock.restart();
-        
+      
         ProcessEvents();
-        
         Update(deltaTime);
-
         Render();
         sf::Time elapsedTime = clock.getElapsedTime();
         
@@ -65,21 +74,20 @@ void Game::Run() {
 
 void Game::ProcessEvents() {
   sf::Event event;
-  while (window.pollEvent(event)) {
-    if (event.type == sf::Event::Closed) window.close();
+  while (window_.pollEvent(event)) {
+    if (event.type == sf::Event::Closed) window_.close();
   }
 }
 
 void Game::HandleInput() {
   const float angle = 4.0f;
-  Vehicle* vehicle = world->GetVehicle()[0];
+  Vehicle* vehicle = world_->GetVehicle()[0];
   if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
     // Move car
     vehicle->ToggleForce(true);
     
   } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
     // turn right
-    
     vehicle->Rotate(angle);
   } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
     vehicle->Rotate(-angle);
@@ -95,22 +103,23 @@ void Game::HandleInput() {
 void Game::Update(sf::Time deltaTime) {
   // Update car position
   HandleInput();
-  world->Update(deltaTime.asSeconds(), velocityIterations, positionIterations);
+  world_->Update(deltaTime.asSeconds(), velocityIterations, positionIterations);
+  counterClock_->Update(); 
 }
 
 void Game::AddBoundaries() {
-  float worldWidth = 800.0f / SCALE;   // Width of window in Box2D units
-  float worldHeight = 800.0f / SCALE;  // Height of  window in Box2D units
+  float world_Width = 800.0f / SCALE;   // Width of window_ in Box2D units
+  float world_Height = 800.0f / SCALE;  // Height of  window_ in Box2D units
   float thickness = 0.0005f / SCALE;   // Thickness of the boundary walls
 
   // Define the positions and sizes of the boundary walls
-  b2Vec2 topWallPos(worldWidth / 2, thickness / 2);
-  b2Vec2 bottomWallPos(worldWidth / 2, worldHeight - thickness / 2);
-  b2Vec2 leftWallPos(thickness / 2, worldHeight / 2);
-  b2Vec2 rightWallPos(worldWidth - thickness / 2, worldHeight / 2);
+  b2Vec2 topWallPos(world_Width / 2, thickness / 2);
+  b2Vec2 bottomWallPos(world_Width / 2, world_Height - thickness / 2);
+  b2Vec2 leftWallPos(thickness / 2, world_Height / 2);
+  b2Vec2 rightWallPos(world_Width - thickness / 2, world_Height / 2);
 
-  b2Vec2 horizontalSize(worldWidth, thickness);
-  b2Vec2 verticalSize(thickness, worldHeight);
+  b2Vec2 horizontalSize(world_Width, thickness);
+  b2Vec2 verticalSize(thickness, world_Height);
 
   // Create each wall as a static body
   CreateWall(topWallPos, horizontalSize);
@@ -123,7 +132,7 @@ void Game::CreateWall(const b2Vec2& position, const b2Vec2& size) {
   b2BodyDef bodyDef;
   bodyDef.position = position;
   bodyDef.type = b2_staticBody;
-  b2Body* body = world->GetPhysicWorld()->CreateBody(&bodyDef);
+  b2Body* body = world_->GetPhysicWorld()->CreateBody(&bodyDef);
 
   b2PolygonShape shape;
   shape.SetAsBox(size.x / 2, size.y / 2);
@@ -134,29 +143,32 @@ void Game::CreateWall(const b2Vec2& position, const b2Vec2& size) {
 }
 
 void Game::Render() {
-  window.clear();
-  map->Draw(window);
+  
+  window_.clear();
+  map_->Draw(window_);
 
-  if (!world->GetVehicle().empty()) {
-    for (auto vehicle : world->GetVehicle()) {
-      window.draw(*vehicle);
+  if (!world_->GetVehicle().empty()) {
+    for (auto vehicle : world_->GetVehicle()) {
+      window_.draw(*vehicle);
     }
   }
 
-  if (!world->GetCollectable().empty()) {
-    for (auto collectable : world->GetCollectable()) {
+  if (!world_->GetCollectable().empty()) {
+    for (auto collectable : world_->GetCollectable()) {
             if (!collectable->IsNullBody()){
-          window.draw(*collectable);
+          window_.draw(*collectable);
                  collectable->DeleteBody();
             }
     }
   }
 
-  if (!world->GetObstacle().empty()) {
-    for (auto obstacle : world->GetObstacle()) {
-      window.draw(*obstacle);
+  if (!world_->GetObstacle().empty()) {
+    for (auto obstacle : world_->GetObstacle()) {
+      window_.draw(*obstacle);
     }
   }
 
-  window.display();
+  counterClock_->Draw(window_);
+
+  window_.display();
 }

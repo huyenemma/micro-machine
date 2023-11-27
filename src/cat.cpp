@@ -6,8 +6,8 @@ constexpr float CAT_MAX_SPEED = 3.75f;
 constexpr float CAT_ANGULAR_DAMPING = 0.8f;
 constexpr int CAT_SKILL_COOLDOWN = 100*FPS;
 
-Cat::Cat(b2World* world, float x /*= 0*/, float y /*= 0*/,const std::string& imagePath)
-    : Vehicle(world, x, y,imagePath)
+Cat::Cat(b2World* world, float x, float y, const sf::Texture& texture)
+    : Vehicle(world, x, y,texture)
 {
     // Additional setup specific to the Ox with the Ox constants
     maxSpeed = CAT_MAX_SPEED;

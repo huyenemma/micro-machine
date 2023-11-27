@@ -2,10 +2,9 @@
 #include <cmath>
 #include <iostream>
 
-Vehicle::Vehicle(b2World* world, float x , float y, const std::string& imagePath)
-    : forceOn(false), m_body(nullptr), maxSpeed(MAX_SPEED), imagePath_(imagePath) 
+Vehicle::Vehicle(b2World* world, float x, float y, const sf::Texture& texture)
+    : forceOn(false), m_body(nullptr), maxSpeed(MAX_SPEED), texture_(texture)
 {
-    texture_.loadFromFile(imagePath_);
     sprite_.setTexture(texture_);
     rescaleSprite(sprite_, BOX_WIDTH * SCALE, BOX_HEIGHT * SCALE);
 
