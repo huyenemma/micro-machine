@@ -55,6 +55,9 @@ void Game::Initialize() {
   // world_->AddCollectable(collectable);
 
   world->AddVehicle(ox2);
+
+  // Need to update when selecting number of players
+  playerCount = 2;
   AddBoundaries();
 }
 
@@ -105,7 +108,7 @@ void Game::HandleInput() {
   }
   vehicle->Update();
 
-  if (world->GetVehicle().size() == 2) {
+  if (playerCount == 2) {
     Vehicle* vehicle2 = world->GetVehicle()[1];
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
       // Move car

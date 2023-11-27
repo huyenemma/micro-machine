@@ -7,15 +7,13 @@
 #include "ContactListener.hpp"
 #include "constant.hpp"
 #include "map.hpp"
-
-#include "ox.hpp"
 #include "negativebuff.hpp"
 #include "obstacle.hpp"
+#include "ox.hpp"
+#include "positivebuff.hpp"
+#include "realTime.hpp"
 #include "vehicle.hpp"
 #include "world.hpp"
-#include "ContactListener.hpp"
-#include "realTime.hpp"
-#include "positivebuff.hpp"
 
 class Game {
  private:
@@ -25,6 +23,7 @@ class Game {
   ResourceManager* resourceManager_; 
   RealTime* counterClock_; 
   Map* map_; 
+  int playerCount;
 
  public:
   // Constructor
