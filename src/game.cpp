@@ -196,7 +196,7 @@ void Game::Render() {
     sf::View view;
     view.setCenter(sf::Vector2f(player1->GetPosition().first * SCALE,
                                 player1->GetPosition().second * SCALE));
-    view.zoom(0.5f);
+    view.zoom(zoomCoef);
     window.setView(view);
     DrawGameWorld();
   }
@@ -205,7 +205,7 @@ void Game::Render() {
     sf::View view1;
     view1.setCenter(sf::Vector2f(player1->GetPosition().first * SCALE,
                                  player1->GetPosition().second * SCALE));
-    view1.zoom(0.5f);
+    view1.zoom(zoomCoef);
     view1.setViewport(sf::FloatRect(0.f, 0.f, 0.5f, 1.f));
     window.setView(view1);
     DrawGameWorld();
@@ -213,7 +213,7 @@ void Game::Render() {
     sf::View view2;
     view2.setCenter(sf::Vector2f(player2->GetPosition().first * SCALE,
                                  player2->GetPosition().second * SCALE));
-    view2.zoom(0.5f);
+    view2.zoom(zoomCoef);
     view2.setViewport(sf::FloatRect(0.5f, 0.f, 0.5f, 1.f));
     window.setView(view2);
     DrawGameWorld();
