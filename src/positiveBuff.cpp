@@ -11,7 +11,7 @@ void OxSuperSkillBuff::ReverseEffect(Vehicle* vehicle){
     vehicle->ApplyBuff(1.0f/buffIntensity,1/buffIntensity,1,1.0f/0.001);
 }
 
-OxSuperSkillBuff::OxSuperSkillBuff(int duration,float Intensity) : Buff(duration,BuffType::Positive,BuffEffect::continuous) {
+OxSuperSkillBuff::OxSuperSkillBuff(int duration,float Intensity) : Buff(duration,BuffType::Positive,BuffEffect::onetime) {
     buffIntensity = Intensity;
 }
 

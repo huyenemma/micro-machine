@@ -4,7 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <unordered_map>
 #include <string>
-#include <nlohmann/json.hpp>
+#include "../../libs/nlohmann/json.hpp"
 #include <iostream>
 #include <fstream>
 
@@ -16,10 +16,15 @@ public:
     void LoadImage(const std::string& key, const std::string& filename);
     const sf::Texture& GetImage(const std::string& key) const;
 
+    void LoadFont(const std::string& key, const std::string& filename);
+    const sf::Font& GetFont(const std::string& key) const;
+
     void LoadFromJson(const std::string& jsonFilePath);
 
 private:
-    std::unordered_map<std::string, sf::Texture> textures;
+    std::unordered_map<std::string, sf::Texture> textures_;
+    std::unordered_map<std::string, sf::Font> fonts_;
+    sf::Texture defaultTexture_; 
 };
 
 #endif // RESOURCEMANAGER_HPP

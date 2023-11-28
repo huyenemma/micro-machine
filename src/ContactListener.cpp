@@ -2,30 +2,6 @@
 
 MyContactListener::MyContactListener() {}
 
-void MyContactListener::ModelElasticCollision(b2Body* bodyA, b2Body* bodyB) {
-    // Calculate relative velocity
-    b2Vec2 relativeVelocity = bodyB->GetLinearVelocity() - bodyA->GetLinearVelocity();
-
-    // Calculate the normal vector (points from A to B)
-    b2Vec2 normal = bodyB->GetPosition() - bodyA->GetPosition();
-    normal.Normalize();
-
-    // Calculate relative velocity along the normal
-    float relativeSpeedAlongNormal = b2Dot(relativeVelocity, normal);
-
-    // Calculate the coefficient of restitution (elasticity)
-    float restitution = 0.5;
-
-    // Calculate the impulse (change in velocity)
-    float impulse = -(1 + restitution) * relativeSpeedAlongNormal /
-                    (1 / bodyA->GetMass() + 1 / bodyB->GetMass());
-
-    // Apply the impulse to both bodies
-    bodyA->ApplyLinearImpulse(-impulse * normal, bodyA->GetWorldCenter(), true);
-    bodyB->ApplyLinearImpulse(impulse * normal, bodyB->GetWorldCenter(), true);
-}
-
-
 void MyContactListener::BeginContact(b2Contact* contact) {
   std::cout << "contact" << std::endl;
   HandleContact(contact, true);
@@ -78,20 +54,15 @@ void MyContactListener::HandleContact(b2Contact* contact, bool begin) {
       Obstacle* obstacle = static_cast<Obstacle*>(
           IsObstacle(userDataB) ? userDataB->info.pointer
                                 : userDataA->info.pointer);
+
+      // Call the appropriate method in Vehicle and Obstacle based on the
+      // contact type
       if (begin) {
         std::cout << "hit obstacle" << std::endl;
         //obstacle->OnContact(vehicle);  // Do something in the Obstacle class
       }
-    } else if (IsVehicle(userDataA) && IsVehicle(userDataB)) {
-      Vehicle* vehicleA = static_cast<Vehicle*>(userDataA->info.pointer);
-      Vehicle* vehicleB = static_cast<Vehicle*>(userDataB->info.pointer);
-
-      // Handle the collision between two vehicles
-      if (begin) {
-        std::cout << "hit vehicle" << std::endl;
-        ModelElasticCollision(fixtureA->GetBody(),fixtureB->GetBody());
-      }
+    }
   }
-}}
+}
 
 MyContactListener::~MyContactListener() {}

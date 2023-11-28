@@ -1,5 +1,6 @@
 #ifndef HORSE_H
 #define HORSE_H
+#include "../include/box2d/box2d.h"
 #include "vehicle.hpp"
 
 class Horse : public Vehicle {
