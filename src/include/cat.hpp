@@ -1,6 +1,5 @@
 #ifndef CAT_H
 #define CAT_H
-#include "../include/box2d/box2d.h"
 #include "vehicle.hpp"
 
 class Cat : public Vehicle {

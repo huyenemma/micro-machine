@@ -70,7 +70,7 @@ void Vehicle::UpdateSpeed() {
 
 void Vehicle::Rotate(float angleInDegrees) {
     // Convert the angle to radians
-    float angleInRadians = angleInDegrees* b2_pi/180.0f;
+    float angleInRadians = angleInDegrees*RotationBuff* b2_pi/180.0f;
 
     // Get the current position of the body
     b2Vec2 currentPosition = m_body->GetPosition();
@@ -118,6 +118,11 @@ void Vehicle::draw(sf::RenderTarget& target, sf::RenderStates states) const
     target.draw(sprite_, states);
 }
 
+
+void Vehicle::UpdateCoolDown(){
+    if (superSkillCoolDown > 0)
+        superSkillCoolDown--;
+};
 
 
 
@@ -168,7 +173,7 @@ void Vehicle::ApplyBuff(float forceMul, float MaxSpeedMul,float SizeMul,float To
     forceBuff *= forceMul;
     MaxSpeedBuff *= MaxSpeedMul;
     SizeBuff    *= SizeMul;
-    TorqueBuff  *= TorqueMul;
+    RotationBuff  *= TorqueMul;
 };
 
 
@@ -192,9 +197,9 @@ void Vehicle::UpdateBuff() {
 }
 
 void Vehicle::Update() {
-    UpdateSpeed();
-    UpdateLateralVelocity();
+    UpdateCoolDown();
     UpdateBuff();
+    UpdateSpeed();
 }
 
 void Vehicle::SuperSkill() {

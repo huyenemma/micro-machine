@@ -14,7 +14,8 @@ Game::~Game() {
 using namespace NegativeBuff;
 void Game::Initialize() { 
     Ox* ox = new Ox(world->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE, "../img/buffalo.png");
-    
+    Ox* ox2 = new Ox(world->GetPhysicWorld(), 400.0f / SCALE, 400.0f / SCALE, "../img/buffalo.png");
+
     MyContactListener* contactListener =new MyContactListener();
     world->GetPhysicWorld()->SetContactListener(contactListener);
     
@@ -33,6 +34,7 @@ void Game::Initialize() {
     world->AddObstacle(obstacle);
     */
     world->AddVehicle(ox);
+    world->AddVehicle(ox2);
     //world->AddCollectable(collectable);
 
     AddBoundaries();

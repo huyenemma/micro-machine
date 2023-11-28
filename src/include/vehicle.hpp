@@ -29,7 +29,7 @@ class Vehicle : public sf::Drawable {
   float forceBuff     = 1.0f;
   float MaxSpeedBuff  = 1.0f; 
   float SizeBuff      = 1.0f;
-  float TorqueBuff    = 1.0f;
+  float RotationBuff  = 1.0f;
 
   //A collection of Buffs
 
@@ -74,6 +74,8 @@ class Vehicle : public sf::Drawable {
   void AddBuff(Buff* buff);
 
   void UpdateBuff();
+
+  void UpdateCoolDown();
 
   void virtual SuperSkill() ;
 };
