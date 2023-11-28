@@ -1,11 +1,10 @@
     #include "./include/collectable.hpp"
     #include <iostream>
 
-    Collectable::Collectable(b2World* world, b2Vec2 position, float radius,Buff* buff, const std::string& imagePath) : radius_(radius) ,buff(buff), imagePath_(imagePath) {
+    Collectable::Collectable(b2World* world, b2Vec2 position, float radius,Buff* buff, const sf::Texture& texture) : radius_(radius) ,buff(buff), texture_(texture) {
         
-        texture.loadFromFile(imagePath_);
-        sprite.setTexture(texture);
-        rescaleSprite(sprite, radius_ * SCALE, radius_ * SCALE);
+        sprite_.setTexture(texture_);
+        rescaleSprite(sprite_, radius_ * SCALE, radius_ * SCALE);
         
         // Define the collectable's shape
         b2CircleShape shape;
@@ -62,12 +61,15 @@
     void Collectable::draw(sf::RenderTarget& target, sf::RenderStates states) const 
     {
         auto pos = GetPosition(); 
-        sprite.setPosition(pos.first * SCALE, pos.second * SCALE); 
+        sprite_.setPosition(pos.first * SCALE, pos.second * SCALE); 
 
+        sf::Vector2f spriteOrigin(sprite_.getLocalBounds().width / 2, sprite_.getLocalBounds().height / 2);
+        sprite_.setOrigin(spriteOrigin);
+        
         float angleDegrees = body->GetAngle() * (180 / b2_pi);
-        sprite.setRotation(angleDegrees);
+        sprite_.setRotation(angleDegrees);
 
-        target.draw(sprite, states);
+        target.draw(sprite_, states);
     }
 
     void Collectable::OnContact(Vehicle* vehicle) {
