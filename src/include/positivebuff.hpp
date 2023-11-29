@@ -7,6 +7,6 @@
 #include "timer.hpp"
 
 namespace PositiveBuff {
-    
+
 }
 #endif

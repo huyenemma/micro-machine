@@ -1,26 +1,32 @@
 #ifndef REAL_TIME_HPP
 #define REAL_TIME_HPP
 
-#include <SFML/Graphics.hpp>
 #include <chrono>
-#include <iomanip> 
-#include <sstream>
+#include <thread>
 
-constexpr int CHAR_SIZE = 24; 
+class RealTime{
+    private: 
+        int duration_;
+        std::chrono::steady_clock::time_point startTime_;
 
-class RealTime {
-private: 
-    int duration_;
-    std::chrono::steady_clock::time_point startTime_;
-    sf::Text timeText_;
+    public:
+    RealTime(int duration) : duration_(duration){}
 
-public:
-    RealTime(int duration, const sf::Font& font, sf::Color color = sf::Color::White, sf::Vector2f position = sf::Vector2f(10, 10));
+    void SetUp() {
+        // Set the duration of the game to specified minutes
+        std::chrono::minutes gameDuration(duration_);
 
-    void SetUp();
-    bool IsTimeUp();
-    void Update();
-    void Draw(sf::RenderWindow& window);
+        // Get the current time point
+        startTime_ = std::chrono::steady_clock::now();
+    }
+
+    bool IsTimeUp() {
+        // Calculate the elapsed time
+        auto currentTime = std::chrono::steady_clock::now();
+        auto elapsedTime = std::chrono::duration_cast<std::chrono::minutes>(currentTime - startTime_);
+
+        // Check if the game duration has passed
+        return (elapsedTime >= std::chrono::minutes(duration_));
+    }
 };
-
-#endif // REAL_TIME_HPP
+#endif

@@ -8,7 +8,7 @@
 class Map {
 public:
     // Constructor that loads the texture from resourceManager 
-    Map(const sf::Texture& texture);
+    Map(const std::string& texturePath);
 
     // Method to draw the map
     void Draw(sf::RenderWindow& window);

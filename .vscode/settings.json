@@ -87,7 +87,6 @@
     "shared_mutex": "cpp",
     "cfenv": "cpp",
     "typeindex": "cpp",
-    "valarray": "cpp",
-    "forward_list": "cpp"
+    "valarray": "cpp"
   }
 }

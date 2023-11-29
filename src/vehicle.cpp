@@ -2,9 +2,10 @@
 #include <cmath>
 #include <iostream>
 
-Vehicle::Vehicle(b2World* world, float x, float y, const sf::Texture& texture)
-    : forceOn(false), m_body(nullptr), maxSpeed(MAX_SPEED), texture_(texture)
+Vehicle::Vehicle(b2World* world, float x , float y, const std::string& imagePath)
+    : forceOn(false), m_body(nullptr), maxSpeed(MAX_SPEED), imagePath_(imagePath) 
 {
+    texture_.loadFromFile(imagePath_);
     sprite_.setTexture(texture_);
     rescaleSprite(sprite_, BOX_WIDTH * SCALE, BOX_HEIGHT * SCALE);
 
@@ -46,6 +47,8 @@ Vehicle::Vehicle(b2World* world, float x, float y, const sf::Texture& texture)
     data->info.type = UserType::Vehicle;
     data->info.pointer = this;
     m_body->GetUserData().pointer = reinterpret_cast<uintptr_t>(data); 
+
+
 }
 
 Vehicle::~Vehicle() {
@@ -67,7 +70,7 @@ void Vehicle::UpdateSpeed() {
 
 void Vehicle::Rotate(float angleInDegrees) {
     // Convert the angle to radians
-    float angleInRadians = angleInDegrees* b2_pi/180.0f;
+    float angleInRadians = angleInDegrees*RotationBuff* b2_pi/180.0f;
 
     // Get the current position of the body
     b2Vec2 currentPosition = m_body->GetPosition();
@@ -115,6 +118,11 @@ void Vehicle::draw(sf::RenderTarget& target, sf::RenderStates states) const
     target.draw(sprite_, states);
 }
 
+
+void Vehicle::UpdateCoolDown(){
+    if (superSkillCoolDown > 0)
+        superSkillCoolDown--;
+};
 
 
 
@@ -165,7 +173,7 @@ void Vehicle::ApplyBuff(float forceMul, float MaxSpeedMul,float SizeMul,float To
     forceBuff *= forceMul;
     MaxSpeedBuff *= MaxSpeedMul;
     SizeBuff    *= SizeMul;
-    TorqueBuff  *= TorqueMul;
+    RotationBuff  *= TorqueMul;
 };
 
 
@@ -189,9 +197,9 @@ void Vehicle::UpdateBuff() {
 }
 
 void Vehicle::Update() {
-    UpdateSpeed();
-    UpdateLateralVelocity();
+    UpdateCoolDown();
     UpdateBuff();
+    UpdateSpeed();
 }
 
 void Vehicle::SuperSkill() {

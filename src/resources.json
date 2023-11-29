@@ -2,18 +2,18 @@
     "map" : [
         {
             "id": "forest",
-            "path" : "../img/finalMap.png"
+            "texturePath" : "../img/finalMap.png"
         }
     ],
     
     "vehicle": [
         {
             "id": "buffalo",
-            "path": "../img/buffalo.png"
+            "texturePath": "../img/buffalo.png"
         },
         {
             "id": "vehicle2",
-            "path": "../img/buffalo1.png"
+            "texturePath": "../img/buffalo1.png"
         }
        
     ],
@@ -21,21 +21,14 @@
     "collectable": [
         {
             "id": "mushroom",
-            "path": "../img/mushroom.png"
+            "texturePath": "../img/mushroom.png"
         }
     ],
 
     "obstacle" : [
         {
             "id":"rock", 
-            "path": "../img/rock.png"
-        }
-    ], 
-
-    "font" : [
-        {
-            "id":"clockFont", 
-            "path": "../font/PixelOperator.ttf"
+            "texturePath": "../img/rock.png"
         }
     ]
 }

@@ -2,7 +2,6 @@
 #define VEHICLE_H
 
 #include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp>
 #include "box2dInclude.hpp"
 #include "constant.hpp"
 #include "reScale.hpp"
@@ -18,32 +17,28 @@ class Vehicle : public sf::Drawable {
   float maxSpeed;  // Maximum speed of the vehicle
   mutable sf::Sprite sprite_;
   sf::Texture texture_;
+  std::string imagePath_;
 
   int superSkillCoolDown=0; 
 
 
   b2Body* m_frontTire;
 
-
-
   b2Body* m_rearTire;
   //Variable that relate to Buff with 1 as default value
   float forceBuff     = 1.0f;
   float MaxSpeedBuff  = 1.0f; 
   float SizeBuff      = 1.0f;
-  float TorqueBuff    = 1.0f;
+  float RotationBuff  = 1.0f;
 
   //A collection of Buffs
-  std::vector<Buff*> buffs;
 
-  //sound effect
-  sf::SoundBuffer runBuffer;
-  sf::Sound run;
+  std::vector<Buff*> buffs;
 
  public:
   // Constructor: Creates a new vehicle in the given Box2D world at the
   // specified position (default at the origin)
-  Vehicle(b2World* world, float x, float y, const sf::Texture& texture);
+  Vehicle(b2World* world, float x = 0, float y = 0,const std::string& imagePath="../img/buffalo.png");
 
   // Destructor: Destroys the Box2D body associated with the vehicle
   ~Vehicle();
@@ -79,6 +74,8 @@ class Vehicle : public sf::Drawable {
   void AddBuff(Buff* buff);
 
   void UpdateBuff();
+
+  void UpdateCoolDown();
 
   void virtual SuperSkill() ;
 };
