@@ -17,6 +17,8 @@ class MyContactListener : public b2ContactListener {
 
   ~MyContactListener();
 
+  void ModelElasticCollision(b2Body* bodyA, b2Body* bodyB);
+
  private:
   struct ContactData {
     b2Body* bodyA;

@@ -1,37 +1,28 @@
 #ifndef GAME_H
 #define GAME_H
 
+// #include "../../libs/include/SFML/Graphics.hpp"
 #include <SFML/Graphics.hpp>
-#include "resourceManager.hpp"
-#include <SFML/Audio.hpp>
 
 #include "ContactListener.hpp"
 #include "constant.hpp"
 #include "map.hpp"
+
+#include "ox.hpp"
 #include "negativebuff.hpp"
 #include "obstacle.hpp"
-#include "ox.hpp"
-#include "positivebuff.hpp"
-#include "realTime.hpp"
 #include "vehicle.hpp"
 #include "world.hpp"
+#include "ContactListener.hpp"
+#include "realTime.hpp"
+#include "positivebuff.hpp"
 
 class Game {
  private:
-  sf::RenderWindow window_;  // The SFML window for rendering
-  World* world_;             // The physics world
-  bool isRunning_;           // Flag to check if the game is running
-  ResourceManager* resourceManager_; 
-  RealTime* counterClock_; 
-  Map* map_; 
-  int playerCount;
-  Vehicle* player1;
-  Vehicle* player2;
-  sf::SoundBuffer backgroundBuffer;
-  sf::Sound background;
-
-  sf::SoundBuffer runBuffer;
-  sf::Sound run;
+  sf::RenderWindow window;  // The SFML window for rendering
+  World* world;             // The physics world
+  bool isRunning;           // Flag to check if the game is running
+  Map* map;
 
  public:
   // Constructor
@@ -63,9 +54,6 @@ class Game {
 
   // Render the game
   void Render();
-
-  // Draw game world
-  void DrawGameWorld();
 };
 
 #endif  // GAME_H

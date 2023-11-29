@@ -7,14 +7,12 @@
 #include "userDataPointer.hpp"
 #include "vehicle.hpp"
 #include "buff.hpp"
-#include "constant.hpp"
-#include <SFML/Audio.hpp>
 
 using namespace BodyType;
 
 class Collectable : public sf::Drawable {
 public:
-    Collectable(b2World* world, b2Vec2 position, float radius, Buff* buff, const sf::Texture& texture);
+    Collectable(b2World* world, b2Vec2 position, float radius, Buff* buff, const std::string& imagePath);
 
     std::pair<float, float> GetPosition() const;
     
@@ -33,15 +31,13 @@ public:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
 private:
-    mutable sf::Sprite sprite_;
-    sf::Texture texture_;  
+    mutable sf::Sprite sprite;
+    sf::Texture texture;  
+    std::string imagePath_;
     Buff* buff;
     b2Body* body;
     float radius_;  
     bool  toBeDeleted = false;
-
-    sf::SoundBuffer hitBuffer;
-    sf::Sound hit;
 
 };
 
