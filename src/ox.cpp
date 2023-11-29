@@ -18,8 +18,10 @@ Ox::Ox(b2World* world, float x /*= 0*/, float y /*= 0*/, const sf::Texture& text
 
 Ox::~Ox(){}
 
+
 void Ox::SuperSkill()
 {   
     PositiveBuff::OxSuperSkillBuff* buff = new PositiveBuff::OxSuperSkillBuff(10*FPS/10,1.5);
     this->AddBuff(buff);
 }
+

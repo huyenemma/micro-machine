@@ -1,7 +1,9 @@
 #include "./include/positivebuff.hpp"
 #include "./include/buff.hpp"
 #include "vehicle.hpp"
+
 using namespace PositiveBuff;
+
 
 void OxSuperSkillBuff::ApplyEffect(Vehicle* vehicle){
     vehicle->ApplyBuff(buffIntensity,buffIntensity,1,0.001);

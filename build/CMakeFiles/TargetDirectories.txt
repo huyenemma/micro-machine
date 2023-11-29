@@ -1,0 +1,3 @@
+/u/14/doh6/unix/cpp/micro/build/CMakeFiles/MicroMachine.dir
+/u/14/doh6/unix/cpp/micro/build/CMakeFiles/edit_cache.dir
+/u/14/doh6/unix/cpp/micro/build/CMakeFiles/rebuild_cache.dir
