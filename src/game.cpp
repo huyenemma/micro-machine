@@ -52,7 +52,6 @@ void Game::Initialize() {
   world_->AddCollectable(collectable2);
   world_->AddObstacle(obstacle);
   */
-  world_->AddVehicle(ox);
   // world_->AddCollectable(collectable);
   world_->AddVehicle(ox);
   player1 = ox;
@@ -64,34 +63,24 @@ void Game::Initialize() {
   // Need to update when selecting number of players
   playerCount = 2;
   AddBoundaries();
-    Obstacle* obstacle = new Obstacle(world->GetPhysicWorld(),
-                                    b2Vec2(140.0f / SCALE, 150.0f / SCALE),
-                                    50.0f / SCALE, "../img/rock.png");
-  
-    Collectable* collectable2 = new Collectable(world->GetPhysicWorld(), b2Vec2(440.0f / SCALE, 440.0f / SCALE),50.0f/SCALE, buff2, "../img/mushroom.png");
 
-  world_->AddVehicle(ox2);
-  player2 = ox2;
-  // Need to update when selecting number of players
-  playerCount = 2;
-  AddBoundaries();
-    //add background sound
-    if (!backgroundBuffer.loadFromFile("../sound/background.mp3")){
-       std::cerr << "Error loading sound files!" << std::endl;
-    }
+  //add background sound
+  if (!backgroundBuffer.loadFromFile("../sound/background.mp3")){
+      std::cerr << "Error loading sound files!" << std::endl;
+  }
 
-    background.setBuffer(backgroundBuffer);
-    background.setLoop(true);
-    background.setVolume(50);
-    background.play();
+  background.setBuffer(backgroundBuffer);
+  background.setLoop(true);
+  background.setVolume(50);
+  background.play();
 
-    //Set sound effect
-    if (!runBuffer.loadFromFile("../sound/step.mp3")){
-       std::cerr << "Error loading sound files!" << std::endl;
-    }
+  //Set sound effect
+  if (!runBuffer.loadFromFile("../sound/step.mp3")){
+      std::cerr << "Error loading sound files!" << std::endl;
+  }
 
-    run.setBuffer(runBuffer);
-    run.setVolume(40);
+  run.setBuffer(runBuffer);
+  run.setVolume(40);
 }
 
 void Game::Run() {
