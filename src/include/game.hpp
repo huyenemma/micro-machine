@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "resourceManager.hpp"
+#include <SFML/Audio.hpp>
 
 #include "ContactListener.hpp"
 #include "constant.hpp"
@@ -26,6 +27,8 @@ class Game {
   int playerCount;
   Vehicle* player1;
   Vehicle* player2;
+  sf::SoundBuffer backgroundBuffer;
+  sf::Sound background;
 
  public:
   // Constructor

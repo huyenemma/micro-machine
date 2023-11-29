@@ -64,6 +64,22 @@ void Game::Initialize() {
   // Need to update when selecting number of players
   playerCount = 2;
   AddBoundaries();
+    Obstacle* obstacle = new Obstacle(world->GetPhysicWorld(),
+                                    b2Vec2(140.0f / SCALE, 150.0f / SCALE),
+                                    50.0f / SCALE, "../img/rock.png");
+  
+    Collectable* collectable2 = new Collectable(world->GetPhysicWorld(), b2Vec2(440.0f / SCALE, 440.0f / SCALE),50.0f/SCALE, buff2, "../img/mushroom.png");
+
+  world_->AddVehicle(ox2);
+  player2 = ox2;
+  // Need to update when selecting number of players
+  playerCount = 2;
+  AddBoundaries();
+    if (!backgroundBuffer.loadFromFile("../sound/collectable.mp3")){
+       std::cerr << "Error loading sound files!" << std::endl;
+    }
+
+    background.setBuffer(backgroundBuffer);
 }
 
 void Game::Run() {
@@ -73,6 +89,7 @@ void Game::Run() {
     const sf::Time targetFrameTime = sf::seconds(1.0f / 24.0f);
 
     while (window_.isOpen() && isRunning_ && !counterClock_->IsTimeUp()) {
+        background.play(); 
         sf::Time deltaTime = clock.restart();
       
         ProcessEvents();
