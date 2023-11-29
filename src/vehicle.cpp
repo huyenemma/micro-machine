@@ -46,8 +46,6 @@ Vehicle::Vehicle(b2World* world, float x, float y, const sf::Texture& texture)
     data->info.type = UserType::Vehicle;
     data->info.pointer = this;
     m_body->GetUserData().pointer = reinterpret_cast<uintptr_t>(data); 
-
-
 }
 
 Vehicle::~Vehicle() {

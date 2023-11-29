@@ -8,6 +8,7 @@
 #include "vehicle.hpp"
 #include "buff.hpp"
 #include "constant.hpp"
+#include <SFML/Audio.hpp>
 
 using namespace BodyType;
 
@@ -38,6 +39,9 @@ private:
     b2Body* body;
     float radius_;  
     bool  toBeDeleted = false;
+
+    sf::SoundBuffer hitBuffer;
+    sf::Sound hit;
 
 };
 

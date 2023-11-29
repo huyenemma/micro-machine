@@ -5,7 +5,6 @@
 
 class Ox : public Vehicle {
 private:
-    int superSkillCoolDown; // Follow camelCase for variable names
 
 public:
     // Constructor: Creates a new Ox in the given Box2D world at the specified position (default at the origin)
