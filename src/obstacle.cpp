@@ -73,6 +73,7 @@ void Obstacle::OnContact(Vehicle* car) {
             std::cerr << "Error loading sound files!" << std::endl;
         }
         hit.setBuffer(hitBuffer);
+        hit.setVolume(50);
         hit.play();
 
     //handle contact on vehicle

@@ -75,11 +75,23 @@ void Game::Initialize() {
   // Need to update when selecting number of players
   playerCount = 2;
   AddBoundaries();
-    if (!backgroundBuffer.loadFromFile("../sound/collectable.mp3")){
+    //add background sound
+    if (!backgroundBuffer.loadFromFile("../sound/background.mp3")){
        std::cerr << "Error loading sound files!" << std::endl;
     }
 
     background.setBuffer(backgroundBuffer);
+    background.setLoop(true);
+    background.setVolume(50);
+    background.play();
+
+    //Set sound effect
+    if (!runBuffer.loadFromFile("../sound/step.mp3")){
+       std::cerr << "Error loading sound files!" << std::endl;
+    }
+
+    run.setBuffer(runBuffer);
+    run.setVolume(40);
 }
 
 void Game::Run() {
@@ -115,6 +127,7 @@ void Game::HandleInput() {
   Vehicle* vehicle = world_->GetVehicle()[0];
   if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
     // Move car
+    run.play();
     vehicle->ToggleForce(true);
 
   } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {

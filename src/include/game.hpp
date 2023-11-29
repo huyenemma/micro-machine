@@ -30,6 +30,9 @@ class Game {
   sf::SoundBuffer backgroundBuffer;
   sf::Sound background;
 
+  sf::SoundBuffer runBuffer;
+  sf::Sound run;
+
  public:
   // Constructor
   Game();

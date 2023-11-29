@@ -2,6 +2,7 @@
 #define VEHICLE_H
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "box2dInclude.hpp"
 #include "constant.hpp"
 #include "reScale.hpp"
@@ -23,6 +24,8 @@ class Vehicle : public sf::Drawable {
 
   b2Body* m_frontTire;
 
+
+
   b2Body* m_rearTire;
   //Variable that relate to Buff with 1 as default value
   float forceBuff     = 1.0f;
@@ -31,8 +34,11 @@ class Vehicle : public sf::Drawable {
   float TorqueBuff    = 1.0f;
 
   //A collection of Buffs
-
   std::vector<Buff*> buffs;
+
+  //sound effect
+  sf::SoundBuffer runBuffer;
+  sf::Sound run;
 
  public:
   // Constructor: Creates a new vehicle in the given Box2D world at the
