@@ -198,15 +198,17 @@ void Game::Render() {
                                 player1->GetPosition().second * SCALE));
     view.zoom(0.5f);
     window.setView(view);
+    DrawGameWorld();
   }
 
   else if (playerCount == 2) {
-    sf::View view;
-    view.setCenter(sf::Vector2f(player1->GetPosition().first * SCALE,
-                                player1->GetPosition().second * SCALE));
-    view.zoom(0.5f);
-    view.setViewport(sf::FloatRect(0.f, 0.f, 0.5f, 1.f));
-    window.setView(view);
+    sf::View view1;
+    view1.setCenter(sf::Vector2f(player1->GetPosition().first * SCALE,
+                                 player1->GetPosition().second * SCALE));
+    view1.zoom(0.5f);
+    view1.setViewport(sf::FloatRect(0.f, 0.f, 0.5f, 1.f));
+    window.setView(view1);
+    DrawGameWorld();
 
     sf::View view2;
     view2.setCenter(sf::Vector2f(player2->GetPosition().first * SCALE,
@@ -214,7 +216,13 @@ void Game::Render() {
     view2.zoom(0.5f);
     view2.setViewport(sf::FloatRect(0.5f, 0.f, 0.5f, 1.f));
     window.setView(view2);
+    DrawGameWorld();
   }
+
+  window.display();
+}
+
+void Game::DrawGameWorld() {
   map->Draw(window);
 >>>>>>> cfab764 (add split screen)
 

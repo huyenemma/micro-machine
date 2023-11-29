@@ -57,6 +57,9 @@ class Game {
 
   // Render the game
   void Render();
+
+  // Draw game world
+  void DrawGameWorld();
 };
 
 #endif  // GAME_H
