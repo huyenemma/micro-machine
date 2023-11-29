@@ -24,6 +24,8 @@ class Game {
   RealTime* counterClock_; 
   Map* map_; 
   int playerCount;
+  Vehicle* player1;
+  Vehicle* player2;
 
  public:
   // Constructor

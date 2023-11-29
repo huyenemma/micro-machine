@@ -29,8 +29,13 @@ void Game::Initialize() {
   Ox* ox = new Ox(world_->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE,
                   "../img/buffalo.png");
 
+<<<<<<< HEAD
   Ox* ox2 = new Ox(world->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE,
                    oxTexture);
+=======
+  Ox* ox2 = new Ox(world->GetPhysicWorld(), 400.0f / SCALE, 400.0f / SCALE,
+                   "../img/buffalo.png");
+>>>>>>> cfab764 (add split screen)
 
   MyContactListener* contactListener = new MyContactListener();
   world_->GetPhysicWorld()->SetContactListener(contactListener);
@@ -51,10 +56,17 @@ void Game::Initialize() {
   world_->AddCollectable(collectable2);
   world_->AddObstacle(obstacle);
   */
+<<<<<<< HEAD
   world_->AddVehicle(ox);
   // world_->AddCollectable(collectable);
+=======
+  world->AddVehicle(ox);
+  player1 = ox;
+  // world->AddCollectable(collectable);
+>>>>>>> cfab764 (add split screen)
 
   world->AddVehicle(ox2);
+  player2 = ox2;
 
   // Need to update when selecting number of players
   playerCount = 2;
@@ -173,9 +185,38 @@ void Game::CreateWall(const b2Vec2& position, const b2Vec2& size) {
 }
 
 void Game::Render() {
+<<<<<<< HEAD
   
   window_.clear();
   map_->Draw(window_);
+=======
+  window.clear();
+  // Define the view
+  if (playerCount == 1) {
+    sf::View view;
+    view.setCenter(sf::Vector2f(player1->GetPosition().first * SCALE,
+                                player1->GetPosition().second * SCALE));
+    view.zoom(0.5f);
+    window.setView(view);
+  }
+
+  else if (playerCount == 2) {
+    sf::View view;
+    view.setCenter(sf::Vector2f(player1->GetPosition().first * SCALE,
+                                player1->GetPosition().second * SCALE));
+    view.zoom(0.5f);
+    view.setViewport(sf::FloatRect(0.f, 0.f, 0.5f, 1.f));
+    window.setView(view);
+
+    sf::View view2;
+    view2.setCenter(sf::Vector2f(player2->GetPosition().first * SCALE,
+                                 player2->GetPosition().second * SCALE));
+    view2.zoom(0.5f);
+    view2.setViewport(sf::FloatRect(0.5f, 0.f, 0.5f, 1.f));
+    window.setView(view2);
+  }
+  map->Draw(window);
+>>>>>>> cfab764 (add split screen)
 
   if (!world_->GetVehicle().empty()) {
     for (auto vehicle : world_->GetVehicle()) {
