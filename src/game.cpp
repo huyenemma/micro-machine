@@ -14,7 +14,7 @@ Game::~Game() {
 }
 
 using namespace NegativeBuff;
-void Game::Initialize() { 
+void Game::Initialize() {
   
     resourceManager_->LoadFromJson("../src/resources.json");
 
@@ -26,30 +26,36 @@ void Game::Initialize() {
     map_ = new Map(map_Texture); 
 
     const sf::Texture& oxTexture = resourceManager_->GetImage("buffalo");
-    Ox* ox = new Ox(world_->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE, oxTexture);
-    
-    MyContactListener* contactListener =new MyContactListener();
-    world_->GetPhysicWorld()->SetContactListener(contactListener);
-    
-    /*
-    ReverseMushroom* buff = new ReverseMushroom("test", 2, 3);
-    
-    CrazyRotate* buff2 = new CrazyRotate("rotate", 10, 2, 2);
-    
-    Obstacle* obstacle = new Obstacle(world_->GetPhysicworld_(),
-                                    b2Vec2(140.0f / SCALE, 150.0f / SCALE),
-                                    50.0f / SCALE, "../img/rock.png");
+  Ox* ox = new Ox(world_->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE,
+                  "../img/buffalo.png");
 
-    Collectable* collectable2 = new Collectable(world_->GetPhysicworld_(), b2Vec2(440.0f / SCALE, 440.0f / SCALE),50.0f/SCALE, buff2, "../img/mushroom.png");
-    
-    world_->AddCollectable(collectable2);
-    world_->AddObstacle(obstacle);
-    */
-    world_->AddVehicle(ox);
-    //world_->AddCollectable(collectable);
+  Ox* ox2 = new Ox(world->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE,
+                   oxTexture);
 
-    AddBoundaries();
+  MyContactListener* contactListener = new MyContactListener();
+  world_->GetPhysicWorld()->SetContactListener(contactListener);
 
+  /*
+  ReverseMushroom* buff = new ReverseMushroom("test", 2, 3);
+
+  CrazyRotate* buff2 = new CrazyRotate("rotate", 10, 2, 2);
+
+  Obstacle* obstacle = new Obstacle(world_->GetPhysicworld_(),
+                                  b2Vec2(140.0f / SCALE, 150.0f / SCALE),
+                                  50.0f / SCALE, "../img/rock.png");
+
+  Collectable* collectable2 = new Collectable(world_->GetPhysicworld_(),
+  b2Vec2(440.0f / SCALE, 440.0f / SCALE),50.0f/SCALE, buff2,
+  "../img/mushroom.png");
+
+  world_->AddCollectable(collectable2);
+  world_->AddObstacle(obstacle);
+  */
+  world_->AddVehicle(ox);
+  // world_->AddCollectable(collectable);
+
+  world->AddVehicle(ox2);
+  AddBoundaries();
 }
 
 void Game::Run() {
@@ -85,7 +91,7 @@ void Game::HandleInput() {
   if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
     // Move car
     vehicle->ToggleForce(true);
-    
+
   } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
     // turn right
     vehicle->Rotate(angle);
@@ -98,6 +104,27 @@ void Game::HandleInput() {
     vehicle->ToggleForce(false);
   }
   vehicle->Update();
+
+  if (world->GetVehicle().size() == 2) {
+    Vehicle* vehicle2 = world->GetVehicle()[1];
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+      // Move car
+      vehicle2->ToggleForce(true);
+
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+      // turn right
+
+      vehicle2->Rotate(angle);
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+      vehicle2->Rotate(-angle);
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
+      vehicle2->SuperSkill();
+    } else {
+      // Stop the paddle when no key is pressed
+      vehicle2->ToggleForce(false);
+    }
+    vehicle->Update();
+  }
 }
 
 void Game::Update(sf::Time deltaTime) {
@@ -153,12 +180,12 @@ void Game::Render() {
     }
   }
 
-  if (!world_->GetCollectable().empty()) {
-    for (auto collectable : world_->GetCollectable()) {
-            if (!collectable->IsNullBody()){
-          window_.draw(*collectable);
-                 collectable->DeleteBody();
-            }
+  if (!world->GetCollectable().empty()) {
+    for (auto collectable : world->GetCollectable()) {
+      if (!collectable->IsNullBody()) {
+        window.draw(*collectable);
+        collectable->DeleteBody();
+      }
     }
   }
 
