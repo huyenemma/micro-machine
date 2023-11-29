@@ -16,26 +16,22 @@ Game::~Game() {
 using namespace NegativeBuff;
 void Game::Initialize() {
   
-    resourceManager_->LoadFromJson("../src/resources.json");
+  resourceManager_->LoadFromJson("../src/resources.json");
 
-    const sf::Font& font = resourceManager_->GetFont("clockFont"); 
-    counterClock_ = new RealTime(2, font);
-    counterClock_->SetUp();
+  const sf::Font& font = resourceManager_->GetFont("clockFont"); 
+  counterClock_ = new RealTime(2, font);
+  counterClock_->SetUp();
 
-    const sf::Texture& map_Texture = resourceManager_->GetImage("forest");
-    map_ = new Map(map_Texture); 
+  const sf::Texture& map_Texture = resourceManager_->GetImage("forest");
+  map_ = new Map(map_Texture); 
 
-    const sf::Texture& oxTexture = resourceManager_->GetImage("buffalo");
+  const sf::Texture& oxTexture = resourceManager_->GetImage("buffalo");
+
   Ox* ox = new Ox(world_->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE,
-                  "../img/buffalo.png");
+                  oxTexture);
 
-<<<<<<< HEAD
-  Ox* ox2 = new Ox(world->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE,
+  Ox* ox2 = new Ox(world_->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE,
                    oxTexture);
-=======
-  Ox* ox2 = new Ox(world->GetPhysicWorld(), 400.0f / SCALE, 400.0f / SCALE,
-                   "../img/buffalo.png");
->>>>>>> cfab764 (add split screen)
 
   MyContactListener* contactListener = new MyContactListener();
   world_->GetPhysicWorld()->SetContactListener(contactListener);
@@ -56,16 +52,13 @@ void Game::Initialize() {
   world_->AddCollectable(collectable2);
   world_->AddObstacle(obstacle);
   */
-<<<<<<< HEAD
   world_->AddVehicle(ox);
   // world_->AddCollectable(collectable);
-=======
-  world->AddVehicle(ox);
+  world_->AddVehicle(ox);
   player1 = ox;
   // world->AddCollectable(collectable);
->>>>>>> cfab764 (add split screen)
 
-  world->AddVehicle(ox2);
+  world_->AddVehicle(ox2);
   player2 = ox2;
 
   // Need to update when selecting number of players
@@ -121,7 +114,7 @@ void Game::HandleInput() {
   vehicle->Update();
 
   if (playerCount == 2) {
-    Vehicle* vehicle2 = world->GetVehicle()[1];
+    Vehicle* vehicle2 = world_->GetVehicle()[1];
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
       // Move car
       vehicle2->ToggleForce(true);
@@ -185,19 +178,17 @@ void Game::CreateWall(const b2Vec2& position, const b2Vec2& size) {
 }
 
 void Game::Render() {
-<<<<<<< HEAD
   
   window_.clear();
   map_->Draw(window_);
-=======
-  window.clear();
+  window_.clear();
   // Define the view
   if (playerCount == 1) {
     sf::View view;
     view.setCenter(sf::Vector2f(player1->GetPosition().first * SCALE,
                                 player1->GetPosition().second * SCALE));
     view.zoom(zoomCoef);
-    window.setView(view);
+    window_.setView(view);
     DrawGameWorld();
   }
 
@@ -207,7 +198,7 @@ void Game::Render() {
                                  player1->GetPosition().second * SCALE));
     view1.zoom(zoomCoef);
     view1.setViewport(sf::FloatRect(0.f, 0.f, 0.5f, 1.f));
-    window.setView(view1);
+    window_.setView(view1);
     DrawGameWorld();
 
     sf::View view2;
@@ -215,16 +206,16 @@ void Game::Render() {
                                  player2->GetPosition().second * SCALE));
     view2.zoom(zoomCoef);
     view2.setViewport(sf::FloatRect(0.5f, 0.f, 0.5f, 1.f));
-    window.setView(view2);
+    window_.setView(view2);
     DrawGameWorld();
   }
 
-  window.display();
+  window_.display();
 }
 
 void Game::DrawGameWorld() {
-  map->Draw(window);
->>>>>>> cfab764 (add split screen)
+
+  map_->Draw(window_);
 
   if (!world_->GetVehicle().empty()) {
     for (auto vehicle : world_->GetVehicle()) {
@@ -232,10 +223,10 @@ void Game::DrawGameWorld() {
     }
   }
 
-  if (!world->GetCollectable().empty()) {
-    for (auto collectable : world->GetCollectable()) {
+  if (!world_->GetCollectable().empty()) {
+    for (auto collectable : world_->GetCollectable()) {
       if (!collectable->IsNullBody()) {
-        window.draw(*collectable);
+        window_.draw(*collectable);
         collectable->DeleteBody();
       }
     }
