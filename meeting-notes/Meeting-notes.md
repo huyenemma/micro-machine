@@ -7,7 +7,7 @@ In each meeting, you are required to discuss:
 3. Plan for the next week for everyone
 4. Deviations and changes to the project plan, if any
 
-# Meeting 18.11.2023 11:00
+# Meeting 28.11.2023 
 
 **Participants**:
 
@@ -25,48 +25,41 @@ In each meeting, you are required to discuss:
 ## What we doned in last week: 
 
 ### Huyen 
-- Rendering
-- Implement loading multiple tracks from files
+- Edit json file
+- Timer GUI
 
 ### Linh 
-- Implement one more Buff
-- Implement new Timer class
-
+- Implement sound effect
 
 ### Quan 
-- Improve Vehicle class
+- Improve Vehicle class and Buff class
 
 ### Duy 
-- Obstacle class
+- Split screen and multiplayer
 - OutsideArea class
 
 # Todos
 
 ### Linh
-- Implement sound effects
+- Implement sound effect in json file
+- Implement positive buff
 
 ### Quan 
 - Implement conditions to win
 - Improve vehicle
 
 ### Duy 
-- Implement camera view
-- Implement multiplayer
+- Documentation
+- Refactor OutsideArea class
   
 ### Huyen 
-- Implement GUI for timer
-- Implement menu, and resource manager
+- Implement menu
 
-## Next week goal Tue 21/11
+## Next week goal Sat 2/12
 - Finish to-dos
 
 ## Project status  
-
 - World 
 - Game 
 - Buff
 - Vehicle  
-
-## Questions
-- Feedback on current progress
-- Testing (GUI?)

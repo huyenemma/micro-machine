@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <utility>
+#include <SFML/Audio.hpp>
 
 #include "box2dInclude.hpp"
 #include "userDataPointer.hpp"
@@ -34,5 +35,8 @@ class Obstacle : public sf::Drawable {
 
   b2Body* body;
   float radius_;
+
+  sf::SoundBuffer hitBuffer;
+  sf::Sound hit;
 };
 #endif
