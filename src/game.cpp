@@ -125,6 +125,7 @@ void Game::ProcessEvents() {
 void Game::HandleInput() {
   const float angle = 4.0f;
   Vehicle* vehicle = world_->GetVehicle()[0];
+  
   if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
     // Move car
     run.play();
