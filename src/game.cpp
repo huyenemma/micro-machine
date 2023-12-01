@@ -19,7 +19,7 @@ void Game::Initialize() {
   resourceManager_->LoadFromJson("../src/resources.json");
 
   const sf::Font& font = resourceManager_->GetFont("clockFont"); 
-  counterClock_ = new RealTime(2, font);
+  counterClock_ = new RealTime(15, font);
   counterClock_->SetUp();
 
   const sf::Texture& map_Texture = resourceManager_->GetImage("forest");
@@ -33,32 +33,37 @@ void Game::Initialize() {
   Ox* ox2 = new Ox(world_->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE,
                    oxTexture);
 
-  MyContactListener* contactListener = new MyContactListener();
-  world_->GetPhysicWorld()->SetContactListener(contactListener);
-
-  /*
-  ReverseMushroom* buff = new ReverseMushroom("test", 2, 3);
-
-  CrazyRotate* buff2 = new CrazyRotate("rotate", 10, 2, 2);
-
-  Obstacle* obstacle = new Obstacle(world_->GetPhysicworld_(),
-                                  b2Vec2(140.0f / SCALE, 150.0f / SCALE),
-                                  50.0f / SCALE, "../img/rock.png");
-
-  Collectable* collectable2 = new Collectable(world_->GetPhysicworld_(),
-  b2Vec2(440.0f / SCALE, 440.0f / SCALE),50.0f/SCALE, buff2,
-  "../img/mushroom.png");
-
-  world_->AddCollectable(collectable2);
-  world_->AddObstacle(obstacle);
-  */
-  // world_->AddCollectable(collectable);
+  
   world_->AddVehicle(ox);
   player1 = ox;
-  // world->AddCollectable(collectable);
 
   world_->AddVehicle(ox2);
   player2 = ox2;
+
+  //Setting Contact Listener
+  MyContactListener* contactListener = new MyContactListener();
+  world_->GetPhysicWorld()->SetContactListener(contactListener);
+
+  
+  //Setting collectable and buff
+  CrazyRotate* buff2 = new CrazyRotate(5, 5.f, 2.f);
+
+  const sf::Texture& collectable_Texture = resourceManager_->GetImage("mushroom");
+
+  Collectable* collectable = new Collectable(world_->GetPhysicWorld(),
+  b2Vec2(440.0f / SCALE, 440.0f / SCALE),50.0f/SCALE, buff2,
+  collectable_Texture);
+
+  world_->AddCollectable(collectable);
+
+  /*
+  Obstacle* obstacle = new Obstacle(world_->GetPhysicWorld(),
+                                  b2Vec2(140.0f / SCALE, 150.0f / SCALE),
+                                  50.0f / SCALE, "../img/rock.png");
+  world_->AddObstacle(obstacle);
+  */
+  
+
 
   // Need to update when selecting number of players
   playerCount = 2;

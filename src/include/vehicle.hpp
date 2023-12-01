@@ -73,6 +73,9 @@ class Vehicle : public sf::Drawable {
   // draw vehicle
   virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
+  //Rotate buff
+  void CrazyRotate(float degree, float intensity);
+
   //Multiply 
   void ApplyBuff(float forceMu=1.0f, float MaxSpeedMul=1.0f,float SizeMul=1.0f,float TorqueMul=1.0f);
 

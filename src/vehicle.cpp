@@ -131,18 +131,20 @@ void Vehicle::UpdateLateralVelocity() {
     m_body->ApplyAngularImpulse( 0.1f * m_body->GetInertia() * -m_body->GetAngularVelocity() ,true);
 }
 
+void Vehicle::CrazyRotate(float degree, float intensity){
+    b2Vec2 force = b2Vec2(cos(m_body->GetAngle()) * -intensity * m_body->GetMass(), sin(m_body->GetAngle()) * -intensity * m_body->GetMass());
+    m_body->ApplyForceToCenter(force, true);
+    this->ToggleForce(true);
+    m_body->ApplyAngularImpulse(degree*m_body->GetMass(), true);
+
+}
+
 /*
 void Vehicle::BoostSpeed(float boost){
     b2Vec2 force = b2Vec2(cos(m_body->GetAngle()) * boost * m_body->GetMass(), sin(m_body->GetAngle()) * boost * m_body->GetMass());
     m_body->ApplyForceToCenter(force, true);
     this->ToggleForce(true);
     std::cout << "speedzz" << std::endl;
-}
-void Vehicle::CrazyRotate(float torque, float boost,int time){
-    b2Vec2 force = b2Vec2(cos(m_body->GetAngle()) * -boost * m_body->GetMass(), sin(m_body->GetAngle()) * -boost * m_body->GetMass());
-    m_body->ApplyForceToCenter(force, true);
-    this->ToggleForce(true);
-    m_body->ApplyAngularImpulse(torque*m_body->GetMass(), true); 
 }
 
 
