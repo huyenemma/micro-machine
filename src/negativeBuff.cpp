@@ -16,15 +16,14 @@ ReverseMushroom::ReverseMushroom(int duration,float Intensity) : Buff( duration,
 
 ReverseMushroom::~ReverseMushroom() {}
 
-/*
+
 //CrazyRotate buff
-CrazyRotate::CrazyRotate(std::string id, int duration, float torque, float Intensity) : Buff(id,duration), buffIntensity(Intensity), torque_(torque){}
+CrazyRotate::CrazyRotate(int duration, float degree) : Buff(duration,BuffType::Negative,BuffEffect::continuous), degree_(degree){}
 
 void CrazyRotate::ApplyEffect(Vehicle* vehicle){
-    vehicle->CrazyRotate(torque_, buffIntensity);
+    vehicle->Rotate(degree_);
 }
 
 void CrazyRotate::ReverseEffect(Vehicle* vehicle) {}
 
 CrazyRotate::~CrazyRotate(){}
-*/

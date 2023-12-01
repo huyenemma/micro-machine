@@ -63,11 +63,10 @@ void Obstacle::draw(sf::RenderTarget& target, sf::RenderStates states) const {
 
   target.draw(sprite, states);
 }
-/*
+
 void Obstacle::OnContact(Vehicle* car) {
   std::cout << "hit obstacle" << std::endl;
   if (car != nullptr) {
-    car->CrazyRotate(1, 2);
+    car->Rotate(50);
   }
 }
-*/

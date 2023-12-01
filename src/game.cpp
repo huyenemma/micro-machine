@@ -14,28 +14,27 @@ Game::~Game() {
 using namespace NegativeBuff;
 void Game::Initialize() { 
     Ox* ox = new Ox(world->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE, "../img/buffalo.png");
-    Ox* ox2 = new Ox(world->GetPhysicWorld(), 400.0f / SCALE, 400.0f / SCALE, "../img/buffalo.png");
+    //Ox* ox2 = new Ox(world->GetPhysicWorld(), 400.0f / SCALE, 400.0f / SCALE, "../img/buffalo.png");
 
     MyContactListener* contactListener =new MyContactListener();
     world->GetPhysicWorld()->SetContactListener(contactListener);
     
-    /*
-    ReverseMushroom* buff = new ReverseMushroom("test", 2, 3);
     
-    CrazyRotate* buff2 = new CrazyRotate("rotate", 10, 2, 2);
+    ReverseMushroom* buff = new ReverseMushroom(1, 10);
+    
+    CrazyRotate* buff2 = new CrazyRotate(3,40);
     
     Obstacle* obstacle = new Obstacle(world->GetPhysicWorld(),
                                     b2Vec2(140.0f / SCALE, 150.0f / SCALE),
                                     50.0f / SCALE, "../img/rock.png");
 
-    Collectable* collectable2 = new Collectable(world->GetPhysicWorld(), b2Vec2(440.0f / SCALE, 440.0f / SCALE),50.0f/SCALE, buff2, "../img/mushroom.png");
+    Collectable* collectable2 = new Collectable(world->GetPhysicWorld(), b2Vec2(200.0f / SCALE, 150.0f / SCALE), 150.0f/SCALE, buff2, "../img/mushroom.png");
     
     world->AddCollectable(collectable2);
     world->AddObstacle(obstacle);
-    */
+    
     world->AddVehicle(ox);
-    world->AddVehicle(ox2);
-    //world->AddCollectable(collectable);
+    //world->AddVehicle(ox2);
 
     AddBoundaries();
 

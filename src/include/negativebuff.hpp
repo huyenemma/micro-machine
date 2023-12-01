@@ -23,10 +23,10 @@ namespace NegativeBuff {
     class CrazyRotate : public Buff{
     private:
         float buffIntensity;  
-        float torque_;
+        float degree_;
 
     public:
-        CrazyRotate(std::string id ,int duration, float torque, float Intensity);
+        CrazyRotate(int duration, float degree);
 
         void ApplyEffect(Vehicle* vehicle) override;
 

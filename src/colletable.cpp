@@ -27,9 +27,6 @@
         body->CreateFixture(&fixtureDef);
 
         // Set a custom user data to identify the collectable
-        //b2BodyUserData data = body->GetUserData();
-        //uintptr_t uintptrValue = reinterpret_cast<uintptr_t>(this);
-        //data.pointer = uintptrValue;
         UserData* data = new UserData(); // Allocate UserData on the heap
         data->info.type = UserType::Collectable;
         data->info.pointer = this;
