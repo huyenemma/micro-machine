@@ -153,7 +153,7 @@ void Game::HandleInput() {
   } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
     vehicle->Rotate(-angle);
   } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
-    //vehicle->SuperSkill();
+    vehicle->SuperSkill();
   } else {
     vehicle->ToggleForce(false);
   }

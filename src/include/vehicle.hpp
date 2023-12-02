@@ -59,6 +59,10 @@ class Vehicle : public sf::Drawable {
   // Rotate the vehicle by applying angular impulse (default torque is 1)
   void Rotate(float angle = 1);
 
+
+  void UpdateCoolDown();
+
+
   // Get the current position of the vehicle
   std::pair<float, float> GetPosition() const;
 
