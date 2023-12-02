@@ -25,37 +25,38 @@ In each meeting, you are required to discuss:
 ## What we doned in last week: 
 
 ### Huyen 
-- Edit json file
-- Timer GUI
+- Game menu
 
 ### Linh 
-- Implement sound effect
+- Implement positiveBuff: magnetic 
 
 ### Quan 
-- Improve Vehicle class and Buff class
+- Edit vehicle 
 
 ### Duy 
-- Split screen and multiplayer
-- OutsideArea class
+- Documentation 
 
 # Todos
 
 ### Linh
-- Implement sound effect in json file
-- Implement positive buff
+- Documentation 
+- Sound. The sourse management 
 
 ### Quan 
 - Implement conditions to win
-- Improve vehicle
 
 ### Duy 
-- Documentation
-- Refactor OutsideArea class
+- Push Slow area
+- Create view3 
+- Write unit test 
   
 ### Huyen 
-- Implement menu
+- Generate all assets
+- Draw wining board 
+- Documentation 
+- Readme.md 
 
-## Next week goal Sat 2/12
+## Next week goal Tue 5/12
 - Finish to-dos
 
 ## Project status  
