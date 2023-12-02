@@ -46,13 +46,14 @@ void Game::Initialize() {
 
   
   //Setting collectable and buff
-  CrazyRotate* buff2 = new CrazyRotate(5, 5.f, 2.f);
+  CrazyRotate* buff = new CrazyRotate(2, 40.f, 30.f);
 
   const sf::Texture& collectable_Texture = resourceManager_->GetImage("mushroom");
 
   Collectable* collectable = new Collectable(world_->GetPhysicWorld(),
-  b2Vec2(440.0f / SCALE, 440.0f / SCALE),50.0f/SCALE, buff2,
+  b2Vec2(440.0f / SCALE, 440.0f / SCALE),50.0f/SCALE, buff,
   collectable_Texture);
+
 
   world_->AddCollectable(collectable);
 

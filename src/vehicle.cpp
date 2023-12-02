@@ -84,6 +84,7 @@ void Vehicle::Rotate(float angleInDegrees) {
     // Set the new position and angle for the body
     m_body->SetTransform(b2Vec2(offsetX, offsetY), currentAngle + angleInRadians);
 }
+
 std::pair<float, float> Vehicle::GetPosition() const {
     b2Vec2 position = m_body->GetWorldCenter();
     return std::make_pair(position.x, position.y);
@@ -132,30 +133,24 @@ void Vehicle::UpdateLateralVelocity() {
 }
 
 void Vehicle::CrazyRotate(float degree, float intensity){
-    b2Vec2 force = b2Vec2(cos(m_body->GetAngle()) * -intensity * m_body->GetMass(), sin(m_body->GetAngle()) * -intensity * m_body->GetMass());
-    m_body->ApplyForceToCenter(force, true);
-    this->ToggleForce(true);
-    m_body->ApplyAngularImpulse(degree*m_body->GetMass(), true);
+    // Convert degrees to radians
+    float radians = degree * b2_pi / 180.0f;
 
+    // Calculate linear force based on the current angle
+    b2Vec2 linearForce = b2Vec2(cos(m_body->GetAngle() + radians) * intensity * m_body->GetMass(),
+                                 sin(m_body->GetAngle() + radians) * intensity * m_body->GetMass());
+
+    // Apply linear force to center of the body
+    m_body->ApplyForceToCenter(linearForce, true);
+
+    // Calculate rotational force
+    float torque = intensity * m_body->GetMass(); // Adjust the multiplier as needed
+
+    // Apply torque to the body for rotational effect
+    m_body->ApplyTorque(torque, true);
 }
 
-/*
-void Vehicle::BoostSpeed(float boost){
-    b2Vec2 force = b2Vec2(cos(m_body->GetAngle()) * boost * m_body->GetMass(), sin(m_body->GetAngle()) * boost * m_body->GetMass());
-    m_body->ApplyForceToCenter(force, true);
-    this->ToggleForce(true);
-    std::cout << "speedzz" << std::endl;
-}
 
-
-float Vehicle::GetMass(){
-    return m_body->GetMass();
-}
-
-void Vehicle::UpdateMaxSpeed(float speed){
-    maxSpeed = maxSpeed + speed;
-}
-*/
 void Vehicle::AddBuff(Buff* buff) {
     buffs.push_back(buff);
     if ( !(buff)->IsContinuous() ) {
@@ -174,6 +169,7 @@ void Vehicle::ApplyBuff(float forceMul, float MaxSpeedMul,float SizeMul,float To
 void Vehicle::UpdateBuff() {
     std::vector<Buff*>::iterator it = buffs.begin();
     // Iterate until the end of the vector is reached
+    /*
     while (it != buffs.end()) {
         if (!(*it)->Tick()){
             if ( (*it)->IsContinuous() ) {
@@ -188,6 +184,21 @@ void Vehicle::UpdateBuff() {
             it = buffs.erase(it);
         }
     }
+    */
+    while (it != buffs.end()) {
+        if (!(*it)->Tick()){
+            (*it)->ApplyEffect(this);
+            ++it;
+        }
+        else{
+            std::cout << "reverse" << std::endl;
+            (*it)->ReverseEffect(this);
+            delete *it;
+            it = buffs.erase(it);
+        }
+    }
+
+
 }
 
 void Vehicle::Update() {
