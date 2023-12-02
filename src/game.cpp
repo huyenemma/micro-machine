@@ -18,12 +18,13 @@ Game::~Game() {
 }
 
 using namespace NegativeBuff;
+using namespace PositiveBuff;
 void Game::Initialize() {
   
   resourceManager_->LoadFromJson("../src/resources.json");
 
   const sf::Font& font = resourceManager_->GetFont("clockFont"); 
-  counterClock_ = new RealTime(2, font);
+  counterClock_ = new RealTime(15, font);
   counterClock_->SetUp();
 
   const sf::Texture& map_Texture = resourceManager_->GetImage("forest");
@@ -34,35 +35,53 @@ void Game::Initialize() {
   Ox* ox = new Ox(world_->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE,
                   oxTexture);
 
-  Ox* ox2 = new Ox(world_->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE,
-                   oxTexture);
+  Ox* ox2 = new Ox(world_->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE, oxTexture);
 
-  MyContactListener* contactListener = new MyContactListener();
-  world_->GetPhysicWorld()->SetContactListener(contactListener);
-
-  /*
-  ReverseMushroom* buff = new ReverseMushroom("test", 2, 3);
-
-  CrazyRotate* buff2 = new CrazyRotate("rotate", 10, 2, 2);
-
-  Obstacle* obstacle = new Obstacle(world_->GetPhysicworld_(),
-                                  b2Vec2(140.0f / SCALE, 150.0f / SCALE),
-                                  50.0f / SCALE, "../img/rock.png");
-
-  Collectable* collectable2 = new Collectable(world_->GetPhysicworld_(),
-  b2Vec2(440.0f / SCALE, 440.0f / SCALE),50.0f/SCALE, buff2,
-  "../img/mushroom.png");
-
-  world_->AddCollectable(collectable2);
-  world_->AddObstacle(obstacle);
-  */
-  // world_->AddCollectable(collectable);
+  
   world_->AddVehicle(ox);
   player1 = ox;
-  // world->AddCollectable(collectable);
 
   world_->AddVehicle(ox2);
   player2 = ox2;
+
+  //Setting Contact Listener
+  MyContactListener* contactListener = new MyContactListener();
+  world_->GetPhysicWorld()->SetContactListener(contactListener);
+
+  
+  //Setting collectable and buff
+  CrazyRotate* buff = new CrazyRotate(2, 40.f, 30.f);
+
+  const sf::Texture& collectable_Texture = resourceManager_->GetImage("mushroom");
+
+  Collectable* collectable = new Collectable(world_->GetPhysicWorld(),
+  b2Vec2(440.0f / SCALE, 440.0f / SCALE),50.0f/SCALE, buff,
+  collectable_Texture);
+
+  MaxSpeed* buff2 = new MaxSpeed(8, 5.f);
+  const sf::Texture& collectable2_Texture = resourceManager_->GetImage("rock");
+  Collectable* collectable2 = new Collectable(world_->GetPhysicWorld(),
+  b2Vec2(320.0f / SCALE, 320.0f / SCALE),50.0f/SCALE, buff2,
+  collectable2_Texture);
+
+  Magnetic* buff3 = new Magnetic(6, 20.f);
+  const sf::Texture& collectable3_Texture = resourceManager_->GetImage("rock");
+  Collectable* collectable3 = new Collectable(world_->GetPhysicWorld(),
+  b2Vec2(200.0f / SCALE, 240.0f / SCALE),50.0f/SCALE, buff3,
+  collectable3_Texture);
+
+  world_->AddCollectable(collectable);
+  world_->AddCollectable(collectable2);
+  world_->AddCollectable(collectable3);
+
+  /*
+  Obstacle* obstacle = new Obstacle(world_->GetPhysicWorld(),
+                                  b2Vec2(140.0f / SCALE, 150.0f / SCALE),
+                                  50.0f / SCALE, "../img/rock.png");
+  world_->AddObstacle(obstacle);
+  */
+  
+
 
   // Need to update when selecting number of players
   playerCount = 2;
@@ -173,10 +192,12 @@ void Game::RenderGame() {
   
   window_.clear();
   map_->Draw(window_);
- 
+  window_.clear();
+  DrawGameWorld();
   // Define the view
   if (playerCount == 1) {
     sf::View view;
+
     view.setCenter(sf::Vector2f(player1->GetPosition().first * SCALE,
                                 player1->GetPosition().second * SCALE));
     view.zoom(zoomCoef);
@@ -231,49 +252,6 @@ void Game::DrawGameWorld() {
   }
 
   counterClock_->Draw(window_);
-
-  //window_.display();
-}
-
-void Game::HandleMenuInput() {
-  sf::Event event;
-  while (window_.pollEvent(event)) {
-    switch (event.type) {
-      case sf::Event::KeyPressed:
-        switch (event.key.code) {
-          case sf::Keyboard::Up:
-            menu_.MoveUp();
-            break;
-          case sf::Keyboard::Down:
-            menu_.MoveDown();
-            break;
-          case sf::Keyboard::Enter:
-            int selectedItem = menu_.GetPressedItem();
-            if (selectedItem == GameMenu::ONE_PLAYER) {
-                playerCount = 1;
-                currentState_ = GameState::PLAYING;
-                Initialize(); 
-            } else if (selectedItem == GameMenu::TWO_PLAYER) {
-                playerCount = 2;
-                currentState_ = GameState::PLAYING;
-                Initialize(); 
-            } else if (selectedItem == GameMenu::EXIT) {
-                window_.close();
-            }
-            break;
-        }
-        break;
-      case sf::Event::Closed:
-          window_.close();
-          break;
-    }
-  }
-}
-
-void Game::RenderMenu() {
-  window_.clear();
-  menu_.draw();
-  window_.display();
 }
 
 void Game::AddBoundaries() {

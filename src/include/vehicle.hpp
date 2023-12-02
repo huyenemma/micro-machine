@@ -8,8 +8,9 @@
 #include "reScale.hpp"
 #include "buff.hpp"
 #include "userDataPointer.hpp"
+#include "collectable.hpp"
 
-
+using namespace BodyType;
 // Class representing a simple vehicle in a 2D physics world using Box2D
 class Vehicle : public sf::Drawable {
  protected:
@@ -20,6 +21,8 @@ class Vehicle : public sf::Drawable {
   sf::Texture texture_;
 
   int superSkillCoolDown=0; 
+
+  b2PolygonShape dynamicBox;
 
 
   b2Body* m_frontTire;
@@ -71,6 +74,13 @@ class Vehicle : public sf::Drawable {
   // draw vehicle
   virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
+  //Rotate buff
+  void CrazyRotate(float degree, float intensity);
+
+  void MagneticPull(float radius);
+
+  void ReverseMagneticPull();
+
   //Multiply 
   void ApplyBuff(float forceMu=1.0f, float MaxSpeedMul=1.0f,float SizeMul=1.0f,float TorqueMul=1.0f);
 
@@ -79,6 +89,7 @@ class Vehicle : public sf::Drawable {
   void UpdateBuff();
 
   void virtual SuperSkill() ;
+
 };
 
 #endif  // VEHICLE_H

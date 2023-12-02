@@ -14,7 +14,6 @@ Vehicle::Vehicle(b2World* world, float x, float y, const sf::Texture& texture)
     bodyDef.angularDamping = ANGULAR_DAMPING;
     bodyDef.awake = true;
 
-    b2PolygonShape dynamicBox;
     dynamicBox.SetAsBox(BOX_WIDTH, BOX_HEIGHT);
 
     b2FixtureDef fixtureDef;
@@ -84,6 +83,7 @@ void Vehicle::Rotate(float angleInDegrees) {
     // Set the new position and angle for the body
     m_body->SetTransform(b2Vec2(offsetX, offsetY), currentAngle + angleInRadians);
 }
+
 std::pair<float, float> Vehicle::GetPosition() const {
     b2Vec2 position = m_body->GetWorldCenter();
     return std::make_pair(position.x, position.y);
@@ -131,34 +131,31 @@ void Vehicle::UpdateLateralVelocity() {
     m_body->ApplyAngularImpulse( 0.1f * m_body->GetInertia() * -m_body->GetAngularVelocity() ,true);
 }
 
-/*
-void Vehicle::BoostSpeed(float boost){
-    b2Vec2 force = b2Vec2(cos(m_body->GetAngle()) * boost * m_body->GetMass(), sin(m_body->GetAngle()) * boost * m_body->GetMass());
-    m_body->ApplyForceToCenter(force, true);
-    this->ToggleForce(true);
-    std::cout << "speedzz" << std::endl;
-}
-void Vehicle::CrazyRotate(float torque, float boost,int time){
-    b2Vec2 force = b2Vec2(cos(m_body->GetAngle()) * -boost * m_body->GetMass(), sin(m_body->GetAngle()) * -boost * m_body->GetMass());
-    m_body->ApplyForceToCenter(force, true);
-    this->ToggleForce(true);
-    m_body->ApplyAngularImpulse(torque*m_body->GetMass(), true); 
+void Vehicle::CrazyRotate(float degree, float intensity){
+    // Convert degrees to radians
+    float radians = degree * b2_pi / 180.0f;
+
+    // Calculate linear force based on the current angle
+    b2Vec2 linearForce = b2Vec2(cos(m_body->GetAngle() + radians) * intensity * m_body->GetMass(),
+                                 sin(m_body->GetAngle() + radians) * intensity * m_body->GetMass());
+
+    // Apply linear force to center of the body
+    m_body->ApplyForceToCenter(linearForce, true);
+
+    // Calculate rotational force
+    float torque = intensity * m_body->GetMass(); // Adjust the multiplier as needed
+
+    // Apply torque to the body for rotational effect
+    m_body->ApplyTorque(torque, true);
 }
 
-
-float Vehicle::GetMass(){
-    return m_body->GetMass();
-}
-
-void Vehicle::UpdateMaxSpeed(float speed){
-    maxSpeed = maxSpeed + speed;
-}
-*/
 void Vehicle::AddBuff(Buff* buff) {
     buffs.push_back(buff);
+    
     if ( !(buff)->IsContinuous() ) {
         buff->ApplyEffect(this);  
-        }
+    }
+    
 }
 
 void Vehicle::ApplyBuff(float forceMul, float MaxSpeedMul,float SizeMul,float TorqueMul){
@@ -197,3 +194,20 @@ void Vehicle::Update() {
 void Vehicle::SuperSkill() {
     std::cout<<"HI"<<std::endl;
 }
+
+void Vehicle::MagneticPull(float radius) {
+    b2Fixture* fixture = m_body->GetFixtureList();
+    if (fixture) {
+        b2Shape* shape = fixture->GetShape();
+        dynamic_cast<b2PolygonShape*>(shape)->SetAsBox(BOX_WIDTH*radius, BOX_HEIGHT*radius);
+    }
+}
+
+void Vehicle::ReverseMagneticPull() {
+    b2Fixture* fixture = m_body->GetFixtureList();
+    if (fixture) {
+        b2Shape* shape = fixture->GetShape();
+        dynamic_cast<b2PolygonShape*>(shape)->SetAsBox(BOX_WIDTH, BOX_HEIGHT);
+    }
+}
+

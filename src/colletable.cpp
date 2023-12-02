@@ -12,7 +12,7 @@
 
     // Define the collectable's body definition
     b2BodyDef bodyDef;
-    bodyDef.type = b2_staticBody;
+    bodyDef.type = b2_dynamicBody;
     bodyDef.position.Set(position.x, position.y);
 
     // Create the collectable's body
@@ -26,9 +26,6 @@
     body->CreateFixture(&fixtureDef);
 
     // Set a custom user data to identify the collectable
-    //b2BodyUserData data = body->GetUserData();
-    //uintptr_t uintptrValue = reinterpret_cast<uintptr_t>(this);
-    //data.pointer = uintptrValue;
     UserData* data = new UserData(); // Allocate UserData on the heap
     data->info.type = UserType::Collectable;
     data->info.pointer = this;
@@ -87,7 +84,6 @@ void Collectable::OnContact(Vehicle* vehicle) {
         //handel contact on vehicle
         std::cout<<"Added Buff"<<std::endl;
         vehicle->AddBuff(buff);
-        buff->ApplyEffect(vehicle);
         
     if (!this->getDelete()){
         std::cout<<"toBeDeleted"<<std::endl;
