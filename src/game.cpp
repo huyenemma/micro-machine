@@ -1,7 +1,11 @@
 #include "./include/game.hpp"
 
 Game::Game()
-    : window_(sf::VideoMode(800, 800), "Mirco machine"), isRunning_(false) {
+    : window_(sf::VideoMode(800, 800), "Mirco machine"), 
+    isRunning_(false),
+    currentState_(GameState::MENU),
+    menu_(window_) {
+
   world_ = new World(b2Vec2(0.0f, 0.0f));
   resourceManager_ = new ResourceManager(); 
 };
@@ -103,24 +107,30 @@ void Game::Initialize() {
 }
 
 void Game::Run() {
-    isRunning_ = true; 
-    sf::Clock clock;
-    
-    const sf::Time targetFrameTime = sf::seconds(1.0f / 24.0f);
+  isRunning_ = true; 
+  sf::Clock clock;
+  
+  const sf::Time targetFrameTime = sf::seconds(1.0f / 24.0f);
 
-    while (window_.isOpen() && isRunning_ && !counterClock_->IsTimeUp()) {
-        background.play(); 
-        sf::Time deltaTime = clock.restart();
-      
-        ProcessEvents();
-        Update(deltaTime);
-        Render();
-        sf::Time elapsedTime = clock.getElapsedTime();
-        
-        if (elapsedTime < targetFrameTime) {
-            sf::sleep(targetFrameTime - elapsedTime);
-        }
+  while (window_.isOpen() && isRunning_ ) {
+    sf::Time deltaTime = clock.restart();
+    if (currentState_ == GameState::MENU) {
+      HandleMenuInput(); 
+      RenderMenu(); 
+    } 
+    else if (currentState_ == GameState::PLAYING && !counterClock_->IsTimeUp()) {
+      background.play(); 
+      ProcessEvents();
+      Update(deltaTime);
+      RenderGame();
     }
+
+    sf::Time elapsedTime = clock.getElapsedTime();
+      
+      if (elapsedTime < targetFrameTime) {
+          sf::sleep(targetFrameTime - elapsedTime);
+      }
+  }
 }
 
 void Game::ProcessEvents() {
@@ -138,18 +148,17 @@ void Game::HandleInput() {
     // Move car
     run.play();
     vehicle->ToggleForce(true);
-
   } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
     // turn right
     vehicle->Rotate(angle);
   } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
     vehicle->Rotate(-angle);
   } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
-    vehicle->SuperSkill();
+    //vehicle->SuperSkill();
   } else {
-    // Stop the paddle when no key is pressed
     vehicle->ToggleForce(false);
   }
+
   vehicle->Update();
 
   if (playerCount == 2) {
@@ -160,14 +169,12 @@ void Game::HandleInput() {
 
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
       // turn right
-
       vehicle2->Rotate(angle);
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
       vehicle2->Rotate(-angle);
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
       vehicle2->SuperSkill();
     } else {
-      // Stop the paddle when no key is pressed
       vehicle2->ToggleForce(false);
     }
     vehicle2->Update();
@@ -181,42 +188,7 @@ void Game::Update(sf::Time deltaTime) {
   counterClock_->Update(); 
 }
 
-void Game::AddBoundaries() {
-  float world_Width = 800.0f / SCALE;   // Width of window_ in Box2D units
-  float world_Height = 800.0f / SCALE;  // Height of  window_ in Box2D units
-  float thickness = 0.0005f / SCALE;   // Thickness of the boundary walls
-
-  // Define the positions and sizes of the boundary walls
-  b2Vec2 topWallPos(world_Width / 2, thickness / 2);
-  b2Vec2 bottomWallPos(world_Width / 2, world_Height - thickness / 2);
-  b2Vec2 leftWallPos(thickness / 2, world_Height / 2);
-  b2Vec2 rightWallPos(world_Width - thickness / 2, world_Height / 2);
-
-  b2Vec2 horizontalSize(world_Width, thickness);
-  b2Vec2 verticalSize(thickness, world_Height);
-
-  // Create each wall as a static body
-  CreateWall(topWallPos, horizontalSize);
-  CreateWall(bottomWallPos, horizontalSize);
-  CreateWall(leftWallPos, verticalSize);
-  CreateWall(rightWallPos, verticalSize);
-}
-
-void Game::CreateWall(const b2Vec2& position, const b2Vec2& size) {
-  b2BodyDef bodyDef;
-  bodyDef.position = position;
-  bodyDef.type = b2_staticBody;
-  b2Body* body = world_->GetPhysicWorld()->CreateBody(&bodyDef);
-
-  b2PolygonShape shape;
-  shape.SetAsBox(size.x / 2, size.y / 2);
-
-  b2FixtureDef fixtureDef;
-  fixtureDef.shape = &shape;
-  body->CreateFixture(&fixtureDef);
-}
-
-void Game::Render() {
+void Game::RenderGame() {
   
   window_.clear();
   map_->Draw(window_);
@@ -280,4 +252,39 @@ void Game::DrawGameWorld() {
   }
 
   counterClock_->Draw(window_);
+}
+
+void Game::AddBoundaries() {
+  float world_Width = 800.0f / SCALE;   // Width of window_ in Box2D units
+  float world_Height = 800.0f / SCALE;  // Height of  window_ in Box2D units
+  float thickness = 0.0005f / SCALE;   // Thickness of the boundary walls
+
+  // Define the positions and sizes of the boundary walls
+  b2Vec2 topWallPos(world_Width / 2, thickness / 2);
+  b2Vec2 bottomWallPos(world_Width / 2, world_Height - thickness / 2);
+  b2Vec2 leftWallPos(thickness / 2, world_Height / 2);
+  b2Vec2 rightWallPos(world_Width - thickness / 2, world_Height / 2);
+
+  b2Vec2 horizontalSize(world_Width, thickness);
+  b2Vec2 verticalSize(thickness, world_Height);
+
+  // Create each wall as a static body
+  CreateWall(topWallPos, horizontalSize);
+  CreateWall(bottomWallPos, horizontalSize);
+  CreateWall(leftWallPos, verticalSize);
+  CreateWall(rightWallPos, verticalSize);
+}
+
+void Game::CreateWall(const b2Vec2& position, const b2Vec2& size) {
+  b2BodyDef bodyDef;
+  bodyDef.position = position;
+  bodyDef.type = b2_staticBody;
+  b2Body* body = world_->GetPhysicWorld()->CreateBody(&bodyDef);
+
+  b2PolygonShape shape;
+  shape.SetAsBox(size.x / 2, size.y / 2);
+
+  b2FixtureDef fixtureDef;
+  fixtureDef.shape = &shape;
+  body->CreateFixture(&fixtureDef);
 }

@@ -71,7 +71,7 @@ void ResourceManager::LoadFromJson(const std::string& jsonFilePath) {
     nlohmann::json json;
     file >> json;
 
-    for (const auto& item : json["map"]) {
+    for (const auto& item : json["background"]) {
         LoadImage(item["id"], item["path"]);
     }
     for (const auto& item : json["vehicle"]) {

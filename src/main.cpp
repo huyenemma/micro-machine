@@ -7,7 +7,7 @@ int main() {
     Game game;
 
     // Initialize game resources, settings, etc.
-    game.Initialize();
+    //game.Initialize();
 
     // Run the game loop
     game.Run();

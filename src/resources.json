@@ -1,8 +1,12 @@
 {
-    "map" : [
+    "background" : [
         {
             "id": "forest",
             "path" : "../img/finalMap.png"
+        }, 
+        {
+            "id": "menu", 
+            "path": "../img/menu.png"
         }
     ],
     
