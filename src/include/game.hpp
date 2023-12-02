@@ -15,16 +15,25 @@
 #include "realTime.hpp"
 #include "vehicle.hpp"
 #include "world.hpp"
+#include "menu.hpp"
+
+enum class GameState {
+    MENU,
+    PLAYING,
+    PAUSED,
+    GAME_OVER
+};
 
 class Game {
  private:
+
   sf::RenderWindow window_;  // The SFML window for rendering
   World* world_;             // The physics world
   bool isRunning_;           // Flag to check if the game is running
   ResourceManager* resourceManager_; 
   RealTime* counterClock_; 
   Map* map_; 
-  int playerCount;
+  int playerCount = 1;
   Vehicle* player1;
   Vehicle* player2;
   sf::SoundBuffer backgroundBuffer;
@@ -32,6 +41,9 @@ class Game {
 
   sf::SoundBuffer runBuffer;
   sf::Sound run;
+
+  GameState currentState_; 
+  GameMenu menu_; 
 
  public:
   // Constructor
@@ -62,10 +74,16 @@ class Game {
   void CreateWall(const b2Vec2& position, const b2Vec2& size);
 
   // Render the game
-  void Render();
+  void RenderGame();
 
   // Draw game world
   void DrawGameWorld();
+
+  // Handle menu input 
+  void HandleMenuInput(); 
+
+  //Render the menu
+  void RenderMenu(); 
 };
 
 #endif  // GAME_H

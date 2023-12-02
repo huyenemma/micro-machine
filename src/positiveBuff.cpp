@@ -4,7 +4,7 @@
 
 using namespace PositiveBuff;
 
-
+/*
 void OxSuperSkillBuff::ApplyEffect(Vehicle* vehicle){
     vehicle->ApplyBuff(buffIntensity,buffIntensity,1,0.001);
 }
@@ -18,3 +18,5 @@ OxSuperSkillBuff::OxSuperSkillBuff(int duration,float Intensity) : Buff(duration
 }
 
 OxSuperSkillBuff::~OxSuperSkillBuff() {}
+
+*/

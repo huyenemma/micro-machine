@@ -24,8 +24,6 @@ class Vehicle : public sf::Drawable {
 
   b2Body* m_frontTire;
 
-
-
   b2Body* m_rearTire;
   //Variable that relate to Buff with 1 as default value
   float forceBuff     = 1.0f;
