@@ -14,7 +14,6 @@ Vehicle::Vehicle(b2World* world, float x, float y, const sf::Texture& texture)
     bodyDef.angularDamping = ANGULAR_DAMPING;
     bodyDef.awake = true;
 
-    b2PolygonShape dynamicBox;
     dynamicBox.SetAsBox(BOX_WIDTH, BOX_HEIGHT);
 
     b2FixtureDef fixtureDef;
@@ -150,12 +149,13 @@ void Vehicle::CrazyRotate(float degree, float intensity){
     m_body->ApplyTorque(torque, true);
 }
 
-
 void Vehicle::AddBuff(Buff* buff) {
     buffs.push_back(buff);
+    
     if ( !(buff)->IsContinuous() ) {
         buff->ApplyEffect(this);  
-        }
+    }
+    
 }
 
 void Vehicle::ApplyBuff(float forceMul, float MaxSpeedMul,float SizeMul,float TorqueMul){
@@ -169,7 +169,6 @@ void Vehicle::ApplyBuff(float forceMul, float MaxSpeedMul,float SizeMul,float To
 void Vehicle::UpdateBuff() {
     std::vector<Buff*>::iterator it = buffs.begin();
     // Iterate until the end of the vector is reached
-    /*
     while (it != buffs.end()) {
         if (!(*it)->Tick()){
             if ( (*it)->IsContinuous() ) {
@@ -184,21 +183,6 @@ void Vehicle::UpdateBuff() {
             it = buffs.erase(it);
         }
     }
-    */
-    while (it != buffs.end()) {
-        if (!(*it)->Tick()){
-            (*it)->ApplyEffect(this);
-            ++it;
-        }
-        else{
-            std::cout << "reverse" << std::endl;
-            (*it)->ReverseEffect(this);
-            delete *it;
-            it = buffs.erase(it);
-        }
-    }
-
-
 }
 
 void Vehicle::Update() {
@@ -210,3 +194,20 @@ void Vehicle::Update() {
 void Vehicle::SuperSkill() {
     std::cout<<"HI"<<std::endl;
 }
+
+void Vehicle::MagneticPull(float radius) {
+    b2Fixture* fixture = m_body->GetFixtureList();
+    if (fixture) {
+        b2Shape* shape = fixture->GetShape();
+        dynamic_cast<b2PolygonShape*>(shape)->SetAsBox(BOX_WIDTH*radius, BOX_HEIGHT*radius);
+    }
+}
+
+void Vehicle::ReverseMagneticPull() {
+    b2Fixture* fixture = m_body->GetFixtureList();
+    if (fixture) {
+        b2Shape* shape = fixture->GetShape();
+        dynamic_cast<b2PolygonShape*>(shape)->SetAsBox(BOX_WIDTH, BOX_HEIGHT);
+    }
+}
+

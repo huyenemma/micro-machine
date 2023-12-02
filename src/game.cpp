@@ -14,6 +14,7 @@ Game::~Game() {
 }
 
 using namespace NegativeBuff;
+using namespace PositiveBuff;
 void Game::Initialize() {
   
   resourceManager_->LoadFromJson("../src/resources.json");
@@ -30,8 +31,7 @@ void Game::Initialize() {
   Ox* ox = new Ox(world_->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE,
                   oxTexture);
 
-  Ox* ox2 = new Ox(world_->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE,
-                   oxTexture);
+  Ox* ox2 = new Ox(world_->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE, oxTexture);
 
   
   world_->AddVehicle(ox);
@@ -54,8 +54,21 @@ void Game::Initialize() {
   b2Vec2(440.0f / SCALE, 440.0f / SCALE),50.0f/SCALE, buff,
   collectable_Texture);
 
+  MaxSpeed* buff2 = new MaxSpeed(8, 5.f);
+  const sf::Texture& collectable2_Texture = resourceManager_->GetImage("rock");
+  Collectable* collectable2 = new Collectable(world_->GetPhysicWorld(),
+  b2Vec2(320.0f / SCALE, 320.0f / SCALE),50.0f/SCALE, buff2,
+  collectable2_Texture);
+
+  Magnetic* buff3 = new Magnetic(6, 20.f);
+  const sf::Texture& collectable3_Texture = resourceManager_->GetImage("rock");
+  Collectable* collectable3 = new Collectable(world_->GetPhysicWorld(),
+  b2Vec2(200.0f / SCALE, 240.0f / SCALE),50.0f/SCALE, buff3,
+  collectable3_Texture);
 
   world_->AddCollectable(collectable);
+  world_->AddCollectable(collectable2);
+  world_->AddCollectable(collectable3);
 
   /*
   Obstacle* obstacle = new Obstacle(world_->GetPhysicWorld(),
@@ -208,9 +221,11 @@ void Game::Render() {
   window_.clear();
   map_->Draw(window_);
   window_.clear();
+  DrawGameWorld();
   // Define the view
   if (playerCount == 1) {
     sf::View view;
+
     view.setCenter(sf::Vector2f(player1->GetPosition().first * SCALE,
                                 player1->GetPosition().second * SCALE));
     view.zoom(zoomCoef);
@@ -265,6 +280,4 @@ void Game::DrawGameWorld() {
   }
 
   counterClock_->Draw(window_);
-
-  window_.display();
 }
