@@ -35,15 +35,15 @@ void Game::Initialize() {
   Ox* ox = new Ox(world_->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE,
                   oxTexture);
 
-  Ox* ox2 = new Ox(world_->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE, oxTexture);
-
-  
   world_->AddVehicle(ox);
   player1 = ox;
 
-  world_->AddVehicle(ox2);
-  player2 = ox2;
-
+  if (playerCount == 2) {
+    const sf::Texture& goatTexture = resourceManager_->GetImage("goat");
+    Ox* ox2 = new Ox(world_->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE, goatTexture);
+    world_->AddVehicle(ox2);
+    player2 = ox2;
+  }
   //Setting Contact Listener
   MyContactListener* contactListener = new MyContactListener();
   world_->GetPhysicWorld()->SetContactListener(contactListener);
@@ -84,7 +84,6 @@ void Game::Initialize() {
 
 
   // Need to update when selecting number of players
-  playerCount = 2;
   AddBoundaries();
 
   //add background sound
