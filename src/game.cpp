@@ -31,10 +31,10 @@ void Game::Initialize() {
 
   const sf::Texture& oxTexture = resourceManager_->GetImage("buffalo");
 
-  Ox* player1 = new Ox(world_->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE,
+  Ox* ox = new Ox(world_->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE,
                   oxTexture);
 
-  Ox* player2 = new Ox(world_->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE,
+  Ox* ox2 = new Ox(world_->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE,
                    oxTexture);
 
   MyContactListener* contactListener = new MyContactListener();
@@ -57,11 +57,15 @@ void Game::Initialize() {
   world_->AddObstacle(obstacle);
   */
   // world_->AddCollectable(collectable);
-  world_->AddVehicle(player1);
+  world_->AddVehicle(ox);
+  player1 = ox;
   // world->AddCollectable(collectable);
 
-  world_->AddVehicle(player2);
+  world_->AddVehicle(ox2);
+  player2 = ox2;
+
   // Need to update when selecting number of players
+  playerCount = 2;
   AddBoundaries();
 
   //add background sound
