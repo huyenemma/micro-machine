@@ -2,13 +2,13 @@
 #include "../include/positivebuff.hpp"
 #include <iostream>
 
-constexpr float OX_MAX_SPEED = 4.0f;
+constexpr float OX_MAX_SPEED = 1.0f;
 constexpr float OX_ANGULAR_DAMPING = 0.95f;
 constexpr float OX_BOOST_IMPULSE = 10.0f;
 
-constexpr int OX_SKILL_DURATION = 5*FPS;
-constexpr int OX_SKILL_COOLDOWN = 5*FPS+OX_SKILL_DURATION;
-constexpr int OX_SKILL_INTENSITY = 2.0f;
+constexpr int OX_SKILL_DURATION = 2*FPS;
+constexpr int OX_SKILL_COOLDOWN = 2*FPS+OX_SKILL_DURATION;
+constexpr int OX_SKILL_INTENSITY = 1.3f;
 
 class OxSuperSkillBuff : public Buff{
     private:
