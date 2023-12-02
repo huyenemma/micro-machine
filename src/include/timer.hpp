@@ -4,17 +4,32 @@
 #include <string>
 #include <iostream>
 
+/**
+ * @class Timer
+ * @brief Represents a simple countdown timer.
+ */
 class Timer {
 private:
-    int timeLeft;
+    int timeLeft; ///< The time remaining on the timer.
 
 public:
+    /**
+     * @brief Constructor for Timer.
+     * @param timeLeft The initial time left on the timer.
+     */
     Timer(int timeLeft);
 
-    virtual ~Timer(){};
+    /**
+     * @brief Destructor for Timer.
+     */
+    virtual ~Timer();
 
-    // Return true if the object should be removed, false otherwise
-    bool Tick(); 
+    /**
+     * @brief Decreases the time remaining on the timer by one tick.
+     * @return True if the object should be removed, false otherwise.
+     */
+    bool Tick();
+
 };
 
-#endif
+#endif // TIMER_HPP
