@@ -11,6 +11,7 @@ Vehicle::Vehicle(b2World* world, float x, float y, const sf::Texture& texture)
     b2BodyDef bodyDef;
     bodyDef.type = b2_dynamicBody;
     bodyDef.position.Set(x, y);
+    bodyDef.linearDamping = LINEAR_DAMPING;
     bodyDef.angularDamping = ANGULAR_DAMPING;
     bodyDef.awake = true;
 
@@ -55,10 +56,21 @@ void Vehicle::UpdateSpeed() {
     b2Vec2 vel = m_body->GetLinearVelocity();
     float forceMagnitude = 0;
 
-    if (forceOn && std::abs(vel.x) < maxSpeed)
-    {
-        forceMagnitude = FORCE_MAGNITUDE*forceBuff;
+    if (forceOn && std::abs(vel.x) < maxSpeed * MaxSpeedBuff) {
+        // Calculate the remaining force needed to reach maxSpeed * MaxSpeedBuff
+        float remainingForce = FORCE_MAGNITUDE * forceBuff;
+
+        // Check if the vehicle is already exceeding the desired speed
+        if (std::abs(vel.x) > maxSpeed * MaxSpeedBuff) {
+            remainingForce -= m_body->GetMass() * std::abs(vel.x - maxSpeed * MaxSpeedBuff);
+        }
+
+        // Limit the force to ensure the vehicle won't exceed maxSpeed * MaxSpeedBuff
+        if (remainingForce > 0) {
+            forceMagnitude = remainingForce;
+        }
     }
+
 
     b2Vec2 force = b2Vec2(cos(m_body->GetAngle()) * forceMagnitude, sin(m_body->GetAngle()) * forceMagnitude);
     m_body->ApplyForceToCenter(force, true);
@@ -66,7 +78,7 @@ void Vehicle::UpdateSpeed() {
 
 void Vehicle::Rotate(float angleInDegrees) {
     // Convert the angle to radians
-    float angleInRadians = angleInDegrees* b2_pi/180.0f;
+    float angleInRadians = angleInDegrees*TorqueBuff* b2_pi/180.0f;
 
     // Get the current position of the body
     b2Vec2 currentPosition = m_body->GetPosition();
@@ -120,15 +132,15 @@ void Vehicle::draw(sf::RenderTarget& target, sf::RenderStates states) const
 
 void Vehicle::UpdateLateralVelocity() {
     // Calculate the lateral velocity
-    b2Vec2 currentRightNormal = m_body->GetWorldVector(b2Vec2(0, 1.0f));
+    b2Vec2 currentRightNormal = m_body->GetWorldVector(b2Vec2(1.0f, 0.0f));
     b2Vec2 lateralVelocity = b2Dot(currentRightNormal, m_body->GetLinearVelocity()) * currentRightNormal;
 
     // Apply impulse to cancel out the lateral velocity
     b2Vec2 impulse = m_body->GetMass() * -lateralVelocity;
-    m_body->ApplyLinearImpulse(impulse, m_body->GetWorldCenter(),true);
     if ( impulse.Length() > MAX_LATERAL_IMPULSE )
       impulse *= MAX_LATERAL_IMPULSE / impulse.Length();
-    m_body->ApplyAngularImpulse( 0.1f * m_body->GetInertia() * -m_body->GetAngularVelocity() ,true);
+    
+    m_body->ApplyLinearImpulse(impulse, m_body->GetWorldCenter(),true);  
 }
 
 void Vehicle::CrazyRotate(float degree, float intensity){
@@ -196,7 +208,6 @@ void Vehicle::Update() {
     UpdateCoolDown();
     UpdateBuff();
     UpdateSpeed();
-    UpdateLateralVelocity();
 }
 
 void Vehicle::SuperSkill() {
