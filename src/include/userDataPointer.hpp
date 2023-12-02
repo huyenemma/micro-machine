@@ -1,22 +1,57 @@
 #ifndef USER_DATA_POINTER_HPP
 #define USER_DATA_POINTER_HPP
+
 #include <cstdint>
 
-enum class UserType { Vehicle, Collectable, Obstacle };
-
-// TODO: manage union memory
-union UserData {
-  uintptr_t data;
-  struct {
-    UserType type;
-    void* pointer;
-  } info;
+/**
+ * @enum UserType
+ * @brief Enumerates the possible types of user data.
+ */
+enum class UserType {
+    Vehicle,     ///< User data corresponds to a Vehicle.
+    Collectable, ///< User data corresponds to a Collectable.
+    Obstacle     ///< User data corresponds to an Obstacle.
 };
 
-namespace BodyType {
-bool IsVehicle(UserData* userData);
-bool IsCollectable(UserData* userData);
-bool IsObstacle(UserData* userData);
-}  // namespace BodyType
+/**
+ * @union UserData
+ * @brief Represents a union of data or a combination of type and pointer for user data.
+ */
+union UserData {
+    uintptr_t data; ///< Raw data value.
+    struct {
+        UserType type; ///< Type of user data.
+        void* pointer; ///< Pointer to user data.
+    } info; ///< Structure containing type and pointer information.
+};
 
-#endif
+/**
+ * @namespace BodyType
+ * @brief Provides functions to check the type of user data.
+ */
+namespace BodyType {
+
+    /**
+     * @brief Checks if the user data represents a Vehicle.
+     * @param userData Pointer to user data.
+     * @return True if the user data is of type Vehicle, false otherwise.
+     */
+    bool IsVehicle(UserData* userData);
+
+    /**
+     * @brief Checks if the user data represents a Collectable.
+     * @param userData Pointer to user data.
+     * @return True if the user data is of type Collectable, false otherwise.
+     */
+    bool IsCollectable(UserData* userData);
+
+    /**
+     * @brief Checks if the user data represents an Obstacle.
+     * @param userData Pointer to user data.
+     * @return True if the user data is of type Obstacle, false otherwise.
+     */
+    bool IsObstacle(UserData* userData);
+
+} // namespace BodyType
+
+#endif // USER_DATA_POINTER_HPP
