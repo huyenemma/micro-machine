@@ -14,7 +14,7 @@ public:
     ~Ox();
 
     // Implement the SuperSkill function specific to the Ox
-    //void SuperSkill() override;
+    void SuperSkill() override;
 };
 
 #endif // OX_H

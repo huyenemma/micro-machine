@@ -185,10 +185,18 @@ void Vehicle::UpdateBuff() {
     }
 }
 
+
+void Vehicle::UpdateCoolDown(){
+    if (superSkillCoolDown > 0)
+        superSkillCoolDown--;
+};
+
+
 void Vehicle::Update() {
+    UpdateCoolDown();
+    UpdateBuff();
     UpdateSpeed();
     UpdateLateralVelocity();
-    UpdateBuff();
 }
 
 void Vehicle::SuperSkill() {
