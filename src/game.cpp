@@ -173,7 +173,7 @@ void Game::RenderGame() {
   
   window_.clear();
   map_->Draw(window_);
-  window_.clear();
+ 
   // Define the view
   if (playerCount == 1) {
     sf::View view;
@@ -232,7 +232,7 @@ void Game::DrawGameWorld() {
 
   counterClock_->Draw(window_);
 
-  window_.display();
+  //window_.display();
 }
 
 void Game::HandleMenuInput() {
