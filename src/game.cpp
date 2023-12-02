@@ -254,6 +254,48 @@ void Game::DrawGameWorld() {
   counterClock_->Draw(window_);
 }
 
+void Game::HandleMenuInput() {
+  sf::Event event;
+  while (window_.pollEvent(event)) {
+    switch (event.type) {
+      case sf::Event::KeyPressed:
+        switch (event.key.code) {
+          case sf::Keyboard::Up:
+            menu_.MoveUp();
+            break;
+          case sf::Keyboard::Down:
+            menu_.MoveDown();
+            break;
+          case sf::Keyboard::Enter:
+            int selectedItem = menu_.GetPressedItem();
+            if (selectedItem == GameMenu::ONE_PLAYER) {
+                playerCount = 1;
+                currentState_ = GameState::PLAYING;
+                Initialize(); 
+            } else if (selectedItem == GameMenu::TWO_PLAYER) {
+                playerCount = 2;
+                currentState_ = GameState::PLAYING;
+                Initialize(); 
+            } else if (selectedItem == GameMenu::EXIT) {
+                window_.close();
+            }
+            break;
+        }
+        break;
+      case sf::Event::Closed:
+          window_.close();
+          break;
+    }
+  }
+}
+
+void Game::RenderMenu() {
+  window_.clear();
+  menu_.draw();
+  window_.display();
+}
+
+
 void Game::AddBoundaries() {
   float world_Width = 800.0f / SCALE;   // Width of window_ in Box2D units
   float world_Height = 800.0f / SCALE;  // Height of  window_ in Box2D units
