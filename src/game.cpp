@@ -288,6 +288,7 @@ void Game::HandleMenuInput() {
   }
 }
 
+
 void Game::RenderMenu() {
   window_.clear();
   menu_.draw();
