@@ -1,7 +1,7 @@
 #include "./include/game.hpp"
 
 Game::Game()
-    : window_(sf::VideoMode(800, 800), "Mirco machine"), 
+    : window_(sf::VideoMode(800, 800), "Micro machine"), 
     isRunning_(false),
     currentState_(GameState::MENU),
     menu_(window_) {
@@ -31,6 +31,21 @@ void Game::Initialize() {
   map_ = new Map(map_Texture); 
 
   const sf::Texture& oxTexture = resourceManager_->GetImage("buffalo");
+
+  //add background sound
+  backgroundBuffer = resourceManager_->GetSoundBackground("grass");
+
+  background.setBuffer(backgroundBuffer);
+  background.setLoop(true);
+  background.setVolume(50);
+  background.play();
+
+  //Set sound effect
+  stepBuffer = resourceManager_->GetSoundStep("grass");
+
+  step.setBuffer(stepBuffer);
+  step.setVolume(40);
+
 
   Ox* ox = new Ox(world_->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE,
                   oxTexture);
@@ -85,24 +100,6 @@ void Game::Initialize() {
 
   // Need to update when selecting number of players
   AddBoundaries();
-
-  //add background sound
-  if (!backgroundBuffer.loadFromFile("../sound/background.mp3")){
-      std::cerr << "Error loading sound files!" << std::endl;
-  }
-
-  background.setBuffer(backgroundBuffer);
-  background.setLoop(true);
-  background.setVolume(50);
-  background.play();
-
-  //Set sound effect
-  if (!runBuffer.loadFromFile("../sound/step.mp3")){
-      std::cerr << "Error loading sound files!" << std::endl;
-  }
-
-  run.setBuffer(runBuffer);
-  run.setVolume(40);
 }
 
 void Game::Run() {
@@ -118,7 +115,6 @@ void Game::Run() {
       RenderMenu(); 
     } 
     else if (currentState_ == GameState::PLAYING && !counterClock_->IsTimeUp()) {
-      background.play(); 
       ProcessEvents();
       Update(deltaTime);
       RenderGame();
@@ -146,7 +142,7 @@ void Game::HandleInput() {
   vehicle->ToggleForce(false);
   if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
     // Move car
-    run.play();
+    step.play();
     vehicle->ToggleForce(true);
   } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
     // turn right
@@ -164,6 +160,7 @@ void Game::HandleInput() {
     vehicle2->ToggleForce(false);
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
       // Move car
+      step.play();
       vehicle2->ToggleForce(true);
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
       // turn right
