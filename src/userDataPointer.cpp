@@ -11,3 +11,7 @@ bool BodyType::IsCollectable(UserData* userData) {
 bool BodyType::IsObstacle(UserData* userData) {
   return userData->info.type == UserType::Obstacle;
 };
+
+bool BodyType::IsOutsideArea(UserData* userData) {
+  return userData->info.type == UserType::OutsideArea;
+};
