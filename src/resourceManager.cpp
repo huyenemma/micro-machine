@@ -60,6 +60,57 @@ const sf::Font& ResourceManager::GetFont(const std::string& key) const {
     }
 }
 
+
+void ResourceManager::LoadSoundBackground(const std::string& key, const std::string& filename) {
+    if (sounds_background.find(key) != sounds_background.end()) {
+        std::cerr << "Warning: The sound " << key << " is already loaded" << std::endl;
+        return; 
+    }
+
+    sf::SoundBuffer sound;
+    if (sound.loadFromFile(filename)) {
+        sounds_background[key] = std::move(sound);
+    } else {
+        std::cerr << "Failed to load sound: " << filename << std::endl;
+        // Handle default font case or error
+    }
+}
+
+const sf::SoundBuffer& ResourceManager::GetSoundBackground(const std::string& key) const{
+    auto it = sounds_background.find(key);
+    if (it != sounds_background.end()) {
+        return it->second;
+    } else {
+        std::cerr << "Sound not found: " << key << ". Using default sound." << std::endl;
+        // Return default font or handle error
+    }
+}
+
+void ResourceManager::LoadSoundStep(const std::string& key, const std::string& filename) {
+    if (sounds_step.find(key) != sounds_step.end()) {
+        std::cerr << "Warning: The sound " << key << " is already loaded" << std::endl;
+        return; 
+    }
+
+    sf::SoundBuffer sound;
+    if (sound.loadFromFile(filename)) {
+        sounds_step[key] = std::move(sound);
+    } else {
+        std::cerr << "Failed to load sound: " << filename << std::endl;
+        // Handle default font case or error
+    }
+}
+
+const sf::SoundBuffer& ResourceManager::GetSoundStep(const std::string& key) const{
+    auto it = sounds_step.find(key);
+    if (it != sounds_step.end()) {
+        return it->second;
+    } else {
+        std::cerr << "Sound not found: " << key << ". Using default sound." << std::endl;
+        // Return default font or handle error
+    }
+}
+
 void ResourceManager::LoadFromJson(const std::string& jsonFilePath) {
     std::ifstream file(jsonFilePath);
     
@@ -85,5 +136,11 @@ void ResourceManager::LoadFromJson(const std::string& jsonFilePath) {
     }
     for (const auto& item : json["font"]) {
         LoadFont(item["id"], item["path"]);
+    }
+    for (const auto& item : json["sound_background"]) {
+        LoadSoundBackground(item["id"], item["path"]);
+    }
+    for (const auto& item : json["sound_step"]) {
+        LoadSoundStep(item["id"], item["path"]);
     }
 }

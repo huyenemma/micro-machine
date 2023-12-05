@@ -41,5 +41,19 @@
             "id":"clockFont", 
             "path": "../font/PixelOperator.ttf"
         }
+    ],
+
+    "sound_background" : [
+        {
+            "id":"grass", 
+            "path": "../sound/grass_background.mp3"
+        }
+    ],
+
+    "sound_step" : [
+        {
+            "id":"grass", 
+            "path": "../sound/grass_step.mp3"
+        }
     ]
 }

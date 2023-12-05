@@ -39,8 +39,8 @@ class Game {
   sf::SoundBuffer backgroundBuffer;
   sf::Sound background;
 
-  sf::SoundBuffer runBuffer;
-  sf::Sound run;
+  sf::SoundBuffer stepBuffer;
+  sf::Sound step;
 
   GameState currentState_; 
   GameMenu menu_; 
