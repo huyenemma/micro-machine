@@ -58,7 +58,7 @@ void Game::Initialize() {
   b2Vec2(440.0f / SCALE, 440.0f / SCALE),50.0f/SCALE, buff,
   collectable_Texture);
 
-  MaxSpeed* buff2 = new MaxSpeed(8, 5.f);
+  MaxSpeed* buff2 = new MaxSpeed(8, 1.5f);
   const sf::Texture& collectable2_Texture = resourceManager_->GetImage("rock");
   Collectable* collectable2 = new Collectable(world_->GetPhysicWorld(),
   b2Vec2(320.0f / SCALE, 320.0f / SCALE),50.0f/SCALE, buff2,
@@ -143,6 +143,7 @@ void Game::HandleInput() {
   const float angle = 4.0f;
   Vehicle* vehicle = world_->GetVehicle()[0];
   
+  vehicle->ToggleForce(false);
   if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
     // Move car
     run.play();
@@ -154,18 +155,16 @@ void Game::HandleInput() {
     vehicle->Rotate(-angle);
   } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
     vehicle->SuperSkill();
-  } else {
-    vehicle->ToggleForce(false);
-  }
+  } 
 
   vehicle->Update();
 
   if (playerCount == 2) {
     Vehicle* vehicle2 = world_->GetVehicle()[1];
+    vehicle2->ToggleForce(false);
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
       // Move car
       vehicle2->ToggleForce(true);
-
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
       // turn right
       vehicle2->Rotate(angle);
@@ -173,9 +172,7 @@ void Game::HandleInput() {
       vehicle2->Rotate(-angle);
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
       vehicle2->SuperSkill();
-    } else {
-      vehicle2->ToggleForce(false);
-    }
+    } 
     vehicle2->Update();
   }
 }

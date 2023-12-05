@@ -2,8 +2,8 @@
 #define NEGATIVE_BUFF_HPP
 
 #include <string>
-#include "Buff.hpp"
-#include "Vehicle.hpp"
+#include "buff.hpp"
+#include "vehicle.hpp"
 
 namespace NegativeBuff {
 

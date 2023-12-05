@@ -56,21 +56,13 @@ void Vehicle::UpdateSpeed() {
     b2Vec2 vel = m_body->GetLinearVelocity();
     float forceMagnitude = 0;
 
-    if (forceOn && std::abs(vel.x) < maxSpeed * MaxSpeedBuff) {
-        // Calculate the remaining force needed to reach maxSpeed * MaxSpeedBuff
-        float remainingForce = FORCE_MAGNITUDE * forceBuff;
-
-        // Check if the vehicle is already exceeding the desired speed
-        if (std::abs(vel.x) > maxSpeed * MaxSpeedBuff) {
-            remainingForce -= m_body->GetMass() * std::abs(vel.x - maxSpeed * MaxSpeedBuff);
-        }
-
-        // Limit the force to ensure the vehicle won't exceed maxSpeed * MaxSpeedBuff
-        if (remainingForce > 0) {
-            forceMagnitude = remainingForce;
-        }
+    if (forceOn && std::abs(vel.Length()) < maxSpeed * MaxSpeedBuff) {
+        forceMagnitude = FORCE_MAGNITUDE * forceBuff*m_body->GetMass();
     }
 
+    if (std::abs(vel.Length()) > maxSpeed * MaxSpeedBuff) {
+        forceMagnitude -= m_body->GetMass() * std::abs(vel.Length() - maxSpeed * MaxSpeedBuff);
+    }
 
     b2Vec2 force = b2Vec2(cos(m_body->GetAngle()) * forceMagnitude, sin(m_body->GetAngle()) * forceMagnitude);
     m_body->ApplyForceToCenter(force, true);
@@ -104,7 +96,7 @@ std::pair<float, float> Vehicle::GetPosition() const {
 void Vehicle::ToggleForce(bool value) {
     if (value) {
         forceOn = true;
-        m_body->SetLinearDamping(0);
+        m_body->SetLinearDamping(LINEAR_DAMPING/2);
     } else {
         forceOn = false;    
         m_body->SetLinearDamping(LINEAR_DAMPING);
@@ -132,13 +124,13 @@ void Vehicle::draw(sf::RenderTarget& target, sf::RenderStates states) const
 
 void Vehicle::UpdateLateralVelocity() {
     // Calculate the lateral velocity
-    b2Vec2 currentRightNormal = m_body->GetWorldVector(b2Vec2(1.0f, 0.0f));
+    b2Vec2 currentRightNormal = m_body->GetWorldVector(b2Vec2(0.0f, 1.0f));
     b2Vec2 lateralVelocity = b2Dot(currentRightNormal, m_body->GetLinearVelocity()) * currentRightNormal;
 
     // Apply impulse to cancel out the lateral velocity
     b2Vec2 impulse = m_body->GetMass() * -lateralVelocity;
-    if ( impulse.Length() > MAX_LATERAL_IMPULSE )
-      impulse *= MAX_LATERAL_IMPULSE / impulse.Length();
+    if ( impulse.Length() > 2*m_body->GetMass() )
+      impulse *= 2*m_body->GetMass() / impulse.Length();
     
     m_body->ApplyLinearImpulse(impulse, m_body->GetWorldCenter(),true);  
 }

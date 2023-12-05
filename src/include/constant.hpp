@@ -14,7 +14,7 @@ const int positionIterations = 3;  // how strongly to correct position
 const float zoomCoef = 0.2f;
 
 // VEHICLE
-constexpr float MAX_SPEED = 20.0f;
+constexpr float MAX_SPEED = 4.0f;
 constexpr float LINEAR_DAMPING = 0.9f;
 constexpr float ANGULAR_DAMPING = 0.9f;
 constexpr float BOX_WIDTH = 0.25f;
