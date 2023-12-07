@@ -27,9 +27,15 @@ link_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/SFML)
 
 # Add the source files
 file(GLOB SOURCES ./src/*.cpp)
+file(GLOB HEADERS ./src/include/*.cpp)
 
 # Create the executable
 add_executable(MicroMachine ${SOURCES})
+
+add_library(Testing STATIC ${SOURCES} ${HEADERS})
+target_include_directories(Testing PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/include)
+
+add_subdirectory(tests)
 
 # Link SFML library
 target_link_libraries(MicroMachine sfml-system sfml-graphics sfml-window sfml-audio sfml-network)
