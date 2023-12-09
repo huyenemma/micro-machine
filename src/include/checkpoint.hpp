@@ -2,23 +2,19 @@
 #define CHECKPOINT_H
 
 #include <SFML/Graphics.hpp>
+#include <algorithm>
 #include <iostream>
 #include <utility>
 
 #include "box2dInclude.hpp"
+#include "outsideArea.hpp"
 #include "userDataPointer.hpp"
 #include "vehicle.hpp"
-#include "outsideArea.hpp"
-
-
-
-
-#include <algorithm> 
 
 
 class CheckPoint : public OutsideArea {
-public:
-    CheckPoint(b2World* world, b2Vec2 position, float height, float width);
+ public:
+  CheckPoint(b2World* world, b2Vec2 position, float height, float width);
 
     virtual void OnContact(Vehicle* car) override;
 
@@ -33,8 +29,8 @@ private:
 };
 
 class StartLine : public CheckPoint {
-public:
-    StartLine(b2World* world, b2Vec2 position, float height, float width);
+ public:
+  StartLine(b2World* world, b2Vec2 position, float height, float width);
 
     virtual void OnContact(Vehicle* car) override;
 
@@ -49,6 +45,4 @@ private:
     std::map<Vehicle*,int> points;
 };
 
-
 #endif
-

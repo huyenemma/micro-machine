@@ -6,11 +6,9 @@ World::World(b2Vec2 gravity) { physicWorld = new b2World(gravity); };
 
 void World::Update(float timeStep, int velocityIterations,
                    int positionIterations) {
-  
   physicWorld->Step(timeStep, velocityIterations, positionIterations);
-  
+
   physicWorld->ClearForces();
-  
 }
 std::map<Vehicle*,int> World::GetPoints(){
   if (startLine){

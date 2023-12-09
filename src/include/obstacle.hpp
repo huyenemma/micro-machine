@@ -1,10 +1,10 @@
 #ifndef OBSTACLE_H
 #define OBSTACLE_H
 
+#include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <utility>
-#include <SFML/Audio.hpp>
 
 #include "box2dInclude.hpp"
 #include "userDataPointer.hpp"
@@ -30,7 +30,7 @@ class Obstacle : public sf::Drawable {
 
  private:
   mutable sf::Sprite sprite;
-  sf::Texture texture;  
+  sf::Texture texture;
   std::string imagePath_;
 
   b2Body* body;

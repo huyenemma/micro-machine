@@ -3,19 +3,20 @@
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
+
 #include "reScale.hpp"
 
 class Map {
-public:
-    // Constructor that loads the texture from resourceManager 
-    Map(const sf::Texture& texture);
+ public:
+  // Constructor that loads the texture from resourceManager
+  Map(const sf::Texture& texture);
 
-    // Method to draw the map
-    void Draw(sf::RenderWindow& window);
+  // Method to draw the map
+  void Draw(sf::RenderWindow& window);
 
-private:
-    sf::Texture texture;
-    sf::Sprite sprite;
+ private:
+  sf::Texture texture;
+  sf::Sprite sprite;
 };
 
 #endif
