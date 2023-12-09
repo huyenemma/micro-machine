@@ -4,11 +4,15 @@ int main() {
   // Create a Game object
   Game game;
 
-  // Initialize game resources, settings, etc.
-  // game.Initialize();
+    // Create a Game object
+    Game* game = new Game();
 
   // Run the game loop
   game.Run();
 
-  return 0;
+    // Run the game loop
+    if (!game->Run())
+        game->~Game();
+
+    return 0;
 }
