@@ -198,6 +198,7 @@ void Game::RenderGame() {
   window_.clear();
   DrawGameWorld();
   // Define the view
+  
   if (playerCount == 1) {
     sf::View view;
 
@@ -224,9 +225,37 @@ void Game::RenderGame() {
     view2.setViewport(sf::FloatRect(0.5f, 0.f, 0.5f, 1.f));
     window_.setView(view2);
     DrawGameWorld();
-  }
 
-  window_.display();
+  }
+    sf::View topBarView1;
+    topBarView1.setCenter(window_.getSize().x / 8*1, 50);  // Centered horizontally, 50 units from the top
+    topBarView1.setSize(sf::Vector2f(window_.getSize().x, 100));  // Set the size of the top bar
+    topBarView1.setViewport(sf::FloatRect(0.f, 0.f, 0.25f, 0.1f));  // 10% of the window height
+    window_.setView(topBarView1);
+
+    // Draw the top bar with a color
+    sf::RectangleShape topBarRect(sf::Vector2f(window_.getSize().x, 100));
+    topBarRect.setFillColor(sf::Color::Blue);  // Set the color of the top bar
+    window_.draw(topBarRect);
+
+    // Process additional drawing for the top bar
+    // ...
+
+    sf::View topBarView2;
+    topBarView2.setCenter(window_.getSize().x / 8*5, 50);  // Centered horizontally, 50 units from the top
+    topBarView2.setSize(sf::Vector2f(window_.getSize().x, 100));  // Set the size of the top bar
+    topBarView2.setViewport(sf::FloatRect(0.f, 0.f, 0.25f, 0.1f));  // 10% of the window height
+    window_.setView(topBarView2);
+
+    // Draw the top bar with a color
+    sf::RectangleShape topBarRect2(sf::Vector2f(window_.getSize().x, 100));
+    topBarRect2.setFillColor(sf::Color::Red);  // Set the color of the top bar
+    window_.draw(topBarRect2);
+
+    // Process additional drawing for the top bar
+    // ...
+
+    window_.display();
 }
 
 void Game::DrawGameWorld() {
