@@ -66,7 +66,6 @@ StartLine::~StartLine() {
     for (CheckPoint* checkpoint : CheckPoints_) {
         delete checkpoint;
     }
-
     // Clear the vector after deleting the objects
     CheckPoints_.clear();
 }

@@ -101,6 +101,7 @@ void Game::Initialize() {
   CheckPoint* checkPoint2 = new CheckPoint(world_->GetPhysicWorld(),b2Vec2(136.0f/SCALE,620.0f/SCALE),5.0f,5.0f);
   startLine->AddCheckPoint(checkPoint1);
   startLine->AddCheckPoint(checkPoint2);
+  world_->SetRacingTrack(startLine);
 
   // Need to update when selecting number of players
   AddBoundaries();
@@ -135,7 +136,9 @@ void Game::Run() {
 void Game::ProcessEvents() {
   sf::Event event;
   while (window_.pollEvent(event)) {
-    if (event.type == sf::Event::Closed) window_.close();
+    if (event.type == sf::Event::Closed) {
+      window_.close();
+      }
   }
 }
 
@@ -183,6 +186,9 @@ void Game::Update(sf::Time deltaTime) {
   HandleInput();
   world_->Update(deltaTime.asSeconds(), velocityIterations, positionIterations);
   counterClock_->Update(); 
+  if (world_->HaveAnyOneWin()) {
+    //event
+  }
 }
 
 void Game::RenderGame() {

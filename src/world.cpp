@@ -12,6 +12,11 @@ void World::Update(float timeStep, int velocityIterations,
   physicWorld->ClearForces();
   
 }
+std::map<Vehicle*,int> World::GetPoints(){
+  if (startLine){
+    return startLine->GetPoints();
+  }
+};
 
 void World::AddVehicle(Vehicle* vehicle) { vehicles.push_back(vehicle); }
 
@@ -22,6 +27,21 @@ void World::AddCollectable(Collectable* collectable) {
 void World::AddObstacle(Obstacle* obstacle) { obstacles.push_back(obstacle); }
 
 
+bool World::HaveAnyOneWin() {
+    if (!startLine) {
+      std::cout << "startLine is null!" << std::endl;
+      return false; // or handle accordingly
+    }   
+
+    std::map<Vehicle*, int> points = startLine->GetPoints();
+
+    for (const auto& entry : points) {
+        if (entry.second >= winCondition) {
+            return true; // At least one vehicle has 6 or more points
+        }
+    }
+    return false; 
+}
 
 
 b2World* World::GetPhysicWorld() const { return physicWorld; }
@@ -35,14 +55,8 @@ std::vector<Obstacle*>& World::GetObstacle() { return obstacles; }
 void World::SetRacingTrack(StartLine* StartLine) { this->startLine = StartLine;}
 
 
-std::map<Vehicle*,int> World::GetPoints(){
-  if (startLine){
-    return startLine->GetPoints();
-  }
-};
+
 World::~World() {
-    // Free the StartLine object
-    delete startLine;
 
     // Free all Vehicle objects in the vehicles vector
     for (Vehicle* vehicle : vehicles) {

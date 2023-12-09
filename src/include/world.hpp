@@ -37,7 +37,8 @@ class World {
 
   std::map<Vehicle*,int> GetPoints();
 
-  int GetPoint(Vehicle* Vehicle);
+  bool HaveAnyOneWin();
+  
   b2World* GetPhysicWorld() const;
   std::vector<Vehicle*>& GetVehicle();
   std::vector<Collectable*>& GetCollectable();
