@@ -4,14 +4,14 @@
 #include "vehicle.hpp"
 
 class Cat : public Vehicle {
-private:
-    int superSkillCoolDown; // Follow camelCase for variable names
+ private:
+  int superSkillCoolDown;  // Follow camelCase for variable names
 
-public:
-    Cat(b2World* world, float x, float y, const sf::Texture& texture);
+ public:
+  Cat(b2World* world, float x, float y, const sf::Texture& texture);
 
-    ~Cat();
+  ~Cat();
 
-    void SuperSkill() override;
+  void SuperSkill() override;
 };
 #endif
