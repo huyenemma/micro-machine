@@ -7,7 +7,28 @@ ResourceManager::ResourceManager() {
     }
 }
 
-ResourceManager::~ResourceManager() {}
+ResourceManager::~ResourceManager() {
+    // Release all loaded textures
+    for (auto& pair : textures_) {
+        pair.second.~Texture();  // The SFML Texture class does not require explicit release, but this is an example
+    }
+
+    // Release all loaded fonts
+    for (auto& pair : fonts_) {
+        pair.second.~Font();  // The SFML Font class does not require explicit release, but this is an example
+    }
+
+    // Release all loaded sound buffers for background sounds
+    for (auto& pair : sounds_background) {
+        pair.second.~SoundBuffer();  // The SFML SoundBuffer class does not require explicit release, but this is an example
+    }
+
+    // Release all loaded sound buffers for step sounds
+    for (auto& pair : sounds_step) {
+        pair.second.~SoundBuffer();  // The SFML SoundBuffer class does not require explicit release, but this is an example
+    }
+
+}
 
 
 void ResourceManager::LoadImage(const std::string& key, const std::string& filename) {

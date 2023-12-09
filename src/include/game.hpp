@@ -57,7 +57,7 @@ class Game {
   void Initialize();
 
   // The main game loop
-  void Run();
+  bool Run();
 
   /// Handle input
   void HandleInput();

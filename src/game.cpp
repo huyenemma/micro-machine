@@ -107,7 +107,7 @@ void Game::Initialize() {
   AddBoundaries();
 }
 
-void Game::Run() {
+bool Game::Run() {
   isRunning_ = true; 
   sf::Clock clock;
   
@@ -115,7 +115,7 @@ void Game::Run() {
 
   while (window_.isOpen() && isRunning_ ) {
     sf::Time deltaTime = clock.restart();
-    if (currentState_ == GameState::MENU) {
+    if (currentState_ == GameState::MENU ) {
       HandleMenuInput(); 
       RenderMenu(); 
     } 
@@ -123,14 +123,14 @@ void Game::Run() {
       ProcessEvents();
       Update(deltaTime);
       RenderGame();
-    }
-
+    } 
     sf::Time elapsedTime = clock.getElapsedTime();
       
       if (elapsedTime < targetFrameTime) {
           sf::sleep(targetFrameTime - elapsedTime);
       }
   }
+  return false;
 }
 
 void Game::ProcessEvents() {
