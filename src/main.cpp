@@ -1,14 +1,10 @@
 #include "./include/game.hpp"
 
 int main() {
+  
   // Create a Game object
-  Game game;
+  Game* game = new Game();
 
-    // Create a Game object
-    Game* game = new Game();
-
-  // Run the game loop
-  game.Run();
 
     // Run the game loop
     if (!game->Run())
