@@ -16,6 +16,7 @@
 #include "vehicle.hpp"
 #include "world.hpp"
 #include "menu.hpp"
+#include "checkpoint.hpp"
 
 enum class GameState {
     MENU,

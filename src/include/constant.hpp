@@ -12,6 +12,7 @@ const float timeStep =
 const int velocityIterations = 8;  // how strongly to correct velocity
 const int positionIterations = 3;  // how strongly to correct position
 const float zoomCoef = 0.2f;
+const int winCondition = 6;
 
 // VEHICLE
 constexpr float MAX_SPEED = 4.0f;

@@ -33,18 +33,18 @@ void Game::Initialize() {
   const sf::Texture& oxTexture = resourceManager_->GetImage("buffalo");
 
   //add background sound
-  backgroundBuffer = resourceManager_->GetSoundBackground("grass");
+  //backgroundBuffer = resourceManager_->GetSoundBackground("grass");
 
-  background.setBuffer(backgroundBuffer);
-  background.setLoop(true);
-  background.setVolume(50);
-  background.play();
+  //background.setBuffer(backgroundBuffer);
+  //background.setLoop(true);
+  //background.setVolume(50);
+  //background.play();
 
   //Set sound effect
-  stepBuffer = resourceManager_->GetSoundStep("grass");
+  //stepBuffer = resourceManager_->GetSoundStep("grass");
 
-  step.setBuffer(stepBuffer);
-  step.setVolume(40);
+  //step.setBuffer(stepBuffer);
+  //step.setVolume(40);
 
 
   Ox* ox = new Ox(world_->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE,
@@ -96,7 +96,12 @@ void Game::Initialize() {
   world_->AddObstacle(obstacle);
   */
   
-
+  StartLine* startLine = new StartLine(world_->GetPhysicWorld(),b2Vec2(136.0f/SCALE,120.0f/SCALE),5.0f,5.0f);
+  CheckPoint* checkPoint1 = new CheckPoint(world_->GetPhysicWorld(),b2Vec2(636.0f/SCALE,620.0f/SCALE),5.0f,5.0f);
+  CheckPoint* checkPoint2 = new CheckPoint(world_->GetPhysicWorld(),b2Vec2(136.0f/SCALE,620.0f/SCALE),5.0f,5.0f);
+  startLine->AddCheckPoint(checkPoint1);
+  startLine->AddCheckPoint(checkPoint2);
+  world_->SetRacingTrack(startLine);
 
   // Need to update when selecting number of players
   AddBoundaries();
@@ -131,7 +136,9 @@ void Game::Run() {
 void Game::ProcessEvents() {
   sf::Event event;
   while (window_.pollEvent(event)) {
-    if (event.type == sf::Event::Closed) window_.close();
+    if (event.type == sf::Event::Closed) {
+      window_.close();
+      }
   }
 }
 
@@ -179,6 +186,9 @@ void Game::Update(sf::Time deltaTime) {
   HandleInput();
   world_->Update(deltaTime.asSeconds(), velocityIterations, positionIterations);
   counterClock_->Update(); 
+  if (world_->HaveAnyOneWin()) {
+    //event
+  }
 }
 
 void Game::RenderGame() {
@@ -188,6 +198,7 @@ void Game::RenderGame() {
   window_.clear();
   DrawGameWorld();
   // Define the view
+  
   if (playerCount == 1) {
     sf::View view;
 
@@ -214,9 +225,37 @@ void Game::RenderGame() {
     view2.setViewport(sf::FloatRect(0.5f, 0.f, 0.5f, 1.f));
     window_.setView(view2);
     DrawGameWorld();
-  }
 
-  window_.display();
+  }
+    sf::View topBarView1;
+    topBarView1.setCenter(window_.getSize().x / 8*1, 50);  // Centered horizontally, 50 units from the top
+    topBarView1.setSize(sf::Vector2f(window_.getSize().x, 100));  // Set the size of the top bar
+    topBarView1.setViewport(sf::FloatRect(0.f, 0.f, 0.25f, 0.1f));  // 10% of the window height
+    window_.setView(topBarView1);
+
+    // Draw the top bar with a color
+    sf::RectangleShape topBarRect(sf::Vector2f(window_.getSize().x, 100));
+    topBarRect.setFillColor(sf::Color::Blue);  // Set the color of the top bar
+    window_.draw(topBarRect);
+
+    // Process additional drawing for the top bar
+    // ...
+
+    sf::View topBarView2;
+    topBarView2.setCenter(window_.getSize().x /8*3 , 50);  // Centered horizontally, 50 units from the top
+    topBarView2.setSize(sf::Vector2f(window_.getSize().x, 100));  // Set the size of the top bar
+    topBarView2.setViewport(sf::FloatRect(0.25f, 0.f, 0.25f, 0.1f));  // 10% of the window height
+    window_.setView(topBarView2);
+
+    // Draw the top bar with a color
+    sf::RectangleShape topBarRect2(sf::Vector2f(window_.getSize().x, 100));
+    topBarRect2.setFillColor(sf::Color::Red);  // Set the color of the top bar
+    window_.draw(topBarRect2);
+
+    // Process additional drawing for the top bar
+    // ...
+
+    window_.display();
 }
 
 void Game::DrawGameWorld() {
