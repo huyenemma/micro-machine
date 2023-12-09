@@ -2,7 +2,7 @@
 
 #include <timer.hpp>
 
-// fixture
+// Test fixture for Timer class
 struct Tests : public ::testing::Test {
   Timer* timer;
   virtual void SetUp() override { timer = new Timer(2); }
@@ -10,7 +10,7 @@ struct Tests : public ::testing::Test {
   virtual void TearDown() override { delete timer; }
 };
 
-TEST_F(Tests, vehicleInitialPosition) {
+TEST_F(Tests, timerTest) {
   EXPECT_FALSE(timer->Tick());
   EXPECT_TRUE(timer->Tick());
 }

@@ -43,8 +43,11 @@ target_link_libraries(MicroMachine sfml-system sfml-graphics sfml-window sfml-au
 # Link Box2D library according to OS
 if(APPLE)
   target_link_libraries(MicroMachine ${PROJECT_SOURCE_DIR}/libs/arm64/libbox2d.a)
+  target_link_libraries(Testing ${PROJECT_SOURCE_DIR}/libs/arm64/libbox2d.a)
+  
 elseif(UNIX AND NOT APPLE)
   target_link_libraries(MicroMachine ${PROJECT_SOURCE_DIR}/libs/unix/libbox2d.a)
+  target_link_libraries(Testing ${PROJECT_SOURCE_DIR}/libs/unix/libbox2d.a)
 endif()
 
 # Where to find the headers
