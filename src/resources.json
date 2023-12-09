@@ -17,7 +17,7 @@
         },
         {
             "id": "goat",
-            "path": "../img/runninggoat.png"
+            "path": "../img/goat.png"
         }
        
     ],
@@ -26,6 +26,22 @@
         {
             "id": "mushroom",
             "path": "../img/mushroom.png"
+        }, 
+        {
+            "id": "goodApple", 
+            "path": "../img/goodApple.png"
+        }, 
+        {
+            "id": "badApple", 
+            "path": "../img/badApple.png"
+        }, 
+        {
+            "id": "goodBanana", 
+            "path": "../img/goodBanana.png"
+        }, 
+        {
+            "id": "badBanana", 
+            "path": "../img/badBanana.png"
         }
     ],
 
@@ -33,6 +49,10 @@
         {
             "id":"rock", 
             "path": "../img/rock.png"
+        }, 
+        {
+            "id": "tree", 
+            "path": "../img/tree.png"
         }
     ], 
 
