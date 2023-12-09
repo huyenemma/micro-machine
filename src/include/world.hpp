@@ -8,14 +8,16 @@
 #include "constant.hpp"
 #include "obstacle.hpp"
 #include "vehicle.hpp"
+#include "checkpoint.hpp"
 
 class World {
  private:
   b2World* physicWorld;
+  StartLine* startLine;
   std::vector<Vehicle*> vehicles;
   std::vector<Collectable*> collectables;
   std::vector<Obstacle*> obstacles;
-
+  
  public:
   // contructor
   World(b2Vec2 gravity);
@@ -29,11 +31,19 @@ class World {
 
   void AddCollectable(Collectable* Collectable);
 
+  void SetRacingTrack(StartLine* startline);
+
   void AddObstacle(Obstacle* Obstacle);
+
+  std::map<Vehicle*,int> GetPoints();
+
+  bool HaveAnyOneWin();
+  
   b2World* GetPhysicWorld() const;
   std::vector<Vehicle*>& GetVehicle();
   std::vector<Collectable*>& GetCollectable();
   std::vector<Obstacle*>& GetObstacle();
+  
 };
 
 #endif  // WORLD_H
