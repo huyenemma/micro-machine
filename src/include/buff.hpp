@@ -1,44 +1,39 @@
 
-    #ifndef BUFF_HPP
-    #define BUFF_HPP
+#ifndef BUFF_HPP
+#define BUFF_HPP
 
-    #include <string> 
-    #include "timer.hpp"
+#include <string>
 
-    class Vehicle;
-    
-    enum BuffEffect {
-        onetime,
-        continuous,
-    };
+#include "timer.hpp"
 
-    enum class BuffType {
-        Positive,
-        Negative
-    };
+class Vehicle;
 
-    class Buff : public Timer {
-    protected:
-        std::string id; 
-        BuffType type_;
-        BuffEffect effectType_;
-        
-    public:
-        Buff(int duration,BuffType type,BuffEffect effectType): Timer(duration) ,type_(type), effectType_(effectType) {}
+enum BuffEffect {
+  onetime,
+  continuous,
+};
 
-        ~Buff(){};
+enum class BuffType { Positive, Negative };
 
-        virtual void ApplyEffect(Vehicle* vehicle) = 0;
+class Buff : public Timer {
+ protected:
+  std::string id;
+  BuffType type_;
+  BuffEffect effectType_;
 
-        virtual void ReverseEffect(Vehicle* vehicle) = 0;
+ public:
+  Buff(int duration, BuffType type, BuffEffect effectType)
+      : Timer(duration), type_(type), effectType_(effectType) {}
 
-        bool IsContinuous() {
-            return (effectType_ == BuffEffect::continuous);
-        };
+  ~Buff(){};
 
-        bool IsNegativeBuff() {
-            return (type_ == BuffType::Negative);
-        }
-    };
+  virtual void ApplyEffect(Vehicle* vehicle) = 0;
 
-    #endif
+  virtual void ReverseEffect(Vehicle* vehicle) = 0;
+
+  bool IsContinuous() { return (effectType_ == BuffEffect::continuous); };
+
+  bool IsNegativeBuff() { return (type_ == BuffType::Negative); }
+};
+
+#endif
