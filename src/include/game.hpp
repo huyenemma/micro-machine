@@ -77,6 +77,9 @@ class Game {
   // Render the game
   void RenderGame();
 
+  //helper function to Cramp camera view
+  sf::Vector2f ClampViewCenter(const sf::Vector2f& center, const sf::Vector2f& viewSize, const sf::Vector2f& mapSize);
+
   // Draw game world
   void DrawGameWorld();
 
