@@ -242,9 +242,9 @@ void Game::RenderGame() {
     // ...
 
     sf::View topBarView2;
-    topBarView2.setCenter(window_.getSize().x / 8*5, 50);  // Centered horizontally, 50 units from the top
+    topBarView2.setCenter(window_.getSize().x /8*3 , 50);  // Centered horizontally, 50 units from the top
     topBarView2.setSize(sf::Vector2f(window_.getSize().x, 100));  // Set the size of the top bar
-    topBarView2.setViewport(sf::FloatRect(0.f, 0.f, 0.25f, 0.1f));  // 10% of the window height
+    topBarView2.setViewport(sf::FloatRect(0.25f, 0.f, 0.25f, 0.1f));  // 10% of the window height
     window_.setView(topBarView2);
 
     // Draw the top bar with a color
