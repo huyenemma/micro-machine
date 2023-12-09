@@ -33,18 +33,18 @@ void Game::Initialize() {
   const sf::Texture& oxTexture = resourceManager_->GetImage("buffalo");
 
   //add background sound
-  backgroundBuffer = resourceManager_->GetSoundBackground("grass");
+  //backgroundBuffer = resourceManager_->GetSoundBackground("grass");
 
-  background.setBuffer(backgroundBuffer);
-  background.setLoop(true);
-  background.setVolume(50);
-  background.play();
+  //background.setBuffer(backgroundBuffer);
+  //background.setLoop(true);
+  //background.setVolume(50);
+  //background.play();
 
   //Set sound effect
-  stepBuffer = resourceManager_->GetSoundStep("grass");
+  //stepBuffer = resourceManager_->GetSoundStep("grass");
 
-  step.setBuffer(stepBuffer);
-  step.setVolume(40);
+  //step.setBuffer(stepBuffer);
+  //step.setVolume(40);
 
 
   Ox* ox = new Ox(world_->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE,
@@ -96,7 +96,11 @@ void Game::Initialize() {
   world_->AddObstacle(obstacle);
   */
   
-
+  StartLine* startLine = new StartLine(world_->GetPhysicWorld(),b2Vec2(136.0f/SCALE,120.0f/SCALE),5.0f,5.0f);
+  CheckPoint* checkPoint1 = new CheckPoint(world_->GetPhysicWorld(),b2Vec2(636.0f/SCALE,620.0f/SCALE),5.0f,5.0f);
+  CheckPoint* checkPoint2 = new CheckPoint(world_->GetPhysicWorld(),b2Vec2(136.0f/SCALE,620.0f/SCALE),5.0f,5.0f);
+  startLine->AddCheckPoint(checkPoint1);
+  startLine->AddCheckPoint(checkPoint2);
 
   // Need to update when selecting number of players
   AddBoundaries();
