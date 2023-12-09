@@ -20,7 +20,6 @@ Game::~Game() {
 using namespace NegativeBuff;
 using namespace PositiveBuff;
 void Game::Initialize() {
-  
   resourceManager_->LoadFromJson("../src/resources.json");
 
   const sf::Font& font = resourceManager_->GetFont("clockFont"); 
