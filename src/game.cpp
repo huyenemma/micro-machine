@@ -8,6 +8,16 @@ Game::Game()
       menu2_(window_) {
   world_ = new World(b2Vec2(0.0f, 0.0f));
   resourceManager_ = new ResourceManager();
+  resourceManager_->LoadFromJson("../src/resources.json");
+  font = resourceManager_->GetFont("clockFont"); 
+
+  const sf::Texture& menuTexture = resourceManager_->GetImage("menu"); 
+  menu_ = new GameMenu(window_, font, menuTexture); 
+
+  const sf::Texture& wintexture = resourceManager_->GetImage("gameWin"); 
+  winnerBoard_ = new WinnerBoard(window_, font, wintexture);
+
+  world_ = new World(b2Vec2(0.0f, 0.0f));
 };
 
 Game::~Game() {
@@ -15,23 +25,27 @@ Game::~Game() {
   delete resourceManager_;
   delete counterClock_;
   delete map_;
+  delete menu_;
+  delete winnerBoard_; 
 }
 
 using namespace NegativeBuff;
 using namespace PositiveBuff;
 void Game::Initialize() {
-  resourceManager_->LoadFromJson("../src/resources.json");
-
-  const sf::Font& font = resourceManager_->GetFont("clockFont");
-  counterClock_ = new RealTime(15, font);
+  
+  const sf::Font& font = resourceManager_->GetFont("clockFont"); 
+  counterClock_ = new RealTime(15, font, sf::Color::White, sf::Vector2f(330, 10));
   counterClock_->SetUp();
+  if (playerCount == 2) {
+    counterClock_->SetGameMode(2); 
+  }; 
 
   const sf::Texture& map_Texture = resourceManager_->GetImage(map);
   map_ = new Map(map_Texture);
 
   const sf::Texture& oxTexture = resourceManager_->GetImage("buffalo");
 
-  // add background sound
+  //add background sound
   backgroundBuffer = resourceManager_->GetSoundBackground("grass");
 
   background.setBuffer(backgroundBuffer);
@@ -75,6 +89,7 @@ void Game::Initialize() {
       player2 = ox2;
     }
   }
+
   // Setting Contact Listener
   MyContactListener* contactListener = new MyContactListener();
   world_->GetPhysicWorld()->SetContactListener(contactListener);
@@ -107,12 +122,12 @@ void Game::Initialize() {
     world_->AddCollectable(collectable2);
     // world_->AddCollectable(collectable3);
 
-    /*
-    Obstacle* obstacle = new Obstacle(world_->GetPhysicWorld(),
-                                    b2Vec2(140.0f / SCALE, 150.0f / SCALE),
-                                    50.0f / SCALE, "../img/rock.png");
-    world_->AddObstacle(obstacle);
-    */
+  const sf::Texture& rock = resourceManager_->GetImage("rock");
+  Obstacle* obstacle = new Obstacle(world_->GetPhysicWorld(),
+                                  b2Vec2(140.0f / SCALE, 150.0f / SCALE),
+                                  20.0f / SCALE, rock);
+  world_->AddObstacle(obstacle);
+  
 
     StartLine* startLine =
         new StartLine(world_->GetPhysicWorld(),
@@ -227,6 +242,7 @@ void Game::HandleInput() {
     // Move car
     step.play();
     vehicle->ToggleForce(true);
+    std::cout << "Current position " << vehicle->GetPosition().first * SCALE << ", " << vehicle->GetPosition().second * SCALE << std::endl; 
   } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
     // turn right
     vehicle->Rotate(angle);
@@ -263,61 +279,65 @@ void Game::Update(sf::Time deltaTime) {
   world_->Update(deltaTime.asSeconds(), velocityIterations, positionIterations);
   counterClock_->Update();
   if (world_->HaveAnyOneWin()) {
-    // event
+    winnerBoard_->SetWinner(1, 2, 1);
+    currentState_ = GameState::GAME_OVER; 
   }
 }
 
 void Game::RenderGame() {
   window_.clear();
-  sf::Vector2f mapSize(800.0f, 800.0f);
-  // Define the view
 
-  if (playerCount == 1) {
-    sf::View view;
+  if (currentState_ == GameState::GAME_OVER) {
+    RenderWinningBoard();  
+  } else {
+    sf::Vector2f mapSize(800.0f, 800.0f);
 
-    // view.setCenter(sf::Vector2f(player1->GetPosition().first * SCALE,
-    // player1->GetPosition().second * SCALE));
-    view.zoom(zoomCoef);
+  // Define the view for player
+    if (playerCount == 1) {
+      sf::View view;
 
-    sf::Vector2f clampedCenter =
-        ClampViewCenter(sf::Vector2f(player1->GetPosition().first * SCALE,
-                                     player1->GetPosition().second * SCALE),
-                        view.getSize(), mapSize);
-    view.setCenter(clampedCenter);
-    window_.setView(view);
-    DrawGameWorld();
-  }
+      // view.setCenter(sf::Vector2f(player1->GetPosition().first * SCALE,
+      // player1->GetPosition().second * SCALE));
+      view.zoom(zoomCoef);
 
-  else if (playerCount == 2) {
-    sf::View view1;
-    // view1.setCenter(sf::Vector2f(player1->GetPosition().first * SCALE,
-    //                              player1->GetPosition().second * SCALE));
-    view1.zoom(zoomCoef);
-    view1.setViewport(sf::FloatRect(0.f, 0.f, 0.5f, 1.f));
+      sf::Vector2f clampedCenter =
+          ClampViewCenter(sf::Vector2f(player1->GetPosition().first * SCALE,
+                                      player1->GetPosition().second * SCALE),
+                          view.getSize(), mapSize);
+      view.setCenter(clampedCenter);
+      window_.setView(view);
+      DrawGameWorld();
+    }
+    else if (playerCount == 2) {
+      sf::View view1;
+      view1.zoom(zoomCoef);
+      view1.setViewport(sf::FloatRect(0.f, 0.f, 0.5f, 1.f));
+      sf::Vector2f clampedCenter1 =
+          ClampViewCenter(sf::Vector2f(player1->GetPosition().first * SCALE,
+                                      player1->GetPosition().second * SCALE),
+                          view1.getSize(), mapSize);
+      view1.setCenter(clampedCenter1);
+      window_.setView(view1);
+      DrawGameWorld();
 
-    sf::Vector2f clampedCenter1 =
-        ClampViewCenter(sf::Vector2f(player1->GetPosition().first * SCALE,
-                                     player1->GetPosition().second * SCALE),
-                        view1.getSize(), mapSize);
-    view1.setCenter(clampedCenter1);
-    window_.setView(view1);
-    DrawGameWorld();
+      sf::View view2;
+      view2.zoom(zoomCoef);
+      view2.setViewport(sf::FloatRect(0.5f, 0.f, 0.5f, 1.f));
+      sf::Vector2f clampedCenter2 =
+          ClampViewCenter(sf::Vector2f(player2->GetPosition().first * SCALE,
+                                      player2->GetPosition().second * SCALE),
+                          view2.getSize(), mapSize);
+      view2.setCenter(clampedCenter2);
+      window_.setView(view2);
+      DrawGameWorld();
+    }
 
-    sf::View view2;
-    // view2.setCenter(sf::Vector2f(player2->GetPosition().first * SCALE,
-    //                              player2->GetPosition().second * SCALE));
-    view2.zoom(zoomCoef);
-    view2.setViewport(sf::FloatRect(0.5f, 0.f, 0.5f, 1.f));
+    //view for fix ui element 
+    sf::View uiView = window_.getDefaultView(); 
+    window_.setView(uiView);
+    counterClock_->Draw(window_);
+    }
 
-    sf::Vector2f clampedCenter2 =
-        ClampViewCenter(sf::Vector2f(player2->GetPosition().first * SCALE,
-                                     player2->GetPosition().second * SCALE),
-                        view2.getSize(), mapSize);
-    view2.setCenter(clampedCenter2);
-    window_.setView(view2);
-
-    DrawGameWorld();
-  }
   window_.display();
 }
 
@@ -365,8 +385,7 @@ void Game::DrawGameWorld() {
       window_.draw(*obstacle);
     }
   }
-
-  counterClock_->Draw(window_);
+  //counterClock_->Draw(window_);
 }
 
 void Game::HandleMenuInput() {
@@ -376,13 +395,13 @@ void Game::HandleMenuInput() {
       case sf::Event::KeyPressed:
         switch (event.key.code) {
           case sf::Keyboard::Up:
-            menu_.MoveUp();
+            menu_->MoveUp();
             break;
           case sf::Keyboard::Down:
-            menu_.MoveDown();
+            menu_->MoveDown();
             break;
           case sf::Keyboard::Enter:
-            int selectedItem = menu_.GetPressedItem();
+            int selectedItem = menu_->GetPressedItem();
             if (selectedItem == GameMenu::ONE_PLAYER) {
               playerCount = 1;
               currentState_ = GameState::MENU2;
@@ -439,7 +458,7 @@ void Game::HandleMenuInput2() {
 
 void Game::RenderMenu() {
   window_.clear();
-  menu_.draw();
+  menu_->draw();
   window_.display();
 }
 

@@ -13,8 +13,7 @@
 using namespace BodyType;
 class Obstacle : public sf::Drawable {
  public:
-  Obstacle(b2World* world, b2Vec2 position, float radius,
-           const std::string& imagePath);
+  Obstacle(b2World* world, b2Vec2 position, float radius, const sf::Texture& texture);
 
   std::pair<float, float> GetPosition() const;
 
@@ -29,9 +28,8 @@ class Obstacle : public sf::Drawable {
   void OnContact(Vehicle* car);
 
  private:
-  mutable sf::Sprite sprite;
-  sf::Texture texture;
-  std::string imagePath_;
+  mutable sf::Sprite sprite_;
+  sf::Texture texture_;
 
   b2Body* body;
   float radius_;

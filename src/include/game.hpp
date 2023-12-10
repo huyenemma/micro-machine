@@ -19,6 +19,9 @@
 #include "vehicle.hpp"
 #include "winnerBoard.hpp"
 #include "world.hpp"
+#include "menu.hpp"
+#include "checkpoint.hpp"
+#include "winnerBoard.hpp"
 
 enum class GameState { MENU, MENU2, PLAYING, PAUSED, GAME_OVER };
 
@@ -36,7 +39,7 @@ class Game {
   Vehicle* player2;
   sf::SoundBuffer backgroundBuffer;
   sf::Sound background;
-
+  sf::Font font; 
   sf::SoundBuffer stepBuffer;
   sf::Sound step;
 

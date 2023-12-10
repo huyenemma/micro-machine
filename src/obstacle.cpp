@@ -1,11 +1,9 @@
 #include "obstacle.hpp"
 
-Obstacle::Obstacle(b2World* world, b2Vec2 position, float radius,
-                   const std::string& imagePath)
-    : radius_(radius), imagePath_(imagePath) {
-  texture.loadFromFile(imagePath_);
-  sprite.setTexture(texture);
-  rescaleSprite(sprite, radius_ * SCALE, radius_ * SCALE);
+Obstacle::Obstacle(b2World* world, b2Vec2 position, float radius, const sf::Texture& texture)
+    : radius_(radius), texture_(texture) {
+  sprite_.setTexture(texture_);
+  rescaleSprite(sprite_, radius_ * SCALE, radius_ * SCALE);
 
   // Define the obstacle shape
   b2CircleShape shape;
@@ -56,13 +54,14 @@ bool Obstacle::IsNullBody() { return body == nullptr; }
 
 void Obstacle::draw(sf::RenderTarget& target, sf::RenderStates states) const {
   auto pos = GetPosition();
-  sprite.setPosition(pos.first * SCALE, pos.second * SCALE);
+  sprite_.setPosition(pos.first * SCALE, pos.second * SCALE);
 
   float angleDegrees = body->GetAngle() * (180 / b2_pi);
-  sprite.setRotation(angleDegrees);
+  sprite_.setRotation(angleDegrees);
 
-  target.draw(sprite, states);
+  target.draw(sprite_, states);
 }
+
 
 void Obstacle::OnContact(Vehicle* car) {
   std::cout << "hit obstacle" << std::endl;
