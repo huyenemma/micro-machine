@@ -44,19 +44,19 @@ void Game::Initialize() {
 
   const sf::Texture& oxTexture = resourceManager_->GetImage("buffalo");
 
-  // add background sound
-  // backgroundBuffer = resourceManager_->GetSoundBackground("grass");
+  //add background sound
+  backgroundBuffer = resourceManager_->GetSoundBackground("grass");
 
-  // background.setBuffer(backgroundBuffer);
-  // background.setLoop(true);
-  // background.setVolume(50);
-  // background.play();
+  background.setBuffer(backgroundBuffer);
+  background.setLoop(true);
+  background.setVolume(50);
+  background.play();
 
-  // // Set sound effect
-  // stepBuffer = resourceManager_->GetSoundStep("grass");
+  // Set sound effect
+  stepBuffer = resourceManager_->GetSoundStep("grass");
 
-  // //step.setBuffer(stepBuffer);
-  // //step.setVolume(40);
+  step.setBuffer(stepBuffer);
+  step.setVolume(40);
 
   Ox* ox = new Ox(world_->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE,
                   oxTexture);
@@ -71,6 +71,7 @@ void Game::Initialize() {
     world_->AddVehicle(ox2);
     player2 = ox2;
   }
+
   // Setting Contact Listener
   MyContactListener* contactListener = new MyContactListener();
   world_->GetPhysicWorld()->SetContactListener(contactListener);
@@ -90,10 +91,10 @@ void Game::Initialize() {
       world_->GetPhysicWorld(), b2Vec2(140.0f / SCALE, 330.0f / SCALE),
       20.0f / SCALE, buff2, collectable2_Texture);
 
-  Magnetic* buff3 = new Magnetic(6, 20.f);
+  Magnetic* buff3 = new Magnetic(6, 5.f);
   const sf::Texture& collectable3_Texture = resourceManager_->GetImage("goodBanana");
   Collectable* collectable3 = new Collectable(
-      world_->GetPhysicWorld(), b2Vec2(140.0f / SCALE, 400.0f / SCALE),
+      world_->GetPhysicWorld(), b2Vec2(140.0f / SCALE, 380.0f / SCALE),
       20.0f / SCALE, buff3, collectable3_Texture);
 
   world_->AddCollectable(collectable);
