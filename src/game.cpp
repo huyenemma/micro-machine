@@ -449,6 +449,8 @@ void Game::RenderMenu2() {
   window_.display();
 }
 
+void Game::RenderWinningBoard() { winnerBoard_->Draw(); }
+
 void Game::AddBoundaries() {
   float world_Width = 800.0f / SCALE;   // Width of window_ in Box2D units
   float world_Height = 800.0f / SCALE;  // Height of  window_ in Box2D units

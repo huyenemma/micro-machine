@@ -17,6 +17,7 @@
 #include "realTime.hpp"
 #include "resourceManager.hpp"
 #include "vehicle.hpp"
+#include "winnerBoard.hpp"
 #include "world.hpp"
 
 enum class GameState { MENU, MENU2, PLAYING, PAUSED, GAME_OVER };
@@ -42,6 +43,7 @@ class Game {
   GameState currentState_;
   GameMenu menu_;
   GameMenu2 menu2_;
+  WinnerBoard* winnerBoard_;
 
  public:
   // Constructor
@@ -91,6 +93,9 @@ class Game {
 
   // Render menu2
   void RenderMenu2();
+
+  // Render winning board
+  void RenderWinningBoard();
 };
 
 #endif  // GAME_H
