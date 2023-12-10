@@ -16,6 +16,7 @@
 #include "vehicle.hpp"
 #include "world.hpp"
 #include "menu.hpp"
+#include "checkpoint.hpp"
 
 enum class GameState {
     MENU,
@@ -56,7 +57,7 @@ class Game {
   void Initialize();
 
   // The main game loop
-  void Run();
+  bool Run();
 
   /// Handle input
   void HandleInput();
@@ -75,6 +76,9 @@ class Game {
 
   // Render the game
   void RenderGame();
+
+  //helper function to Cramp camera view
+  sf::Vector2f ClampViewCenter(const sf::Vector2f& center, const sf::Vector2f& viewSize, const sf::Vector2f& mapSize);
 
   // Draw game world
   void DrawGameWorld();

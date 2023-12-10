@@ -1,16 +1,14 @@
 #include "./include/game.hpp"
 
-
 int main() {
+  
+  // Create a Game object
+  Game* game = new Game();
 
-    // Create a Game object
-    Game game;
-
-    // Initialize game resources, settings, etc.
-    //game.Initialize();
 
     // Run the game loop
-    game.Run();
+    if (!game->Run())
+        game->~Game();
 
     return 0;
 }

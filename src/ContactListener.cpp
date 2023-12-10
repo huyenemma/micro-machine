@@ -3,12 +3,10 @@
 MyContactListener::MyContactListener() {}
 
 void MyContactListener::BeginContact(b2Contact* contact) {
-  std::cout << "contact" << std::endl;
   HandleContact(contact, true);
 }
 
 void MyContactListener::EndContact(b2Contact* contact) {
-  std::cout << "end contact" << std::endl;
   HandleContact(contact, false);
 }
 
@@ -24,7 +22,6 @@ void MyContactListener::HandleContact(b2Contact* contact, bool begin) {
 
   // Check if both fixtures have valid user data
   if (userDataA && userDataB) {
-    std::cout << "cast sucessfully" << std::endl;
     // Check if one of the fixtures is a Vehicle and the other is a Collectable
     if ((IsVehicle(userDataA) && IsCollectable(userDataB)) ||
         (IsVehicle(userDataB) && IsCollectable(userDataA))) {
@@ -40,7 +37,6 @@ void MyContactListener::HandleContact(b2Contact* contact, bool begin) {
       // Call the appropriate method in Vehicle and Collectable based on the
       // contact type
       if (begin) {
-        std::cout << "hit collectable" << std::endl;
         collectable->OnContact(
             vehicle);  // Do something in the Collectable class
       }
@@ -58,7 +54,6 @@ void MyContactListener::HandleContact(b2Contact* contact, bool begin) {
       // Call the appropriate method in Vehicle and Obstacle based on the
       // contact type
       if (begin) {
-        std::cout << "hit obstacle" << std::endl;
         // obstacle->OnContact(vehicle);  // Do something in the Obstacle class
       }
     } else if ((IsVehicle(userDataA) && IsOutsideArea(userDataB)) ||
@@ -75,7 +70,7 @@ void MyContactListener::HandleContact(b2Contact* contact, bool begin) {
       // Call the appropriate method in Vehicle and OutsideArea based on the
       // contact type
       if (begin) {
-        std::cout << "out of track" << std::endl;
+        std::cout << "visit area" << std::endl;
         outsideArea->OnContact(
             vehicle);  // Do something in the OutsideArea class
       }

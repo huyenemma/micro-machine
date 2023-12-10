@@ -21,6 +21,30 @@ In each meeting, you are required to discuss:
    - Plan what to do next 
 # Notes
 
+## Our current status: 
+
+- Vehicle good 
+- Collectable (2 good, 2 bad)
+- Slow area (not appear yet)
+- Obstacle (not use resourceManager yet)
+- Checkpoint 
+- Timer 
+- Advanced C++ constructs are used appropriately 
+
+## What we need to do? 
+
+- Gg test (Duy)
+- Check warning (Duy)
+- Project documentation (Linh take main responsibility)
+- Software documentation (Huyen)
+- Check view (Huyen)
+- Exit button (clear memory) (Quan)
+- Count how many rounds (condition to wins) (Quan)
+- New track (Duy)
+   - Generate map 
+   - Slow area 
+   - Checkpoint
+   - Button to change map 
 
 ## What we doned in last week: 
 
@@ -35,32 +59,3 @@ In each meeting, you are required to discuss:
 
 ### Duy 
 - Documentation 
-
-# Todos
-
-### Linh
-- Documentation 
-- Sound. The sourse management 
-
-### Quan 
-- Implement conditions to win
-
-### Duy 
-- Push Slow area
-- Create view3 
-- Write unit test 
-  
-### Huyen 
-- Generate all assets
-- Draw wining board 
-- Documentation 
-- Readme.md 
-
-## Next week goal Tue 5/12
-- Finish to-dos
-
-## Project status  
-- World 
-- Game 
-- Buff
-- Vehicle  

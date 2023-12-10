@@ -1,6 +1,6 @@
 #include "./include/cat.hpp"
 
-#include "./include/positivebuff.hpp"
+#include "../include/positivebuff.hpp"
 
 constexpr float CAT_MAX_SPEED = 3.75f;
 constexpr float CAT_ANGULAR_DAMPING = 0.8f;

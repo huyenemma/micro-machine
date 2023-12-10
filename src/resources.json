@@ -1,15 +1,18 @@
 {
-    "background" : [
+    "background": [
         {
             "id": "forest",
-            "path" : "../img/finalMap.png"
+            "path": "../img/finalMap.png"
+        },
+        {
+            "id": "menu",
+            "path": "../img/menu.png"
         }, 
         {
-            "id": "menu", 
-            "path": "../img/menu.png"
+            "id": "ocean", 
+            "path": "../img/ocean.png"
         }
     ],
-    
     "vehicle": [
         {
             "id": "buffalo",
@@ -17,42 +20,56 @@
         },
         {
             "id": "goat",
-            "path": "../img/runninggoat.png"
+            "path": "../img/goat.png"
         }
-       
     ],
-
     "collectable": [
         {
             "id": "mushroom",
             "path": "../img/mushroom.png"
+        },
+        {
+            "id": "goodApple",
+            "path": "../img/goodApple.png"
+        },
+        {
+            "id": "badApple",
+            "path": "../img/badApple.png"
+        },
+        {
+            "id": "goodBanana",
+            "path": "../img/goodBanana.png"
+        },
+        {
+            "id": "badBanana",
+            "path": "../img/badBanana.png"
         }
     ],
-
-    "obstacle" : [
+    "obstacle": [
         {
-            "id":"rock", 
+            "id": "rock",
             "path": "../img/rock.png"
-        }
-    ], 
-
-    "font" : [
+        },
         {
-            "id":"clockFont", 
+            "id": "tree",
+            "path": "../img/tree.png"
+        }
+    ],
+    "font": [
+        {
+            "id": "clockFont",
             "path": "../font/PixelOperator.ttf"
         }
     ],
-
-    "sound_background" : [
+    "sound_background": [
         {
-            "id":"grass", 
+            "id": "grass",
             "path": "../sound/grass_background.mp3"
         }
     ],
-
-    "sound_step" : [
+    "sound_step": [
         {
-            "id":"grass", 
+            "id": "grass",
             "path": "../sound/grass_step.mp3"
         }
     ]
