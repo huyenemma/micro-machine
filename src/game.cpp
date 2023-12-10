@@ -26,7 +26,7 @@ void Game::Initialize() {
   counterClock_ = new RealTime(15, font);
   counterClock_->SetUp();
 
-  const sf::Texture& map_Texture = resourceManager_->GetImage("forest");
+  const sf::Texture& map_Texture = resourceManager_->GetImage(map);
   map_ = new Map(map_Texture);
 
   const sf::Texture& oxTexture = resourceManager_->GetImage("buffalo");
@@ -124,7 +124,7 @@ bool Game::Run() {
       HandleMenuInput();
       RenderMenu();
     } else if (currentState_ == GameState::MENU2) {
-      HandleMenuInput();
+      HandleMenuInput2();
       RenderMenu2();
     }
 

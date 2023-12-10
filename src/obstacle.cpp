@@ -63,21 +63,20 @@ void Obstacle::draw(sf::RenderTarget& target, sf::RenderStates states) const {
 
   target.draw(sprite, states);
 }
-/*
+
 void Obstacle::OnContact(Vehicle* car) {
   std::cout << "hit obstacle" << std::endl;
   if (car != nullptr) {
-    //Add sound effect
-        if (!hitBuffer.loadFromFile("../sound/obstacle.mp3")) {
-            // Handle error loading sound files
-            std::cerr << "Error loading sound files!" << std::endl;
-        }
-        hit.setBuffer(hitBuffer);
-        hit.setVolume(50);
-        hit.play();
+    // Add sound effect
+    if (!hitBuffer.loadFromFile("../sound/obstacle.mp3")) {
+      // Handle error loading sound files
+      std::cerr << "Error loading sound files!" << std::endl;
+    }
+    hit.setBuffer(hitBuffer);
+    hit.setVolume(50);
+    hit.play();
 
-    //handle contact on vehicle
+    // handle contact on vehicle
     car->CrazyRotate(1, 2);
   }
 }
-*/
