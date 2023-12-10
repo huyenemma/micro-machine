@@ -73,12 +73,20 @@
         {
             "id": "grass",
             "path": "../sound/grass_background.mp3"
+        },
+        {
+            "id": "ocean",
+            "path": "../sound/ocean_background.mp3"
         }
     ],
     "sound_step": [
         {
             "id": "grass",
             "path": "../sound/grass_step.mp3"
+        },
+        {
+            "id": "ocean",
+            "path": "../sound/ocean_step.mp3"
         }
     ]
 }
