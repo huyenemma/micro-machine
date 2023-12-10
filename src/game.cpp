@@ -44,20 +44,6 @@ void Game::Initialize() {
 
   const sf::Texture& oxTexture = resourceManager_->GetImage("buffalo");
 
-  // add background sound
-  backgroundBuffer = resourceManager_->GetSoundBackground("grass");
-
-  background.setBuffer(backgroundBuffer);
-  background.setLoop(true);
-  background.setVolume(50);
-  background.play();
-
-  // Set sound effect
-  stepBuffer = resourceManager_->GetSoundStep("grass");
-
-  step.setBuffer(stepBuffer);
-  step.setVolume(40);
-
   // Setting vehicles
   if (map == "forest") {
     Ox* ox = new Ox(world_->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE,
@@ -110,16 +96,16 @@ void Game::Initialize() {
         world_->GetPhysicWorld(), b2Vec2(700.f / SCALE, 320.0f / SCALE),
         30.0f / SCALE, buff2, collectable2_Texture);
 
-    // Magnetic* buff3 = new Magnetic(6, 20.f);
-    // const sf::Texture& collectable3_Texture =
-    //     resourceManager_->GetImage("goodBanana");
-    // Collectable* collectable3 = new Collectable(
-    //     world_->GetPhysicWorld(), b2Vec2(200.0f / SCALE, 650.f / SCALE),
-    //     50.0f / SCALE, buff3, collectable3_Texture);
+    Magnetic* buff3 = new Magnetic(6, 5.f);
+    const sf::Texture& collectable3_Texture =
+        resourceManager_->GetImage("goodBanana");
+    Collectable* collectable3 = new Collectable(
+        world_->GetPhysicWorld(), b2Vec2(200.0f / SCALE, 650.f / SCALE),
+        50.0f / SCALE, buff3, collectable3_Texture);
 
     world_->AddCollectable(collectable);
     world_->AddCollectable(collectable2);
-    // world_->AddCollectable(collectable3);
+    world_->AddCollectable(collectable3);
 
     const sf::Texture& rock = resourceManager_->GetImage("rock");
     Obstacle* obstacle = new Obstacle(world_->GetPhysicWorld(),
@@ -139,6 +125,20 @@ void Game::Initialize() {
     startLine->AddCheckPoint(checkPoint1);
     startLine->AddCheckPoint(checkPoint2);
     world_->SetRacingTrack(startLine);
+
+    // add background sound
+    backgroundBuffer = resourceManager_->GetSoundBackground("grass");
+
+    background.setBuffer(backgroundBuffer);
+    background.setLoop(true);
+    background.setVolume(50);
+    background.play();
+
+    // Set sound effect
+    stepBuffer = resourceManager_->GetSoundStep("grass");
+
+    step.setBuffer(stepBuffer);
+    step.setVolume(40);
   }
 
   else {
@@ -157,16 +157,16 @@ void Game::Initialize() {
         world_->GetPhysicWorld(), b2Vec2(750.f / SCALE, 120.f / SCALE),
         30.0f / SCALE, buff2, collectable2_Texture);
 
-    // Magnetic* buff3 = new Magnetic(6, 20.f);
-    // const sf::Texture& collectable3_Texture =
-    //     resourceManager_->GetImage("goodBanana");
-    // Collectable* collectable3 = new Collectable(
-    //     world_->GetPhysicWorld(), b2Vec2(200.0f / SCALE, 240.0f / SCALE),
-    //     50.0f / SCALE, buff3, collectable3_Texture);
+    Magnetic* buff3 = new Magnetic(6, 5.f);
+    const sf::Texture& collectable3_Texture =
+        resourceManager_->GetImage("goodBanana");
+    Collectable* collectable3 = new Collectable(
+        world_->GetPhysicWorld(), b2Vec2(750.0f / SCALE, 240.0f / SCALE),
+        50.0f / SCALE, buff3, collectable3_Texture);
 
     world_->AddCollectable(collectable);
     world_->AddCollectable(collectable2);
-    // world_->AddCollectable(collectable3);
+    world_->AddCollectable(collectable3);
 
     /*
     Obstacle* obstacle = new Obstacle(world_->GetPhysicWorld(),
@@ -187,6 +187,20 @@ void Game::Initialize() {
     startLine->AddCheckPoint(checkPoint1);
     startLine->AddCheckPoint(checkPoint2);
     world_->SetRacingTrack(startLine);
+
+    // add background sound
+    backgroundBuffer = resourceManager_->GetSoundBackground("ocean");
+
+    background.setBuffer(backgroundBuffer);
+    background.setLoop(true);
+    background.setVolume(50);
+    background.play();
+
+    // Set sound effect
+    stepBuffer = resourceManager_->GetSoundStep("ocean");
+
+    step.setBuffer(stepBuffer);
+    step.setVolume(40);
   }
   AddBoundaries();
 }
