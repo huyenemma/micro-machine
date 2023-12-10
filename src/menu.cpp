@@ -1,14 +1,9 @@
 #include "./include/menu.hpp"
 
-GameMenu::GameMenu(sf::RenderWindow& window): window_(window) {
+GameMenu::GameMenu(sf::RenderWindow& window, const sf::Font& font, const sf::Texture& texture): 
+window_(window), font_(font), texture_(texture) {
     
-    resourceManager_ = new ResourceManager();
-
-    resourceManager_->LoadFromJson("../src/resources.json");
-    const sf::Font& font_ = resourceManager_->GetFont("clockFont");
-
-    const sf::Texture& texture = resourceManager_->GetImage("menu"); 
-    sprite_.setTexture(texture);
+    sprite_.setTexture(texture_);
 
     // Initialize menu items
     menuItems_[0].setFont(font_);
@@ -18,7 +13,7 @@ GameMenu::GameMenu(sf::RenderWindow& window): window_(window) {
     menuItems_[0].setOutlineThickness(2);
     menuItems_[0].setString("ONE PLAYER");
     menuItems_[0].setStyle(sf::Text::Bold); 
-    menuItems_[0].setPosition(sf::Vector2f(350, 300));
+    menuItems_[0].setPosition(sf::Vector2f(320, 300));
 
     menuItems_[1].setFont(font_);
     menuItems_[1].setCharacterSize(50); 
@@ -27,7 +22,7 @@ GameMenu::GameMenu(sf::RenderWindow& window): window_(window) {
     menuItems_[1].setOutlineThickness(2);
     menuItems_[1].setString("TWO PLAYERS");
     menuItems_[1].setStyle(sf::Text::Bold); 
-    menuItems_[1].setPosition(sf::Vector2f(350, 350));
+    menuItems_[1].setPosition(sf::Vector2f(320, 350));
 
     menuItems_[2].setFont(font_);
     menuItems_[2].setCharacterSize(50); 
@@ -36,7 +31,7 @@ GameMenu::GameMenu(sf::RenderWindow& window): window_(window) {
     menuItems_[2].setOutlineThickness(2);
     menuItems_[2].setString("EXIT");
     menuItems_[2].setStyle(sf::Text::Bold); 
-    menuItems_[2].setPosition(sf::Vector2f(350, 400));
+    menuItems_[2].setPosition(sf::Vector2f(320, 400));
 
     selectedItemIndex = 0;
 }

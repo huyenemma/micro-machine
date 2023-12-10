@@ -34,7 +34,7 @@ bool World::HaveAnyOneWin() {
     std::map<Vehicle*, int> points = startLine->GetPoints();
 
     for (const auto& entry : points) {
-        if (entry.second >= winCondition) {
+        if (entry.second >= 1 /* winCondition */) {
             return true; // At least one vehicle has 6 or more points
         }
     }

@@ -17,6 +17,7 @@
 #include "world.hpp"
 #include "menu.hpp"
 #include "checkpoint.hpp"
+#include "winnerBoard.hpp"
 
 enum class GameState {
     MENU,
@@ -39,12 +40,13 @@ class Game {
   Vehicle* player2;
   sf::SoundBuffer backgroundBuffer;
   sf::Sound background;
-
+  sf::Font font; 
   sf::SoundBuffer stepBuffer;
   sf::Sound step;
 
   GameState currentState_; 
-  GameMenu menu_; 
+  GameMenu* menu_; 
+  WinnerBoard* winnerBoard_;
 
  public:
   // Constructor
@@ -88,6 +90,9 @@ class Game {
 
   //Render the menu
   void RenderMenu(); 
+
+  // Render winning board
+  void RenderWinningBoard(); 
 };
 
 #endif  // GAME_H

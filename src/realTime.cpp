@@ -65,7 +65,7 @@ void RealTime::Update() {
 
 void RealTime::Draw(sf::RenderWindow& window) {
 
-   sf::RectangleShape backgroundBox;
+  sf::RectangleShape backgroundBox;
   backgroundBox.setSize(sf::Vector2f(785, CHAR_SIZE + 10)); 
   backgroundBox.setFillColor(sf::Color(0, 0, 0, 128)); // Semi-transparent black
   backgroundBox.setOutlineColor(sf::Color::Black); 
