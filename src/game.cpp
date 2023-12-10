@@ -23,8 +23,11 @@ void Game::Initialize() {
   resourceManager_->LoadFromJson("../src/resources.json");
 
   const sf::Font& font = resourceManager_->GetFont("clockFont"); 
-  counterClock_ = new RealTime(15, font);
+  counterClock_ = new RealTime(15, font, sf::Color::White, sf::Vector2f(330, 10));
   counterClock_->SetUp();
+  if (playerCount == 2) {
+    counterClock_->SetGameMode(2); 
+  }; 
 
   const sf::Texture& map_Texture = resourceManager_->GetImage("forest");
   map_ = new Map(map_Texture); 
@@ -44,7 +47,6 @@ void Game::Initialize() {
 
   //step.setBuffer(stepBuffer);
   //step.setVolume(40);
-
 
   Ox* ox = new Ox(world_->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE,
                   oxTexture);
@@ -187,8 +189,8 @@ void Game::RenderGame() {
   
   window_.clear();
   sf::Vector2f mapSize(800.0f, 800.0f);
-  // Define the view
-  
+
+  // Define the view for player
   if (playerCount == 1) {
     sf::View view;
 
@@ -202,7 +204,6 @@ void Game::RenderGame() {
     window_.setView(view);
     DrawGameWorld();
   }
-
   else if (playerCount == 2) {
     sf::View view1;
     // view1.setCenter(sf::Vector2f(player1->GetPosition().first * SCALE,
@@ -231,7 +232,12 @@ void Game::RenderGame() {
     
     DrawGameWorld();
   }
-    window_.display();
+
+   //view for fix ui element 
+  sf::View uiView = window_.getDefaultView(); 
+  window_.setView(uiView);
+  counterClock_->Draw(window_);
+  window_.display();
 }
 
 //helper function 
@@ -277,8 +283,7 @@ void Game::DrawGameWorld() {
       window_.draw(*obstacle);
     }
   }
-
-  counterClock_->Draw(window_);
+  //counterClock_->Draw(window_);
 }
 
 void Game::HandleMenuInput() {

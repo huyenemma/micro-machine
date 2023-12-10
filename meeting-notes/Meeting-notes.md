@@ -33,13 +33,13 @@ In each meeting, you are required to discuss:
 
 ## What we need to do? 
 
-- Gg test (Duy)
-- Check warning (Duy)
+- Gg test (Duy) (done)
+- Check warning (Duy) 
 - Project documentation (Linh take main responsibility)
 - Software documentation (Huyen)
-- Check view (Huyen)
-- Exit button (clear memory) (Quan)
-- Count how many rounds (condition to wins) (Quan)
+- Check view (Huyen) (done)
+- Exit button (clear memory) (Quan) (done)
+- Count how many rounds (condition to wins) (Quan) (done)
 - New track (Duy)
    - Generate map 
    - Slow area 

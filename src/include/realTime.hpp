@@ -6,7 +6,7 @@
 #include <iomanip>
 #include <sstream>
 
-constexpr int CHAR_SIZE = 24;  ///< Default character size for the time display.
+constexpr int CHAR_SIZE = 30;  ///< Default character size for the time display.
 
 /**
  * @class RealTime
@@ -18,6 +18,9 @@ class RealTime {
   std::chrono::steady_clock::time_point
       startTime_;      ///< The start time of the countdown.
   sf::Text timeText_;  ///< The text object for displaying the time.
+  sf::Text player1RoundsText_;  ///< The text object for displaying the number of rounds of player 1.
+  sf::Text player2RoundsText_;  ///< The text object for displaying the number of rounds of player 2.
+  int gameMode; // 1 for one player, 2 for two players
 
  public:
   /**
@@ -47,6 +50,10 @@ class RealTime {
    * @brief Updates the countdown timer.
    */
   void Update();
+
+  void SetGameMode(int mode);
+  
+  void SetPlayerRounds(int player1Rounds, int player2Rounds);
 
   /**
    * @brief Draws the countdown timer on the provided SFML window.
