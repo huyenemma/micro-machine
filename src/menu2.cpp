@@ -15,7 +15,7 @@ GameMenu2::GameMenu2(sf::RenderWindow& window) : window_(window) {
   menuItems_[0].setFillColor(sf::Color::Red);       // Highlighted by default
   menuItems_[0].setOutlineColor(sf::Color::Black);  // Black outline
   menuItems_[0].setOutlineThickness(2);
-  menuItems_[0].setString("ONE PLAYER");
+  menuItems_[0].setString("FOREST");
   menuItems_[0].setStyle(sf::Text::Bold);
   menuItems_[0].setPosition(sf::Vector2f(350, 300));
 
@@ -24,7 +24,7 @@ GameMenu2::GameMenu2(sf::RenderWindow& window) : window_(window) {
   menuItems_[1].setFillColor(sf::Color::White);
   menuItems_[1].setOutlineColor(sf::Color::Black);  // Black outline
   menuItems_[1].setOutlineThickness(2);
-  menuItems_[1].setString("TWO PLAYERS");
+  menuItems_[1].setString("OCEAN");
   menuItems_[1].setStyle(sf::Text::Bold);
   menuItems_[1].setPosition(sf::Vector2f(350, 350));
 

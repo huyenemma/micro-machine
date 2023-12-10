@@ -4,7 +4,7 @@
 
 class GameMenu2 {
  public:
-  enum MenuOption { ONE_PLAYER, TWO_PLAYER, EXIT, NUM_ITEMS };
+  enum MenuOption { FOREST, TWO_PLAYER, EXIT, NUM_ITEMS };
 
   GameMenu2(sf::RenderWindow& window);
   void draw();
