@@ -1,3 +1,6 @@
+#ifndef GAMEMENU_HPP
+#define GAMEMENU_HPP
+
 #include <SFML/Graphics.hpp>
 
 #include "resourceManager.hpp"
@@ -20,3 +23,5 @@ class GameMenu {
   ResourceManager* resourceManager_;
   sf::Sprite sprite_;
 };
+
+#endif

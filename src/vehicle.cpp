@@ -217,3 +217,5 @@ void Vehicle::ReverseMagneticPull() {
     dynamic_cast<b2PolygonShape*>(shape)->SetAsBox(BOX_WIDTH, BOX_HEIGHT);
   }
 }
+
+bool Vehicle::GetForce() { return forceOn; }

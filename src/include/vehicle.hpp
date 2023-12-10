@@ -1,14 +1,15 @@
 #ifndef VEHICLE_H
 #define VEHICLE_H
 
-#include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
+#include <SFML/Graphics.hpp>
+
 #include "box2dInclude.hpp"
+#include "buff.hpp"
+#include "collectable.hpp"
 #include "constant.hpp"
 #include "reScale.hpp"
-#include "buff.hpp"
 #include "userDataPointer.hpp"
-#include "collectable.hpp"
 
 using namespace BodyType;
 // Class representing a simple vehicle in a 2D physics world using Box2D
@@ -20,24 +21,23 @@ class Vehicle : public sf::Drawable {
   mutable sf::Sprite sprite_;
   sf::Texture texture_;
 
-  int superSkillCoolDown=0; 
+  int superSkillCoolDown = 0;
 
   b2PolygonShape dynamicBox;
-
 
   b2Body* m_frontTire;
 
   b2Body* m_rearTire;
-  //Variable that relate to Buff with 1 as default value
-  float forceBuff     = 1.0f;
-  float MaxSpeedBuff  = 1.0f; 
-  float SizeBuff      = 1.0f;
-  float TorqueBuff    = 1.0f;
+  // Variable that relate to Buff with 1 as default value
+  float forceBuff = 1.0f;
+  float MaxSpeedBuff = 1.0f;
+  float SizeBuff = 1.0f;
+  float TorqueBuff = 1.0f;
 
-  //A collection of Buffs
+  // A collection of Buffs
   std::vector<Buff*> buffs;
 
-  //sound effect
+  // sound effect
   sf::SoundBuffer runBuffer;
   sf::Sound run;
 
@@ -59,9 +59,7 @@ class Vehicle : public sf::Drawable {
   // Rotate the vehicle by applying angular impulse (default torque is 1)
   void Rotate(float angle = 1);
 
-
   void UpdateCoolDown();
-
 
   // Get the current position of the vehicle
   std::pair<float, float> GetPosition() const;
@@ -78,22 +76,26 @@ class Vehicle : public sf::Drawable {
   // draw vehicle
   virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
-  //Rotate buff
+  // Rotate buff
   void CrazyRotate(float degree, float intensity);
 
   void MagneticPull(float radius);
 
   void ReverseMagneticPull();
 
-  //Multiply 
-  void ApplyBuff(float forceMu=1.0f, float MaxSpeedMul=1.0f,float SizeMul=1.0f,float TorqueMul=1.0f);
+  // Multiply
+  void ApplyBuff(float forceMu = 1.0f, float MaxSpeedMul = 1.0f,
+                 float SizeMul = 1.0f, float TorqueMul = 1.0f);
 
   void AddBuff(Buff* buff);
 
   void UpdateBuff();
 
-  void virtual SuperSkill() ;
+  void virtual SuperSkill();
 
-};
+  bool GetForce();
+}
+
+;
 
 #endif  // VEHICLE_H
