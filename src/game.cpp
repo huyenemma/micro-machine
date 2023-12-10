@@ -277,7 +277,7 @@ void Game::Update(sf::Time deltaTime) {
   // Update car position
   HandleInput();
   world_->Update(deltaTime.asSeconds(), velocityIterations, positionIterations);
-  counterClock_->Update();
+  counterClock_->Update(world_->GetPoint(player1),world_->GetPoint(player2));
   if (world_->HaveAnyOneWin()) {
     winnerBoard_->SetWinner(1, 2, 1);
     currentState_ = GameState::GAME_OVER; 

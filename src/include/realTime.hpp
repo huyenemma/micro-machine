@@ -49,7 +49,7 @@ class RealTime {
   /**
    * @brief Updates the countdown timer.
    */
-  void Update();
+  void Update(int player1Rounds, int player2Rounds);
 
   void SetGameMode(int mode);
   

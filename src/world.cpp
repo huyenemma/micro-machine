@@ -6,9 +6,11 @@ World::World(b2Vec2 gravity) { physicWorld = new b2World(gravity); };
 
 void World::Update(float timeStep, int velocityIterations,
                    int positionIterations) {
+  
   physicWorld->Step(timeStep, velocityIterations, positionIterations);
-
+  
   physicWorld->ClearForces();
+  
 }
 std::map<Vehicle*,int> World::GetPoints(){
   if (startLine){
@@ -34,13 +36,25 @@ bool World::HaveAnyOneWin() {
     std::map<Vehicle*, int> points = startLine->GetPoints();
 
     for (const auto& entry : points) {
-        if (entry.second >= 1 /* winCondition */) {
+        if (entry.second >= winCondition) {
             return true; // At least one vehicle has 6 or more points
         }
     }
     return false; 
 }
 
+int World::GetPoint(Vehicle* car) {
+    std::map<Vehicle*, int> points = startLine->GetPoints();
+
+    auto it = points.find(car);
+    // Check if the car is found in the map
+    if (it != points.end()) {
+        // Car is in the map, return its points
+        return it->second;
+    } else {
+        return 0;
+    }
+}
 
 b2World* World::GetPhysicWorld() const { return physicWorld; }
 
@@ -53,9 +67,7 @@ std::vector<Obstacle*>& World::GetObstacle() { return obstacles; }
 void World::SetRacingTrack(StartLine* StartLine) { this->startLine = StartLine;}
 
 
-
 World::~World() {
-
     // Free all Vehicle objects in the vehicles vector
     for (Vehicle* vehicle : vehicles) {
         delete vehicle;
@@ -79,5 +91,8 @@ World::~World() {
     obstacles.clear();
 
     // Delete the physics world
+
+
     delete physicWorld;
+    
 }
