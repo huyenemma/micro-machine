@@ -47,7 +47,7 @@ void Game::Initialize() {
 
   // Setting vehicles
   if (map == "forest") {
-    Ox* ox = new Ox(world_->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE,
+    Ox* ox = new Ox(world_->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE,
                     oxTexture);
 
     world_->AddVehicle(ox);
@@ -61,7 +61,7 @@ void Game::Initialize() {
       player2 = ox2;
     }
   } else {
-    Ox* ox = new Ox(world_->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE,
+    Ox* ox = new Ox(world_->GetPhysicWorld(), 220.0f / SCALE, 280.f / SCALE,
                     oxTexture);
 
     world_->AddVehicle(ox);
@@ -69,7 +69,7 @@ void Game::Initialize() {
 
     if (playerCount == 2) {
       const sf::Texture& goatTexture = resourceManager_->GetImage("goat");
-      Ox* ox2 = new Ox(world_->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE,
+      Ox* ox2 = new Ox(world_->GetPhysicWorld(), 220.0f / SCALE, 270.f / SCALE,
                        goatTexture);
       world_->AddVehicle(ox2);
       player2 = ox2;
@@ -86,26 +86,26 @@ void Game::Initialize() {
     const sf::Texture& badTexture1 = resourceManager_->GetImage("badApple");
 
     Collectable* collectable = new Collectable(
-        world_->GetPhysicWorld(), b2Vec2(440.0f / SCALE, 440.0f / SCALE),
+        world_->GetPhysicWorld(), b2Vec2(150.f / SCALE, 440.0f / SCALE),
         30.0f / SCALE, badBuff1, badTexture1);
 
     MaxSpeed* buff2 = new MaxSpeed(8, 1.5f);
     const sf::Texture& collectable2_Texture =
         resourceManager_->GetImage("goodApple");
     Collectable* collectable2 = new Collectable(
-        world_->GetPhysicWorld(), b2Vec2(320.0f / SCALE, 320.0f / SCALE),
+        world_->GetPhysicWorld(), b2Vec2(700.f / SCALE, 320.0f / SCALE),
         30.0f / SCALE, buff2, collectable2_Texture);
 
-    Magnetic* buff3 = new Magnetic(6, 20.f);
-    const sf::Texture& collectable3_Texture =
-        resourceManager_->GetImage("goodBanana");
-    Collectable* collectable3 = new Collectable(
-        world_->GetPhysicWorld(), b2Vec2(200.0f / SCALE, 240.0f / SCALE),
-        50.0f / SCALE, buff3, collectable3_Texture);
+    // Magnetic* buff3 = new Magnetic(6, 20.f);
+    // const sf::Texture& collectable3_Texture =
+    //     resourceManager_->GetImage("goodBanana");
+    // Collectable* collectable3 = new Collectable(
+    //     world_->GetPhysicWorld(), b2Vec2(200.0f / SCALE, 650.f / SCALE),
+    //     50.0f / SCALE, buff3, collectable3_Texture);
 
     world_->AddCollectable(collectable);
     world_->AddCollectable(collectable2);
-    world_->AddCollectable(collectable3);
+    // world_->AddCollectable(collectable3);
 
     /*
     Obstacle* obstacle = new Obstacle(world_->GetPhysicWorld(),
@@ -116,7 +116,7 @@ void Game::Initialize() {
 
     StartLine* startLine =
         new StartLine(world_->GetPhysicWorld(),
-                      b2Vec2(136.0f / SCALE, 120.0f / SCALE), 5.0f, 5.0f);
+                      b2Vec2(200.0f / SCALE, 120.0f / SCALE), 5.0f, 5.0f);
     CheckPoint* checkPoint1 =
         new CheckPoint(world_->GetPhysicWorld(),
                        b2Vec2(636.0f / SCALE, 620.0f / SCALE), 5.0f, 5.0f);
@@ -134,26 +134,26 @@ void Game::Initialize() {
     const sf::Texture& badTexture1 = resourceManager_->GetImage("badApple");
 
     Collectable* collectable = new Collectable(
-        world_->GetPhysicWorld(), b2Vec2(440.0f / SCALE, 440.0f / SCALE),
+        world_->GetPhysicWorld(), b2Vec2(440.0f / SCALE, 700.f / SCALE),
         30.0f / SCALE, badBuff1, badTexture1);
 
     MaxSpeed* buff2 = new MaxSpeed(8, 1.5f);
     const sf::Texture& collectable2_Texture =
         resourceManager_->GetImage("goodApple");
     Collectable* collectable2 = new Collectable(
-        world_->GetPhysicWorld(), b2Vec2(320.0f / SCALE, 320.0f / SCALE),
+        world_->GetPhysicWorld(), b2Vec2(750.f / SCALE, 120.f / SCALE),
         30.0f / SCALE, buff2, collectable2_Texture);
 
-    Magnetic* buff3 = new Magnetic(6, 20.f);
-    const sf::Texture& collectable3_Texture =
-        resourceManager_->GetImage("goodBanana");
-    Collectable* collectable3 = new Collectable(
-        world_->GetPhysicWorld(), b2Vec2(200.0f / SCALE, 240.0f / SCALE),
-        50.0f / SCALE, buff3, collectable3_Texture);
+    // Magnetic* buff3 = new Magnetic(6, 20.f);
+    // const sf::Texture& collectable3_Texture =
+    //     resourceManager_->GetImage("goodBanana");
+    // Collectable* collectable3 = new Collectable(
+    //     world_->GetPhysicWorld(), b2Vec2(200.0f / SCALE, 240.0f / SCALE),
+    //     50.0f / SCALE, buff3, collectable3_Texture);
 
     world_->AddCollectable(collectable);
     world_->AddCollectable(collectable2);
-    world_->AddCollectable(collectable3);
+    // world_->AddCollectable(collectable3);
 
     /*
     Obstacle* obstacle = new Obstacle(world_->GetPhysicWorld(),
