@@ -45,7 +45,7 @@ void RealTime::SetPlayerRounds(int player1Rounds, int player2Rounds) {
   player2RoundsText_.setString("GOAT: " + std::to_string(player2Rounds) + " rounds");
 }
 
-void RealTime::Update() {
+void RealTime::Update(int player1Rounds, int player2Rounds) {
   auto currentTime = std::chrono::steady_clock::now();
   auto elapsedTime = std::chrono::duration_cast<std::chrono::seconds>(
       currentTime - startTime_);
@@ -59,7 +59,7 @@ void RealTime::Update() {
              << std::setw(2) << std::setfill('0') << seconds;
 
   timeText_.setString("Time: " + timeStream.str());
-  SetPlayerRounds(2, 3);
+  SetPlayerRounds(player1Rounds, player2Rounds);
 }
 
 
