@@ -3,9 +3,10 @@
 Game::Game()
     : window_(sf::VideoMode(800, 800), "Micro machine"),
       isRunning_(false),
-      currentState_(GameState::MENU)
-      {
-
+      currentState_(GameState::MENU),
+      menu_(window_),
+      menu2_(window_) {
+  world_ = new World(b2Vec2(0.0f, 0.0f));
   resourceManager_ = new ResourceManager();
   resourceManager_->LoadFromJson("../src/resources.json");
   font = resourceManager_->GetFont("clockFont"); 
@@ -39,7 +40,7 @@ void Game::Initialize() {
     counterClock_->SetGameMode(2); 
   }; 
 
-  const sf::Texture& map_Texture = resourceManager_->GetImage("forest");
+  const sf::Texture& map_Texture = resourceManager_->GetImage(map);
   map_ = new Map(map_Texture);
 
   const sf::Texture& oxTexture = resourceManager_->GetImage("buffalo");
@@ -58,18 +59,35 @@ void Game::Initialize() {
   step.setBuffer(stepBuffer);
   step.setVolume(40);
 
-  Ox* ox = new Ox(world_->GetPhysicWorld(), 136.0f / SCALE, 120.0f / SCALE,
-                  oxTexture);
+  // Setting vehicles
+  if (map == "forest") {
+    Ox* ox = new Ox(world_->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE,
+                    oxTexture);
 
-  world_->AddVehicle(ox);
-  player1 = ox;
+    world_->AddVehicle(ox);
+    player1 = ox;
 
-  if (playerCount == 2) {
-    const sf::Texture& goatTexture = resourceManager_->GetImage("goat");
-    Ox* ox2 = new Ox(world_->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE,
-                     goatTexture);
-    world_->AddVehicle(ox2);
-    player2 = ox2;
+    if (playerCount == 2) {
+      const sf::Texture& goatTexture = resourceManager_->GetImage("goat");
+      Ox* ox2 = new Ox(world_->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE,
+                       goatTexture);
+      world_->AddVehicle(ox2);
+      player2 = ox2;
+    }
+  } else {
+    Ox* ox = new Ox(world_->GetPhysicWorld(), 220.0f / SCALE, 280.f / SCALE,
+                    oxTexture);
+
+    world_->AddVehicle(ox);
+    player1 = ox;
+
+    if (playerCount == 2) {
+      const sf::Texture& goatTexture = resourceManager_->GetImage("goat");
+      Ox* ox2 = new Ox(world_->GetPhysicWorld(), 220.0f / SCALE, 270.f / SCALE,
+                       goatTexture);
+      world_->AddVehicle(ox2);
+      player2 = ox2;
+    }
   }
 
   // Setting Contact Listener
@@ -77,29 +95,32 @@ void Game::Initialize() {
   world_->GetPhysicWorld()->SetContactListener(contactListener);
 
   // Setting collectable and buff
-  CrazyRotate* badBuff1 = new CrazyRotate(2, 40.f, 30.f);
+  if (map == "forest") {
+    CrazyRotate* badBuff1 = new CrazyRotate(2, 40.f, 30.f);
 
-  const sf::Texture& badTexture1 = resourceManager_->GetImage("badApple");
+    const sf::Texture& badTexture1 = resourceManager_->GetImage("badApple");
 
-  Collectable* collectable = new Collectable(
-      world_->GetPhysicWorld(), b2Vec2(142.0f / SCALE, 280.0f / SCALE),
-      20.0f / SCALE, badBuff1, badTexture1);
+    Collectable* collectable = new Collectable(
+        world_->GetPhysicWorld(), b2Vec2(150.f / SCALE, 440.0f / SCALE),
+        30.0f / SCALE, badBuff1, badTexture1);
 
-  MaxSpeed* buff2 = new MaxSpeed(8, 1.5f);
-  const sf::Texture& collectable2_Texture = resourceManager_->GetImage("goodApple");
-  Collectable* collectable2 = new Collectable(
-      world_->GetPhysicWorld(), b2Vec2(140.0f / SCALE, 330.0f / SCALE),
-      20.0f / SCALE, buff2, collectable2_Texture);
+    MaxSpeed* buff2 = new MaxSpeed(8, 1.5f);
+    const sf::Texture& collectable2_Texture =
+        resourceManager_->GetImage("goodApple");
+    Collectable* collectable2 = new Collectable(
+        world_->GetPhysicWorld(), b2Vec2(700.f / SCALE, 320.0f / SCALE),
+        30.0f / SCALE, buff2, collectable2_Texture);
 
-  Magnetic* buff3 = new Magnetic(6, 5.f);
-  const sf::Texture& collectable3_Texture = resourceManager_->GetImage("goodBanana");
-  Collectable* collectable3 = new Collectable(
-      world_->GetPhysicWorld(), b2Vec2(140.0f / SCALE, 380.0f / SCALE),
-      20.0f / SCALE, buff3, collectable3_Texture);
+    // Magnetic* buff3 = new Magnetic(6, 20.f);
+    // const sf::Texture& collectable3_Texture =
+    //     resourceManager_->GetImage("goodBanana");
+    // Collectable* collectable3 = new Collectable(
+    //     world_->GetPhysicWorld(), b2Vec2(200.0f / SCALE, 650.f / SCALE),
+    //     50.0f / SCALE, buff3, collectable3_Texture);
 
-  world_->AddCollectable(collectable);
-  world_->AddCollectable(collectable2);
-  world_->AddCollectable(collectable3);
+    world_->AddCollectable(collectable);
+    world_->AddCollectable(collectable2);
+    // world_->AddCollectable(collectable3);
 
   const sf::Texture& rock = resourceManager_->GetImage("rock");
   Obstacle* obstacle = new Obstacle(world_->GetPhysicWorld(),
@@ -108,19 +129,67 @@ void Game::Initialize() {
   world_->AddObstacle(obstacle);
   
 
-  StartLine* startLine =
-      new StartLine(world_->GetPhysicWorld(),
-                    b2Vec2(136.0f / SCALE, 120.0f / SCALE), 5.0f, 5.0f);
-  CheckPoint* checkPoint1 =
-      new CheckPoint(world_->GetPhysicWorld(),
-                     b2Vec2(636.0f / SCALE, 620.0f / SCALE), 5.0f, 5.0f);
-  CheckPoint* checkPoint2 =
-      new CheckPoint(world_->GetPhysicWorld(),
-                     b2Vec2(136.0f / SCALE, 620.0f / SCALE), 5.0f, 5.0f);
-  startLine->AddCheckPoint(checkPoint1);
-  startLine->AddCheckPoint(checkPoint2);
-  world_->SetRacingTrack(startLine);
+    StartLine* startLine =
+        new StartLine(world_->GetPhysicWorld(),
+                      b2Vec2(200.0f / SCALE, 120.0f / SCALE), 5.0f, 5.0f);
+    CheckPoint* checkPoint1 =
+        new CheckPoint(world_->GetPhysicWorld(),
+                       b2Vec2(636.0f / SCALE, 620.0f / SCALE), 5.0f, 5.0f);
+    CheckPoint* checkPoint2 =
+        new CheckPoint(world_->GetPhysicWorld(),
+                       b2Vec2(136.0f / SCALE, 620.0f / SCALE), 5.0f, 5.0f);
+    startLine->AddCheckPoint(checkPoint1);
+    startLine->AddCheckPoint(checkPoint2);
+    world_->SetRacingTrack(startLine);
+  }
 
+  else {
+    CrazyRotate* badBuff1 = new CrazyRotate(2, 40.f, 30.f);
+
+    const sf::Texture& badTexture1 = resourceManager_->GetImage("badApple");
+
+    Collectable* collectable = new Collectable(
+        world_->GetPhysicWorld(), b2Vec2(440.0f / SCALE, 700.f / SCALE),
+        30.0f / SCALE, badBuff1, badTexture1);
+
+    MaxSpeed* buff2 = new MaxSpeed(8, 1.5f);
+    const sf::Texture& collectable2_Texture =
+        resourceManager_->GetImage("goodApple");
+    Collectable* collectable2 = new Collectable(
+        world_->GetPhysicWorld(), b2Vec2(750.f / SCALE, 120.f / SCALE),
+        30.0f / SCALE, buff2, collectable2_Texture);
+
+    // Magnetic* buff3 = new Magnetic(6, 20.f);
+    // const sf::Texture& collectable3_Texture =
+    //     resourceManager_->GetImage("goodBanana");
+    // Collectable* collectable3 = new Collectable(
+    //     world_->GetPhysicWorld(), b2Vec2(200.0f / SCALE, 240.0f / SCALE),
+    //     50.0f / SCALE, buff3, collectable3_Texture);
+
+    world_->AddCollectable(collectable);
+    world_->AddCollectable(collectable2);
+    // world_->AddCollectable(collectable3);
+
+    /*
+    Obstacle* obstacle = new Obstacle(world_->GetPhysicWorld(),
+                                    b2Vec2(140.0f / SCALE, 150.0f / SCALE),
+                                    50.0f / SCALE, "../img/rock.png");
+    world_->AddObstacle(obstacle);
+    */
+
+    StartLine* startLine =
+        new StartLine(world_->GetPhysicWorld(),
+                      b2Vec2(136.0f / SCALE, 120.0f / SCALE), 5.0f, 5.0f);
+    CheckPoint* checkPoint1 =
+        new CheckPoint(world_->GetPhysicWorld(),
+                       b2Vec2(636.0f / SCALE, 620.0f / SCALE), 5.0f, 5.0f);
+    CheckPoint* checkPoint2 =
+        new CheckPoint(world_->GetPhysicWorld(),
+                       b2Vec2(136.0f / SCALE, 620.0f / SCALE), 5.0f, 5.0f);
+    startLine->AddCheckPoint(checkPoint1);
+    startLine->AddCheckPoint(checkPoint2);
+    world_->SetRacingTrack(startLine);
+  }
   AddBoundaries();
 }
 
@@ -135,8 +204,13 @@ bool Game::Run() {
     if (currentState_ == GameState::MENU) {
       HandleMenuInput();
       RenderMenu();
-    } else if (currentState_ == GameState::PLAYING &&
-               !counterClock_->IsTimeUp()) {
+    } else if (currentState_ == GameState::MENU2) {
+      HandleMenuInput2();
+      RenderMenu2();
+    }
+
+    else if (currentState_ == GameState::PLAYING &&
+             !counterClock_->IsTimeUp()) {
       ProcessEvents();
       Update(deltaTime);
       RenderGame();
@@ -330,10 +404,43 @@ void Game::HandleMenuInput() {
             int selectedItem = menu_->GetPressedItem();
             if (selectedItem == GameMenu::ONE_PLAYER) {
               playerCount = 1;
+              currentState_ = GameState::MENU2;
+            } else if (selectedItem == GameMenu::TWO_PLAYER) {
+              playerCount = 2;
+              currentState_ = GameState::MENU2;
+            } else if (selectedItem == GameMenu::EXIT) {
+              window_.close();
+            }
+            break;
+        }
+        break;
+      case sf::Event::Closed:
+        window_.close();
+        break;
+    }
+  }
+}
+
+void Game::HandleMenuInput2() {
+  sf::Event event;
+  while (window_.pollEvent(event)) {
+    switch (event.type) {
+      case sf::Event::KeyPressed:
+        switch (event.key.code) {
+          case sf::Keyboard::Up:
+            menu2_.MoveUp();
+            break;
+          case sf::Keyboard::Down:
+            menu2_.MoveDown();
+            break;
+          case sf::Keyboard::Enter:
+            int selectedItem = menu2_.GetPressedItem();
+            if (selectedItem == GameMenu2::FOREST) {
+              map = "forest";
               currentState_ = GameState::PLAYING;
               Initialize();
             } else if (selectedItem == GameMenu::TWO_PLAYER) {
-              playerCount = 2;
+              map = "ocean";
               currentState_ = GameState::PLAYING;
               Initialize();
             } else if (selectedItem == GameMenu::EXIT) {
@@ -355,9 +462,13 @@ void Game::RenderMenu() {
   window_.display();
 }
 
-void Game::RenderWinningBoard() {
-  winnerBoard_->Draw();
+void Game::RenderMenu2() {
+  window_.clear();
+  menu2_.draw();
+  window_.display();
 }
+
+void Game::RenderWinningBoard() { winnerBoard_->Draw(); }
 
 void Game::AddBoundaries() {
   float world_Width = 800.0f / SCALE;   // Width of window_ in Box2D units
