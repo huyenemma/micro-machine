@@ -1,0 +1,131 @@
+\hypertarget{classOutsideArea}{}\doxysection{Outside\+Area Class Reference}
+\label{classOutsideArea}\index{OutsideArea@{OutsideArea}}
+
+
+Represents areas outside the main playable region in the game.  
+
+
+
+
+{\ttfamily \#include $<$outside\+Area.\+hpp$>$}
+
+
+
+Inheritance diagram for Outside\+Area\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classOutsideArea_aba6112f1339f4a5b944b7ec4b12fd389}{Outside\+Area}} (b2\+World $\ast$world, b2\+Vec2 position, float height, float width)
+\begin{DoxyCompactList}\small\item\em Constructs an \mbox{\hyperlink{classOutsideArea}{Outside\+Area}} object. \end{DoxyCompactList}\item 
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classOutsideArea_a8c2977eb0e864d48e808f21ee8456497}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the position of the outside area. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOutsideArea_a9e3f8b38fb71c2610239e834b3593fa3}\label{classOutsideArea_a9e3f8b38fb71c2610239e834b3593fa3}} 
+void \mbox{\hyperlink{classOutsideArea_a9e3f8b38fb71c2610239e834b3593fa3}{Delete\+Body}} ()
+\begin{DoxyCompactList}\small\item\em Deletes the physical body associated with the area. \end{DoxyCompactList}\item 
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classOutsideArea_aba9dc1754c26adbde7a58bc30ab8956d}{Get\+Dimension}} ()
+\begin{DoxyCompactList}\small\item\em Gets the dimensions of the outside area. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classOutsideArea_a08ac7e292b768bc859e87990e5a90ab7}{Is\+Null\+Body}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the physical body of the area is null. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classOutsideArea_ae220dff44f61293f447f9df745a54b15}{On\+Contact}} (\mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$car)
+\begin{DoxyCompactList}\small\item\em Virtual function to handle contact with a vehicle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents areas outside the main playable region in the game. 
+
+The \mbox{\hyperlink{classOutsideArea}{Outside\+Area}} class is used to create and manage areas in the game world that are not part of the central gameplay but are significant for game mechanics, such as checkpoints and start lines. It handles their physical representation and interactions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classOutsideArea_aba6112f1339f4a5b944b7ec4b12fd389}\label{classOutsideArea_aba6112f1339f4a5b944b7ec4b12fd389}} 
+\index{OutsideArea@{OutsideArea}!OutsideArea@{OutsideArea}}
+\index{OutsideArea@{OutsideArea}!OutsideArea@{OutsideArea}}
+\doxysubsubsection{\texorpdfstring{OutsideArea()}{OutsideArea()}}
+{\footnotesize\ttfamily Outside\+Area\+::\+Outside\+Area (\begin{DoxyParamCaption}\item[{b2\+World $\ast$}]{world,  }\item[{b2\+Vec2}]{position,  }\item[{float}]{height,  }\item[{float}]{width }\end{DoxyParamCaption})}
+
+
+
+Constructs an \mbox{\hyperlink{classOutsideArea}{Outside\+Area}} object. 
+
+Initializes an area outside the main playable region with a position, height, and width.
+
+
+\begin{DoxyParams}{Parameters}
+{\em world} & The Box2D world where the outside area exists. \\
+\hline
+{\em position} & The position of the area in the game world. \\
+\hline
+{\em height} & The height of the area. \\
+\hline
+{\em width} & The width of the area. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classOutsideArea_aba9dc1754c26adbde7a58bc30ab8956d}\label{classOutsideArea_aba9dc1754c26adbde7a58bc30ab8956d}} 
+\index{OutsideArea@{OutsideArea}!GetDimension@{GetDimension}}
+\index{GetDimension@{GetDimension}!OutsideArea@{OutsideArea}}
+\doxysubsubsection{\texorpdfstring{GetDimension()}{GetDimension()}}
+{\footnotesize\ttfamily std\+::pair$<$ float, float $>$ Outside\+Area\+::\+Get\+Dimension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the dimensions of the outside area. 
+
+\begin{DoxyReturn}{Returns}
+A pair of floats representing the height and width of the area. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOutsideArea_a8c2977eb0e864d48e808f21ee8456497}\label{classOutsideArea_a8c2977eb0e864d48e808f21ee8456497}} 
+\index{OutsideArea@{OutsideArea}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!OutsideArea@{OutsideArea}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily std\+::pair$<$ float, float $>$ Outside\+Area\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the position of the outside area. 
+
+\begin{DoxyReturn}{Returns}
+A pair of floats representing the x and y coordinates of the area. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOutsideArea_a08ac7e292b768bc859e87990e5a90ab7}\label{classOutsideArea_a08ac7e292b768bc859e87990e5a90ab7}} 
+\index{OutsideArea@{OutsideArea}!IsNullBody@{IsNullBody}}
+\index{IsNullBody@{IsNullBody}!OutsideArea@{OutsideArea}}
+\doxysubsubsection{\texorpdfstring{IsNullBody()}{IsNullBody()}}
+{\footnotesize\ttfamily bool Outside\+Area\+::\+Is\+Null\+Body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the physical body of the area is null. 
+
+\begin{DoxyReturn}{Returns}
+True if the body is null, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOutsideArea_ae220dff44f61293f447f9df745a54b15}\label{classOutsideArea_ae220dff44f61293f447f9df745a54b15}} 
+\index{OutsideArea@{OutsideArea}!OnContact@{OnContact}}
+\index{OnContact@{OnContact}!OutsideArea@{OutsideArea}}
+\doxysubsubsection{\texorpdfstring{OnContact()}{OnContact()}}
+{\footnotesize\ttfamily void Outside\+Area\+::\+On\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$}]{car }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual function to handle contact with a vehicle. 
+
+This function can be overridden in derived classes to define specific behavior when a vehicle comes into contact with the area.
+
+
+\begin{DoxyParams}{Parameters}
+{\em car} & A pointer to the vehicle that made contact with the area. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classStartLine_ac5f6333b2d88790654205688018c46fd}{Start\+Line}}, and \mbox{\hyperlink{classCheckPoint_ae88b34b3982e2cc7eab498f615d14c61}{Check\+Point}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/outside\+Area.\+hpp\item 
+src/outside\+Area.\+cpp\end{DoxyCompactItemize}

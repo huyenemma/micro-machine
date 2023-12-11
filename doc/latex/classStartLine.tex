@@ -1,0 +1,118 @@
+\hypertarget{classStartLine}{}\doxysection{Start\+Line Class Reference}
+\label{classStartLine}\index{StartLine@{StartLine}}
+
+
+Represents the starting line and manages checkpoints in the game.  
+
+
+
+
+{\ttfamily \#include $<$checkpoint.\+hpp$>$}
+
+
+
+Inheritance diagram for Start\+Line\+:
+% FIG 0
+
+
+Collaboration diagram for Start\+Line\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStartLine_a14c97779b4c2d900cf79140a644c1ab1}{Start\+Line}} (b2\+World $\ast$world, b2\+Vec2 position, float height, float width)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classStartLine}{Start\+Line}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classStartLine_ac5f6333b2d88790654205688018c46fd}{On\+Contact}} (\mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$car) override
+\begin{DoxyCompactList}\small\item\em Handle the event when a vehicle contacts the start line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStartLine_a2dc8bd6908082688727669deaed9f900}{Add\+Check\+Point}} (\mbox{\hyperlink{classCheckPoint}{Check\+Point}} $\ast$checkpoint)
+\begin{DoxyCompactList}\small\item\em Add a checkpoint to be managed by this start line. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStartLine_aa3676d97d0c146aadf4a41b45d5a0850}\label{classStartLine_aa3676d97d0c146aadf4a41b45d5a0850}} 
+\mbox{\hyperlink{classStartLine_aa3676d97d0c146aadf4a41b45d5a0850}{$\sim$\+Start\+Line}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classStartLine}{Start\+Line}}. \end{DoxyCompactList}\item 
+std\+::map$<$ \mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$, int $>$ \mbox{\hyperlink{classStartLine_a9d8d93f017eb3ac5de6956bf30d3d09a}{Get\+Points}} ()
+\begin{DoxyCompactList}\small\item\em Get the points of each vehicle based on checkpoints visited. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the starting line and manages checkpoints in the game. 
+
+The \mbox{\hyperlink{classStartLine}{Start\+Line}} class extends \mbox{\hyperlink{classCheckPoint}{Check\+Point}} and adds functionality to manage multiple checkpoints in the game, tracking the progress of vehicles through these checkpoints. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classStartLine_a14c97779b4c2d900cf79140a644c1ab1}\label{classStartLine_a14c97779b4c2d900cf79140a644c1ab1}} 
+\index{StartLine@{StartLine}!StartLine@{StartLine}}
+\index{StartLine@{StartLine}!StartLine@{StartLine}}
+\doxysubsubsection{\texorpdfstring{StartLine()}{StartLine()}}
+{\footnotesize\ttfamily Start\+Line\+::\+Start\+Line (\begin{DoxyParamCaption}\item[{b2\+World $\ast$}]{world,  }\item[{b2\+Vec2}]{position,  }\item[{float}]{height,  }\item[{float}]{width }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classStartLine}{Start\+Line}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world} & The Box2D world where the start line will exist. \\
+\hline
+{\em position} & The position of the start line in the world. \\
+\hline
+{\em height} & The height of the start line area. \\
+\hline
+{\em width} & The width of the start line area. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classStartLine_a2dc8bd6908082688727669deaed9f900}\label{classStartLine_a2dc8bd6908082688727669deaed9f900}} 
+\index{StartLine@{StartLine}!AddCheckPoint@{AddCheckPoint}}
+\index{AddCheckPoint@{AddCheckPoint}!StartLine@{StartLine}}
+\doxysubsubsection{\texorpdfstring{AddCheckPoint()}{AddCheckPoint()}}
+{\footnotesize\ttfamily void Start\+Line\+::\+Add\+Check\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCheckPoint}{Check\+Point}} $\ast$}]{checkpoint }\end{DoxyParamCaption})}
+
+
+
+Add a checkpoint to be managed by this start line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checkpoint} & A pointer to the checkpoint to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classStartLine_a9d8d93f017eb3ac5de6956bf30d3d09a}\label{classStartLine_a9d8d93f017eb3ac5de6956bf30d3d09a}} 
+\index{StartLine@{StartLine}!GetPoints@{GetPoints}}
+\index{GetPoints@{GetPoints}!StartLine@{StartLine}}
+\doxysubsubsection{\texorpdfstring{GetPoints()}{GetPoints()}}
+{\footnotesize\ttfamily std\+::map$<$ \mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$, int $>$ Start\+Line\+::\+Get\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the points of each vehicle based on checkpoints visited. 
+
+\begin{DoxyReturn}{Returns}
+A map of vehicles to their respective points. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStartLine_ac5f6333b2d88790654205688018c46fd}\label{classStartLine_ac5f6333b2d88790654205688018c46fd}} 
+\index{StartLine@{StartLine}!OnContact@{OnContact}}
+\index{OnContact@{OnContact}!StartLine@{StartLine}}
+\doxysubsubsection{\texorpdfstring{OnContact()}{OnContact()}}
+{\footnotesize\ttfamily void Start\+Line\+::\+On\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$}]{car }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handle the event when a vehicle contacts the start line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em car} & A pointer to the vehicle that made contact with the start line. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classCheckPoint_ae88b34b3982e2cc7eab498f615d14c61}{Check\+Point}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/checkpoint.\+hpp\item 
+src/checkpoint.\+cpp\end{DoxyCompactItemize}

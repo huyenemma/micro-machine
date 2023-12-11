@@ -1,0 +1,135 @@
+\hypertarget{classBaseMenu}{}\doxysection{Base\+Menu Class Reference}
+\label{classBaseMenu}\index{BaseMenu@{BaseMenu}}
+
+
+A base class for creating menus in an SFML application.  
+
+
+
+
+{\ttfamily \#include $<$base\+Menu.\+hpp$>$}
+
+
+
+Inheritance diagram for Base\+Menu\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseMenu_a37ede0040d44be1a27e52c3f8474de0a}{Base\+Menu}} (sf\+::\+Render\+Window \&window, const sf\+::\+Font \&font, const sf\+::\+Texture \&texture)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classBaseMenu}{Base\+Menu}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBaseMenu_aea8cd4859286c711abee5f54d608cf1a}\label{classBaseMenu_aea8cd4859286c711abee5f54d608cf1a}} 
+virtual \mbox{\hyperlink{classBaseMenu_aea8cd4859286c711abee5f54d608cf1a}{$\sim$\+Base\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \mbox{\hyperlink{classBaseMenu}{Base\+Menu}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBaseMenu_a59a785cb1eaca1005d466bb616ae87f6}{draw}} ()
+\begin{DoxyCompactList}\small\item\em Virtual function to draw the menu to the window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseMenu_a56c3ae496a0128eac591275105001f81}{Move\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Move the selection up in the menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseMenu_ae147db3fb7bbeee64b480260817ac590}{Move\+Down}} ()
+\begin{DoxyCompactList}\small\item\em Move the selection down in the menu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBaseMenu_a8b751667a404018a864616afbd68d3f3}{Get\+Pressed\+Item}} () const
+\begin{DoxyCompactList}\small\item\em Get the index of the currently selected menu item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBaseMenu_acd0cd20a6239a041dc92bee461a779c1}\label{classBaseMenu_acd0cd20a6239a041dc92bee461a779c1}} 
+sf\+::\+Text \mbox{\hyperlink{classBaseMenu_acd0cd20a6239a041dc92bee461a779c1}{menu\+Items\+\_\+}} \mbox{[}NUM\+\_\+\+ITEMS\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array of Text objects for menu items. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBaseMenu_a04f9040fd23cbc2c87d6643ea82f19d7}\label{classBaseMenu_a04f9040fd23cbc2c87d6643ea82f19d7}} 
+sf\+::\+Render\+Window \& \mbox{\hyperlink{classBaseMenu_a04f9040fd23cbc2c87d6643ea82f19d7}{window\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Reference to the SFML Render\+Window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBaseMenu_a937a4adb1ff964be20cc92399ea82cdc}\label{classBaseMenu_a937a4adb1ff964be20cc92399ea82cdc}} 
+sf\+::\+Font \mbox{\hyperlink{classBaseMenu_a937a4adb1ff964be20cc92399ea82cdc}{font\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Font used for menu items. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBaseMenu_a03d744437da749132b8c98b7f2224e99}\label{classBaseMenu_a03d744437da749132b8c98b7f2224e99}} 
+sf\+::\+Texture \mbox{\hyperlink{classBaseMenu_a03d744437da749132b8c98b7f2224e99}{texture\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Texture used for the menu background. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBaseMenu_aa29d34cd6e6edf924022de85c4f4807a}\label{classBaseMenu_aa29d34cd6e6edf924022de85c4f4807a}} 
+sf\+::\+Sprite \mbox{\hyperlink{classBaseMenu_aa29d34cd6e6edf924022de85c4f4807a}{sprite\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Sprite used for the menu background. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBaseMenu_ad4057a071a443e66ef414f33bcaa739a}\label{classBaseMenu_ad4057a071a443e66ef414f33bcaa739a}} 
+std\+::size\+\_\+t \mbox{\hyperlink{classBaseMenu_ad4057a071a443e66ef414f33bcaa739a}{selected\+Item\+Index}}
+\begin{DoxyCompactList}\small\item\em Index of the currently selected menu item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A base class for creating menus in an SFML application. 
+
+\mbox{\hyperlink{classBaseMenu}{Base\+Menu}} is intended to be a parent class for specific menu types. It handles basic functionalities like rendering menu items, navigating through them, and keeping track of the currently selected item. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBaseMenu_a37ede0040d44be1a27e52c3f8474de0a}\label{classBaseMenu_a37ede0040d44be1a27e52c3f8474de0a}} 
+\index{BaseMenu@{BaseMenu}!BaseMenu@{BaseMenu}}
+\index{BaseMenu@{BaseMenu}!BaseMenu@{BaseMenu}}
+\doxysubsubsection{\texorpdfstring{BaseMenu()}{BaseMenu()}}
+{\footnotesize\ttfamily Base\+Menu\+::\+Base\+Menu (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{const sf\+::\+Font \&}]{font,  }\item[{const sf\+::\+Texture \&}]{texture }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classBaseMenu}{Base\+Menu}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & A reference to the SFML Render\+Window object. \\
+\hline
+{\em font} & The font used to display menu items. \\
+\hline
+{\em texture} & The texture used for the menu background. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBaseMenu_a59a785cb1eaca1005d466bb616ae87f6}\label{classBaseMenu_a59a785cb1eaca1005d466bb616ae87f6}} 
+\index{BaseMenu@{BaseMenu}!draw@{draw}}
+\index{draw@{draw}!BaseMenu@{BaseMenu}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Base\+Menu\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual function to draw the menu to the window. 
+
+This function should be overridden by derived classes to provide specific drawing implementations. 
+
+Reimplemented in \mbox{\hyperlink{classWinnerBoard_a346569108e3ffc105fe6f0491e2c1ba2}{Winner\+Board}}.
+
+\mbox{\Hypertarget{classBaseMenu_a8b751667a404018a864616afbd68d3f3}\label{classBaseMenu_a8b751667a404018a864616afbd68d3f3}} 
+\index{BaseMenu@{BaseMenu}!GetPressedItem@{GetPressedItem}}
+\index{GetPressedItem@{GetPressedItem}!BaseMenu@{BaseMenu}}
+\doxysubsubsection{\texorpdfstring{GetPressedItem()}{GetPressedItem()}}
+{\footnotesize\ttfamily int Base\+Menu\+::\+Get\+Pressed\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the index of the currently selected menu item. 
+
+\begin{DoxyReturn}{Returns}
+The index of the selected item. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBaseMenu_ae147db3fb7bbeee64b480260817ac590}\label{classBaseMenu_ae147db3fb7bbeee64b480260817ac590}} 
+\index{BaseMenu@{BaseMenu}!MoveDown@{MoveDown}}
+\index{MoveDown@{MoveDown}!BaseMenu@{BaseMenu}}
+\doxysubsubsection{\texorpdfstring{MoveDown()}{MoveDown()}}
+{\footnotesize\ttfamily void Base\+Menu\+::\+Move\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Move the selection down in the menu. 
+
+If the last item is selected, this function does nothing. \mbox{\Hypertarget{classBaseMenu_a56c3ae496a0128eac591275105001f81}\label{classBaseMenu_a56c3ae496a0128eac591275105001f81}} 
+\index{BaseMenu@{BaseMenu}!MoveUp@{MoveUp}}
+\index{MoveUp@{MoveUp}!BaseMenu@{BaseMenu}}
+\doxysubsubsection{\texorpdfstring{MoveUp()}{MoveUp()}}
+{\footnotesize\ttfamily void Base\+Menu\+::\+Move\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Move the selection up in the menu. 
+
+If the first item is selected, this function does nothing. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/base\+Menu.\+hpp\item 
+src/base\+Menu.\+cpp\end{DoxyCompactItemize}

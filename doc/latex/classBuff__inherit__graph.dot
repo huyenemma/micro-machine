@@ -1,0 +1,24 @@
+digraph "Buff"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Buff",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Base class for Buffs, derived from Timer."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Timer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTimer.html",tooltip="Represents a simple countdown timer."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="HorseSuperSkillBuff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classHorseSuperSkillBuff.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="NegativeBuff::CrazyRotate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classNegativeBuff_1_1CrazyRotate.html",tooltip="A class representing a crazy rotate negative buff."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="NegativeBuff::ReverseMushroom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classNegativeBuff_1_1ReverseMushroom.html",tooltip="A class representing a reverse mushroom negative buff."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="OxSuperSkillBuff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOxSuperSkillBuff.html",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="PositiveBuff::Magnetic",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPositiveBuff_1_1Magnetic.html",tooltip="A class representing a magnetic positive buff."];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="PositiveBuff::MaxSpeed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPositiveBuff_1_1MaxSpeed.html",tooltip="A class representing a maximum speed positive buff."];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="PositiveBuff::OxSuperSkillBuff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPositiveBuff_1_1OxSuperSkillBuff.html",tooltip="A class representing an Ox super skill positive buff."];
+}

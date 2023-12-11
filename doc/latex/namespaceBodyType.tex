@@ -1,0 +1,96 @@
+\hypertarget{namespaceBodyType}{}\doxysection{Body\+Type Namespace Reference}
+\label{namespaceBodyType}\index{BodyType@{BodyType}}
+
+
+Provides functions to check the type of user data.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespaceBodyType_ad2e9bf4902e25c7ade198a6a5f28b1f0}{Is\+Vehicle}} (\mbox{\hyperlink{unionUserData}{User\+Data}} $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em Checks if the user data represents a \mbox{\hyperlink{classVehicle}{Vehicle}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespaceBodyType_a1244ea4be56243c87aed2b165394b184}{Is\+Collectable}} (\mbox{\hyperlink{unionUserData}{User\+Data}} $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em Checks if the user data represents a \mbox{\hyperlink{classCollectable}{Collectable}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespaceBodyType_a1993d7ceae139ea05a891ad5a98c4ac5}{Is\+Obstacle}} (\mbox{\hyperlink{unionUserData}{User\+Data}} $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em Checks if the user data represents an \mbox{\hyperlink{classObstacle}{Obstacle}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespaceBodyType_a907975a0d70ffcb1bb8dbba7da11bc0a}{Is\+Outside\+Area}} (\mbox{\hyperlink{unionUserData}{User\+Data}} $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em Checks if the user data represents an \mbox{\hyperlink{classOutsideArea}{Outside\+Area}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides functions to check the type of user data. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceBodyType_a1244ea4be56243c87aed2b165394b184}\label{namespaceBodyType_a1244ea4be56243c87aed2b165394b184}} 
+\index{BodyType@{BodyType}!IsCollectable@{IsCollectable}}
+\index{IsCollectable@{IsCollectable}!BodyType@{BodyType}}
+\doxysubsubsection{\texorpdfstring{IsCollectable()}{IsCollectable()}}
+{\footnotesize\ttfamily bool Body\+Type\+::\+Is\+Collectable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unionUserData}{User\+Data}} $\ast$}]{user\+Data }\end{DoxyParamCaption})}
+
+
+
+Checks if the user data represents a \mbox{\hyperlink{classCollectable}{Collectable}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Data} & Pointer to user data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the user data is of type \mbox{\hyperlink{classCollectable}{Collectable}}, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceBodyType_a1993d7ceae139ea05a891ad5a98c4ac5}\label{namespaceBodyType_a1993d7ceae139ea05a891ad5a98c4ac5}} 
+\index{BodyType@{BodyType}!IsObstacle@{IsObstacle}}
+\index{IsObstacle@{IsObstacle}!BodyType@{BodyType}}
+\doxysubsubsection{\texorpdfstring{IsObstacle()}{IsObstacle()}}
+{\footnotesize\ttfamily bool Body\+Type\+::\+Is\+Obstacle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unionUserData}{User\+Data}} $\ast$}]{user\+Data }\end{DoxyParamCaption})}
+
+
+
+Checks if the user data represents an \mbox{\hyperlink{classObstacle}{Obstacle}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Data} & Pointer to user data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the user data is of type \mbox{\hyperlink{classObstacle}{Obstacle}}, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceBodyType_a907975a0d70ffcb1bb8dbba7da11bc0a}\label{namespaceBodyType_a907975a0d70ffcb1bb8dbba7da11bc0a}} 
+\index{BodyType@{BodyType}!IsOutsideArea@{IsOutsideArea}}
+\index{IsOutsideArea@{IsOutsideArea}!BodyType@{BodyType}}
+\doxysubsubsection{\texorpdfstring{IsOutsideArea()}{IsOutsideArea()}}
+{\footnotesize\ttfamily bool Body\+Type\+::\+Is\+Outside\+Area (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unionUserData}{User\+Data}} $\ast$}]{user\+Data }\end{DoxyParamCaption})}
+
+
+
+Checks if the user data represents an \mbox{\hyperlink{classOutsideArea}{Outside\+Area}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Data} & Pointer to user data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the user data is of type \mbox{\hyperlink{classOutsideArea}{Outside\+Area}}, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceBodyType_ad2e9bf4902e25c7ade198a6a5f28b1f0}\label{namespaceBodyType_ad2e9bf4902e25c7ade198a6a5f28b1f0}} 
+\index{BodyType@{BodyType}!IsVehicle@{IsVehicle}}
+\index{IsVehicle@{IsVehicle}!BodyType@{BodyType}}
+\doxysubsubsection{\texorpdfstring{IsVehicle()}{IsVehicle()}}
+{\footnotesize\ttfamily bool Body\+Type\+::\+Is\+Vehicle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unionUserData}{User\+Data}} $\ast$}]{user\+Data }\end{DoxyParamCaption})}
+
+
+
+Checks if the user data represents a \mbox{\hyperlink{classVehicle}{Vehicle}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Data} & Pointer to user data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the user data is of type \mbox{\hyperlink{classVehicle}{Vehicle}}, false otherwise. 
+\end{DoxyReturn}

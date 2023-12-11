@@ -1,0 +1,22 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node7 [label="sf::Drawable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="Collectable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCollectable.html",tooltip="Represents a collectable item in the game."];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Obstacle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classObstacle.html",tooltip="Class representing an Obstacle that can interact with vehicles."];
+  Node7 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Vehicle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classVehicle.html",tooltip="Class representing a simple vehicle in a 2D physics world using Box2D."];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Cat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCat.html",tooltip="Class representing a Cat, derived from Vehicle."];
+  Node10 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Dog",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDog.html",tooltip="Class representing a Dog, derived from Vehicle."];
+  Node10 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Horse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classHorse.html",tooltip="Class representing a Horse, derived from Vehicle."];
+  Node10 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="Ox",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOx.html",tooltip="Class representing an Ox, derived from Vehicle."];
+}

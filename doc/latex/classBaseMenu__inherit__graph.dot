@@ -1,0 +1,13 @@
+digraph "BaseMenu"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="BaseMenu",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="A base class for creating menus in an SFML application."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="GameMenu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGameMenu.html",tooltip="Manages the main game menu interface."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="GameMenu2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGameMenu2.html",tooltip="Manages the secondary game menu interface."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="WinnerBoard",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWinnerBoard.html",tooltip="A class to manage and display the winning screen of the game."];
+}

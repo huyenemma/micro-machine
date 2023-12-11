@@ -1,0 +1,17 @@
+digraph "Vehicle"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Vehicle",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Class representing a simple vehicle in a 2D physics world using Box2D."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="sf::Drawable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Cat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCat.html",tooltip="Class representing a Cat, derived from Vehicle."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Dog",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDog.html",tooltip="Class representing a Dog, derived from Vehicle."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Horse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classHorse.html",tooltip="Class representing a Horse, derived from Vehicle."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Ox",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOx.html",tooltip="Class representing an Ox, derived from Vehicle."];
+}

@@ -1,0 +1,166 @@
+\hypertarget{classCollectable}{}\doxysection{Collectable Class Reference}
+\label{classCollectable}\index{Collectable@{Collectable}}
+
+
+Represents a collectable item in the game.  
+
+
+
+
+{\ttfamily \#include $<$collectable.\+hpp$>$}
+
+
+
+Inheritance diagram for Collectable\+:
+% FIG 0
+
+
+Collaboration diagram for Collectable\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCollectable_aa1dbd414af814abf30980deea2e534e7}{Collectable}} (b2\+World $\ast$world, b2\+Vec2 position, float radius, \mbox{\hyperlink{classBuff}{Buff}} $\ast$buff, const sf\+::\+Texture \&texture)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classCollectable}{Collectable}} object. \end{DoxyCompactList}\item 
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classCollectable_a01482701fea1a9015c680706322857e0}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current position of the collectable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCollectable_a6e3c4ccb2e992ca9906d44291a0bb984}\label{classCollectable_a6e3c4ccb2e992ca9906d44291a0bb984}} 
+void \mbox{\hyperlink{classCollectable_a6e3c4ccb2e992ca9906d44291a0bb984}{Delete\+Body}} ()
+\begin{DoxyCompactList}\small\item\em Deletes the Box2D body associated with the collectable. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classCollectable_afa5a46bfd43047581918a1dc47011cfa}{Get\+Radius}} ()
+\begin{DoxyCompactList}\small\item\em Gets the radius of the collectable. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCollectable_a2c5223cc35d83529e035a261f4af482e}{Is\+Null\+Body}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the collectable has a null body. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCollectable_a1fe5dd6643b20f5c9954293dab8badd2}\label{classCollectable_a1fe5dd6643b20f5c9954293dab8badd2}} 
+void \mbox{\hyperlink{classCollectable_a1fe5dd6643b20f5c9954293dab8badd2}{set\+Delete}} ()
+\begin{DoxyCompactList}\small\item\em Marks the collectable to be deleted. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCollectable_adb014d060a0a5403847f0a10776228e0}{get\+Delete}} ()
+\begin{DoxyCompactList}\small\item\em Gets the delete status of the collectable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCollectable_a8b3a99caf6e0cce8c1a8f35b36b56f7e}{On\+Contact}} (\mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$car)
+\begin{DoxyCompactList}\small\item\em Handles the contact event with a \mbox{\hyperlink{classVehicle}{Vehicle}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCollectable_afc5ab7814827e323a03544ea9b9f390f}{draw}} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const
+\begin{DoxyCompactList}\small\item\em Draws the collectable on the target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a collectable item in the game. 
+
+Inherits from sf\+::\+Drawable and provides functionality for handling collectables. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCollectable_aa1dbd414af814abf30980deea2e534e7}\label{classCollectable_aa1dbd414af814abf30980deea2e534e7}} 
+\index{Collectable@{Collectable}!Collectable@{Collectable}}
+\index{Collectable@{Collectable}!Collectable@{Collectable}}
+\doxysubsubsection{\texorpdfstring{Collectable()}{Collectable()}}
+{\footnotesize\ttfamily Collectable\+::\+Collectable (\begin{DoxyParamCaption}\item[{b2\+World $\ast$}]{world,  }\item[{b2\+Vec2}]{position,  }\item[{float}]{radius,  }\item[{\mbox{\hyperlink{classBuff}{Buff}} $\ast$}]{buff,  }\item[{const sf\+::\+Texture \&}]{texture }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classCollectable}{Collectable}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world} & The Box2D world in which the collectable exists. \\
+\hline
+{\em position} & The initial position of the collectable. \\
+\hline
+{\em radius} & The radius of the collectable. \\
+\hline
+{\em buff} & A pointer to the \mbox{\hyperlink{classBuff}{Buff}} associated with the collectable. \\
+\hline
+{\em texture} & The texture used for rendering the collectable. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCollectable_afc5ab7814827e323a03544ea9b9f390f}\label{classCollectable_afc5ab7814827e323a03544ea9b9f390f}} 
+\index{Collectable@{Collectable}!draw@{draw}}
+\index{draw@{draw}!Collectable@{Collectable}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Collectable\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const}
+
+
+
+Draws the collectable on the target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The rendering target. \\
+\hline
+{\em states} & The rendering states. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCollectable_adb014d060a0a5403847f0a10776228e0}\label{classCollectable_adb014d060a0a5403847f0a10776228e0}} 
+\index{Collectable@{Collectable}!getDelete@{getDelete}}
+\index{getDelete@{getDelete}!Collectable@{Collectable}}
+\doxysubsubsection{\texorpdfstring{getDelete()}{getDelete()}}
+{\footnotesize\ttfamily bool Collectable\+::get\+Delete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the delete status of the collectable. 
+
+\begin{DoxyReturn}{Returns}
+True if the collectable is marked to be deleted, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCollectable_a01482701fea1a9015c680706322857e0}\label{classCollectable_a01482701fea1a9015c680706322857e0}} 
+\index{Collectable@{Collectable}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Collectable@{Collectable}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily std\+::pair$<$ float, float $>$ Collectable\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the current position of the collectable. 
+
+\begin{DoxyReturn}{Returns}
+A pair representing the x and y coordinates of the collectable\textquotesingle{}s position. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCollectable_afa5a46bfd43047581918a1dc47011cfa}\label{classCollectable_afa5a46bfd43047581918a1dc47011cfa}} 
+\index{Collectable@{Collectable}!GetRadius@{GetRadius}}
+\index{GetRadius@{GetRadius}!Collectable@{Collectable}}
+\doxysubsubsection{\texorpdfstring{GetRadius()}{GetRadius()}}
+{\footnotesize\ttfamily float Collectable\+::\+Get\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the radius of the collectable. 
+
+\begin{DoxyReturn}{Returns}
+The radius of the collectable. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCollectable_a2c5223cc35d83529e035a261f4af482e}\label{classCollectable_a2c5223cc35d83529e035a261f4af482e}} 
+\index{Collectable@{Collectable}!IsNullBody@{IsNullBody}}
+\index{IsNullBody@{IsNullBody}!Collectable@{Collectable}}
+\doxysubsubsection{\texorpdfstring{IsNullBody()}{IsNullBody()}}
+{\footnotesize\ttfamily bool Collectable\+::\+Is\+Null\+Body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the collectable has a null body. 
+
+\begin{DoxyReturn}{Returns}
+True if the collectable has a null body, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCollectable_a8b3a99caf6e0cce8c1a8f35b36b56f7e}\label{classCollectable_a8b3a99caf6e0cce8c1a8f35b36b56f7e}} 
+\index{Collectable@{Collectable}!OnContact@{OnContact}}
+\index{OnContact@{OnContact}!Collectable@{Collectable}}
+\doxysubsubsection{\texorpdfstring{OnContact()}{OnContact()}}
+{\footnotesize\ttfamily void Collectable\+::\+On\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$}]{car }\end{DoxyParamCaption})}
+
+
+
+Handles the contact event with a \mbox{\hyperlink{classVehicle}{Vehicle}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em car} & A pointer to the \mbox{\hyperlink{classVehicle}{Vehicle}} involved in the contact. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/collectable.\+hpp\item 
+src/colletable.\+cpp\end{DoxyCompactItemize}

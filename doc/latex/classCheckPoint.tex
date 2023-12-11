@@ -1,0 +1,124 @@
+\hypertarget{classCheckPoint}{}\doxysection{Check\+Point Class Reference}
+\label{classCheckPoint}\index{CheckPoint@{CheckPoint}}
+
+
+Represents a checkpoint in the game world.  
+
+
+
+
+{\ttfamily \#include $<$checkpoint.\+hpp$>$}
+
+
+
+Inheritance diagram for Check\+Point\+:
+% FIG 0
+
+
+Collaboration diagram for Check\+Point\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCheckPoint_ac9612e381697f169b12a5f0b7b8dc02b}{Check\+Point}} (b2\+World $\ast$world, b2\+Vec2 position, float height, float width)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classCheckPoint}{Check\+Point}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCheckPoint_ae88b34b3982e2cc7eab498f615d14c61}{On\+Contact}} (\mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$car) override
+\begin{DoxyCompactList}\small\item\em Handle the event when a vehicle contacts the checkpoint. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCheckPoint_a3bd322a3a56e512a295027fb40124f6f}{Is\+Visited\+By}} (\mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$car) const
+\begin{DoxyCompactList}\small\item\em Check if a vehicle has visited this checkpoint. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCheckPoint_aa81cff15579f286599909f1f85955ed1}{Remove\+Visited\+Car}} (\mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$car)
+\begin{DoxyCompactList}\small\item\em Remove a vehicle from the list of those who have visited this checkpoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a checkpoint in the game world. 
+
+The \mbox{\hyperlink{classCheckPoint}{Check\+Point}} class is used to create checkpoints in the game world. \mbox{\hyperlink{classVehicle}{Vehicle}} need to visit all hidden checkpoints to consider as finishing one round 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCheckPoint_ac9612e381697f169b12a5f0b7b8dc02b}\label{classCheckPoint_ac9612e381697f169b12a5f0b7b8dc02b}} 
+\index{CheckPoint@{CheckPoint}!CheckPoint@{CheckPoint}}
+\index{CheckPoint@{CheckPoint}!CheckPoint@{CheckPoint}}
+\doxysubsubsection{\texorpdfstring{CheckPoint()}{CheckPoint()}}
+{\footnotesize\ttfamily Check\+Point\+::\+Check\+Point (\begin{DoxyParamCaption}\item[{b2\+World $\ast$}]{world,  }\item[{b2\+Vec2}]{position,  }\item[{float}]{height,  }\item[{float}]{width }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classCheckPoint}{Check\+Point}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world} & The Box2D world where the checkpoint will exist. \\
+\hline
+{\em position} & The position of the checkpoint in the world. \\
+\hline
+{\em height} & The height of the checkpoint area. \\
+\hline
+{\em width} & The width of the checkpoint area. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCheckPoint_a3bd322a3a56e512a295027fb40124f6f}\label{classCheckPoint_a3bd322a3a56e512a295027fb40124f6f}} 
+\index{CheckPoint@{CheckPoint}!IsVisitedBy@{IsVisitedBy}}
+\index{IsVisitedBy@{IsVisitedBy}!CheckPoint@{CheckPoint}}
+\doxysubsubsection{\texorpdfstring{IsVisitedBy()}{IsVisitedBy()}}
+{\footnotesize\ttfamily bool Check\+Point\+::\+Is\+Visited\+By (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$}]{car }\end{DoxyParamCaption}) const}
+
+
+
+Check if a vehicle has visited this checkpoint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em car} & A pointer to the vehicle to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the vehicle has visited, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCheckPoint_ae88b34b3982e2cc7eab498f615d14c61}\label{classCheckPoint_ae88b34b3982e2cc7eab498f615d14c61}} 
+\index{CheckPoint@{CheckPoint}!OnContact@{OnContact}}
+\index{OnContact@{OnContact}!CheckPoint@{CheckPoint}}
+\doxysubsubsection{\texorpdfstring{OnContact()}{OnContact()}}
+{\footnotesize\ttfamily void Check\+Point\+::\+On\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$}]{car }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handle the event when a vehicle contacts the checkpoint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em car} & A pointer to the vehicle that made contact with the checkpoint. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classOutsideArea_ae220dff44f61293f447f9df745a54b15}{Outside\+Area}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classStartLine_ac5f6333b2d88790654205688018c46fd}{Start\+Line}}.
+
+\mbox{\Hypertarget{classCheckPoint_aa81cff15579f286599909f1f85955ed1}\label{classCheckPoint_aa81cff15579f286599909f1f85955ed1}} 
+\index{CheckPoint@{CheckPoint}!RemoveVisitedCar@{RemoveVisitedCar}}
+\index{RemoveVisitedCar@{RemoveVisitedCar}!CheckPoint@{CheckPoint}}
+\doxysubsubsection{\texorpdfstring{RemoveVisitedCar()}{RemoveVisitedCar()}}
+{\footnotesize\ttfamily void Check\+Point\+::\+Remove\+Visited\+Car (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$}]{car }\end{DoxyParamCaption})}
+
+
+
+Remove a vehicle from the list of those who have visited this checkpoint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em car} & A pointer to the vehicle to be removed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/checkpoint.\+hpp\item 
+src/checkpoint.\+cpp\end{DoxyCompactItemize}

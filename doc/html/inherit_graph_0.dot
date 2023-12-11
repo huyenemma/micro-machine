@@ -1,0 +1,14 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="BaseMenu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBaseMenu.html",tooltip="A base class for creating menus in an SFML application."];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="GameMenu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGameMenu.html",tooltip="Manages the main game menu interface."];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GameMenu2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGameMenu2.html",tooltip="Manages the secondary game menu interface."];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="WinnerBoard",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWinnerBoard.html",tooltip="A class to manage and display the winning screen of the game."];
+}
