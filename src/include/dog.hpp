@@ -1,21 +1,36 @@
 #ifndef DOG_H
 #define DOG_H
+
 #include "../include/box2d/box2d.h"
 #include "vehicle.hpp"
 
+/**
+ * @brief Class representing a Dog, derived from Vehicle.
+ */
 class Dog : public Vehicle {
  private:
-  int superSkillCoolDown;  // Follow camelCase for variable names
- public:
-  // Constructor: Creates a new Ox in the given Box2D world at the specified
-  // position (default at the origin)
-  Dog(b2World* world, float x = 0, float y = 0,
-      const std::string& imagePath = "../img/buffalo.png");
+  int superSkillCoolDown;  ///< Cooldown for the super skill. Follow camelCase for variable names.
 
-  // Destructor: Destroys the Box2D body associated with the Ox
+ public:
+  /**
+   * @brief Constructor for the Dog class.
+   * @param world Pointer to the Box2D world.
+   * @param x Initial x-coordinate of the Dog (default: 0).
+   * @param y Initial y-coordinate of the Dog (default: 0).
+   * @param imagePath Path to the image file for the Dog (default: "../img/buffalo.png").
+   */
+  Dog(b2World* world, float x = 0, float y = 0, const std::string& imagePath = "../img/buffalo.png");
+
+  /**
+   * @brief Destructor for the Dog class.
+   * @details Destroys the Box2D body associated with the Dog.
+   */
   ~Dog();
 
-  // Implement the SuperSkill function specific to the Ox
+  /**
+   * @brief Overrides the super skill function from the base class (Vehicle).
+   */
   void SuperSkill() override;
 };
+
 #endif

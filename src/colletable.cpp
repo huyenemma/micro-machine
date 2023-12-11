@@ -14,7 +14,7 @@ Collectable::Collectable(b2World* world, b2Vec2 position, float radius,
 
   // Define the collectable's body definition
   b2BodyDef bodyDef;
-  bodyDef.type = b2_dynamicBody;
+  bodyDef.type = b2_staticBody;
   bodyDef.position.Set(position.x, position.y);
 
   // Create the collectable's body
