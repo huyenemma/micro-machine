@@ -34,9 +34,9 @@ bool World::HaveAnyOneWin() {
     }   
 
     std::map<Vehicle*, int> points = startLine->GetPoints();
-
     for (const auto& entry : points) {
         if (entry.second >= winCondition) {
+            winner = entry.first;
             return true; // At least one vehicle has 6 or more points
         }
     }
@@ -66,7 +66,9 @@ std::vector<Obstacle*>& World::GetObstacle() { return obstacles; }
 
 void World::SetRacingTrack(StartLine* StartLine) { this->startLine = StartLine;}
 
-
+Vehicle* World::GetWinner(){
+    return winner;
+}
 World::~World() {
     // Free all Vehicle objects in the vehicles vector
     for (Vehicle* vehicle : vehicles) {

@@ -17,6 +17,7 @@ class World {
   std::vector<Vehicle*> vehicles;
   std::vector<Collectable*> collectables;
   std::vector<Obstacle*> obstacles;
+  Vehicle* winner;
   
  public:
   // contructor
@@ -25,6 +26,8 @@ class World {
   ~World();
   // update the physics world
   void Update(float timeStep, int velocityIterations, int positionIterations);
+
+  Vehicle* GetWinner();
 
   // add a vehicle to the world
   void AddVehicle(Vehicle* vehicle);
