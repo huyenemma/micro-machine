@@ -1,0 +1,38 @@
+{
+    "start": {
+        "player1": {
+            "x": 200,
+            "y": 120
+        },
+        "player2": {
+            "x": 200,
+            "y": 120
+        }
+    },
+    "track": {
+        "startLine": {
+            "x": 200,
+            "y": 120,
+            "height": 20,
+            "width": 20
+        },
+        "checkpoint1": {
+            "x": 636,
+            "y": 620,
+            "height": 20,
+            "width": 20
+        },
+        "checkpoint2": {
+            "x": 136,
+            "y": 620,
+            "height": 20,
+            "width": 20
+        },
+        "outsideArea": {
+            "x": 400,
+            "y": 400,
+            "height": 120,
+            "width": 120
+        }
+    }
+}
