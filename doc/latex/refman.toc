@@ -1,0 +1,233 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Source content}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Namespace Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Namespace List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Hierarchical Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Class Hierarchy}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Class Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Class List}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}File Index}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}File List}{9}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Namespace Documentation}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Body\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type Namespace Reference}{11}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{11}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Function Documentation}{11}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}IsCollectable()}{11}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}IsObstacle()}{12}{subsubsection.6.1.2.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.3}IsOutsideArea()}{12}{subsubsection.6.1.2.3}%
+\contentsline {subsubsection}{\numberline {6.1.2.4}IsVehicle()}{12}{subsubsection.6.1.2.4}%
+\contentsline {chapter}{\numberline {7}Class Documentation}{15}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu Class Reference}{15}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Buff Class Reference}{15}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Detailed Description}{16}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Constructor \& Destructor Documentation}{16}{subsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.2.1}Buff()}{16}{subsubsection.7.2.2.1}%
+\contentsline {subsection}{\numberline {7.2.3}Member Function Documentation}{16}{subsection.7.2.3}%
+\contentsline {subsubsection}{\numberline {7.2.3.1}ApplyEffect()}{16}{subsubsection.7.2.3.1}%
+\contentsline {subsubsection}{\numberline {7.2.3.2}IsContinuous()}{17}{subsubsection.7.2.3.2}%
+\contentsline {subsubsection}{\numberline {7.2.3.3}IsNegativeBuff()}{17}{subsubsection.7.2.3.3}%
+\contentsline {subsubsection}{\numberline {7.2.3.4}ReverseEffect()}{17}{subsubsection.7.2.3.4}%
+\contentsline {section}{\numberline {7.3}Cat Class Reference}{18}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Detailed Description}{18}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Constructor \& Destructor Documentation}{18}{subsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.2.1}Cat()}{18}{subsubsection.7.3.2.1}%
+\contentsline {section}{\numberline {7.4}Check\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Point Class Reference}{19}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Detailed Description}{19}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Constructor \& Destructor Documentation}{19}{subsection.7.4.2}%
+\contentsline {subsubsection}{\numberline {7.4.2.1}CheckPoint()}{19}{subsubsection.7.4.2.1}%
+\contentsline {subsection}{\numberline {7.4.3}Member Function Documentation}{20}{subsection.7.4.3}%
+\contentsline {subsubsection}{\numberline {7.4.3.1}IsVisitedBy()}{20}{subsubsection.7.4.3.1}%
+\contentsline {subsubsection}{\numberline {7.4.3.2}OnContact()}{20}{subsubsection.7.4.3.2}%
+\contentsline {subsubsection}{\numberline {7.4.3.3}RemoveVisitedCar()}{21}{subsubsection.7.4.3.3}%
+\contentsline {section}{\numberline {7.5}Collectable Class Reference}{21}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Detailed Description}{22}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Constructor \& Destructor Documentation}{22}{subsection.7.5.2}%
+\contentsline {subsubsection}{\numberline {7.5.2.1}Collectable()}{22}{subsubsection.7.5.2.1}%
+\contentsline {subsection}{\numberline {7.5.3}Member Function Documentation}{22}{subsection.7.5.3}%
+\contentsline {subsubsection}{\numberline {7.5.3.1}draw()}{22}{subsubsection.7.5.3.1}%
+\contentsline {subsubsection}{\numberline {7.5.3.2}getDelete()}{23}{subsubsection.7.5.3.2}%
+\contentsline {subsubsection}{\numberline {7.5.3.3}GetPosition()}{23}{subsubsection.7.5.3.3}%
+\contentsline {subsubsection}{\numberline {7.5.3.4}GetRadius()}{23}{subsubsection.7.5.3.4}%
+\contentsline {subsubsection}{\numberline {7.5.3.5}IsNullBody()}{23}{subsubsection.7.5.3.5}%
+\contentsline {subsubsection}{\numberline {7.5.3.6}OnContact()}{23}{subsubsection.7.5.3.6}%
+\contentsline {section}{\numberline {7.6}Negative\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buff\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Crazy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rotate Class Reference}{24}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Detailed Description}{24}{subsection.7.6.1}%
+\contentsline {subsection}{\numberline {7.6.2}Constructor \& Destructor Documentation}{24}{subsection.7.6.2}%
+\contentsline {subsubsection}{\numberline {7.6.2.1}CrazyRotate()}{24}{subsubsection.7.6.2.1}%
+\contentsline {subsection}{\numberline {7.6.3}Member Function Documentation}{25}{subsection.7.6.3}%
+\contentsline {subsubsection}{\numberline {7.6.3.1}ApplyEffect()}{25}{subsubsection.7.6.3.1}%
+\contentsline {subsubsection}{\numberline {7.6.3.2}ReverseEffect()}{25}{subsubsection.7.6.3.2}%
+\contentsline {section}{\numberline {7.7}Dog Class Reference}{26}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Detailed Description}{26}{subsection.7.7.1}%
+\contentsline {subsection}{\numberline {7.7.2}Constructor \& Destructor Documentation}{26}{subsection.7.7.2}%
+\contentsline {subsubsection}{\numberline {7.7.2.1}Dog()}{26}{subsubsection.7.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.7.2.2}$\sim $Dog()}{27}{subsubsection.7.7.2.2}%
+\contentsline {section}{\numberline {7.8}Game Class Reference}{27}{section.7.8}%
+\contentsline {subsection}{\numberline {7.8.1}Detailed Description}{28}{subsection.7.8.1}%
+\contentsline {section}{\numberline {7.9}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu Class Reference}{28}{section.7.9}%
+\contentsline {subsection}{\numberline {7.9.1}Detailed Description}{28}{subsection.7.9.1}%
+\contentsline {subsection}{\numberline {7.9.2}Constructor \& Destructor Documentation}{28}{subsection.7.9.2}%
+\contentsline {subsubsection}{\numberline {7.9.2.1}GameMenu()}{28}{subsubsection.7.9.2.1}%
+\contentsline {section}{\numberline {7.10}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu2 Class Reference}{29}{section.7.10}%
+\contentsline {subsection}{\numberline {7.10.1}Detailed Description}{29}{subsection.7.10.1}%
+\contentsline {subsection}{\numberline {7.10.2}Constructor \& Destructor Documentation}{29}{subsection.7.10.2}%
+\contentsline {subsubsection}{\numberline {7.10.2.1}GameMenu2()}{29}{subsubsection.7.10.2.1}%
+\contentsline {section}{\numberline {7.11}Horse Class Reference}{30}{section.7.11}%
+\contentsline {subsection}{\numberline {7.11.1}Detailed Description}{30}{subsection.7.11.1}%
+\contentsline {subsection}{\numberline {7.11.2}Constructor \& Destructor Documentation}{30}{subsection.7.11.2}%
+\contentsline {subsubsection}{\numberline {7.11.2.1}Horse()}{30}{subsubsection.7.11.2.1}%
+\contentsline {section}{\numberline {7.12}Horse\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Super\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skill\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buff Class Reference}{31}{section.7.12}%
+\contentsline {subsection}{\numberline {7.12.1}Member Function Documentation}{31}{subsection.7.12.1}%
+\contentsline {subsubsection}{\numberline {7.12.1.1}ApplyEffect()}{31}{subsubsection.7.12.1.1}%
+\contentsline {subsubsection}{\numberline {7.12.1.2}ReverseEffect()}{32}{subsubsection.7.12.1.2}%
+\contentsline {section}{\numberline {7.13}Positive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buff\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Magnetic Class Reference}{32}{section.7.13}%
+\contentsline {subsection}{\numberline {7.13.1}Detailed Description}{32}{subsection.7.13.1}%
+\contentsline {subsection}{\numberline {7.13.2}Constructor \& Destructor Documentation}{33}{subsection.7.13.2}%
+\contentsline {subsubsection}{\numberline {7.13.2.1}Magnetic()}{33}{subsubsection.7.13.2.1}%
+\contentsline {subsection}{\numberline {7.13.3}Member Function Documentation}{33}{subsection.7.13.3}%
+\contentsline {subsubsection}{\numberline {7.13.3.1}ApplyEffect()}{33}{subsubsection.7.13.3.1}%
+\contentsline {subsubsection}{\numberline {7.13.3.2}ReverseEffect()}{33}{subsubsection.7.13.3.2}%
+\contentsline {section}{\numberline {7.14}Map Class Reference}{34}{section.7.14}%
+\contentsline {subsection}{\numberline {7.14.1}Detailed Description}{34}{subsection.7.14.1}%
+\contentsline {subsection}{\numberline {7.14.2}Constructor \& Destructor Documentation}{34}{subsection.7.14.2}%
+\contentsline {subsubsection}{\numberline {7.14.2.1}Map()}{34}{subsubsection.7.14.2.1}%
+\contentsline {subsection}{\numberline {7.14.3}Member Function Documentation}{35}{subsection.7.14.3}%
+\contentsline {subsubsection}{\numberline {7.14.3.1}Draw()}{35}{subsubsection.7.14.3.1}%
+\contentsline {section}{\numberline {7.15}Positive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buff\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Max\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Speed Class Reference}{35}{section.7.15}%
+\contentsline {subsection}{\numberline {7.15.1}Detailed Description}{35}{subsection.7.15.1}%
+\contentsline {subsection}{\numberline {7.15.2}Constructor \& Destructor Documentation}{36}{subsection.7.15.2}%
+\contentsline {subsubsection}{\numberline {7.15.2.1}MaxSpeed()}{36}{subsubsection.7.15.2.1}%
+\contentsline {subsection}{\numberline {7.15.3}Member Function Documentation}{36}{subsection.7.15.3}%
+\contentsline {subsubsection}{\numberline {7.15.3.1}ApplyEffect()}{36}{subsubsection.7.15.3.1}%
+\contentsline {subsubsection}{\numberline {7.15.3.2}ReverseEffect()}{36}{subsubsection.7.15.3.2}%
+\contentsline {section}{\numberline {7.16}My\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Contact\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Listener Class Reference}{37}{section.7.16}%
+\contentsline {subsection}{\numberline {7.16.1}Detailed Description}{37}{subsection.7.16.1}%
+\contentsline {subsection}{\numberline {7.16.2}Member Function Documentation}{37}{subsection.7.16.2}%
+\contentsline {subsubsection}{\numberline {7.16.2.1}BeginContact()}{37}{subsubsection.7.16.2.1}%
+\contentsline {subsubsection}{\numberline {7.16.2.2}EndContact()}{38}{subsubsection.7.16.2.2}%
+\contentsline {section}{\numberline {7.17}Obstacle Class Reference}{38}{section.7.17}%
+\contentsline {subsection}{\numberline {7.17.1}Detailed Description}{38}{subsection.7.17.1}%
+\contentsline {subsection}{\numberline {7.17.2}Constructor \& Destructor Documentation}{39}{subsection.7.17.2}%
+\contentsline {subsubsection}{\numberline {7.17.2.1}Obstacle()}{39}{subsubsection.7.17.2.1}%
+\contentsline {subsection}{\numberline {7.17.3}Member Function Documentation}{39}{subsection.7.17.3}%
+\contentsline {subsubsection}{\numberline {7.17.3.1}draw()}{39}{subsubsection.7.17.3.1}%
+\contentsline {subsubsection}{\numberline {7.17.3.2}GetPosition()}{39}{subsubsection.7.17.3.2}%
+\contentsline {subsubsection}{\numberline {7.17.3.3}GetRadius()}{40}{subsubsection.7.17.3.3}%
+\contentsline {subsubsection}{\numberline {7.17.3.4}IsNullBody()}{40}{subsubsection.7.17.3.4}%
+\contentsline {subsubsection}{\numberline {7.17.3.5}OnContact()}{40}{subsubsection.7.17.3.5}%
+\contentsline {section}{\numberline {7.18}Outside\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Area Class Reference}{41}{section.7.18}%
+\contentsline {subsection}{\numberline {7.18.1}Detailed Description}{41}{subsection.7.18.1}%
+\contentsline {subsection}{\numberline {7.18.2}Constructor \& Destructor Documentation}{41}{subsection.7.18.2}%
+\contentsline {subsubsection}{\numberline {7.18.2.1}OutsideArea()}{41}{subsubsection.7.18.2.1}%
+\contentsline {subsection}{\numberline {7.18.3}Member Function Documentation}{42}{subsection.7.18.3}%
+\contentsline {subsubsection}{\numberline {7.18.3.1}GetDimension()}{42}{subsubsection.7.18.3.1}%
+\contentsline {subsubsection}{\numberline {7.18.3.2}GetPosition()}{42}{subsubsection.7.18.3.2}%
+\contentsline {subsubsection}{\numberline {7.18.3.3}IsNullBody()}{42}{subsubsection.7.18.3.3}%
+\contentsline {subsubsection}{\numberline {7.18.3.4}OnContact()}{42}{subsubsection.7.18.3.4}%
+\contentsline {section}{\numberline {7.19}Ox Class Reference}{43}{section.7.19}%
+\contentsline {subsection}{\numberline {7.19.1}Detailed Description}{43}{subsection.7.19.1}%
+\contentsline {subsection}{\numberline {7.19.2}Constructor \& Destructor Documentation}{43}{subsection.7.19.2}%
+\contentsline {subsubsection}{\numberline {7.19.2.1}Ox()}{43}{subsubsection.7.19.2.1}%
+\contentsline {subsubsection}{\numberline {7.19.2.2}$\sim $Ox()}{44}{subsubsection.7.19.2.2}%
+\contentsline {section}{\numberline {7.20}Ox\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Super\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skill\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buff Class Reference}{44}{section.7.20}%
+\contentsline {subsection}{\numberline {7.20.1}Member Function Documentation}{44}{subsection.7.20.1}%
+\contentsline {subsubsection}{\numberline {7.20.1.1}ApplyEffect()}{44}{subsubsection.7.20.1.1}%
+\contentsline {subsubsection}{\numberline {7.20.1.2}ReverseEffect()}{45}{subsubsection.7.20.1.2}%
+\contentsline {section}{\numberline {7.21}Positive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buff\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Ox\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Super\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Skill\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buff Class Reference}{45}{section.7.21}%
+\contentsline {subsection}{\numberline {7.21.1}Detailed Description}{46}{subsection.7.21.1}%
+\contentsline {subsection}{\numberline {7.21.2}Constructor \& Destructor Documentation}{46}{subsection.7.21.2}%
+\contentsline {subsubsection}{\numberline {7.21.2.1}OxSuperSkillBuff()}{46}{subsubsection.7.21.2.1}%
+\contentsline {subsection}{\numberline {7.21.3}Member Function Documentation}{46}{subsection.7.21.3}%
+\contentsline {subsubsection}{\numberline {7.21.3.1}ApplyEffect()}{46}{subsubsection.7.21.3.1}%
+\contentsline {subsubsection}{\numberline {7.21.3.2}ReverseEffect()}{46}{subsubsection.7.21.3.2}%
+\contentsline {section}{\numberline {7.22}Real\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Time Class Reference}{47}{section.7.22}%
+\contentsline {subsection}{\numberline {7.22.1}Detailed Description}{47}{subsection.7.22.1}%
+\contentsline {subsection}{\numberline {7.22.2}Constructor \& Destructor Documentation}{47}{subsection.7.22.2}%
+\contentsline {subsubsection}{\numberline {7.22.2.1}RealTime()}{47}{subsubsection.7.22.2.1}%
+\contentsline {subsection}{\numberline {7.22.3}Member Function Documentation}{48}{subsection.7.22.3}%
+\contentsline {subsubsection}{\numberline {7.22.3.1}Draw()}{48}{subsubsection.7.22.3.1}%
+\contentsline {subsubsection}{\numberline {7.22.3.2}IsTimeUp()}{48}{subsubsection.7.22.3.2}%
+\contentsline {subsubsection}{\numberline {7.22.3.3}SetGameMode()}{48}{subsubsection.7.22.3.3}%
+\contentsline {subsubsection}{\numberline {7.22.3.4}SetPlayerRounds()}{49}{subsubsection.7.22.3.4}%
+\contentsline {subsubsection}{\numberline {7.22.3.5}Update()}{49}{subsubsection.7.22.3.5}%
+\contentsline {section}{\numberline {7.23}Resource\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{49}{section.7.23}%
+\contentsline {subsection}{\numberline {7.23.1}Detailed Description}{50}{subsection.7.23.1}%
+\contentsline {subsection}{\numberline {7.23.2}Member Function Documentation}{50}{subsection.7.23.2}%
+\contentsline {subsubsection}{\numberline {7.23.2.1}GetFont()}{50}{subsubsection.7.23.2.1}%
+\contentsline {subsubsection}{\numberline {7.23.2.2}GetImage()}{51}{subsubsection.7.23.2.2}%
+\contentsline {subsubsection}{\numberline {7.23.2.3}GetSoundBackground()}{51}{subsubsection.7.23.2.3}%
+\contentsline {subsubsection}{\numberline {7.23.2.4}GetSoundStep()}{51}{subsubsection.7.23.2.4}%
+\contentsline {subsubsection}{\numberline {7.23.2.5}LoadFont()}{52}{subsubsection.7.23.2.5}%
+\contentsline {subsubsection}{\numberline {7.23.2.6}LoadFromJson()}{52}{subsubsection.7.23.2.6}%
+\contentsline {subsubsection}{\numberline {7.23.2.7}LoadImage()}{52}{subsubsection.7.23.2.7}%
+\contentsline {subsubsection}{\numberline {7.23.2.8}LoadSoundBackground()}{53}{subsubsection.7.23.2.8}%
+\contentsline {subsubsection}{\numberline {7.23.2.9}LoadSoundStep()}{53}{subsubsection.7.23.2.9}%
+\contentsline {section}{\numberline {7.24}Negative\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buff\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Reverse\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mushroom Class Reference}{53}{section.7.24}%
+\contentsline {subsection}{\numberline {7.24.1}Detailed Description}{54}{subsection.7.24.1}%
+\contentsline {subsection}{\numberline {7.24.2}Constructor \& Destructor Documentation}{54}{subsection.7.24.2}%
+\contentsline {subsubsection}{\numberline {7.24.2.1}ReverseMushroom()}{54}{subsubsection.7.24.2.1}%
+\contentsline {subsection}{\numberline {7.24.3}Member Function Documentation}{54}{subsection.7.24.3}%
+\contentsline {subsubsection}{\numberline {7.24.3.1}ApplyEffect()}{54}{subsubsection.7.24.3.1}%
+\contentsline {subsubsection}{\numberline {7.24.3.2}ReverseEffect()}{54}{subsubsection.7.24.3.2}%
+\contentsline {section}{\numberline {7.25}Start\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Line Class Reference}{55}{section.7.25}%
+\contentsline {subsection}{\numberline {7.25.1}Detailed Description}{55}{subsection.7.25.1}%
+\contentsline {subsection}{\numberline {7.25.2}Constructor \& Destructor Documentation}{55}{subsection.7.25.2}%
+\contentsline {subsubsection}{\numberline {7.25.2.1}StartLine()}{55}{subsubsection.7.25.2.1}%
+\contentsline {subsection}{\numberline {7.25.3}Member Function Documentation}{56}{subsection.7.25.3}%
+\contentsline {subsubsection}{\numberline {7.25.3.1}AddCheckPoint()}{56}{subsubsection.7.25.3.1}%
+\contentsline {subsubsection}{\numberline {7.25.3.2}GetPoints()}{56}{subsubsection.7.25.3.2}%
+\contentsline {subsubsection}{\numberline {7.25.3.3}OnContact()}{56}{subsubsection.7.25.3.3}%
+\contentsline {section}{\numberline {7.26}Timer Class Reference}{57}{section.7.26}%
+\contentsline {subsection}{\numberline {7.26.1}Detailed Description}{57}{subsection.7.26.1}%
+\contentsline {subsection}{\numberline {7.26.2}Constructor \& Destructor Documentation}{57}{subsection.7.26.2}%
+\contentsline {subsubsection}{\numberline {7.26.2.1}Timer()}{57}{subsubsection.7.26.2.1}%
+\contentsline {subsection}{\numberline {7.26.3}Member Function Documentation}{58}{subsection.7.26.3}%
+\contentsline {subsubsection}{\numberline {7.26.3.1}Tick()}{58}{subsubsection.7.26.3.1}%
+\contentsline {section}{\numberline {7.27}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data Union Reference}{58}{section.7.27}%
+\contentsline {subsection}{\numberline {7.27.1}Detailed Description}{58}{subsection.7.27.1}%
+\contentsline {section}{\numberline {7.28}Vehicle Class Reference}{59}{section.7.28}%
+\contentsline {subsection}{\numberline {7.28.1}Detailed Description}{60}{subsection.7.28.1}%
+\contentsline {subsection}{\numberline {7.28.2}Constructor \& Destructor Documentation}{60}{subsection.7.28.2}%
+\contentsline {subsubsection}{\numberline {7.28.2.1}Vehicle()}{60}{subsubsection.7.28.2.1}%
+\contentsline {subsubsection}{\numberline {7.28.2.2}$\sim $Vehicle()}{61}{subsubsection.7.28.2.2}%
+\contentsline {subsection}{\numberline {7.28.3}Member Function Documentation}{61}{subsection.7.28.3}%
+\contentsline {subsubsection}{\numberline {7.28.3.1}AddBuff()}{61}{subsubsection.7.28.3.1}%
+\contentsline {subsubsection}{\numberline {7.28.3.2}ApplyBuff()}{61}{subsubsection.7.28.3.2}%
+\contentsline {subsubsection}{\numberline {7.28.3.3}CrazyRotate()}{61}{subsubsection.7.28.3.3}%
+\contentsline {subsubsection}{\numberline {7.28.3.4}draw()}{62}{subsubsection.7.28.3.4}%
+\contentsline {subsubsection}{\numberline {7.28.3.5}GetAngle()}{62}{subsubsection.7.28.3.5}%
+\contentsline {subsubsection}{\numberline {7.28.3.6}GetForce()}{62}{subsubsection.7.28.3.6}%
+\contentsline {subsubsection}{\numberline {7.28.3.7}GetPosition()}{63}{subsubsection.7.28.3.7}%
+\contentsline {subsubsection}{\numberline {7.28.3.8}MagneticPull()}{63}{subsubsection.7.28.3.8}%
+\contentsline {subsubsection}{\numberline {7.28.3.9}Rotate()}{63}{subsubsection.7.28.3.9}%
+\contentsline {subsubsection}{\numberline {7.28.3.10}ToggleForce()}{63}{subsubsection.7.28.3.10}%
+\contentsline {section}{\numberline {7.29}Winner\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Board Class Reference}{64}{section.7.29}%
+\contentsline {subsection}{\numberline {7.29.1}Detailed Description}{64}{subsection.7.29.1}%
+\contentsline {subsection}{\numberline {7.29.2}Constructor \& Destructor Documentation}{64}{subsection.7.29.2}%
+\contentsline {subsubsection}{\numberline {7.29.2.1}WinnerBoard()}{64}{subsubsection.7.29.2.1}%
+\contentsline {subsection}{\numberline {7.29.3}Member Function Documentation}{65}{subsection.7.29.3}%
+\contentsline {subsubsection}{\numberline {7.29.3.1}draw()}{65}{subsubsection.7.29.3.1}%
+\contentsline {subsubsection}{\numberline {7.29.3.2}SetWinner()}{65}{subsubsection.7.29.3.2}%
+\contentsline {section}{\numberline {7.30}World Class Reference}{65}{section.7.30}%
+\contentsline {subsection}{\numberline {7.30.1}Detailed Description}{66}{subsection.7.30.1}%
+\contentsline {subsection}{\numberline {7.30.2}Constructor \& Destructor Documentation}{66}{subsection.7.30.2}%
+\contentsline {subsubsection}{\numberline {7.30.2.1}World()}{66}{subsubsection.7.30.2.1}%
+\contentsline {subsection}{\numberline {7.30.3}Member Function Documentation}{67}{subsection.7.30.3}%
+\contentsline {subsubsection}{\numberline {7.30.3.1}AddCollectable()}{67}{subsubsection.7.30.3.1}%
+\contentsline {subsubsection}{\numberline {7.30.3.2}AddObstacle()}{67}{subsubsection.7.30.3.2}%
+\contentsline {subsubsection}{\numberline {7.30.3.3}AddVehicle()}{67}{subsubsection.7.30.3.3}%
+\contentsline {subsubsection}{\numberline {7.30.3.4}GetCollectable()}{68}{subsubsection.7.30.3.4}%
+\contentsline {subsubsection}{\numberline {7.30.3.5}GetObstacle()}{68}{subsubsection.7.30.3.5}%
+\contentsline {subsubsection}{\numberline {7.30.3.6}GetPhysicWorld()}{68}{subsubsection.7.30.3.6}%
+\contentsline {subsubsection}{\numberline {7.30.3.7}GetPoint()}{68}{subsubsection.7.30.3.7}%
+\contentsline {subsubsection}{\numberline {7.30.3.8}GetPoints()}{69}{subsubsection.7.30.3.8}%
+\contentsline {subsubsection}{\numberline {7.30.3.9}GetVehicle()}{69}{subsubsection.7.30.3.9}%
+\contentsline {subsubsection}{\numberline {7.30.3.10}GetWinner()}{69}{subsubsection.7.30.3.10}%
+\contentsline {subsubsection}{\numberline {7.30.3.11}HaveAnyOneWin()}{69}{subsubsection.7.30.3.11}%
+\contentsline {subsubsection}{\numberline {7.30.3.12}SetRacingTrack()}{69}{subsubsection.7.30.3.12}%
+\contentsline {subsubsection}{\numberline {7.30.3.13}Update()}{70}{subsubsection.7.30.3.13}%
+\contentsline {chapter}{\numberline {8}File Documentation}{71}{chapter.8}%
+\contentsline {section}{\numberline {8.1}src/include/menu.hpp File Reference}{71}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Detailed Description}{71}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.2}src/include/menu2.hpp File Reference}{71}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Detailed Description}{71}{subsection.8.2.1}%
