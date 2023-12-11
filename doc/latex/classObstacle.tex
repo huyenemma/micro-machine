@@ -20,7 +20,7 @@ Collaboration diagram for Obstacle\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classObstacle_a5f4d131d2ac8b07605b59cd4d8ab3a34}{Obstacle}} (\mbox{\hyperlink{classb2World}{b2\+World}} $\ast$world, \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} position, float radius, const \mbox{\hyperlink{classsf_1_1Texture}{sf\+::\+Texture}} \&texture)
+\mbox{\hyperlink{classObstacle_a5f4d131d2ac8b07605b59cd4d8ab3a34}{Obstacle}} (b2\+World $\ast$world, b2\+Vec2 position, float radius, const sf\+::\+Texture \&texture)
 \begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classObstacle}{Obstacle}} class. \end{DoxyCompactList}\item 
 std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classObstacle_a680c01df380df59d9b58be316a4f0ca0}{Get\+Position}} () const
 \begin{DoxyCompactList}\small\item\em Get the position of the obstacle. \end{DoxyCompactList}\item 
@@ -31,11 +31,10 @@ float \mbox{\hyperlink{classObstacle_a4a784b10fc6825b33a30a2963fcc572e}{Get\+Rad
 \begin{DoxyCompactList}\small\item\em Get the radius of the obstacle. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classObstacle_aa9a6ab4e5fb3bc581a9e0c790337cb8c}{Is\+Null\+Body}} ()
 \begin{DoxyCompactList}\small\item\em Check if the Box2D body associated with the obstacle is null. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classObstacle_a4339e73b1935179dd34deba079825c45}{draw}} (\mbox{\hyperlink{classsf_1_1RenderTarget}{sf\+::\+Render\+Target}} \&target, \mbox{\hyperlink{classsf_1_1RenderStates}{sf\+::\+Render\+States}} states) const override
+void \mbox{\hyperlink{classObstacle_a4339e73b1935179dd34deba079825c45}{draw}} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const override
 \begin{DoxyCompactList}\small\item\em Implementation of the draw function for rendering the obstacle. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classObstacle_a34cb80ce6ac38dfb354561b43903984a}{On\+Contact}} (\mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$car)
 \begin{DoxyCompactList}\small\item\em Function called when the obstacle comes into contact with a vehicle. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
@@ -46,7 +45,7 @@ Class representing an \mbox{\hyperlink{classObstacle}{Obstacle}} that can intera
 \index{Obstacle@{Obstacle}!Obstacle@{Obstacle}}
 \index{Obstacle@{Obstacle}!Obstacle@{Obstacle}}
 \doxysubsubsection{\texorpdfstring{Obstacle()}{Obstacle()}}
-{\footnotesize\ttfamily Obstacle\+::\+Obstacle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classb2World}{b2\+World}} $\ast$}]{world,  }\item[{\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}}}]{position,  }\item[{float}]{radius,  }\item[{const \mbox{\hyperlink{classsf_1_1Texture}{sf\+::\+Texture}} \&}]{texture }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Obstacle\+::\+Obstacle (\begin{DoxyParamCaption}\item[{b2\+World $\ast$}]{world,  }\item[{b2\+Vec2}]{position,  }\item[{float}]{radius,  }\item[{const sf\+::\+Texture \&}]{texture }\end{DoxyParamCaption})}
 
 
 
@@ -70,7 +69,7 @@ Constructor for the \mbox{\hyperlink{classObstacle}{Obstacle}} class.
 \index{Obstacle@{Obstacle}!draw@{draw}}
 \index{draw@{draw}!Obstacle@{Obstacle}}
 \doxysubsubsection{\texorpdfstring{draw()}{draw()}}
-{\footnotesize\ttfamily void Obstacle\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1RenderTarget}{sf\+::\+Render\+Target}} \&}]{target,  }\item[{\mbox{\hyperlink{classsf_1_1RenderStates}{sf\+::\+Render\+States}}}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Obstacle\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
 
 
 
@@ -83,10 +82,6 @@ Implementation of the draw function for rendering the obstacle.
 {\em states} & Render states. \\
 \hline
 \end{DoxyParams}
-
-
-Implements \mbox{\hyperlink{classsf_1_1Drawable_a90d2c88bba9b035a0844eccb380ef631}{sf\+::\+Drawable}}.
-
 \mbox{\Hypertarget{classObstacle_a680c01df380df59d9b58be316a4f0ca0}\label{classObstacle_a680c01df380df59d9b58be316a4f0ca0}} 
 \index{Obstacle@{Obstacle}!GetPosition@{GetPosition}}
 \index{GetPosition@{GetPosition}!Obstacle@{Obstacle}}

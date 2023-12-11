@@ -4,5 +4,7 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="b2Body",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classb2Body.html",tooltip="A rigid body. These are created via b2World::CreateBody."];
+  Node1 [label="b2ContactListener",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="MyContactListener",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMyContactListener.html",tooltip="A custom contact listener class for handling Box2D contact events."];
 }

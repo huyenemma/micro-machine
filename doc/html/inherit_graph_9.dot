@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="b2Color",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structb2Color.html",tooltip="Color for debug drawing. Each value has the range [0,1]."];
+  Node0 [label="UserData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$unionUserData.html",tooltip="Represents a union of data or a combination of type and pointer for user data."];
 }

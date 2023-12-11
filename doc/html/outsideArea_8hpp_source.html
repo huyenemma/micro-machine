@@ -84,7 +84,7 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classOutsideArea.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classOutsideArea.html">OutsideArea</a> {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="classOutsideArea.html#aba6112f1339f4a5b944b7ec4b12fd389">OutsideArea</a>(<a class="code" href="classb2World.html">b2World</a>* world, <a class="code" href="structb2Vec2.html">b2Vec2</a> position, <span class="keywordtype">float</span> height, <span class="keywordtype">float</span> width);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="classOutsideArea.html#aba6112f1339f4a5b944b7ec4b12fd389">OutsideArea</a>(b2World* world, b2Vec2 position, <span class="keywordtype">float</span> height, <span class="keywordtype">float</span> width);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  std::pair&lt;float, float&gt; <a class="code" href="classOutsideArea.html#a8c2977eb0e864d48e808f21ee8456497">GetPosition</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
@@ -97,7 +97,7 @@ $(function() {
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classOutsideArea.html#ae220dff44f61293f447f9df745a54b15">OnContact</a>(<a class="code" href="classVehicle.html">Vehicle</a>* car);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="classb2Body.html">b2Body</a>* body; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  b2Body* body; </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">float</span> height_; </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">float</span> width_; </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
@@ -111,9 +111,6 @@ $(function() {
 <div class="ttc" id="aclassOutsideArea_html_aba9dc1754c26adbde7a58bc30ab8956d"><div class="ttname"><a href="classOutsideArea.html#aba9dc1754c26adbde7a58bc30ab8956d">OutsideArea::GetDimension</a></div><div class="ttdeci">std::pair&lt; float, float &gt; GetDimension()</div><div class="ttdoc">Gets the dimensions of the outside area.</div><div class="ttdef"><b>Definition:</b> outsideArea.cpp:38</div></div>
 <div class="ttc" id="aclassOutsideArea_html_ae220dff44f61293f447f9df745a54b15"><div class="ttname"><a href="classOutsideArea.html#ae220dff44f61293f447f9df745a54b15">OutsideArea::OnContact</a></div><div class="ttdeci">virtual void OnContact(Vehicle *car)</div><div class="ttdoc">Virtual function to handle contact with a vehicle.</div><div class="ttdef"><b>Definition:</b> outsideArea.cpp:44</div></div>
 <div class="ttc" id="aclassVehicle_html"><div class="ttname"><a href="classVehicle.html">Vehicle</a></div><div class="ttdoc">Class representing a simple vehicle in a 2D physics world using Box2D.</div><div class="ttdef"><b>Definition:</b> vehicle.hpp:19</div></div>
-<div class="ttc" id="aclassb2Body_html"><div class="ttname"><a href="classb2Body.html">b2Body</a></div><div class="ttdoc">A rigid body. These are created via b2World::CreateBody.</div><div class="ttdef"><b>Definition:</b> b2_body.h:129</div></div>
-<div class="ttc" id="aclassb2World_html"><div class="ttname"><a href="classb2World.html">b2World</a></div><div class="ttdef"><b>Definition:</b> b2_world.h:47</div></div>
-<div class="ttc" id="astructb2Vec2_html"><div class="ttname"><a href="structb2Vec2.html">b2Vec2</a></div><div class="ttdoc">A 2D column vector.</div><div class="ttdef"><b>Definition:</b> b2_math.h:42</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

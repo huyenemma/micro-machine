@@ -1,24 +1,4 @@
 var searchData=
 [
-  ['b_5246',['b',['../classsf_1_1Color.html#a6707aedd0609c8920e12df5d7abc53cb',1,'sf::Color']]],
-  ['b2_5fversion_5247',['b2_version',['../unix_2include_2box2d_2b2__common_8h.html#aad172c83e254377c7b646ff0377a6d1a',1,'b2_version():&#160;b2_common.h'],['../arm64_2include_2box2d_2b2__common_8h.html#aad172c83e254377c7b646ff0377a6d1a',1,'b2_version():&#160;b2_common.h']]],
-  ['bitsperpixel_5248',['bitsPerPixel',['../classsf_1_1VideoMode.html#aa080f1ef96a1008d58b1920eceb189df',1,'sf::VideoMode']]],
-  ['black_5249',['Black',['../classsf_1_1Color.html#a77c688197b981338f0b19dc58bd2facd',1,'sf::Color']]],
-  ['blendadd_5250',['BlendAdd',['../namespacesf.html#ac2ab8862d3ebcfa0a1d8bb66a0ac869a',1,'sf']]],
-  ['blendalpha_5251',['BlendAlpha',['../namespacesf.html#a51d712b86fe1804b0b242ef02e9eaa79',1,'sf']]],
-  ['blendmax_5252',['BlendMax',['../namespacesf.html#ac1e6a4e98b1ccc7f18573b9a05db483b',1,'sf']]],
-  ['blendmin_5253',['BlendMin',['../namespacesf.html#aa755f1637ce938a977625d67041887ef',1,'sf']]],
-  ['blendmode_5254',['blendMode',['../classsf_1_1RenderStates.html#ad6ac87f1b5006dae7ebfee4b5d40f5a8',1,'sf::RenderStates']]],
-  ['blendmultiply_5255',['BlendMultiply',['../namespacesf.html#aaa126a8074da2eab2bceaed5ab1062b2',1,'sf']]],
-  ['blendnone_5256',['BlendNone',['../namespacesf.html#a97b1ee23d5c481faa0145ee5641e0bdd',1,'sf']]],
-  ['blue_5257',['Blue',['../classsf_1_1Color.html#ab03770d4817426b2614cfc33cf0e245c',1,'sf::Color']]],
-  ['bodya_5258',['bodyA',['../structb2JointDef.html#a592b8e186f5f0d8848ef6b7ce77f0f70',1,'b2JointDef']]],
-  ['bodyb_5259',['bodyB',['../structb2JointDef.html#a3d1a39831332b8c5a41611c06396480a',1,'b2JointDef']]],
-  ['bounds_5260',['bounds',['../classsf_1_1Glyph.html#a6f3c892093167914adc31e52e5923f4b',1,'sf::Glyph']]],
-  ['broadcast_5261',['Broadcast',['../classsf_1_1IpAddress.html#aa93d1d57b65d243f2baf804b6035465c',1,'sf::IpAddress']]],
-  ['bullet_5262',['bullet',['../structb2BodyDef.html#a7c0047c9a98a1d20614eeddcdbce7586',1,'b2BodyDef']]],
-  ['button_5263',['button',['../structsf_1_1Event_1_1JoystickButtonEvent.html#a6412e698a2f7904c5aa875a0d1b34da4',1,'sf::Event::JoystickButtonEvent::button()'],['../structsf_1_1Event_1_1MouseButtonEvent.html#a5f53725aa7b647705486eeb95f723024',1,'sf::Event::MouseButtonEvent::button()']]],
-  ['buttoncount_5264',['buttonCount',['../structsf_1_1priv_1_1JoystickCaps.html#a710f0e3e97fd5137c3f936966f01cec0',1,'sf::priv::JoystickCaps']]],
-  ['buttons_5265',['buttons',['../structsf_1_1priv_1_1JoystickState.html#aeead12919cdd978ec915ac010091577f',1,'sf::priv::JoystickState']]],
-  ['byte_5266',['byte',['../classdetail_1_1parse__error.html#a5bce7d135aa3a38d1d3f4ed7bf8615e1',1,'detail::parse_error']]]
+  ['effecttype_5f_303',['effectType_',['../classBuff.html#aaa6d37484e89b1edb5f3aad7b55daec2',1,'Buff']]]
 ];

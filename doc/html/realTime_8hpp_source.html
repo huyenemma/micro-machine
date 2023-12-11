@@ -85,13 +85,13 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordtype">int</span> duration_;  </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  std::chrono::steady_clock::time_point</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      startTime_;      </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="classsf_1_1Text.html">sf::Text</a> timeText_;  </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="classsf_1_1Text.html">sf::Text</a> player1RoundsText_;  </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="classsf_1_1Text.html">sf::Text</a> player2RoundsText_;  </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  sf::Text timeText_;  </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  sf::Text player1RoundsText_;  </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  sf::Text player2RoundsText_;  </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">int</span> gameMode; <span class="comment">// 1 for one player, 2 for two players</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="classRealTime.html#a2487f9c5a6ce82acb0303fc20676ee92">RealTime</a>(<span class="keywordtype">int</span> duration, <span class="keyword">const</span> <a class="code" href="classsf_1_1Font.html">sf::Font</a>&amp; font, <a class="code" href="classsf_1_1Color.html">sf::Color</a> color = <a class="code" href="classsf_1_1Color.html#a4fd874712178d9e206f53226002aa4ca">sf::Color::White</a>, <a class="code" href="classsf_1_1Vector2.html">sf::Vector2f</a> position = <a class="code" href="classsf_1_1Vector2.html">sf::Vector2f</a>(10, 10));</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="classRealTime.html#a2487f9c5a6ce82acb0303fc20676ee92">RealTime</a>(<span class="keywordtype">int</span> duration, <span class="keyword">const</span> sf::Font&amp; font, sf::Color color = sf::Color::White, sf::Vector2f position = sf::Vector2f(10, 10));</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRealTime.html#a784582df32a01af25c79a1df1efb236e">SetUp</a>();</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
@@ -103,7 +103,7 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRealTime.html#ad728043c8a36251594d14322f541c853">SetPlayerRounds</a>(<span class="keywordtype">int</span> player1Rounds, <span class="keywordtype">int</span> player2Rounds);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRealTime.html#ade60118672b759b0f01ffd29976a6d77">Draw</a>(<a class="code" href="classsf_1_1RenderWindow.html">sf::RenderWindow</a>&amp; window);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRealTime.html#ade60118672b759b0f01ffd29976a6d77">Draw</a>(sf::RenderWindow&amp; window);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// REAL_TIME_HPP</span></div>
@@ -115,12 +115,6 @@ $(function() {
 <div class="ttc" id="aclassRealTime_html_a7c3f8b61bbc355966eeeaf08474df43f"><div class="ttname"><a href="classRealTime.html#a7c3f8b61bbc355966eeeaf08474df43f">RealTime::SetGameMode</a></div><div class="ttdeci">void SetGameMode(int mode)</div><div class="ttdoc">Sets the game mode (1 for one player, 2 for two players).</div><div class="ttdef"><b>Definition:</b> realTime.cpp:39</div></div>
 <div class="ttc" id="aclassRealTime_html_ad728043c8a36251594d14322f541c853"><div class="ttname"><a href="classRealTime.html#ad728043c8a36251594d14322f541c853">RealTime::SetPlayerRounds</a></div><div class="ttdeci">void SetPlayerRounds(int player1Rounds, int player2Rounds)</div><div class="ttdoc">Sets the number of rounds for both players.</div><div class="ttdef"><b>Definition:</b> realTime.cpp:43</div></div>
 <div class="ttc" id="aclassRealTime_html_ade60118672b759b0f01ffd29976a6d77"><div class="ttname"><a href="classRealTime.html#ade60118672b759b0f01ffd29976a6d77">RealTime::Draw</a></div><div class="ttdeci">void Draw(sf::RenderWindow &amp;window)</div><div class="ttdoc">Draws the countdown timer on the provided SFML window.</div><div class="ttdef"><b>Definition:</b> realTime.cpp:66</div></div>
-<div class="ttc" id="aclasssf_1_1Color_html"><div class="ttname"><a href="classsf_1_1Color.html">sf::Color</a></div><div class="ttdoc">Utility class for manipulating RGBA colors.</div><div class="ttdef"><b>Definition:</b> Color.hpp:41</div></div>
-<div class="ttc" id="aclasssf_1_1Color_html_a4fd874712178d9e206f53226002aa4ca"><div class="ttname"><a href="classsf_1_1Color.html#a4fd874712178d9e206f53226002aa4ca">sf::Color::White</a></div><div class="ttdeci">static const Color White</div><div class="ttdoc">White predefined color.</div><div class="ttdef"><b>Definition:</b> Color.hpp:84</div></div>
-<div class="ttc" id="aclasssf_1_1Font_html"><div class="ttname"><a href="classsf_1_1Font.html">sf::Font</a></div><div class="ttdoc">Class for loading and manipulating character fonts.</div><div class="ttdef"><b>Definition:</b> Font.hpp:49</div></div>
-<div class="ttc" id="aclasssf_1_1RenderWindow_html"><div class="ttname"><a href="classsf_1_1RenderWindow.html">sf::RenderWindow</a></div><div class="ttdoc">Window that can serve as a target for 2D drawing.</div><div class="ttdef"><b>Definition:</b> RenderWindow.hpp:45</div></div>
-<div class="ttc" id="aclasssf_1_1Text_html"><div class="ttname"><a href="classsf_1_1Text.html">sf::Text</a></div><div class="ttdoc">Graphical text that can be drawn to a render target.</div><div class="ttdef"><b>Definition:</b> Text.hpp:49</div></div>
-<div class="ttc" id="aclasssf_1_1Vector2_html"><div class="ttname"><a href="classsf_1_1Vector2.html">sf::Vector2&lt; float &gt;</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

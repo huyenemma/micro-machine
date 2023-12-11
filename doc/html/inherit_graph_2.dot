@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="b2AABB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structb2AABB.html",tooltip="An axis aligned bounding box."];
+  Node0 [label="Game",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGame.html",tooltip="Manages the main aspects of the game including rendering, updating, and game state management."];
 }

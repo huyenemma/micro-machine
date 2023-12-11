@@ -12,7 +12,7 @@ A class representing a real-\/time countdown timer.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classRealTime_a2487f9c5a6ce82acb0303fc20676ee92}{Real\+Time}} (int duration, const \mbox{\hyperlink{classsf_1_1Font}{sf\+::\+Font}} \&font, \mbox{\hyperlink{classsf_1_1Color}{sf\+::\+Color}} color=\mbox{\hyperlink{classsf_1_1Color_a4fd874712178d9e206f53226002aa4ca}{sf\+::\+Color\+::\+White}}, \mbox{\hyperlink{classsf_1_1Vector2}{sf\+::\+Vector2f}} position=\mbox{\hyperlink{classsf_1_1Vector2}{sf\+::\+Vector2f}}(10, 10))
+\mbox{\hyperlink{classRealTime_a2487f9c5a6ce82acb0303fc20676ee92}{Real\+Time}} (int duration, const sf\+::\+Font \&font, sf\+::\+Color color=sf\+::\+Color\+::\+White, sf\+::\+Vector2f position=sf\+::\+Vector2f(10, 10))
 \begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classRealTime}{Real\+Time}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classRealTime_a784582df32a01af25c79a1df1efb236e}\label{classRealTime_a784582df32a01af25c79a1df1efb236e}} 
 void \mbox{\hyperlink{classRealTime_a784582df32a01af25c79a1df1efb236e}{Set\+Up}} ()
@@ -25,7 +25,7 @@ void \mbox{\hyperlink{classRealTime_a7c3f8b61bbc355966eeeaf08474df43f}{Set\+Game
 \begin{DoxyCompactList}\small\item\em Sets the game mode (1 for one player, 2 for two players). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRealTime_ad728043c8a36251594d14322f541c853}{Set\+Player\+Rounds}} (int player1\+Rounds, int player2\+Rounds)
 \begin{DoxyCompactList}\small\item\em Sets the number of rounds for both players. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classRealTime_ade60118672b759b0f01ffd29976a6d77}{Draw}} (\mbox{\hyperlink{classsf_1_1RenderWindow}{sf\+::\+Render\+Window}} \&window)
+void \mbox{\hyperlink{classRealTime_ade60118672b759b0f01ffd29976a6d77}{Draw}} (sf\+::\+Render\+Window \&window)
 \begin{DoxyCompactList}\small\item\em Draws the countdown timer on the provided SFML window. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -37,7 +37,7 @@ A class representing a real-\/time countdown timer.
 \index{RealTime@{RealTime}!RealTime@{RealTime}}
 \index{RealTime@{RealTime}!RealTime@{RealTime}}
 \doxysubsubsection{\texorpdfstring{RealTime()}{RealTime()}}
-{\footnotesize\ttfamily Real\+Time\+::\+Real\+Time (\begin{DoxyParamCaption}\item[{int}]{duration,  }\item[{const \mbox{\hyperlink{classsf_1_1Font}{sf\+::\+Font}} \&}]{font,  }\item[{\mbox{\hyperlink{classsf_1_1Color}{sf\+::\+Color}}}]{color = {\ttfamily \mbox{\hyperlink{classsf_1_1Color_a4fd874712178d9e206f53226002aa4ca}{sf\+::\+Color\+::\+White}}},  }\item[{\mbox{\hyperlink{classsf_1_1Vector2}{sf\+::\+Vector2f}}}]{position = {\ttfamily \mbox{\hyperlink{classsf_1_1Vector2}{sf\+::\+Vector2f}}(10,~10)} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Real\+Time\+::\+Real\+Time (\begin{DoxyParamCaption}\item[{int}]{duration,  }\item[{const sf\+::\+Font \&}]{font,  }\item[{sf\+::\+Color}]{color = {\ttfamily sf\+:\+:Color\+:\+:White},  }\item[{sf\+::\+Vector2f}]{position = {\ttfamily sf\+:\+:Vector2f(10,~10)} }\end{DoxyParamCaption})}
 
 
 
@@ -49,7 +49,7 @@ Constructor for \mbox{\hyperlink{classRealTime}{Real\+Time}}.
 \hline
 {\em font} & The font used for rendering the time text. \\
 \hline
-{\em color} & The color of the time text (default is \mbox{\hyperlink{classsf_1_1Color_a4fd874712178d9e206f53226002aa4ca}{sf\+::\+Color\+::\+White}}). \\
+{\em color} & The color of the time text (default is sf\+::\+Color\+::\+White). \\
 \hline
 {\em position} & The position of the time text (default is sf\+::\+Vector2f(10, 10)). \\
 \hline
@@ -61,7 +61,7 @@ Constructor for \mbox{\hyperlink{classRealTime}{Real\+Time}}.
 \index{RealTime@{RealTime}!Draw@{Draw}}
 \index{Draw@{Draw}!RealTime@{RealTime}}
 \doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
-{\footnotesize\ttfamily void Real\+Time\+::\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1RenderWindow}{sf\+::\+Render\+Window}} \&}]{window }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Real\+Time\+::\+Draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
 
 
 

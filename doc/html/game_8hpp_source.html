@@ -97,7 +97,7 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classGame.html">   45</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGame.html">Game</a> {</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="classsf_1_1RenderWindow.html">sf::RenderWindow</a> window_;  </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  sf::RenderWindow window_;  </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="classWorld.html">World</a>* world_;             </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">bool</span> isRunning_;           </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="classResourceManager.html">ResourceManager</a>* resourceManager_; </div>
@@ -107,11 +107,11 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">int</span> playerCount = 1;       </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="classVehicle.html">Vehicle</a>* player1;          </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="classVehicle.html">Vehicle</a>* player2;          </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="classsf_1_1SoundBuffer.html">sf::SoundBuffer</a> backgroundBuffer; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="classsf_1_1Sound.html">sf::Sound</a> background;      </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="classsf_1_1Font.html">sf::Font</a> font;             </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="classsf_1_1SoundBuffer.html">sf::SoundBuffer</a> stepBuffer;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="classsf_1_1Sound.html">sf::Sound</a> step;            </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  sf::SoundBuffer backgroundBuffer; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  sf::Sound background;      </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  sf::Font font;             </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  sf::SoundBuffer stepBuffer;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  sf::Sound step;            </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  GameState currentState_;   </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="classGameMenu.html">GameMenu</a>* menu_;           </div>
@@ -129,15 +129,15 @@ $(function() {
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGame.html#a6cb82eaece4e30724f3fe4e0d4bde5fc">HandleInput</a>();</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGame.html#aa17149666fb2b94c5e17e88f02dda45b">Update</a>(<a class="code" href="classsf_1_1Time.html">sf::Time</a> deltaTime);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGame.html#aa17149666fb2b94c5e17e88f02dda45b">Update</a>(sf::Time deltaTime);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGame.html#afcda66ff4bc8cd397c96f44681f0ee38">AddBoundaries</a>();</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGame.html#a46babebb14545698a18a0cdfb602943f">CreateWall</a>(<span class="keyword">const</span> <a class="code" href="structb2Vec2.html">b2Vec2</a>&amp; position, <span class="keyword">const</span> <a class="code" href="structb2Vec2.html">b2Vec2</a>&amp; size);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGame.html#a46babebb14545698a18a0cdfb602943f">CreateWall</a>(<span class="keyword">const</span> b2Vec2&amp; position, <span class="keyword">const</span> b2Vec2&amp; size);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGame.html#a9b80dfa4b5f77795e3d4b6147cc5564a">RenderGame</a>();</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="classsf_1_1Vector2.html">sf::Vector2f</a> <a class="code" href="classGame.html#a87076906fdbd92abf1a74c0705263bd9">ClampViewCenter</a>(<span class="keyword">const</span> <a class="code" href="classsf_1_1Vector2.html">sf::Vector2f</a>&amp; center, <span class="keyword">const</span> <a class="code" href="classsf_1_1Vector2.html">sf::Vector2f</a>&amp; viewSize, <span class="keyword">const</span> <a class="code" href="classsf_1_1Vector2.html">sf::Vector2f</a>&amp; mapSize);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  sf::Vector2f <a class="code" href="classGame.html#a87076906fdbd92abf1a74c0705263bd9">ClampViewCenter</a>(<span class="keyword">const</span> sf::Vector2f&amp; center, <span class="keyword">const</span> sf::Vector2f&amp; viewSize, <span class="keyword">const</span> sf::Vector2f&amp; mapSize);</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGame.html#a4f14dfeccde2ce26dbbf3780a8ab3a02">DrawGameWorld</a>();</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
@@ -172,15 +172,8 @@ $(function() {
 <div class="ttc" id="aclassVehicle_html"><div class="ttname"><a href="classVehicle.html">Vehicle</a></div><div class="ttdoc">Class representing a simple vehicle in a 2D physics world using Box2D.</div><div class="ttdef"><b>Definition:</b> vehicle.hpp:19</div></div>
 <div class="ttc" id="aclassWinnerBoard_html"><div class="ttname"><a href="classWinnerBoard.html">WinnerBoard</a></div><div class="ttdoc">A class to manage and display the winning screen of the game.</div><div class="ttdef"><b>Definition:</b> winnerBoard.hpp:21</div></div>
 <div class="ttc" id="aclassWorld_html"><div class="ttname"><a href="classWorld.html">World</a></div><div class="ttdoc">Manages the physics world and game entities like vehicles, collectables, and obstacles.</div><div class="ttdef"><b>Definition:</b> world.hpp:26</div></div>
-<div class="ttc" id="aclasssf_1_1Font_html"><div class="ttname"><a href="classsf_1_1Font.html">sf::Font</a></div><div class="ttdoc">Class for loading and manipulating character fonts.</div><div class="ttdef"><b>Definition:</b> Font.hpp:49</div></div>
-<div class="ttc" id="aclasssf_1_1RenderWindow_html"><div class="ttname"><a href="classsf_1_1RenderWindow.html">sf::RenderWindow</a></div><div class="ttdoc">Window that can serve as a target for 2D drawing.</div><div class="ttdef"><b>Definition:</b> RenderWindow.hpp:45</div></div>
-<div class="ttc" id="aclasssf_1_1SoundBuffer_html"><div class="ttname"><a href="classsf_1_1SoundBuffer.html">sf::SoundBuffer</a></div><div class="ttdoc">Storage for audio samples defining a sound.</div><div class="ttdef"><b>Definition:</b> SoundBuffer.hpp:50</div></div>
-<div class="ttc" id="aclasssf_1_1Sound_html"><div class="ttname"><a href="classsf_1_1Sound.html">sf::Sound</a></div><div class="ttdoc">Regular sound that can be played in the audio environment.</div><div class="ttdef"><b>Definition:</b> Sound.hpp:46</div></div>
-<div class="ttc" id="aclasssf_1_1Time_html"><div class="ttname"><a href="classsf_1_1Time.html">sf::Time</a></div><div class="ttdoc">Represents a time value.</div><div class="ttdef"><b>Definition:</b> Time.hpp:41</div></div>
-<div class="ttc" id="aclasssf_1_1Vector2_html"><div class="ttname"><a href="classsf_1_1Vector2.html">sf::Vector2&lt; float &gt;</a></div></div>
 <div class="ttc" id="amenu2_8hpp_html"><div class="ttname"><a href="menu2_8hpp.html">menu2.hpp</a></div><div class="ttdoc">GameMenu2 class header.</div></div>
 <div class="ttc" id="amenu_8hpp_html"><div class="ttname"><a href="menu_8hpp.html">menu.hpp</a></div><div class="ttdoc">GameMenu class header.</div></div>
-<div class="ttc" id="astructb2Vec2_html"><div class="ttname"><a href="structb2Vec2.html">b2Vec2</a></div><div class="ttdoc">A 2D column vector.</div><div class="ttdef"><b>Definition:</b> b2_math.h:42</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

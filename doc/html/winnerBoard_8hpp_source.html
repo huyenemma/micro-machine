@@ -81,14 +81,14 @@ $(function() {
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classWinnerBoard.html#a3c272cc962c0a6765630c3a81c1eeff1">   27</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="classWinnerBoard.html#a3c272cc962c0a6765630c3a81c1eeff1">MenuOption</a> { REPLAY, EXIT, NUM_ITEMS };</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classWinnerBoard.html#a003751ac71d0b372310e92db0d8df410">WinnerBoard</a>(<a class="code" href="classsf_1_1RenderWindow.html">sf::RenderWindow</a>&amp; window, <span class="keyword">const</span> <a class="code" href="classsf_1_1Font.html">sf::Font</a>&amp; font, <span class="keyword">const</span> <a class="code" href="classsf_1_1Texture.html">sf::Texture</a>&amp; texture);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classWinnerBoard.html#a003751ac71d0b372310e92db0d8df410">WinnerBoard</a>(sf::RenderWindow&amp; window, <span class="keyword">const</span> sf::Font&amp; font, <span class="keyword">const</span> sf::Texture&amp; texture);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classWinnerBoard.html#aa55a9c93392b4bdae31e0f21bc25b02f">SetWinner</a>(<span class="keywordtype">int</span> playerNumber);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classWinnerBoard.html#a346569108e3ffc105fe6f0491e2c1ba2">draw</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">private</span>: </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="classsf_1_1Text.html">sf::Text</a> text_; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    sf::Text text_; </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WINNERBOARD_H</span></div>
@@ -98,10 +98,6 @@ $(function() {
 <div class="ttc" id="aclassWinnerBoard_html_a346569108e3ffc105fe6f0491e2c1ba2"><div class="ttname"><a href="classWinnerBoard.html#a346569108e3ffc105fe6f0491e2c1ba2">WinnerBoard::draw</a></div><div class="ttdeci">void draw() override</div><div class="ttdoc">Draws the winner board on the screen.</div><div class="ttdef"><b>Definition:</b> winnerBoard.cpp:47</div></div>
 <div class="ttc" id="aclassWinnerBoard_html_a3c272cc962c0a6765630c3a81c1eeff1"><div class="ttname"><a href="classWinnerBoard.html#a3c272cc962c0a6765630c3a81c1eeff1">WinnerBoard::MenuOption</a></div><div class="ttdeci">MenuOption</div><div class="ttdoc">Menu options for the WinnerBoard.</div><div class="ttdef"><b>Definition:</b> winnerBoard.hpp:27</div></div>
 <div class="ttc" id="aclassWinnerBoard_html_aa55a9c93392b4bdae31e0f21bc25b02f"><div class="ttname"><a href="classWinnerBoard.html#aa55a9c93392b4bdae31e0f21bc25b02f">WinnerBoard::SetWinner</a></div><div class="ttdeci">void SetWinner(int playerNumber)</div><div class="ttdoc">Sets the winner's information.</div><div class="ttdef"><b>Definition:</b> winnerBoard.cpp:34</div></div>
-<div class="ttc" id="aclasssf_1_1Font_html"><div class="ttname"><a href="classsf_1_1Font.html">sf::Font</a></div><div class="ttdoc">Class for loading and manipulating character fonts.</div><div class="ttdef"><b>Definition:</b> Font.hpp:49</div></div>
-<div class="ttc" id="aclasssf_1_1RenderWindow_html"><div class="ttname"><a href="classsf_1_1RenderWindow.html">sf::RenderWindow</a></div><div class="ttdoc">Window that can serve as a target for 2D drawing.</div><div class="ttdef"><b>Definition:</b> RenderWindow.hpp:45</div></div>
-<div class="ttc" id="aclasssf_1_1Text_html"><div class="ttname"><a href="classsf_1_1Text.html">sf::Text</a></div><div class="ttdoc">Graphical text that can be drawn to a render target.</div><div class="ttdef"><b>Definition:</b> Text.hpp:49</div></div>
-<div class="ttc" id="aclasssf_1_1Texture_html"><div class="ttname"><a href="classsf_1_1Texture.html">sf::Texture</a></div><div class="ttdoc">Image living on the graphics card that can be used for drawing.</div><div class="ttdef"><b>Definition:</b> Texture.hpp:49</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -20,19 +20,19 @@ Manages game resources including images, fonts, and sounds.
 \begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classResourceManager}{Resource\+Manager}} object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classResourceManager_a3a9919818b58afaeaa718afbf997d602}{Load\+Image}} (const std\+::string \&key, const std\+::string \&filename)
 \begin{DoxyCompactList}\small\item\em Loads an image from a file and stores it with a given key. \end{DoxyCompactList}\item 
-const \mbox{\hyperlink{classsf_1_1Texture}{sf\+::\+Texture}} \& \mbox{\hyperlink{classResourceManager_af86ccda03f5fdcfd2f3d4985624ca017}{Get\+Image}} (const std\+::string \&key) const
+const sf\+::\+Texture \& \mbox{\hyperlink{classResourceManager_af86ccda03f5fdcfd2f3d4985624ca017}{Get\+Image}} (const std\+::string \&key) const
 \begin{DoxyCompactList}\small\item\em Retrieves an image resource by its key. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classResourceManager_a7630ca2b5f3f8404be32adc30e77c285}{Load\+Font}} (const std\+::string \&key, const std\+::string \&filename)
 \begin{DoxyCompactList}\small\item\em Loads a font from a file and stores it with a given key. \end{DoxyCompactList}\item 
-const \mbox{\hyperlink{classsf_1_1Font}{sf\+::\+Font}} \& \mbox{\hyperlink{classResourceManager_a38e715e7ec740fd798108e5bd2b21cd1}{Get\+Font}} (const std\+::string \&key) const
+const sf\+::\+Font \& \mbox{\hyperlink{classResourceManager_a38e715e7ec740fd798108e5bd2b21cd1}{Get\+Font}} (const std\+::string \&key) const
 \begin{DoxyCompactList}\small\item\em Retrieves a font resource by its key. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classResourceManager_aefab4e2aa09e84c32a177254c4b114c6}{Load\+Sound\+Background}} (const std\+::string \&key, const std\+::string \&filename)
 \begin{DoxyCompactList}\small\item\em Loads a background sound from a file and stores it with a given key. \end{DoxyCompactList}\item 
-const \mbox{\hyperlink{classsf_1_1SoundBuffer}{sf\+::\+Sound\+Buffer}} \& \mbox{\hyperlink{classResourceManager_a0f9add55ac1a04312da3ade7050f8045}{Get\+Sound\+Background}} (const std\+::string \&key) const
+const sf\+::\+Sound\+Buffer \& \mbox{\hyperlink{classResourceManager_a0f9add55ac1a04312da3ade7050f8045}{Get\+Sound\+Background}} (const std\+::string \&key) const
 \begin{DoxyCompactList}\small\item\em Retrieves a background sound resource by its key. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classResourceManager_aa6cbafc3605d201873a72d63c8019b1c}{Load\+Sound\+Step}} (const std\+::string \&key, const std\+::string \&filename)
 \begin{DoxyCompactList}\small\item\em Loads a step sound from a file and stores it with a given key. \end{DoxyCompactList}\item 
-const \mbox{\hyperlink{classsf_1_1SoundBuffer}{sf\+::\+Sound\+Buffer}} \& \mbox{\hyperlink{classResourceManager_a31e3384c64733c32e95e7de97e5fedd4}{Get\+Sound\+Step}} (const std\+::string \&key) const
+const sf\+::\+Sound\+Buffer \& \mbox{\hyperlink{classResourceManager_a31e3384c64733c32e95e7de97e5fedd4}{Get\+Sound\+Step}} (const std\+::string \&key) const
 \begin{DoxyCompactList}\small\item\em Retrieves a step sound resource by its key. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classResourceManager_a976d958038b8766064685f3cb64b6f7f}{Load\+From\+Json}} (const std\+::string \&json\+File\+Path)
 \begin{DoxyCompactList}\small\item\em Loads resources defined in a JSON configuration file. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -48,7 +48,7 @@ The \mbox{\hyperlink{classResourceManager}{Resource\+Manager}} class is responsi
 \index{ResourceManager@{ResourceManager}!GetFont@{GetFont}}
 \index{GetFont@{GetFont}!ResourceManager@{ResourceManager}}
 \doxysubsubsection{\texorpdfstring{GetFont()}{GetFont()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{classsf_1_1Font}{sf\+::\+Font}} \& Resource\+Manager\+::\+Get\+Font (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily const sf\+::\+Font \& Resource\+Manager\+::\+Get\+Font (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const}
 
 
 
@@ -60,13 +60,13 @@ Retrieves a font resource by its key.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A reference to the \mbox{\hyperlink{classsf_1_1Font}{sf\+::\+Font}} object. 
+A reference to the sf\+::\+Font object. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classResourceManager_af86ccda03f5fdcfd2f3d4985624ca017}\label{classResourceManager_af86ccda03f5fdcfd2f3d4985624ca017}} 
 \index{ResourceManager@{ResourceManager}!GetImage@{GetImage}}
 \index{GetImage@{GetImage}!ResourceManager@{ResourceManager}}
 \doxysubsubsection{\texorpdfstring{GetImage()}{GetImage()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{classsf_1_1Texture}{sf\+::\+Texture}} \& Resource\+Manager\+::\+Get\+Image (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily const sf\+::\+Texture \& Resource\+Manager\+::\+Get\+Image (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const}
 
 
 
@@ -78,13 +78,13 @@ Retrieves an image resource by its key.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A reference to the \mbox{\hyperlink{classsf_1_1Texture}{sf\+::\+Texture}} object. 
+A reference to the sf\+::\+Texture object. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classResourceManager_a0f9add55ac1a04312da3ade7050f8045}\label{classResourceManager_a0f9add55ac1a04312da3ade7050f8045}} 
 \index{ResourceManager@{ResourceManager}!GetSoundBackground@{GetSoundBackground}}
 \index{GetSoundBackground@{GetSoundBackground}!ResourceManager@{ResourceManager}}
 \doxysubsubsection{\texorpdfstring{GetSoundBackground()}{GetSoundBackground()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{classsf_1_1SoundBuffer}{sf\+::\+Sound\+Buffer}} \& Resource\+Manager\+::\+Get\+Sound\+Background (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily const sf\+::\+Sound\+Buffer \& Resource\+Manager\+::\+Get\+Sound\+Background (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const}
 
 
 
@@ -96,13 +96,13 @@ Retrieves a background sound resource by its key.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A reference to the \mbox{\hyperlink{classsf_1_1SoundBuffer}{sf\+::\+Sound\+Buffer}} object. 
+A reference to the sf\+::\+Sound\+Buffer object. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classResourceManager_a31e3384c64733c32e95e7de97e5fedd4}\label{classResourceManager_a31e3384c64733c32e95e7de97e5fedd4}} 
 \index{ResourceManager@{ResourceManager}!GetSoundStep@{GetSoundStep}}
 \index{GetSoundStep@{GetSoundStep}!ResourceManager@{ResourceManager}}
 \doxysubsubsection{\texorpdfstring{GetSoundStep()}{GetSoundStep()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{classsf_1_1SoundBuffer}{sf\+::\+Sound\+Buffer}} \& Resource\+Manager\+::\+Get\+Sound\+Step (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily const sf\+::\+Sound\+Buffer \& Resource\+Manager\+::\+Get\+Sound\+Step (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const}
 
 
 
@@ -114,7 +114,7 @@ Retrieves a step sound resource by its key.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A reference to the \mbox{\hyperlink{classsf_1_1SoundBuffer}{sf\+::\+Sound\+Buffer}} object. 
+A reference to the sf\+::\+Sound\+Buffer object. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classResourceManager_a7630ca2b5f3f8404be32adc30e77c285}\label{classResourceManager_a7630ca2b5f3f8404be32adc30e77c285}} 
 \index{ResourceManager@{ResourceManager}!LoadFont@{LoadFont}}

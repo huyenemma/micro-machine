@@ -20,7 +20,7 @@ Collaboration diagram for Collectable\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classCollectable_aa1dbd414af814abf30980deea2e534e7}{Collectable}} (\mbox{\hyperlink{classb2World}{b2\+World}} $\ast$world, \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} position, float radius, \mbox{\hyperlink{classBuff}{Buff}} $\ast$buff, const \mbox{\hyperlink{classsf_1_1Texture}{sf\+::\+Texture}} \&texture)
+\mbox{\hyperlink{classCollectable_aa1dbd414af814abf30980deea2e534e7}{Collectable}} (b2\+World $\ast$world, b2\+Vec2 position, float radius, \mbox{\hyperlink{classBuff}{Buff}} $\ast$buff, const sf\+::\+Texture \&texture)
 \begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classCollectable}{Collectable}} object. \end{DoxyCompactList}\item 
 std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classCollectable_a01482701fea1a9015c680706322857e0}{Get\+Position}} () const
 \begin{DoxyCompactList}\small\item\em Gets the current position of the collectable. \end{DoxyCompactList}\item 
@@ -38,22 +38,21 @@ bool \mbox{\hyperlink{classCollectable_adb014d060a0a5403847f0a10776228e0}{get\+D
 \begin{DoxyCompactList}\small\item\em Gets the delete status of the collectable. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCollectable_a8b3a99caf6e0cce8c1a8f35b36b56f7e}{On\+Contact}} (\mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$car)
 \begin{DoxyCompactList}\small\item\em Handles the contact event with a \mbox{\hyperlink{classVehicle}{Vehicle}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classCollectable_afc5ab7814827e323a03544ea9b9f390f}{draw}} (\mbox{\hyperlink{classsf_1_1RenderTarget}{sf\+::\+Render\+Target}} \&target, \mbox{\hyperlink{classsf_1_1RenderStates}{sf\+::\+Render\+States}} states) const
+void \mbox{\hyperlink{classCollectable_afc5ab7814827e323a03544ea9b9f390f}{draw}} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const
 \begin{DoxyCompactList}\small\item\em Draws the collectable on the target. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
 Represents a collectable item in the game. 
 
-Inherits from \mbox{\hyperlink{classsf_1_1Drawable}{sf\+::\+Drawable}} and provides functionality for handling collectables. 
+Inherits from sf\+::\+Drawable and provides functionality for handling collectables. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classCollectable_aa1dbd414af814abf30980deea2e534e7}\label{classCollectable_aa1dbd414af814abf30980deea2e534e7}} 
 \index{Collectable@{Collectable}!Collectable@{Collectable}}
 \index{Collectable@{Collectable}!Collectable@{Collectable}}
 \doxysubsubsection{\texorpdfstring{Collectable()}{Collectable()}}
-{\footnotesize\ttfamily Collectable\+::\+Collectable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classb2World}{b2\+World}} $\ast$}]{world,  }\item[{\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}}}]{position,  }\item[{float}]{radius,  }\item[{\mbox{\hyperlink{classBuff}{Buff}} $\ast$}]{buff,  }\item[{const \mbox{\hyperlink{classsf_1_1Texture}{sf\+::\+Texture}} \&}]{texture }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Collectable\+::\+Collectable (\begin{DoxyParamCaption}\item[{b2\+World $\ast$}]{world,  }\item[{b2\+Vec2}]{position,  }\item[{float}]{radius,  }\item[{\mbox{\hyperlink{classBuff}{Buff}} $\ast$}]{buff,  }\item[{const sf\+::\+Texture \&}]{texture }\end{DoxyParamCaption})}
 
 
 
@@ -79,7 +78,7 @@ Constructs a \mbox{\hyperlink{classCollectable}{Collectable}} object.
 \index{Collectable@{Collectable}!draw@{draw}}
 \index{draw@{draw}!Collectable@{Collectable}}
 \doxysubsubsection{\texorpdfstring{draw()}{draw()}}
-{\footnotesize\ttfamily void Collectable\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1RenderTarget}{sf\+::\+Render\+Target}} \&}]{target,  }\item[{\mbox{\hyperlink{classsf_1_1RenderStates}{sf\+::\+Render\+States}}}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Collectable\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const}
 
 
 
@@ -92,10 +91,6 @@ Draws the collectable on the target.
 {\em states} & The rendering states. \\
 \hline
 \end{DoxyParams}
-
-
-Implements \mbox{\hyperlink{classsf_1_1Drawable_a90d2c88bba9b035a0844eccb380ef631}{sf\+::\+Drawable}}.
-
 \mbox{\Hypertarget{classCollectable_adb014d060a0a5403847f0a10776228e0}\label{classCollectable_adb014d060a0a5403847f0a10776228e0}} 
 \index{Collectable@{Collectable}!getDelete@{getDelete}}
 \index{getDelete@{getDelete}!Collectable@{Collectable}}

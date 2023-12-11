@@ -84,9 +84,9 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceBodyType.html">BodyType</a>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classObstacle.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classObstacle.html">Obstacle</a> : <span class="keyword">public</span> <a class="code" href="classsf_1_1Drawable.html">sf::Drawable</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classObstacle.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classObstacle.html">Obstacle</a> : <span class="keyword">public</span> sf::Drawable {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="classObstacle.html">Obstacle</a>(<a class="code" href="classb2World.html">b2World</a>* world, <a class="code" href="structb2Vec2.html">b2Vec2</a> position, <span class="keywordtype">float</span> radius, <span class="keyword">const</span> <a class="code" href="classsf_1_1Texture.html">sf::Texture</a>&amp; texture);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="classObstacle.html">Obstacle</a>(b2World* world, b2Vec2 position, <span class="keywordtype">float</span> radius, <span class="keyword">const</span> sf::Texture&amp; texture);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  std::pair&lt;float, float&gt; GetPosition() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
@@ -96,35 +96,25 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">bool</span> IsNullBody();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">void</span> draw(<a class="code" href="classsf_1_1RenderTarget.html">sf::RenderTarget</a>&amp; target, <a class="code" href="classsf_1_1RenderStates.html">sf::RenderStates</a> states) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">void</span> draw(sf::RenderTarget&amp; target, sf::RenderStates states) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">void</span> OnContact(<a class="code" href="classVehicle.html">Vehicle</a>* car);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">mutable</span> <a class="code" href="classsf_1_1Sprite.html">sf::Sprite</a> sprite_; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="classsf_1_1Texture.html">sf::Texture</a> texture_;       </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">mutable</span> sf::Sprite sprite_; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  sf::Texture texture_;       </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="classb2Body.html">b2Body</a>* body;   </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  b2Body* body;   </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordtype">float</span> radius_;  </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="code" href="classsf_1_1SoundBuffer.html">sf::SoundBuffer</a> hitBuffer; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="classsf_1_1Sound.html">sf::Sound</a> hit;            </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  sf::SoundBuffer hitBuffer; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  sf::Sound hit;            </div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassObstacle_html"><div class="ttname"><a href="classObstacle.html">Obstacle</a></div><div class="ttdoc">Class representing an Obstacle that can interact with vehicles.</div><div class="ttdef"><b>Definition:</b> obstacle.hpp:18</div></div>
 <div class="ttc" id="aclassVehicle_html"><div class="ttname"><a href="classVehicle.html">Vehicle</a></div><div class="ttdoc">Class representing a simple vehicle in a 2D physics world using Box2D.</div><div class="ttdef"><b>Definition:</b> vehicle.hpp:19</div></div>
-<div class="ttc" id="aclassb2Body_html"><div class="ttname"><a href="classb2Body.html">b2Body</a></div><div class="ttdoc">A rigid body. These are created via b2World::CreateBody.</div><div class="ttdef"><b>Definition:</b> b2_body.h:129</div></div>
-<div class="ttc" id="aclassb2World_html"><div class="ttname"><a href="classb2World.html">b2World</a></div><div class="ttdef"><b>Definition:</b> b2_world.h:47</div></div>
-<div class="ttc" id="aclasssf_1_1Drawable_html"><div class="ttname"><a href="classsf_1_1Drawable.html">sf::Drawable</a></div><div class="ttdoc">Abstract base class for objects that can be drawn to a render target.</div><div class="ttdef"><b>Definition:</b> Drawable.hpp:45</div></div>
-<div class="ttc" id="aclasssf_1_1RenderStates_html"><div class="ttname"><a href="classsf_1_1RenderStates.html">sf::RenderStates</a></div><div class="ttdoc">Define the states used for drawing to a RenderTarget.</div><div class="ttdef"><b>Definition:</b> RenderStates.hpp:46</div></div>
-<div class="ttc" id="aclasssf_1_1RenderTarget_html"><div class="ttname"><a href="classsf_1_1RenderTarget.html">sf::RenderTarget</a></div><div class="ttdoc">Base class for all render targets (window, texture, ...)</div><div class="ttdef"><b>Definition:</b> RenderTarget.hpp:53</div></div>
-<div class="ttc" id="aclasssf_1_1SoundBuffer_html"><div class="ttname"><a href="classsf_1_1SoundBuffer.html">sf::SoundBuffer</a></div><div class="ttdoc">Storage for audio samples defining a sound.</div><div class="ttdef"><b>Definition:</b> SoundBuffer.hpp:50</div></div>
-<div class="ttc" id="aclasssf_1_1Sound_html"><div class="ttname"><a href="classsf_1_1Sound.html">sf::Sound</a></div><div class="ttdoc">Regular sound that can be played in the audio environment.</div><div class="ttdef"><b>Definition:</b> Sound.hpp:46</div></div>
-<div class="ttc" id="aclasssf_1_1Sprite_html"><div class="ttname"><a href="classsf_1_1Sprite.html">sf::Sprite</a></div><div class="ttdoc">Drawable representation of a texture, with its own transformations, color, etc.</div><div class="ttdef"><b>Definition:</b> Sprite.hpp:48</div></div>
-<div class="ttc" id="aclasssf_1_1Texture_html"><div class="ttname"><a href="classsf_1_1Texture.html">sf::Texture</a></div><div class="ttdoc">Image living on the graphics card that can be used for drawing.</div><div class="ttdef"><b>Definition:</b> Texture.hpp:49</div></div>
 <div class="ttc" id="anamespaceBodyType_html"><div class="ttname"><a href="namespaceBodyType.html">BodyType</a></div><div class="ttdoc">Provides functions to check the type of user data.</div></div>
-<div class="ttc" id="astructb2Vec2_html"><div class="ttname"><a href="structb2Vec2.html">b2Vec2</a></div><div class="ttdoc">A 2D column vector.</div><div class="ttdef"><b>Definition:</b> b2_math.h:42</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

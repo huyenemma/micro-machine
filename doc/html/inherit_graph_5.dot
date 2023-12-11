@@ -4,5 +4,9 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="b2BodyDef",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structb2BodyDef.html",tooltip=" "];
+  Node0 [label="OutsideArea",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOutsideArea.html",tooltip="Represents areas outside the main playable region in the game."];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="CheckPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCheckPoint.html",tooltip="Represents a checkpoint in the game world."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="StartLine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classStartLine.html",tooltip="Represents the starting line and manages checkpoints in the game."];
 }

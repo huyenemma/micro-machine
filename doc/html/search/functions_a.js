@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['joystickimpl_4532',['JoystickImpl',['../classsf_1_1priv_1_1JoystickImpl.html#ab175935d03c985d006030f213bf3eaa9',1,'sf::priv::JoystickImpl']]],
-  ['json_5fhedley_5fdeprecated_5ffor_4533',['JSON_HEDLEY_DEPRECATED_FOR',['../classbasic__json.html#a29c1ab02ab3b9d508d3aab74f07d12de',1,'basic_json::JSON_HEDLEY_DEPRECATED_FOR(3.11.0, basic_json::json_pointer or nlohmann::json_pointer&lt; basic_json::string_t &gt;) ValueType value(const'],['../classbasic__json.html#a9bbd9e1d431316722cf550ffec328d39',1,'basic_json::JSON_HEDLEY_DEPRECATED_FOR(3.11.0, basic_json::json_pointer or nlohmann::json_pointer&lt; basic_json::string_t &gt;) const _reference operator[](const']]],
-  ['json_5fpointer_4534',['json_pointer',['../classjson__pointer.html#a5288b8f5d6ff6faca37f664b98a16ecd',1,'json_pointer']]],
-  ['json_5freverse_5fiterator_4535',['json_reverse_iterator',['../classdetail_1_1json__reverse__iterator.html#ad0012dca9469c2d5669ca2e446c8957d',1,'detail::json_reverse_iterator::json_reverse_iterator(const typename base_iterator::iterator_type &amp;it) noexcept'],['../classdetail_1_1json__reverse__iterator.html#a95ef832171f9aba019f284125bed75ca',1,'detail::json_reverse_iterator::json_reverse_iterator(const base_iterator &amp;it) noexcept']]],
-  ['json_5fsax_5fdom_5fparser_4536',['json_sax_dom_parser',['../classdetail_1_1json__sax__dom__parser.html#a3ee72f78d1ebdd8f8573ccf2b8e3ea6f',1,'detail::json_sax_dom_parser']]]
+  ['obstacle_249',['Obstacle',['../classObstacle.html#a5f4d131d2ac8b07605b59cd4d8ab3a34',1,'Obstacle']]],
+  ['oncontact_250',['OnContact',['../classCheckPoint.html#ae88b34b3982e2cc7eab498f615d14c61',1,'CheckPoint::OnContact()'],['../classStartLine.html#ac5f6333b2d88790654205688018c46fd',1,'StartLine::OnContact()'],['../classCollectable.html#a8b3a99caf6e0cce8c1a8f35b36b56f7e',1,'Collectable::OnContact()'],['../classObstacle.html#a34cb80ce6ac38dfb354561b43903984a',1,'Obstacle::OnContact()'],['../classOutsideArea.html#ae220dff44f61293f447f9df745a54b15',1,'OutsideArea::OnContact(Vehicle *car)']]],
+  ['outsidearea_251',['OutsideArea',['../classOutsideArea.html#aba6112f1339f4a5b944b7ec4b12fd389',1,'OutsideArea']]],
+  ['ox_252',['Ox',['../classOx.html#a182d746b5b23bd568bf78302baade444',1,'Ox']]],
+  ['oxsuperskillbuff_253',['OxSuperSkillBuff',['../classPositiveBuff_1_1OxSuperSkillBuff.html#af5e8b278fd092d82c17752654ad4c4ce',1,'PositiveBuff::OxSuperSkillBuff']]]
 ];

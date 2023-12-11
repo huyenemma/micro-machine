@@ -12,7 +12,7 @@ Manages the physics world and game entities like vehicles, collectables, and obs
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classWorld_a11fdbac5f23f5f8512754f145626d80e}{World}} (\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} gravity)
+\mbox{\hyperlink{classWorld_a11fdbac5f23f5f8512754f145626d80e}{World}} (b2\+Vec2 gravity)
 \begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classWorld}{World}} object with a given gravity. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classWorld_a8c73fba541a5817fff65147ba47cd827}\label{classWorld_a8c73fba541a5817fff65147ba47cd827}} 
 \mbox{\hyperlink{classWorld_a8c73fba541a5817fff65147ba47cd827}{$\sim$\+World}} ()
@@ -35,7 +35,7 @@ int \mbox{\hyperlink{classWorld_aab24081c216805160cdfa8fde3861d3a}{Get\+Point}} 
 \begin{DoxyCompactList}\small\item\em Gets the points scored by a specific vehicle. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classWorld_a7add78cdf925d123efb7e59632b9510b}{Have\+Any\+One\+Win}} ()
 \begin{DoxyCompactList}\small\item\em Checks if any vehicle has won the game. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classb2World}{b2\+World}} $\ast$ \mbox{\hyperlink{classWorld_a2f5836de1484aaa656dbae95573db098}{Get\+Physic\+World}} () const
+b2\+World $\ast$ \mbox{\hyperlink{classWorld_a2f5836de1484aaa656dbae95573db098}{Get\+Physic\+World}} () const
 \begin{DoxyCompactList}\small\item\em Gets the physics world. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$ $>$ \& \mbox{\hyperlink{classWorld_a6f3328f70eee2e0da1450ce3b24902c3}{Get\+Vehicle}} ()
 \begin{DoxyCompactList}\small\item\em Gets the list of vehicles in the world. \end{DoxyCompactList}\item 
@@ -55,7 +55,7 @@ The \mbox{\hyperlink{classWorld}{World}} class is responsible for updating the p
 \index{World@{World}!World@{World}}
 \index{World@{World}!World@{World}}
 \doxysubsubsection{\texorpdfstring{World()}{World()}}
-{\footnotesize\ttfamily World\+::\+World (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}}}]{gravity }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily World\+::\+World (\begin{DoxyParamCaption}\item[{b2\+Vec2}]{gravity }\end{DoxyParamCaption})}
 
 
 
@@ -144,7 +144,7 @@ Reference to the vector of obstacles.
 \index{World@{World}!GetPhysicWorld@{GetPhysicWorld}}
 \index{GetPhysicWorld@{GetPhysicWorld}!World@{World}}
 \doxysubsubsection{\texorpdfstring{GetPhysicWorld()}{GetPhysicWorld()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classb2World}{b2\+World}} $\ast$ World\+::\+Get\+Physic\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily b2\+World $\ast$ World\+::\+Get\+Physic\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
