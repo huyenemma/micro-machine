@@ -73,6 +73,7 @@ private:
  * The StartLine class extends CheckPoint and adds functionality to manage
  * multiple checkpoints in the game, tracking the progress of vehicles through these checkpoints.
  */
+
 class StartLine : public CheckPoint {
  public:
     /**
