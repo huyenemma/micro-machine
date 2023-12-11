@@ -129,19 +129,19 @@ void Game::Initialize() {
     startLine->AddCheckPoint(checkPoint2);
     world_->SetRacingTrack(startLine);
 
-    // // add background sound
-    // backgroundBuffer = resourceManager_->GetSoundBackground("grass");
+    // add background sound
+    backgroundBuffer = resourceManager_->GetSoundBackground("grass");
 
-    // background.setBuffer(backgroundBuffer);
-    // background.setLoop(true);
-    // background.setVolume(50);
-    // background.play();
+    background.setBuffer(backgroundBuffer);
+    background.setLoop(true);
+    background.setVolume(50);
+    background.play();
 
-    // // Set sound effect
-    // stepBuffer = resourceManager_->GetSoundStep("grass");
+    // Set sound effect
+    stepBuffer = resourceManager_->GetSoundStep("grass");
 
-    // step.setBuffer(stepBuffer);
-    // step.setVolume(40);
+    step.setBuffer(stepBuffer);
+    step.setVolume(40);
   }
 
   else {
@@ -182,30 +182,30 @@ void Game::Initialize() {
         100.0f / SCALE, 100.0f / SCALE);
     StartLine *startLine = new StartLine(world_->GetPhysicWorld(),
                                          b2Vec2(220.0f / SCALE, 280.f / SCALE),
-                                         20.0f / SCALE, 20.0f / SCALE);
+                                         20.0f / SCALE, 40.0f / SCALE);
     CheckPoint *checkPoint1 = new CheckPoint(
-        world_->GetPhysicWorld(), b2Vec2(685.0f / SCALE, 120.0f / SCALE),
-        100.0f / SCALE, 100.0f / SCALE);
+        world_->GetPhysicWorld(), b2Vec2(600.0f / SCALE, 170.0f / SCALE),
+        100.0f / SCALE, 200.0f / SCALE);
     CheckPoint *checkPoint2 = new CheckPoint(
         world_->GetPhysicWorld(), b2Vec2(200.0f / SCALE, 650.0f / SCALE),
-        50.0f / SCALE, 50.0f / SCALE);
+        200.0f / SCALE, 100.0f / SCALE);
     startLine->AddCheckPoint(checkPoint1);
     startLine->AddCheckPoint(checkPoint2);
     world_->SetRacingTrack(startLine);
 
-    // // add background sound
-    // backgroundBuffer = resourceManager_->GetSoundBackground("ocean");
+    // add background sound
+    backgroundBuffer = resourceManager_->GetSoundBackground("ocean");
 
-    // background.setBuffer(backgroundBuffer);
-    // background.setLoop(true);
-    // background.setVolume(50);
-    // background.play();
+    background.setBuffer(backgroundBuffer);
+    background.setLoop(true);
+    background.setVolume(50);
+    background.play();
 
-    // // Set sound effect
-    // stepBuffer = resourceManager_->GetSoundStep("ocean");
+    // Set sound effect
+    stepBuffer = resourceManager_->GetSoundStep("ocean");
 
-    // step.setBuffer(stepBuffer);
-    // step.setVolume(40);
+    step.setBuffer(stepBuffer);
+    step.setVolume(40);
   }
   AddBoundaries();
 }
