@@ -3,8 +3,7 @@
 Game::Game()
     : window_(sf::VideoMode(800, 800), "Micro machine"),
       isRunning_(false),
-      currentState_(GameState::MENU)
-{
+      currentState_(GameState::MENU) {
   resourceManager_ = new ResourceManager();
   resourceManager_->LoadFromJson("../src/resources.json");
   font = resourceManager_->GetFont("clockFont");
@@ -17,8 +16,7 @@ Game::Game()
   winnerBoard_ = new WinnerBoard(window_, font, wintexture);
 };
 
-Game::~Game()
-{
+Game::~Game() {
   delete world_;
   delete resourceManager_;
   delete counterClock_;
@@ -31,16 +29,13 @@ Game::~Game()
 using namespace NegativeBuff;
 using namespace PositiveBuff;
 
-void Game::Initialize()
-{
-
+void Game::Initialize() {
   world_ = new World(b2Vec2(0.0f, 0.0f));
   const sf::Font &font = resourceManager_->GetFont("clockFont");
   counterClock_ =
       new RealTime(15, font, sf::Color::White, sf::Vector2f(330, 10));
   counterClock_->SetUp();
-  if (playerCount == 2)
-  {
+  if (playerCount == 2) {
     counterClock_->SetGameMode(2);
   };
 
@@ -50,33 +45,28 @@ void Game::Initialize()
   const sf::Texture &oxTexture = resourceManager_->GetImage("buffalo");
 
   // Setting vehicles
-  if (map == "forest")
-  {
+  if (map == "forest") {
     Ox *ox = new Ox(world_->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE,
                     oxTexture);
 
     world_->AddVehicle(ox);
     player1 = ox;
 
-    if (playerCount == 2)
-    {
+    if (playerCount == 2) {
       const sf::Texture &goatTexture = resourceManager_->GetImage("goat");
       Ox *ox2 = new Ox(world_->GetPhysicWorld(), 200.0f / SCALE, 120.0f / SCALE,
                        goatTexture);
       world_->AddVehicle(ox2);
       player2 = ox2;
     }
-  }
-  else
-  {
+  } else {
     Ox *ox = new Ox(world_->GetPhysicWorld(), 220.0f / SCALE, 280.f / SCALE,
                     oxTexture);
 
     world_->AddVehicle(ox);
     player1 = ox;
 
-    if (playerCount == 2)
-    {
+    if (playerCount == 2) {
       const sf::Texture &goatTexture = resourceManager_->GetImage("goat");
       Ox *ox2 = new Ox(world_->GetPhysicWorld(), 220.0f / SCALE, 270.f / SCALE,
                        goatTexture);
@@ -90,8 +80,7 @@ void Game::Initialize()
   world_->GetPhysicWorld()->SetContactListener(contactListener);
 
   // Setting collectable and buff
-  if (map == "forest")
-  {
+  if (map == "forest") {
     CrazyRotate *badBuff1 = new CrazyRotate(2, 40.f, 30.f);
 
     const sf::Texture &badTexture1 = resourceManager_->GetImage("badApple");
@@ -124,18 +113,18 @@ void Game::Initialize()
                                       20.0f / SCALE, rock);
     world_->AddObstacle(obstacle);
 
-    OutsideArea* center = new OutsideArea(
+    OutsideArea *center = new OutsideArea(
         world_->GetPhysicWorld(), b2Vec2(400.0f / SCALE, 400.0f / SCALE),
         150.0f / SCALE, 150.0f / SCALE);
-    StartLine* startLine =
-        new StartLine(world_->GetPhysicWorld(),
-                      b2Vec2(200.0f / SCALE, 120.0f / SCALE), 5.0f, 5.0f);
-    CheckPoint *checkPoint1 =
-        new CheckPoint(world_->GetPhysicWorld(),
-                       b2Vec2(636.0f / SCALE, 620.0f / SCALE), 5.0f, 5.0f);
-    CheckPoint *checkPoint2 =
-        new CheckPoint(world_->GetPhysicWorld(),
-                       b2Vec2(136.0f / SCALE, 620.0f / SCALE), 5.0f, 5.0f);
+    StartLine *startLine = new StartLine(world_->GetPhysicWorld(),
+                                         b2Vec2(200.0f / SCALE, 120.0f / SCALE),
+                                         20.0f / SCALE, 20.0f / SCALE);
+    CheckPoint *checkPoint1 = new CheckPoint(
+        world_->GetPhysicWorld(), b2Vec2(636.0f / SCALE, 620.0f / SCALE),
+        20.0f / SCALE, 20.0f / SCALE);
+    CheckPoint *checkPoint2 = new CheckPoint(
+        world_->GetPhysicWorld(), b2Vec2(136.0f / SCALE, 620.0f / SCALE),
+        20.0f / SCALE, 20.0f / SCALE);
     startLine->AddCheckPoint(checkPoint1);
     startLine->AddCheckPoint(checkPoint2);
     world_->SetRacingTrack(startLine);
@@ -155,11 +144,10 @@ void Game::Initialize()
     // step.setVolume(40);
   }
 
-  else
-  {
+  else {
     CrazyRotate *badBuff1 = new CrazyRotate(2, 40.f, 30.f);
 
-    const sf::Texture &badTexture1 = resourceManager_->GetImage("badApple");
+    const sf::Texture &badTexture1 = resourceManager_->GetImage("badBanana");
 
     Collectable *collectable = new Collectable(
         world_->GetPhysicWorld(), b2Vec2(440.0f / SCALE, 700.f / SCALE),
@@ -189,16 +177,18 @@ void Game::Initialize()
                                     50.0f / SCALE, "../img/rock.png");
     world_->AddObstacle(obstacle);
     */
-
+    OutsideArea *center = new OutsideArea(
+        world_->GetPhysicWorld(), b2Vec2(400.0f / SCALE, 450.0f / SCALE),
+        100.0f / SCALE, 100.0f / SCALE);
     StartLine *startLine =
         new StartLine(world_->GetPhysicWorld(),
-                      b2Vec2(136.0f / SCALE, 120.0f / SCALE), 5.0f, 5.0f);
+                      b2Vec2(136.0f / SCALE, 120.0f / SCALE), 20.0f, 20.0f);
     CheckPoint *checkPoint1 =
         new CheckPoint(world_->GetPhysicWorld(),
-                       b2Vec2(636.0f / SCALE, 620.0f / SCALE), 5.0f, 5.0f);
+                       b2Vec2(685.0f / SCALE, 120.0f / SCALE), 50.0f, 50.0f);
     CheckPoint *checkPoint2 =
         new CheckPoint(world_->GetPhysicWorld(),
-                       b2Vec2(136.0f / SCALE, 620.0f / SCALE), 5.0f, 5.0f);
+                       b2Vec2(200.0f / SCALE, 650.0f / SCALE), 50.0f, 50.0f);
     startLine->AddCheckPoint(checkPoint1);
     startLine->AddCheckPoint(checkPoint2);
     world_->SetRacingTrack(startLine);
@@ -220,138 +210,105 @@ void Game::Initialize()
   AddBoundaries();
 }
 
-bool Game::Run()
-{
+bool Game::Run() {
   isRunning_ = true;
   sf::Clock clock;
 
   const sf::Time targetFrameTime = sf::seconds(1.0f / 24.0f);
 
-  while (window_.isOpen() && isRunning_)
-  {
+  while (window_.isOpen() && isRunning_) {
     sf::Time deltaTime = clock.restart();
-    if (currentState_ == GameState::MENU)
-    {
+    if (currentState_ == GameState::MENU) {
       HandleMenuInput();
       RenderBaseMenu(*menu_);
-      //RenderMenu(); 
-    }
-    else if (currentState_ == GameState::MENU2)
-    {
+      // RenderMenu();
+    } else if (currentState_ == GameState::MENU2) {
       HandleMenuInput2();
       RenderBaseMenu(*menu2_);
-      //RenderMenu2();
-    }
-    else if (currentState_ == GameState::PLAYING &&
-             !counterClock_->IsTimeUp())
-    {
+      // RenderMenu2();
+    } else if (currentState_ == GameState::PLAYING &&
+               !counterClock_->IsTimeUp()) {
       Update(deltaTime);
       RenderGame();
-    }
-    else if (currentState_ == GameState::GAME_OVER)
-    {
+    } else if (currentState_ == GameState::GAME_OVER) {
       HandleWinningBoard();
       RenderBaseMenu(*winnerBoard_);
-      //RenderWinningBoard(); 
+      // RenderWinningBoard();
     }
 
     sf::Time elapsedTime = clock.getElapsedTime();
 
-    if (elapsedTime < targetFrameTime)
-    {
+    if (elapsedTime < targetFrameTime) {
       sf::sleep(targetFrameTime - elapsedTime);
     }
   }
   return false;
 }
 
-void Game::HandleInput()
-{
+void Game::HandleInput() {
   const float angle = 4.0f;
   Vehicle *vehicle = world_->GetVehicle()[0];
 
   vehicle->ToggleForce(false);
-  if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-  {
+  if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
     // Move car
     step.play();
     vehicle->ToggleForce(true);
     std::cout << "Current position " << vehicle->GetPosition().first * SCALE
               << ", " << vehicle->GetPosition().second * SCALE << std::endl;
-  }
-  else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-  {
+  } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
     // turn right
     vehicle->Rotate(angle);
-  }
-  else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-  {
+  } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
     vehicle->Rotate(-angle);
-  }
-  else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
-  {
+  } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
     vehicle->SuperSkill();
   }
 
   vehicle->Update();
 
-  if (playerCount == 2)
-  {
+  if (playerCount == 2) {
     Vehicle *vehicle2 = world_->GetVehicle()[1];
     vehicle2->ToggleForce(false);
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-    {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
       // Move car
       step.play();
       vehicle2->ToggleForce(true);
-    }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-    {
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
       // turn right
       vehicle2->Rotate(angle);
-    }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-    {
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
       vehicle2->Rotate(-angle);
-    }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::E))
-    {
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
       vehicle2->SuperSkill();
     }
     vehicle2->Update();
   }
 }
 
-void Game::Update(sf::Time deltaTime)
-{
+void Game::Update(sf::Time deltaTime) {
   // Update car position
   HandleInput();
   world_->Update(deltaTime.asSeconds(), velocityIterations, positionIterations);
   counterClock_->Update(world_->GetPoint(player1), world_->GetPoint(player2));
-  if (world_->HaveAnyOneWin())
-  {
+  if (world_->HaveAnyOneWin()) {
     winnerBoard_->SetWinner(1);
     currentState_ = GameState::GAME_OVER;
   }
 }
 
-void Game::RenderGame()
-{
+void Game::RenderGame() {
   window_.clear();
 
-  if (currentState_ == GameState::GAME_OVER)
-  {
+  if (currentState_ == GameState::GAME_OVER) {
     HandleWinningBoard();
     RenderBaseMenu(*winnerBoard_);
-    //RenderWinningBoard(); 
-  }
-  else
-  {
+    // RenderWinningBoard();
+  } else {
     sf::Vector2f mapSize(800.0f, 800.0f);
 
     // Define the view for player
-    if (playerCount == 1)
-    {
+    if (playerCount == 1) {
       sf::View view;
 
       // view.setCenter(sf::Vector2f(player1->GetPosition().first * SCALE,
@@ -365,9 +322,7 @@ void Game::RenderGame()
       view.setCenter(clampedCenter);
       window_.setView(view);
       DrawGameWorld();
-    }
-    else if (playerCount == 2)
-    {
+    } else if (playerCount == 2) {
       sf::View view1;
       view1.zoom(zoomCoef);
       view1.setViewport(sf::FloatRect(0.f, 0.f, 0.5f, 1.f));
@@ -403,8 +358,7 @@ void Game::RenderGame()
 // helper function
 sf::Vector2f Game::ClampViewCenter(const sf::Vector2f &center,
                                    const sf::Vector2f &viewSize,
-                                   const sf::Vector2f &mapSize)
-{
+                                   const sf::Vector2f &mapSize) {
   sf::Vector2f clampedCenter = center;
 
   // Clamp X coordinates
@@ -422,179 +376,143 @@ sf::Vector2f Game::ClampViewCenter(const sf::Vector2f &center,
   return clampedCenter;
 }
 
-void Game::DrawGameWorld()
-{
+void Game::DrawGameWorld() {
   map_->Draw(window_);
 
-  if (!world_->GetVehicle().empty())
-  {
-    for (auto vehicle : world_->GetVehicle())
-    {
+  if (!world_->GetVehicle().empty()) {
+    for (auto vehicle : world_->GetVehicle()) {
       window_.draw(*vehicle);
     }
   }
 
-  if (!world_->GetCollectable().empty())
-  {
-    for (auto collectable : world_->GetCollectable())
-    {
-      if (!collectable->IsNullBody())
-      {
+  if (!world_->GetCollectable().empty()) {
+    for (auto collectable : world_->GetCollectable()) {
+      if (!collectable->IsNullBody()) {
         window_.draw(*collectable);
         collectable->DeleteBody();
       }
     }
   }
 
-  if (!world_->GetObstacle().empty())
-  {
-    for (auto obstacle : world_->GetObstacle())
-    {
+  if (!world_->GetObstacle().empty()) {
+    for (auto obstacle : world_->GetObstacle()) {
       window_.draw(*obstacle);
     }
   }
   // counterClock_->Draw(window_);
 }
 
-void Game::HandleMenuInput()
-{
+void Game::HandleMenuInput() {
   sf::Event event;
-  while (window_.pollEvent(event))
-  {
-    switch (event.type)
-    {
-
-    case sf::Event::KeyPressed:
-      switch (event.key.code)
-      {
-      case sf::Keyboard::Up:
-        menu_->MoveUp();
-        break;
-      case sf::Keyboard::Down:
-        menu_->MoveDown();
-        break;
-      case sf::Keyboard::Enter:
-        int selectedItem = menu_->GetPressedItem();
-        if (selectedItem == GameMenu::ONE_PLAYER)
-        {
-          playerCount = 1;
-          currentState_ = GameState::MENU2;
-        }
-        else if (selectedItem == GameMenu::TWO_PLAYER)
-        {
-          playerCount = 2;
-          currentState_ = GameState::MENU2;
-        }
-        else if (selectedItem == GameMenu::EXIT)
-        {
-          window_.close();
+  while (window_.pollEvent(event)) {
+    switch (event.type) {
+      case sf::Event::KeyPressed:
+        switch (event.key.code) {
+          case sf::Keyboard::Up:
+            menu_->MoveUp();
+            break;
+          case sf::Keyboard::Down:
+            menu_->MoveDown();
+            break;
+          case sf::Keyboard::Enter:
+            int selectedItem = menu_->GetPressedItem();
+            if (selectedItem == GameMenu::ONE_PLAYER) {
+              playerCount = 1;
+              currentState_ = GameState::MENU2;
+            } else if (selectedItem == GameMenu::TWO_PLAYER) {
+              playerCount = 2;
+              currentState_ = GameState::MENU2;
+            } else if (selectedItem == GameMenu::EXIT) {
+              window_.close();
+            }
+            break;
         }
         break;
-      }
-      break;
-    case sf::Event::Closed:
-      window_.close();
-      break;
+      case sf::Event::Closed:
+        window_.close();
+        break;
     }
   }
 }
 
-void Game::HandleMenuInput2()
-{
+void Game::HandleMenuInput2() {
   sf::Event event;
-  while (window_.pollEvent(event))
-  {
-    switch (event.type)
-    {
-    case sf::Event::KeyPressed:
-      switch (event.key.code)
-      {
-      case sf::Keyboard::Up:
-        menu2_->MoveUp();
-        break;
-      case sf::Keyboard::Down:
-        menu2_->MoveDown();
-        break;
-      case sf::Keyboard::Enter:
-        int selectedItem = menu2_->GetPressedItem();
-        if (selectedItem == GameMenu2::FOREST)
-        {
-          map = "forest";
-          currentState_ = GameState::PLAYING;
-          Initialize();
-        }
-        else if (selectedItem == GameMenu::TWO_PLAYER)
-        {
-          map = "ocean";
-          currentState_ = GameState::PLAYING;
-          Initialize();
-        }
-        else if (selectedItem == GameMenu::EXIT)
-        {
-          window_.close();
+  while (window_.pollEvent(event)) {
+    switch (event.type) {
+      case sf::Event::KeyPressed:
+        switch (event.key.code) {
+          case sf::Keyboard::Up:
+            menu2_->MoveUp();
+            break;
+          case sf::Keyboard::Down:
+            menu2_->MoveDown();
+            break;
+          case sf::Keyboard::Enter:
+            int selectedItem = menu2_->GetPressedItem();
+            if (selectedItem == GameMenu2::FOREST) {
+              map = "forest";
+              currentState_ = GameState::PLAYING;
+              Initialize();
+            } else if (selectedItem == GameMenu::TWO_PLAYER) {
+              map = "ocean";
+              currentState_ = GameState::PLAYING;
+              Initialize();
+            } else if (selectedItem == GameMenu::EXIT) {
+              window_.close();
+            }
+            break;
         }
         break;
-      }
-      break;
-    case sf::Event::Closed:
-      window_.close();
-      break;
+      case sf::Event::Closed:
+        window_.close();
+        break;
     }
   }
 }
 
-void Game::HandleWinningBoard()
-{
+void Game::HandleWinningBoard() {
   sf::Event event;
-  while (window_.pollEvent(event))
-  {
-    switch (event.type)
-    {
-    case sf::Event::KeyPressed:
-      switch (event.key.code)
-      {
-      case sf::Keyboard::Up:
-        winnerBoard_->MoveUp();
-        break;
-      case sf::Keyboard::Down:
-        winnerBoard_->MoveDown();
-        break;
-      case sf::Keyboard::Enter:
-        int selectedItem = winnerBoard_->GetPressedItem();
-        if (selectedItem == WinnerBoard::REPLAY)
-        {
-          // Reset the game to start a new round
-          delete world_;
-          delete counterClock_;
-          delete map_;
-          currentState_ = GameState::MENU;
-        }
-        else if (selectedItem == WinnerBoard::EXIT)
-        {
-          window_.close();
+  while (window_.pollEvent(event)) {
+    switch (event.type) {
+      case sf::Event::KeyPressed:
+        switch (event.key.code) {
+          case sf::Keyboard::Up:
+            winnerBoard_->MoveUp();
+            break;
+          case sf::Keyboard::Down:
+            winnerBoard_->MoveDown();
+            break;
+          case sf::Keyboard::Enter:
+            int selectedItem = winnerBoard_->GetPressedItem();
+            if (selectedItem == WinnerBoard::REPLAY) {
+              // Reset the game to start a new round
+              delete world_;
+              delete counterClock_;
+              delete map_;
+              currentState_ = GameState::MENU;
+            } else if (selectedItem == WinnerBoard::EXIT) {
+              window_.close();
+            }
+            break;
         }
         break;
-      }
-      break;
-    case sf::Event::Closed:
-      window_.close();
-      break;
+      case sf::Event::Closed:
+        window_.close();
+        break;
     }
   }
 }
 
-void Game::RenderBaseMenu(BaseMenu& menu)
-{
+void Game::RenderBaseMenu(BaseMenu &menu) {
   window_.clear();
   menu.draw();
   window_.display();
 }
 
-void Game::AddBoundaries()
-{
-  float world_Width = 800.0f / SCALE;  // Width of window_ in Box2D units
-  float world_Height = 800.0f / SCALE; // Height of  window_ in Box2D units
-  float thickness = 0.0005f / SCALE;   // Thickness of the boundary walls
+void Game::AddBoundaries() {
+  float world_Width = 800.0f / SCALE;   // Width of window_ in Box2D units
+  float world_Height = 800.0f / SCALE;  // Height of  window_ in Box2D units
+  float thickness = 0.0005f / SCALE;    // Thickness of the boundary walls
 
   // Define the positions and sizes of the boundary walls
   b2Vec2 topWallPos(world_Width / 2, thickness / 2);
@@ -612,8 +530,7 @@ void Game::AddBoundaries()
   CreateWall(rightWallPos, verticalSize);
 }
 
-void Game::CreateWall(const b2Vec2 &position, const b2Vec2 &size)
-{
+void Game::CreateWall(const b2Vec2 &position, const b2Vec2 &size) {
   b2BodyDef bodyDef;
   bodyDef.position = position;
   bodyDef.type = b2_staticBody;
