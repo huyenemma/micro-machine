@@ -19,4 +19,5 @@ TEST_F(Tests, timerTest) {
   // Check if after 2 ticks the timer should return true
   EXPECT_FALSE(timer->Tick());
   EXPECT_TRUE(timer->Tick());
+  EXPECT_TRUE(timer->Tick());
 }
