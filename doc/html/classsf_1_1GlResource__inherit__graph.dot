@@ -1,0 +1,24 @@
+digraph "sf::GlResource"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="sf::GlResource",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Base class for classes that require an OpenGL context."];
+  Node1 -> Node2 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="sf::Context",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1Context.html",tooltip="Class holding a valid drawing context."];
+  Node1 -> Node3 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="sf::Shader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1Shader.html",tooltip="Shader class (vertex, geometry and fragment)"];
+  Node1 -> Node4 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="sf::Texture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1Texture.html",tooltip="Image living on the graphics card that can be used for drawing."];
+  Node1 -> Node5 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="sf::VertexBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1VertexBuffer.html",tooltip="Vertex buffer storage for one or more 2D primitives."];
+  Node1 -> Node6 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="sf::Window",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1Window.html",tooltip="Window that serves as a target for OpenGL rendering."];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="sf::RenderWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1RenderWindow.html",tooltip="Window that can serve as a target for 2D drawing."];
+  Node1 -> Node8 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="sf::priv::RenderTextureImpl\lDefault",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1priv_1_1RenderTextureImplDefault.html",tooltip="Default specialization of RenderTextureImpl, using an in-memory context."];
+  Node1 -> Node9 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="sf::priv::RenderTextureImplFBO",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1priv_1_1RenderTextureImplFBO.html",tooltip="Specialization of RenderTextureImpl using the FrameBuffer Object OpenGL extension."];
+}

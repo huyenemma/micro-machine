@@ -1,0 +1,16 @@
+digraph "b2RevoluteJointDef"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="b2RevoluteJointDef",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="b2JointDef",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structb2JointDef.html",tooltip="Joint definitions are used to construct joints."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bodyA\nbodyB" ,fontname="Helvetica"];
+  Node3 [label="b2Body",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classb2Body.html",tooltip="A rigid body. These are created via b2World::CreateBody."];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" userData" ,fontname="Helvetica"];
+  Node4 [label="b2JointUserData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structb2JointUserData.html",tooltip="You can define this to inject whatever data you want in b2Joint."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" localAnchorA\nlocalAnchorB" ,fontname="Helvetica"];
+  Node5 [label="b2Vec2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structb2Vec2.html",tooltip="A 2D column vector."];
+}

@@ -1,0 +1,88 @@
+\hypertarget{structb2WeldJointDef}{}\doxysection{b2\+Weld\+Joint\+Def Struct Reference}
+\label{structb2WeldJointDef}\index{b2WeldJointDef@{b2WeldJointDef}}
+
+
+{\ttfamily \#include $<$b2\+\_\+weld\+\_\+joint.\+h$>$}
+
+
+
+Inheritance diagram for b2\+Weld\+Joint\+Def\+:
+% FIG 0
+
+
+Collaboration diagram for b2\+Weld\+Joint\+Def\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structb2WeldJointDef_a9f6592c2a7eba6ce6e07e40c4e82aab5}{Initialize}} (\mbox{\hyperlink{classb2Body}{b2\+Body}} $\ast$\mbox{\hyperlink{structb2JointDef_a592b8e186f5f0d8848ef6b7ce77f0f70}{bodyA}}, \mbox{\hyperlink{classb2Body}{b2\+Body}} $\ast$\mbox{\hyperlink{structb2JointDef_a3d1a39831332b8c5a41611c06396480a}{bodyB}}, const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&anchor)
+\item 
+void \mbox{\hyperlink{structb2WeldJointDef_a9f6592c2a7eba6ce6e07e40c4e82aab5}{Initialize}} (\mbox{\hyperlink{classb2Body}{b2\+Body}} $\ast$\mbox{\hyperlink{structb2JointDef_a592b8e186f5f0d8848ef6b7ce77f0f70}{bodyA}}, \mbox{\hyperlink{classb2Body}{b2\+Body}} $\ast$\mbox{\hyperlink{structb2JointDef_a3d1a39831332b8c5a41611c06396480a}{bodyB}}, const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&anchor)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structb2WeldJointDef_a3b04af6164bb32efc3f5cf3e8d2b7109}\label{structb2WeldJointDef_a3b04af6164bb32efc3f5cf3e8d2b7109}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{structb2WeldJointDef_a3b04af6164bb32efc3f5cf3e8d2b7109}{local\+AnchorA}}
+\begin{DoxyCompactList}\small\item\em The local anchor point relative to bodyA\textquotesingle{}s origin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2WeldJointDef_a528262b92dac10de37411ad8c5637149}\label{structb2WeldJointDef_a528262b92dac10de37411ad8c5637149}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{structb2WeldJointDef_a528262b92dac10de37411ad8c5637149}{local\+AnchorB}}
+\begin{DoxyCompactList}\small\item\em The local anchor point relative to bodyB\textquotesingle{}s origin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2WeldJointDef_a88841acce3b4e88fb33997a2f9eedb52}\label{structb2WeldJointDef_a88841acce3b4e88fb33997a2f9eedb52}} 
+float \mbox{\hyperlink{structb2WeldJointDef_a88841acce3b4e88fb33997a2f9eedb52}{reference\+Angle}}
+\begin{DoxyCompactList}\small\item\em The bodyB angle minus bodyA angle in the reference state (radians). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structb2WeldJointDef_aeb881c0408c9674b2a1869b491fdc6a0}{stiffness}}
+\item 
+\mbox{\Hypertarget{structb2WeldJointDef_a59dcfbbd7c8d4421b3c621946ab4ec7d}\label{structb2WeldJointDef_a59dcfbbd7c8d4421b3c621946ab4ec7d}} 
+float \mbox{\hyperlink{structb2WeldJointDef_a59dcfbbd7c8d4421b3c621946ab4ec7d}{damping}}
+\begin{DoxyCompactList}\small\item\em The rotational damping in N$\ast$m$\ast$s. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Weld joint definition. You need to specify local anchor points where they are attached and the relative body angle. The position of the anchor points is important for computing the reaction torque. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structb2WeldJointDef_a9f6592c2a7eba6ce6e07e40c4e82aab5}\label{structb2WeldJointDef_a9f6592c2a7eba6ce6e07e40c4e82aab5}} 
+\index{b2WeldJointDef@{b2WeldJointDef}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!b2WeldJointDef@{b2WeldJointDef}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void b2\+Weld\+Joint\+Def\+::\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classb2Body}{b2\+Body}} $\ast$}]{bodyA,  }\item[{\mbox{\hyperlink{classb2Body}{b2\+Body}} $\ast$}]{bodyB,  }\item[{const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&}]{anchor }\end{DoxyParamCaption})}
+
+Initialize the bodies, anchors, reference angle, stiffness, and damping. 
+\begin{DoxyParams}{Parameters}
+{\em bodyA} & the first body connected by this joint \\
+\hline
+{\em bodyB} & the second body connected by this joint \\
+\hline
+{\em anchor} & the point of connection in world coordinates \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structb2WeldJointDef_a9f6592c2a7eba6ce6e07e40c4e82aab5}\label{structb2WeldJointDef_a9f6592c2a7eba6ce6e07e40c4e82aab5}} 
+\index{b2WeldJointDef@{b2WeldJointDef}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!b2WeldJointDef@{b2WeldJointDef}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void b2\+Weld\+Joint\+Def\+::\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classb2Body}{b2\+Body}} $\ast$}]{bodyA,  }\item[{\mbox{\hyperlink{classb2Body}{b2\+Body}} $\ast$}]{bodyB,  }\item[{const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&}]{anchor }\end{DoxyParamCaption})}
+
+Initialize the bodies, anchors, reference angle, stiffness, and damping. 
+\begin{DoxyParams}{Parameters}
+{\em bodyA} & the first body connected by this joint \\
+\hline
+{\em bodyB} & the second body connected by this joint \\
+\hline
+{\em anchor} & the point of connection in world coordinates \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structb2WeldJointDef_aeb881c0408c9674b2a1869b491fdc6a0}\label{structb2WeldJointDef_aeb881c0408c9674b2a1869b491fdc6a0}} 
+\index{b2WeldJointDef@{b2WeldJointDef}!stiffness@{stiffness}}
+\index{stiffness@{stiffness}!b2WeldJointDef@{b2WeldJointDef}}
+\doxysubsubsection{\texorpdfstring{stiffness}{stiffness}}
+{\footnotesize\ttfamily float b2\+Weld\+Joint\+Def\+::stiffness}
+
+The rotational stiffness in N$\ast$m Disable softness with a value of 0 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libs/arm64/include/box2d/b2\+\_\+weld\+\_\+joint.\+h\end{DoxyCompactItemize}

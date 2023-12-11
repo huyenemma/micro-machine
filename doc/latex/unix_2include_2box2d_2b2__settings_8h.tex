@@ -1,0 +1,71 @@
+\hypertarget{unix_2include_2box2d_2b2__settings_8h}{}\doxysection{libs/unix/include/box2d/b2\+\_\+settings.h File Reference}
+\label{unix_2include_2box2d_2b2__settings_8h}\index{libs/unix/include/box2d/b2\_settings.h@{libs/unix/include/box2d/b2\_settings.h}}
+{\ttfamily \#include \char`\"{}b2\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}b2\+\_\+api.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}b2\+\_\+common.\+h\char`\"{}}\newline
+Include dependency graph for b2\+\_\+settings.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structb2BodyUserData}{b2\+Body\+User\+Data}}
+\begin{DoxyCompactList}\small\item\em You can define this to inject whatever data you want in \mbox{\hyperlink{classb2Body}{b2\+Body}}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structb2FixtureUserData}{b2\+Fixture\+User\+Data}}
+\begin{DoxyCompactList}\small\item\em You can define this to inject whatever data you want in \mbox{\hyperlink{classb2Fixture}{b2\+Fixture}}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structb2JointUserData}{b2\+Joint\+User\+Data}}
+\begin{DoxyCompactList}\small\item\em You can define this to inject whatever data you want in \mbox{\hyperlink{classb2Joint}{b2\+Joint}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{unix_2include_2box2d_2b2__settings_8h_ac981dcccb9ee291352843a27af829c8c}{b2\+\_\+length\+Units\+Per\+Meter}}~1.\+0f
+\begin{DoxyCompactList}\small\item\em Define this macro in your build if you want to override settings. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{unix_2include_2box2d_2b2__settings_8h_a09d71ee1993bee28b5b2e6d893b41884}{b2\+\_\+max\+Polygon\+Vertices}}~8
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{unix_2include_2box2d_2b2__settings_8h_a5358f4a0d6805d16f331270b6433410e}\label{unix_2include_2box2d_2b2__settings_8h_a5358f4a0d6805d16f331270b6433410e}} 
+B2\+\_\+\+API void $\ast$ \mbox{\hyperlink{unix_2include_2box2d_2b2__settings_8h_a5358f4a0d6805d16f331270b6433410e}{b2\+Alloc\+\_\+\+Default}} (int32 size)
+\begin{DoxyCompactList}\small\item\em Default allocation functions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{unix_2include_2box2d_2b2__settings_8h_ab15a8752359261c8440362a19de714a9}\label{unix_2include_2box2d_2b2__settings_8h_ab15a8752359261c8440362a19de714a9}} 
+B2\+\_\+\+API void {\bfseries b2\+Free\+\_\+\+Default} (void $\ast$mem)
+\item 
+\mbox{\Hypertarget{unix_2include_2box2d_2b2__settings_8h_a2dca9b286e9b9d6d022055fd61534bd7}\label{unix_2include_2box2d_2b2__settings_8h_a2dca9b286e9b9d6d022055fd61534bd7}} 
+void $\ast$ \mbox{\hyperlink{unix_2include_2box2d_2b2__settings_8h_a2dca9b286e9b9d6d022055fd61534bd7}{b2\+Alloc}} (int32 size)
+\begin{DoxyCompactList}\small\item\em Implement this function to use your own memory allocator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{unix_2include_2box2d_2b2__settings_8h_a50f4abf5edeabd0300946edbd542e24d}\label{unix_2include_2box2d_2b2__settings_8h_a50f4abf5edeabd0300946edbd542e24d}} 
+void \mbox{\hyperlink{unix_2include_2box2d_2b2__settings_8h_a50f4abf5edeabd0300946edbd542e24d}{b2\+Free}} (void $\ast$mem)
+\begin{DoxyCompactList}\small\item\em If you implement b2\+Alloc, you should also implement this function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{unix_2include_2box2d_2b2__settings_8h_a5bbb7f5988607acce4f0422a4683d824}\label{unix_2include_2box2d_2b2__settings_8h_a5bbb7f5988607acce4f0422a4683d824}} 
+B2\+\_\+\+API void \mbox{\hyperlink{unix_2include_2box2d_2b2__settings_8h_a5bbb7f5988607acce4f0422a4683d824}{b2\+Log\+\_\+\+Default}} (const char $\ast$string, va\+\_\+list args)
+\begin{DoxyCompactList}\small\item\em Default logging function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{unix_2include_2box2d_2b2__settings_8h_a9f10095d05c74eebfe535931c9061ab2}\label{unix_2include_2box2d_2b2__settings_8h_a9f10095d05c74eebfe535931c9061ab2}} 
+void \mbox{\hyperlink{unix_2include_2box2d_2b2__settings_8h_a9f10095d05c74eebfe535931c9061ab2}{b2\+Log}} (const char $\ast$string,...)
+\begin{DoxyCompactList}\small\item\em Implement this to use your own logging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Settings that can be overriden for your application 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{unix_2include_2box2d_2b2__settings_8h_ac981dcccb9ee291352843a27af829c8c}\label{unix_2include_2box2d_2b2__settings_8h_ac981dcccb9ee291352843a27af829c8c}} 
+\index{b2\_settings.h@{b2\_settings.h}!b2\_lengthUnitsPerMeter@{b2\_lengthUnitsPerMeter}}
+\index{b2\_lengthUnitsPerMeter@{b2\_lengthUnitsPerMeter}!b2\_settings.h@{b2\_settings.h}}
+\doxysubsubsection{\texorpdfstring{b2\_lengthUnitsPerMeter}{b2\_lengthUnitsPerMeter}}
+{\footnotesize\ttfamily \#define b2\+\_\+length\+Units\+Per\+Meter~1.\+0f}
+
+
+
+Define this macro in your build if you want to override settings. 
+
+You can use this to change the length scale used by your game. For example for inches you could use 39.\+4. \mbox{\Hypertarget{unix_2include_2box2d_2b2__settings_8h_a09d71ee1993bee28b5b2e6d893b41884}\label{unix_2include_2box2d_2b2__settings_8h_a09d71ee1993bee28b5b2e6d893b41884}} 
+\index{b2\_settings.h@{b2\_settings.h}!b2\_maxPolygonVertices@{b2\_maxPolygonVertices}}
+\index{b2\_maxPolygonVertices@{b2\_maxPolygonVertices}!b2\_settings.h@{b2\_settings.h}}
+\doxysubsubsection{\texorpdfstring{b2\_maxPolygonVertices}{b2\_maxPolygonVertices}}
+{\footnotesize\ttfamily \#define b2\+\_\+max\+Polygon\+Vertices~8}
+
+The maximum number of vertices on a convex polygon. You cannot increase this too much because \mbox{\hyperlink{classb2BlockAllocator}{b2\+Block\+Allocator}} has a maximum object size. 

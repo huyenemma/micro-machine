@@ -1,0 +1,144 @@
+\hypertarget{classBuff}{}\doxysection{Buff Class Reference}
+\label{classBuff}\index{Buff@{Buff}}
+
+
+\mbox{\hyperlink{classBase}{Base}} class for Buffs, derived from \mbox{\hyperlink{classTimer}{Timer}}.  
+
+
+
+
+{\ttfamily \#include $<$buff.\+hpp$>$}
+
+
+
+Inheritance diagram for Buff\+:
+% FIG 0
+
+
+Collaboration diagram for Buff\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBuff_a608137c9b3dfed30b4f796451ef1f051}{Buff}} (int duration, Buff\+Type type, Buff\+Effect effect\+Type)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classBuff}{Buff}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBuff_a2c32559d2f7a19f60757c00fb96262a4}\label{classBuff_a2c32559d2f7a19f60757c00fb96262a4}} 
+\mbox{\hyperlink{classBuff_a2c32559d2f7a19f60757c00fb96262a4}{$\sim$\+Buff}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classBuff}{Buff}} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBuff_af4b1e07dddedf375886473913066cb53}{Apply\+Effect}} (\mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$vehicle)=0
+\begin{DoxyCompactList}\small\item\em Applies the buff effect to a \mbox{\hyperlink{classVehicle}{Vehicle}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBuff_a552f767658e58e5eee9c2f4980a26eb5}{Reverse\+Effect}} (\mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$vehicle)=0
+\begin{DoxyCompactList}\small\item\em Reverses the buff effect applied to a \mbox{\hyperlink{classVehicle}{Vehicle}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBuff_a9a1271e564a04ea934013816396bc8b7}{Is\+Continuous}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the buff effect is continuous. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBuff_a388c129156febdd9703fc4022ce6cb3c}{Is\+Negative\+Buff}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the buff is a negative buff. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBuff_ae2580e633b50acf69b42c0da09e1be4b}\label{classBuff_ae2580e633b50acf69b42c0da09e1be4b}} 
+std\+::string \mbox{\hyperlink{classBuff_ae2580e633b50acf69b42c0da09e1be4b}{id}}
+\begin{DoxyCompactList}\small\item\em Unique identifier for the buff. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBuff_a6e50ee282b18627de79db679ac138770}\label{classBuff_a6e50ee282b18627de79db679ac138770}} 
+Buff\+Type \mbox{\hyperlink{classBuff_a6e50ee282b18627de79db679ac138770}{type\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Type of the buff (Positive or Negative). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBuff_aaa6d37484e89b1edb5f3aad7b55daec2}\label{classBuff_aaa6d37484e89b1edb5f3aad7b55daec2}} 
+Buff\+Effect \mbox{\hyperlink{classBuff_aaa6d37484e89b1edb5f3aad7b55daec2}{effect\+Type\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Type of the buff effect (onetime or continuous). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classBase}{Base}} class for Buffs, derived from \mbox{\hyperlink{classTimer}{Timer}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBuff_a608137c9b3dfed30b4f796451ef1f051}\label{classBuff_a608137c9b3dfed30b4f796451ef1f051}} 
+\index{Buff@{Buff}!Buff@{Buff}}
+\index{Buff@{Buff}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{Buff()}{Buff()}}
+{\footnotesize\ttfamily Buff\+::\+Buff (\begin{DoxyParamCaption}\item[{int}]{duration,  }\item[{Buff\+Type}]{type,  }\item[{Buff\+Effect}]{effect\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \mbox{\hyperlink{classBuff}{Buff}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & The duration of the buff. \\
+\hline
+{\em type} & Type of the buff (Positive or Negative). \\
+\hline
+{\em effect\+Type} & Type of the buff effect (onetime or continuous). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBuff_af4b1e07dddedf375886473913066cb53}\label{classBuff_af4b1e07dddedf375886473913066cb53}} 
+\index{Buff@{Buff}!ApplyEffect@{ApplyEffect}}
+\index{ApplyEffect@{ApplyEffect}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{ApplyEffect()}{ApplyEffect()}}
+{\footnotesize\ttfamily virtual void Buff\+::\+Apply\+Effect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$}]{vehicle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Applies the buff effect to a \mbox{\hyperlink{classVehicle}{Vehicle}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicle} & The \mbox{\hyperlink{classVehicle}{Vehicle}} to which the buff effect is applied. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classOxSuperSkillBuff_a6b94e5c8531846607ebe584a38eb9454}{Ox\+Super\+Skill\+Buff}}, \mbox{\hyperlink{classNegativeBuff_1_1CrazyRotate_ab9754df16305f793f7b3af4438d89410}{Negative\+Buff\+::\+Crazy\+Rotate}}, \mbox{\hyperlink{classNegativeBuff_1_1ReverseMushroom_aef4e6dabb08ecc4b7f1c1d31c38bb1b2}{Negative\+Buff\+::\+Reverse\+Mushroom}}, \mbox{\hyperlink{classHorseSuperSkillBuff_a062e67603336a98f62b66504df6e66f5}{Horse\+Super\+Skill\+Buff}}, \mbox{\hyperlink{classPositiveBuff_1_1Magnetic_a4a255d30d1fea8702eb947741e2303c7}{Positive\+Buff\+::\+Magnetic}}, \mbox{\hyperlink{classPositiveBuff_1_1MaxSpeed_ab5e0c41161a6131b3e329e736a3454e0}{Positive\+Buff\+::\+Max\+Speed}}, and \mbox{\hyperlink{classPositiveBuff_1_1OxSuperSkillBuff_aa965990bf4c2a1be58edb4b4504a80cd}{Positive\+Buff\+::\+Ox\+Super\+Skill\+Buff}}.
+
+\mbox{\Hypertarget{classBuff_a9a1271e564a04ea934013816396bc8b7}\label{classBuff_a9a1271e564a04ea934013816396bc8b7}} 
+\index{Buff@{Buff}!IsContinuous@{IsContinuous}}
+\index{IsContinuous@{IsContinuous}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{IsContinuous()}{IsContinuous()}}
+{\footnotesize\ttfamily bool Buff\+::\+Is\+Continuous (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the buff effect is continuous. 
+
+\begin{DoxyReturn}{Returns}
+True if the buff effect is continuous, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBuff_a388c129156febdd9703fc4022ce6cb3c}\label{classBuff_a388c129156febdd9703fc4022ce6cb3c}} 
+\index{Buff@{Buff}!IsNegativeBuff@{IsNegativeBuff}}
+\index{IsNegativeBuff@{IsNegativeBuff}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{IsNegativeBuff()}{IsNegativeBuff()}}
+{\footnotesize\ttfamily bool Buff\+::\+Is\+Negative\+Buff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the buff is a negative buff. 
+
+\begin{DoxyReturn}{Returns}
+True if the buff is negative, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBuff_a552f767658e58e5eee9c2f4980a26eb5}\label{classBuff_a552f767658e58e5eee9c2f4980a26eb5}} 
+\index{Buff@{Buff}!ReverseEffect@{ReverseEffect}}
+\index{ReverseEffect@{ReverseEffect}!Buff@{Buff}}
+\doxysubsubsection{\texorpdfstring{ReverseEffect()}{ReverseEffect()}}
+{\footnotesize\ttfamily virtual void Buff\+::\+Reverse\+Effect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVehicle}{Vehicle}} $\ast$}]{vehicle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Reverses the buff effect applied to a \mbox{\hyperlink{classVehicle}{Vehicle}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicle} & The \mbox{\hyperlink{classVehicle}{Vehicle}} to which the buff effect is reversed. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classOxSuperSkillBuff_aa07b1e70337ddd3abc5db20280450d31}{Ox\+Super\+Skill\+Buff}}, \mbox{\hyperlink{classNegativeBuff_1_1CrazyRotate_a3aba045d0203c5a569828f766dc5aafd}{Negative\+Buff\+::\+Crazy\+Rotate}}, \mbox{\hyperlink{classNegativeBuff_1_1ReverseMushroom_a2edcadc6f5cf72bb5773b23fd347ef8c}{Negative\+Buff\+::\+Reverse\+Mushroom}}, \mbox{\hyperlink{classHorseSuperSkillBuff_afaf6989fd4d1c60658bb49e8c9aa8416}{Horse\+Super\+Skill\+Buff}}, \mbox{\hyperlink{classPositiveBuff_1_1Magnetic_a124f5f0a9421ec3961932ed822240cad}{Positive\+Buff\+::\+Magnetic}}, \mbox{\hyperlink{classPositiveBuff_1_1MaxSpeed_a2bf960eae6153ca6675d69310916ef3b}{Positive\+Buff\+::\+Max\+Speed}}, and \mbox{\hyperlink{classPositiveBuff_1_1OxSuperSkillBuff_adab96eb4d685235f469e33ee4d899707}{Positive\+Buff\+::\+Ox\+Super\+Skill\+Buff}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/buff.\+hpp\end{DoxyCompactItemize}

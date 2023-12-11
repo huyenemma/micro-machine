@@ -1,7 +1,7 @@
 #ifndef DOG_H
 #define DOG_H
 
-#include "../include/box2d/box2d.h"
+#include "box2dInclude.hpp"
 #include "vehicle.hpp"
 
 /**

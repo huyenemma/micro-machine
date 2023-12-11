@@ -1,0 +1,17 @@
+digraph "b2ShapeCastInput"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="b2ShapeCastInput",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Input parameters for b2ShapeCast."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" proxyA\nproxyB" ];
+  Node2 [label="b2DistanceProxy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structb2DistanceProxy.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_buffer\nm_vertices" ];
+  Node3 [label="b2Vec2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structb2Vec2.html",tooltip="A 2D column vector."];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" translationB" ];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" transformA\ntransformB" ];
+  Node4 [label="b2Transform",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structb2Transform.html",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p" ];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" q" ];
+  Node5 [label="b2Rot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structb2Rot.html",tooltip="Rotation."];
+}

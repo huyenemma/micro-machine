@@ -1,0 +1,68 @@
+\hypertarget{classTimer}{}\doxysection{Timer Class Reference}
+\label{classTimer}\index{Timer@{Timer}}
+
+
+Represents a simple countdown timer.  
+
+
+
+
+{\ttfamily \#include $<$timer.\+hpp$>$}
+
+
+
+Inheritance diagram for Timer\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTimer_a6c0bb92bb73af01aac9f13d9424256cd}{Timer}} (int time\+Left)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classTimer}{Timer}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTimer_ad3c95ce902fce977d280256256856d64}\label{classTimer_ad3c95ce902fce977d280256256856d64}} 
+virtual \mbox{\hyperlink{classTimer_ad3c95ce902fce977d280256256856d64}{$\sim$\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classTimer}{Timer}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTimer_a0b4be569a1bb380c33e82d0c6690ff9c}{Tick}} ()
+\begin{DoxyCompactList}\small\item\em Decreases the time remaining on the timer by one tick. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a simple countdown timer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTimer_a6c0bb92bb73af01aac9f13d9424256cd}\label{classTimer_a6c0bb92bb73af01aac9f13d9424256cd}} 
+\index{Timer@{Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{Timer()}{Timer()}}
+{\footnotesize\ttfamily Timer\+::\+Timer (\begin{DoxyParamCaption}\item[{int}]{time\+Left }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classTimer}{Timer}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Left} & The initial time left on the timer. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTimer_a0b4be569a1bb380c33e82d0c6690ff9c}\label{classTimer_a0b4be569a1bb380c33e82d0c6690ff9c}} 
+\index{Timer@{Timer}!Tick@{Tick}}
+\index{Tick@{Tick}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily bool Timer\+::\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Decreases the time remaining on the timer by one tick. 
+
+\begin{DoxyReturn}{Returns}
+True if the object should be removed, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/timer.\+hpp\item 
+src/timer.\+cpp\end{DoxyCompactItemize}

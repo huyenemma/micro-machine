@@ -1,0 +1,70 @@
+\hypertarget{classGame}{}\doxysection{Game Class Reference}
+\label{classGame}\index{Game@{Game}}
+
+
+Manages the main aspects of the game including rendering, updating, and game state management.  
+
+
+
+
+{\ttfamily \#include $<$game.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGame_ad59df6562a58a614fda24622d3715b65}\label{classGame_ad59df6562a58a614fda24622d3715b65}} 
+\mbox{\hyperlink{classGame_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_ae3d112ca6e0e55150d2fdbc704474530}\label{classGame_ae3d112ca6e0e55150d2fdbc704474530}} 
+\mbox{\hyperlink{classGame_ae3d112ca6e0e55150d2fdbc704474530}{$\sim$\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_adc01a7fae5261c95f7e6b41024e6c533}\label{classGame_adc01a7fae5261c95f7e6b41024e6c533}} 
+void \mbox{\hyperlink{classGame_adc01a7fae5261c95f7e6b41024e6c533}{Initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the game (create window, world, etc.) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a712aad58012747c8e1f0387199594910}\label{classGame_a712aad58012747c8e1f0387199594910}} 
+bool \mbox{\hyperlink{classGame_a712aad58012747c8e1f0387199594910}{Run}} ()
+\begin{DoxyCompactList}\small\item\em Main game loop. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a6cb82eaece4e30724f3fe4e0d4bde5fc}\label{classGame_a6cb82eaece4e30724f3fe4e0d4bde5fc}} 
+void \mbox{\hyperlink{classGame_a6cb82eaece4e30724f3fe4e0d4bde5fc}{Handle\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Handles user input. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_aa17149666fb2b94c5e17e88f02dda45b}\label{classGame_aa17149666fb2b94c5e17e88f02dda45b}} 
+void \mbox{\hyperlink{classGame_aa17149666fb2b94c5e17e88f02dda45b}{Update}} (\mbox{\hyperlink{classsf_1_1Time}{sf\+::\+Time}} delta\+Time)
+\begin{DoxyCompactList}\small\item\em Updates game state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_afcda66ff4bc8cd397c96f44681f0ee38}\label{classGame_afcda66ff4bc8cd397c96f44681f0ee38}} 
+void \mbox{\hyperlink{classGame_afcda66ff4bc8cd397c96f44681f0ee38}{Add\+Boundaries}} ()
+\begin{DoxyCompactList}\small\item\em Adds boundaries to the game window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a46babebb14545698a18a0cdfb602943f}\label{classGame_a46babebb14545698a18a0cdfb602943f}} 
+void \mbox{\hyperlink{classGame_a46babebb14545698a18a0cdfb602943f}{Create\+Wall}} (const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&position, const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&size)
+\begin{DoxyCompactList}\small\item\em Creates an impassable wall. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a9b80dfa4b5f77795e3d4b6147cc5564a}\label{classGame_a9b80dfa4b5f77795e3d4b6147cc5564a}} 
+void \mbox{\hyperlink{classGame_a9b80dfa4b5f77795e3d4b6147cc5564a}{Render\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Renders the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a87076906fdbd92abf1a74c0705263bd9}\label{classGame_a87076906fdbd92abf1a74c0705263bd9}} 
+\mbox{\hyperlink{classsf_1_1Vector2}{sf\+::\+Vector2f}} \mbox{\hyperlink{classGame_a87076906fdbd92abf1a74c0705263bd9}{Clamp\+View\+Center}} (const \mbox{\hyperlink{classsf_1_1Vector2}{sf\+::\+Vector2f}} \&center, const \mbox{\hyperlink{classsf_1_1Vector2}{sf\+::\+Vector2f}} \&view\+Size, const \mbox{\hyperlink{classsf_1_1Vector2}{sf\+::\+Vector2f}} \&map\+Size)
+\begin{DoxyCompactList}\small\item\em Helper function to clamp camera view. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a4f14dfeccde2ce26dbbf3780a8ab3a02}\label{classGame_a4f14dfeccde2ce26dbbf3780a8ab3a02}} 
+void \mbox{\hyperlink{classGame_a4f14dfeccde2ce26dbbf3780a8ab3a02}{Draw\+Game\+World}} ()
+\begin{DoxyCompactList}\small\item\em Draws the game world. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_aa2d522e39f38c7dc2cfc4f9e6c1811ba}\label{classGame_aa2d522e39f38c7dc2cfc4f9e6c1811ba}} 
+void \mbox{\hyperlink{classGame_aa2d522e39f38c7dc2cfc4f9e6c1811ba}{Handle\+Menu\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Handles menu input. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a632ff8b269c4517817e23c6ac49806bb}\label{classGame_a632ff8b269c4517817e23c6ac49806bb}} 
+void {\bfseries Handle\+Menu\+Input2} ()
+\item 
+\mbox{\Hypertarget{classGame_a21366ed169e808c310a944c9a9fdc0ac}\label{classGame_a21366ed169e808c310a944c9a9fdc0ac}} 
+void {\bfseries Handle\+Winning\+Board} ()
+\item 
+\mbox{\Hypertarget{classGame_a2d4599a890c9c5fb4a03d8433a417394}\label{classGame_a2d4599a890c9c5fb4a03d8433a417394}} 
+void \mbox{\hyperlink{classGame_a2d4599a890c9c5fb4a03d8433a417394}{Render\+Base\+Menu}} (\mbox{\hyperlink{classBaseMenu}{Base\+Menu}} \&menu)
+\begin{DoxyCompactList}\small\item\em Renders the menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the main aspects of the game including rendering, updating, and game state management. 
+
+The \mbox{\hyperlink{classGame}{Game}} class handles the main game loop, event processing, and switching between different states of the game. It is responsible for initializing and managing game resources, rendering game elements, and updating game logic. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/game.\+hpp\item 
+src/game.\+cpp\end{DoxyCompactItemize}

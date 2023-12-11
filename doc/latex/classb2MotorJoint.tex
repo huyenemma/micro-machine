@@ -1,0 +1,215 @@
+\hypertarget{classb2MotorJoint}{}\doxysection{b2\+Motor\+Joint Class Reference}
+\label{classb2MotorJoint}\index{b2MotorJoint@{b2MotorJoint}}
+
+
+{\ttfamily \#include $<$b2\+\_\+motor\+\_\+joint.\+h$>$}
+
+
+
+Inheritance diagram for b2\+Motor\+Joint\+:
+% FIG 0
+
+
+Collaboration diagram for b2\+Motor\+Joint\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a58adfab0fe79d254347a367341b0963a}\label{classb2MotorJoint_a58adfab0fe79d254347a367341b0963a}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{classb2MotorJoint_a58adfab0fe79d254347a367341b0963a}{Get\+AnchorA}} () const override
+\begin{DoxyCompactList}\small\item\em Get the anchor point on bodyA in world coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a5d563fd070f7b6cfe8db6f83e1bebbcd}\label{classb2MotorJoint_a5d563fd070f7b6cfe8db6f83e1bebbcd}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{classb2MotorJoint_a5d563fd070f7b6cfe8db6f83e1bebbcd}{Get\+AnchorB}} () const override
+\begin{DoxyCompactList}\small\item\em Get the anchor point on bodyB in world coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a5dd26e48d7820619bdf149e08ea49bcb}\label{classb2MotorJoint_a5dd26e48d7820619bdf149e08ea49bcb}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{classb2MotorJoint_a5dd26e48d7820619bdf149e08ea49bcb}{Get\+Reaction\+Force}} (float inv\+\_\+dt) const override
+\begin{DoxyCompactList}\small\item\em Get the reaction force on bodyB at the joint anchor in Newtons. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a5735431a7c29ca105ec2fb6bd6548d0e}\label{classb2MotorJoint_a5735431a7c29ca105ec2fb6bd6548d0e}} 
+float \mbox{\hyperlink{classb2MotorJoint_a5735431a7c29ca105ec2fb6bd6548d0e}{Get\+Reaction\+Torque}} (float inv\+\_\+dt) const override
+\begin{DoxyCompactList}\small\item\em Get the reaction torque on bodyB in N$\ast$m. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a99254b5fc9ed9f2d0fdccada513000c3}\label{classb2MotorJoint_a99254b5fc9ed9f2d0fdccada513000c3}} 
+void \mbox{\hyperlink{classb2MotorJoint_a99254b5fc9ed9f2d0fdccada513000c3}{Set\+Linear\+Offset}} (const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&linear\+Offset)
+\begin{DoxyCompactList}\small\item\em Set/get the target linear offset, in frame A, in meters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a21a2e1b6484194dc2c5cf3037404bc6d}\label{classb2MotorJoint_a21a2e1b6484194dc2c5cf3037404bc6d}} 
+const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \& {\bfseries Get\+Linear\+Offset} () const
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_aa9042733cfcac2acbc529c2fd60b15f5}\label{classb2MotorJoint_aa9042733cfcac2acbc529c2fd60b15f5}} 
+void \mbox{\hyperlink{classb2MotorJoint_aa9042733cfcac2acbc529c2fd60b15f5}{Set\+Angular\+Offset}} (float angular\+Offset)
+\begin{DoxyCompactList}\small\item\em Set/get the target angular offset, in radians. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a3ee1b96733af21700c35579de1a556f9}\label{classb2MotorJoint_a3ee1b96733af21700c35579de1a556f9}} 
+float {\bfseries Get\+Angular\+Offset} () const
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_aa3c2b0b06eda7fd50b8a0188d04714e0}\label{classb2MotorJoint_aa3c2b0b06eda7fd50b8a0188d04714e0}} 
+void \mbox{\hyperlink{classb2MotorJoint_aa3c2b0b06eda7fd50b8a0188d04714e0}{Set\+Max\+Force}} (float force)
+\begin{DoxyCompactList}\small\item\em Set the maximum friction force in N. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a2d20421e4336350007db42caa9887101}\label{classb2MotorJoint_a2d20421e4336350007db42caa9887101}} 
+float \mbox{\hyperlink{classb2MotorJoint_a2d20421e4336350007db42caa9887101}{Get\+Max\+Force}} () const
+\begin{DoxyCompactList}\small\item\em Get the maximum friction force in N. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a73ef23148813ca3b30e1d52d8faa43a9}\label{classb2MotorJoint_a73ef23148813ca3b30e1d52d8faa43a9}} 
+void \mbox{\hyperlink{classb2MotorJoint_a73ef23148813ca3b30e1d52d8faa43a9}{Set\+Max\+Torque}} (float torque)
+\begin{DoxyCompactList}\small\item\em Set the maximum friction torque in N$\ast$m. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_aa8276f00dc2e32a0d7de6de2022e9ffa}\label{classb2MotorJoint_aa8276f00dc2e32a0d7de6de2022e9ffa}} 
+float \mbox{\hyperlink{classb2MotorJoint_aa8276f00dc2e32a0d7de6de2022e9ffa}{Get\+Max\+Torque}} () const
+\begin{DoxyCompactList}\small\item\em Get the maximum friction torque in N$\ast$m. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a4fb5a4ee4d16bae6be450979bf3d388b}\label{classb2MotorJoint_a4fb5a4ee4d16bae6be450979bf3d388b}} 
+void \mbox{\hyperlink{classb2MotorJoint_a4fb5a4ee4d16bae6be450979bf3d388b}{Set\+Correction\+Factor}} (float factor)
+\begin{DoxyCompactList}\small\item\em Set the position correction factor in the range \mbox{[}0,1\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a827da80c693304040cb171369af7d9ba}\label{classb2MotorJoint_a827da80c693304040cb171369af7d9ba}} 
+float \mbox{\hyperlink{classb2MotorJoint_a827da80c693304040cb171369af7d9ba}{Get\+Correction\+Factor}} () const
+\begin{DoxyCompactList}\small\item\em Get the position correction factor in the range \mbox{[}0,1\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_abb67754f39b4747ae07af5cb5b348836}\label{classb2MotorJoint_abb67754f39b4747ae07af5cb5b348836}} 
+void \mbox{\hyperlink{classb2MotorJoint_abb67754f39b4747ae07af5cb5b348836}{Dump}} () override
+\begin{DoxyCompactList}\small\item\em Dump to b2\+Log. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a58adfab0fe79d254347a367341b0963a}\label{classb2MotorJoint_a58adfab0fe79d254347a367341b0963a}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{classb2MotorJoint_a58adfab0fe79d254347a367341b0963a}{Get\+AnchorA}} () const override
+\begin{DoxyCompactList}\small\item\em Get the anchor point on bodyA in world coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a5d563fd070f7b6cfe8db6f83e1bebbcd}\label{classb2MotorJoint_a5d563fd070f7b6cfe8db6f83e1bebbcd}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{classb2MotorJoint_a5d563fd070f7b6cfe8db6f83e1bebbcd}{Get\+AnchorB}} () const override
+\begin{DoxyCompactList}\small\item\em Get the anchor point on bodyB in world coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a5dd26e48d7820619bdf149e08ea49bcb}\label{classb2MotorJoint_a5dd26e48d7820619bdf149e08ea49bcb}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{classb2MotorJoint_a5dd26e48d7820619bdf149e08ea49bcb}{Get\+Reaction\+Force}} (float inv\+\_\+dt) const override
+\begin{DoxyCompactList}\small\item\em Get the reaction force on bodyB at the joint anchor in Newtons. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a5735431a7c29ca105ec2fb6bd6548d0e}\label{classb2MotorJoint_a5735431a7c29ca105ec2fb6bd6548d0e}} 
+float \mbox{\hyperlink{classb2MotorJoint_a5735431a7c29ca105ec2fb6bd6548d0e}{Get\+Reaction\+Torque}} (float inv\+\_\+dt) const override
+\begin{DoxyCompactList}\small\item\em Get the reaction torque on bodyB in N$\ast$m. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a99254b5fc9ed9f2d0fdccada513000c3}\label{classb2MotorJoint_a99254b5fc9ed9f2d0fdccada513000c3}} 
+void \mbox{\hyperlink{classb2MotorJoint_a99254b5fc9ed9f2d0fdccada513000c3}{Set\+Linear\+Offset}} (const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&linear\+Offset)
+\begin{DoxyCompactList}\small\item\em Set/get the target linear offset, in frame A, in meters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a21a2e1b6484194dc2c5cf3037404bc6d}\label{classb2MotorJoint_a21a2e1b6484194dc2c5cf3037404bc6d}} 
+const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \& {\bfseries Get\+Linear\+Offset} () const
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_aa9042733cfcac2acbc529c2fd60b15f5}\label{classb2MotorJoint_aa9042733cfcac2acbc529c2fd60b15f5}} 
+void \mbox{\hyperlink{classb2MotorJoint_aa9042733cfcac2acbc529c2fd60b15f5}{Set\+Angular\+Offset}} (float angular\+Offset)
+\begin{DoxyCompactList}\small\item\em Set/get the target angular offset, in radians. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a3ee1b96733af21700c35579de1a556f9}\label{classb2MotorJoint_a3ee1b96733af21700c35579de1a556f9}} 
+float {\bfseries Get\+Angular\+Offset} () const
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_aa3c2b0b06eda7fd50b8a0188d04714e0}\label{classb2MotorJoint_aa3c2b0b06eda7fd50b8a0188d04714e0}} 
+void \mbox{\hyperlink{classb2MotorJoint_aa3c2b0b06eda7fd50b8a0188d04714e0}{Set\+Max\+Force}} (float force)
+\begin{DoxyCompactList}\small\item\em Set the maximum friction force in N. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a2d20421e4336350007db42caa9887101}\label{classb2MotorJoint_a2d20421e4336350007db42caa9887101}} 
+float \mbox{\hyperlink{classb2MotorJoint_a2d20421e4336350007db42caa9887101}{Get\+Max\+Force}} () const
+\begin{DoxyCompactList}\small\item\em Get the maximum friction force in N. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a73ef23148813ca3b30e1d52d8faa43a9}\label{classb2MotorJoint_a73ef23148813ca3b30e1d52d8faa43a9}} 
+void \mbox{\hyperlink{classb2MotorJoint_a73ef23148813ca3b30e1d52d8faa43a9}{Set\+Max\+Torque}} (float torque)
+\begin{DoxyCompactList}\small\item\em Set the maximum friction torque in N$\ast$m. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_aa8276f00dc2e32a0d7de6de2022e9ffa}\label{classb2MotorJoint_aa8276f00dc2e32a0d7de6de2022e9ffa}} 
+float \mbox{\hyperlink{classb2MotorJoint_aa8276f00dc2e32a0d7de6de2022e9ffa}{Get\+Max\+Torque}} () const
+\begin{DoxyCompactList}\small\item\em Get the maximum friction torque in N$\ast$m. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a4fb5a4ee4d16bae6be450979bf3d388b}\label{classb2MotorJoint_a4fb5a4ee4d16bae6be450979bf3d388b}} 
+void \mbox{\hyperlink{classb2MotorJoint_a4fb5a4ee4d16bae6be450979bf3d388b}{Set\+Correction\+Factor}} (float factor)
+\begin{DoxyCompactList}\small\item\em Set the position correction factor in the range \mbox{[}0,1\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_a827da80c693304040cb171369af7d9ba}\label{classb2MotorJoint_a827da80c693304040cb171369af7d9ba}} 
+float \mbox{\hyperlink{classb2MotorJoint_a827da80c693304040cb171369af7d9ba}{Get\+Correction\+Factor}} () const
+\begin{DoxyCompactList}\small\item\em Get the position correction factor in the range \mbox{[}0,1\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2MotorJoint_abb67754f39b4747ae07af5cb5b348836}\label{classb2MotorJoint_abb67754f39b4747ae07af5cb5b348836}} 
+void \mbox{\hyperlink{classb2MotorJoint_abb67754f39b4747ae07af5cb5b348836}{Dump}} () override
+\begin{DoxyCompactList}\small\item\em Dump to b2\+Log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_ac0c56b069910915e1ceef3b89c035833}\label{classb2MotorJoint_ac0c56b069910915e1ceef3b89c035833}} 
+{\bfseries b2\+Motor\+Joint} (const \mbox{\hyperlink{structb2MotorJointDef}{b2\+Motor\+Joint\+Def}} $\ast$def)
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_aeffac9d1e3940c362962319d1bdb3f22}\label{classb2MotorJoint_aeffac9d1e3940c362962319d1bdb3f22}} 
+void {\bfseries Init\+Velocity\+Constraints} (const \mbox{\hyperlink{structb2SolverData}{b2\+Solver\+Data}} \&data) override
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a620c75b301aeab409f9d50a041a80fb8}\label{classb2MotorJoint_a620c75b301aeab409f9d50a041a80fb8}} 
+void {\bfseries Solve\+Velocity\+Constraints} (const \mbox{\hyperlink{structb2SolverData}{b2\+Solver\+Data}} \&data) override
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a4e56455ab7e90f82fc1f463efc9b59de}\label{classb2MotorJoint_a4e56455ab7e90f82fc1f463efc9b59de}} 
+bool {\bfseries Solve\+Position\+Constraints} (const \mbox{\hyperlink{structb2SolverData}{b2\+Solver\+Data}} \&data) override
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_ac0c56b069910915e1ceef3b89c035833}\label{classb2MotorJoint_ac0c56b069910915e1ceef3b89c035833}} 
+{\bfseries b2\+Motor\+Joint} (const \mbox{\hyperlink{structb2MotorJointDef}{b2\+Motor\+Joint\+Def}} $\ast$def)
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_aeffac9d1e3940c362962319d1bdb3f22}\label{classb2MotorJoint_aeffac9d1e3940c362962319d1bdb3f22}} 
+void {\bfseries Init\+Velocity\+Constraints} (const \mbox{\hyperlink{structb2SolverData}{b2\+Solver\+Data}} \&data) override
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a620c75b301aeab409f9d50a041a80fb8}\label{classb2MotorJoint_a620c75b301aeab409f9d50a041a80fb8}} 
+void {\bfseries Solve\+Velocity\+Constraints} (const \mbox{\hyperlink{structb2SolverData}{b2\+Solver\+Data}} \&data) override
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a4e56455ab7e90f82fc1f463efc9b59de}\label{classb2MotorJoint_a4e56455ab7e90f82fc1f463efc9b59de}} 
+bool {\bfseries Solve\+Position\+Constraints} (const \mbox{\hyperlink{structb2SolverData}{b2\+Solver\+Data}} \&data) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a6e8db2001da3a9b2926a41451f28f73b}\label{classb2MotorJoint_a6e8db2001da3a9b2926a41451f28f73b}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+linear\+Offset}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_ad4e94ac665fd5ea958f5bb7d314d5b7e}\label{classb2MotorJoint_ad4e94ac665fd5ea958f5bb7d314d5b7e}} 
+float {\bfseries m\+\_\+angular\+Offset}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a5aba4dbf8cccc33a1cc20f7a503b51f5}\label{classb2MotorJoint_a5aba4dbf8cccc33a1cc20f7a503b51f5}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+linear\+Impulse}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_ab19a9b01b371e93806ad71b19fd439f8}\label{classb2MotorJoint_ab19a9b01b371e93806ad71b19fd439f8}} 
+float {\bfseries m\+\_\+angular\+Impulse}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a9ecf7202f8978c2c8fa4690435393b07}\label{classb2MotorJoint_a9ecf7202f8978c2c8fa4690435393b07}} 
+float {\bfseries m\+\_\+max\+Force}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a00dbcbdc092c523706fcdddfe84a9d73}\label{classb2MotorJoint_a00dbcbdc092c523706fcdddfe84a9d73}} 
+float {\bfseries m\+\_\+max\+Torque}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a5b20a1762b7167ac82ab585eaedd050c}\label{classb2MotorJoint_a5b20a1762b7167ac82ab585eaedd050c}} 
+float {\bfseries m\+\_\+correction\+Factor}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_afdd9d0ebe37506dd8509ed2392fa1f56}\label{classb2MotorJoint_afdd9d0ebe37506dd8509ed2392fa1f56}} 
+int32 {\bfseries m\+\_\+indexA}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a51525d3f5af31dcede8e641943fe86b3}\label{classb2MotorJoint_a51525d3f5af31dcede8e641943fe86b3}} 
+int32 {\bfseries m\+\_\+indexB}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a0340ef47abad9882a271be45df15d3ed}\label{classb2MotorJoint_a0340ef47abad9882a271be45df15d3ed}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+rA}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a85c605b404e4b087e2932fdf23b447d5}\label{classb2MotorJoint_a85c605b404e4b087e2932fdf23b447d5}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+rB}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a42f50bbd4b5821164c9777903c83a723}\label{classb2MotorJoint_a42f50bbd4b5821164c9777903c83a723}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+local\+CenterA}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a8ba1cf76d5cbc10bf6ff9b7685ebc20d}\label{classb2MotorJoint_a8ba1cf76d5cbc10bf6ff9b7685ebc20d}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+local\+CenterB}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a21d38a7fedf735aca7d36d1ec033337e}\label{classb2MotorJoint_a21d38a7fedf735aca7d36d1ec033337e}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+linear\+Error}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a9e525c7ee8fd735e2e12025791581cf6}\label{classb2MotorJoint_a9e525c7ee8fd735e2e12025791581cf6}} 
+float {\bfseries m\+\_\+angular\+Error}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_ad69dbe78f50353baf23466a6dfee2c0b}\label{classb2MotorJoint_ad69dbe78f50353baf23466a6dfee2c0b}} 
+float {\bfseries m\+\_\+inv\+MassA}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a632ca501bfb5ebab3ab01ca047dc6feb}\label{classb2MotorJoint_a632ca501bfb5ebab3ab01ca047dc6feb}} 
+float {\bfseries m\+\_\+inv\+MassB}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a69f726324adf8fd596a2102bdc202aec}\label{classb2MotorJoint_a69f726324adf8fd596a2102bdc202aec}} 
+float {\bfseries m\+\_\+inv\+IA}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_ab4d176989f1b011baf160d53f70a7b99}\label{classb2MotorJoint_ab4d176989f1b011baf160d53f70a7b99}} 
+float {\bfseries m\+\_\+inv\+IB}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a89503b91fd38d332304092661aafd2c0}\label{classb2MotorJoint_a89503b91fd38d332304092661aafd2c0}} 
+\mbox{\hyperlink{structb2Mat22}{b2\+Mat22}} {\bfseries m\+\_\+linear\+Mass}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_adc0309560f4883fba8b9a55a29198056}\label{classb2MotorJoint_adc0309560f4883fba8b9a55a29198056}} 
+float {\bfseries m\+\_\+angular\+Mass}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classb2MotorJoint_a2f8aeb7f12b8fbe115431953a4926eed}\label{classb2MotorJoint_a2f8aeb7f12b8fbe115431953a4926eed}} 
+class {\bfseries b2\+Joint}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A motor joint is used to control the relative motion between two bodies. A typical usage is to control the movement of a dynamic body with respect to the ground. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libs/arm64/include/box2d/b2\+\_\+motor\+\_\+joint.\+h\end{DoxyCompactItemize}

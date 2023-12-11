@@ -1,0 +1,70 @@
+\hypertarget{classGameMenu2}{}\doxysection{Game\+Menu2 Class Reference}
+\label{classGameMenu2}\index{GameMenu2@{GameMenu2}}
+
+
+Manages the secondary game menu interface.  
+
+
+
+
+{\ttfamily \#include $<$menu2.\+hpp$>$}
+
+
+
+Inheritance diagram for Game\+Menu2\+:
+% FIG 0
+
+
+Collaboration diagram for Game\+Menu2\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGameMenu2_a6ac686af2033eb730ff18b3611cb29f2}\label{classGameMenu2_a6ac686af2033eb730ff18b3611cb29f2}} 
+enum \mbox{\hyperlink{classGameMenu2_a6ac686af2033eb730ff18b3611cb29f2}{Menu\+Option}} \{ {\bfseries FOREST}
+, {\bfseries OCEAN}
+, {\bfseries EXIT}
+, {\bfseries NUM\+\_\+\+ITEMS}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines menu options available in the secondary game menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGameMenu2_a44d6a084f7bf0527d725172d82656fb1}{Game\+Menu2}} (\mbox{\hyperlink{classsf_1_1RenderWindow}{sf\+::\+Render\+Window}} \&window, const \mbox{\hyperlink{classsf_1_1Font}{sf\+::\+Font}} \&font, const \mbox{\hyperlink{classsf_1_1Texture}{sf\+::\+Texture}} \&texture)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classGameMenu2}{Game\+Menu2}} object with a given window, font, and texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Manages the secondary game menu interface. 
+
+The \mbox{\hyperlink{classGameMenu2}{Game\+Menu2}} class extends the \mbox{\hyperlink{classBaseMenu}{Base\+Menu}} class to provide a specific interface for the secondary game menu. It includes options for choosing different game environments or exiting the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGameMenu2_a44d6a084f7bf0527d725172d82656fb1}\label{classGameMenu2_a44d6a084f7bf0527d725172d82656fb1}} 
+\index{GameMenu2@{GameMenu2}!GameMenu2@{GameMenu2}}
+\index{GameMenu2@{GameMenu2}!GameMenu2@{GameMenu2}}
+\doxysubsubsection{\texorpdfstring{GameMenu2()}{GameMenu2()}}
+{\footnotesize\ttfamily Game\+Menu2\+::\+Game\+Menu2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1RenderWindow}{sf\+::\+Render\+Window}} \&}]{window,  }\item[{const \mbox{\hyperlink{classsf_1_1Font}{sf\+::\+Font}} \&}]{font,  }\item[{const \mbox{\hyperlink{classsf_1_1Texture}{sf\+::\+Texture}} \&}]{texture }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classGameMenu2}{Game\+Menu2}} object with a given window, font, and texture. 
+
+Initializes the secondary game menu with specified appearance and functionality, setting up the menu items and their properties specific to game environment selection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The SFML Render\+Window object where the menu will be drawn. \\
+\hline
+{\em font} & The SFML Font object used to render text in the menu. \\
+\hline
+{\em texture} & The SFML Texture object used for the menu\textquotesingle{}s background. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/\mbox{\hyperlink{menu2_8hpp}{menu2.\+hpp}}\item 
+src/menu2.\+cpp\end{DoxyCompactItemize}

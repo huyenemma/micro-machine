@@ -1,0 +1,16 @@
+digraph "sf::SoundFileReader"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="sf::SoundFileReader",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Abstract base class for sound file decoding."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="sf::priv::SoundFileReaderFlac",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1priv_1_1SoundFileReaderFlac.html",tooltip="Implementation of sound file reader that handles FLAC files."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="sf::priv::SoundFileReaderMp3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1priv_1_1SoundFileReaderMp3.html",tooltip="Implementation of sound file reader that handles MP3 files."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="sf::priv::SoundFileReaderOgg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1priv_1_1SoundFileReaderOgg.html",tooltip="Implementation of sound file reader that handles OGG/Vorbis files."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="sf::priv::SoundFileReaderWav",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1priv_1_1SoundFileReaderWav.html",tooltip="Implementation of sound file reader that handles wav files."];
+}

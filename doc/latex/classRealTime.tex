@@ -1,0 +1,142 @@
+\hypertarget{classRealTime}{}\doxysection{Real\+Time Class Reference}
+\label{classRealTime}\index{RealTime@{RealTime}}
+
+
+A class representing a real-\/time countdown timer.  
+
+
+
+
+{\ttfamily \#include $<$real\+Time.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRealTime_a2487f9c5a6ce82acb0303fc20676ee92}{Real\+Time}} (int duration, const \mbox{\hyperlink{classsf_1_1Font}{sf\+::\+Font}} \&font, \mbox{\hyperlink{classsf_1_1Color}{sf\+::\+Color}} color=\mbox{\hyperlink{classsf_1_1Color_a4fd874712178d9e206f53226002aa4ca}{sf\+::\+Color\+::\+White}}, \mbox{\hyperlink{classsf_1_1Vector2}{sf\+::\+Vector2f}} position=\mbox{\hyperlink{classsf_1_1Vector2}{sf\+::\+Vector2f}}(10, 10))
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classRealTime}{Real\+Time}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRealTime_a784582df32a01af25c79a1df1efb236e}\label{classRealTime_a784582df32a01af25c79a1df1efb236e}} 
+void \mbox{\hyperlink{classRealTime_a784582df32a01af25c79a1df1efb236e}{Set\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Sets up the initial state of the countdown timer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRealTime_a703e09968919e93e186f86b20afd7e49}{Is\+Time\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the time has run out. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRealTime_a76298ece5137586196d465f21ec0c2ad}{Update}} (int player1\+Rounds, int player2\+Rounds)
+\begin{DoxyCompactList}\small\item\em Updates the countdown timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRealTime_a7c3f8b61bbc355966eeeaf08474df43f}{Set\+Game\+Mode}} (int mode)
+\begin{DoxyCompactList}\small\item\em Sets the game mode (1 for one player, 2 for two players). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRealTime_ad728043c8a36251594d14322f541c853}{Set\+Player\+Rounds}} (int player1\+Rounds, int player2\+Rounds)
+\begin{DoxyCompactList}\small\item\em Sets the number of rounds for both players. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRealTime_ade60118672b759b0f01ffd29976a6d77}{Draw}} (\mbox{\hyperlink{classsf_1_1RenderWindow}{sf\+::\+Render\+Window}} \&window)
+\begin{DoxyCompactList}\small\item\em Draws the countdown timer on the provided SFML window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class representing a real-\/time countdown timer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRealTime_a2487f9c5a6ce82acb0303fc20676ee92}\label{classRealTime_a2487f9c5a6ce82acb0303fc20676ee92}} 
+\index{RealTime@{RealTime}!RealTime@{RealTime}}
+\index{RealTime@{RealTime}!RealTime@{RealTime}}
+\doxysubsubsection{\texorpdfstring{RealTime()}{RealTime()}}
+{\footnotesize\ttfamily Real\+Time\+::\+Real\+Time (\begin{DoxyParamCaption}\item[{int}]{duration,  }\item[{const \mbox{\hyperlink{classsf_1_1Font}{sf\+::\+Font}} \&}]{font,  }\item[{\mbox{\hyperlink{classsf_1_1Color}{sf\+::\+Color}}}]{color = {\ttfamily \mbox{\hyperlink{classsf_1_1Color_a4fd874712178d9e206f53226002aa4ca}{sf\+::\+Color\+::\+White}}},  }\item[{\mbox{\hyperlink{classsf_1_1Vector2}{sf\+::\+Vector2f}}}]{position = {\ttfamily \mbox{\hyperlink{classsf_1_1Vector2}{sf\+::\+Vector2f}}(10,~10)} }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classRealTime}{Real\+Time}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & The duration of the countdown timer. \\
+\hline
+{\em font} & The font used for rendering the time text. \\
+\hline
+{\em color} & The color of the time text (default is \mbox{\hyperlink{classsf_1_1Color_a4fd874712178d9e206f53226002aa4ca}{sf\+::\+Color\+::\+White}}). \\
+\hline
+{\em position} & The position of the time text (default is sf\+::\+Vector2f(10, 10)). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRealTime_ade60118672b759b0f01ffd29976a6d77}\label{classRealTime_ade60118672b759b0f01ffd29976a6d77}} 
+\index{RealTime@{RealTime}!Draw@{Draw}}
+\index{Draw@{Draw}!RealTime@{RealTime}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Real\+Time\+::\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1RenderWindow}{sf\+::\+Render\+Window}} \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Draws the countdown timer on the provided SFML window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The SFML window on which to draw the countdown timer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRealTime_a703e09968919e93e186f86b20afd7e49}\label{classRealTime_a703e09968919e93e186f86b20afd7e49}} 
+\index{RealTime@{RealTime}!IsTimeUp@{IsTimeUp}}
+\index{IsTimeUp@{IsTimeUp}!RealTime@{RealTime}}
+\doxysubsubsection{\texorpdfstring{IsTimeUp()}{IsTimeUp()}}
+{\footnotesize\ttfamily bool Real\+Time\+::\+Is\+Time\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the time has run out. 
+
+\begin{DoxyReturn}{Returns}
+True if the time is up, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRealTime_a7c3f8b61bbc355966eeeaf08474df43f}\label{classRealTime_a7c3f8b61bbc355966eeeaf08474df43f}} 
+\index{RealTime@{RealTime}!SetGameMode@{SetGameMode}}
+\index{SetGameMode@{SetGameMode}!RealTime@{RealTime}}
+\doxysubsubsection{\texorpdfstring{SetGameMode()}{SetGameMode()}}
+{\footnotesize\ttfamily void Real\+Time\+::\+Set\+Game\+Mode (\begin{DoxyParamCaption}\item[{int}]{mode }\end{DoxyParamCaption})}
+
+
+
+Sets the game mode (1 for one player, 2 for two players). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The game mode to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRealTime_ad728043c8a36251594d14322f541c853}\label{classRealTime_ad728043c8a36251594d14322f541c853}} 
+\index{RealTime@{RealTime}!SetPlayerRounds@{SetPlayerRounds}}
+\index{SetPlayerRounds@{SetPlayerRounds}!RealTime@{RealTime}}
+\doxysubsubsection{\texorpdfstring{SetPlayerRounds()}{SetPlayerRounds()}}
+{\footnotesize\ttfamily void Real\+Time\+::\+Set\+Player\+Rounds (\begin{DoxyParamCaption}\item[{int}]{player1\+Rounds,  }\item[{int}]{player2\+Rounds }\end{DoxyParamCaption})}
+
+
+
+Sets the number of rounds for both players. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player1\+Rounds} & Number of rounds for player 1. \\
+\hline
+{\em player2\+Rounds} & Number of rounds for player 2. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRealTime_a76298ece5137586196d465f21ec0c2ad}\label{classRealTime_a76298ece5137586196d465f21ec0c2ad}} 
+\index{RealTime@{RealTime}!Update@{Update}}
+\index{Update@{Update}!RealTime@{RealTime}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Real\+Time\+::\+Update (\begin{DoxyParamCaption}\item[{int}]{player1\+Rounds,  }\item[{int}]{player2\+Rounds }\end{DoxyParamCaption})}
+
+
+
+Updates the countdown timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player1\+Rounds} & Number of rounds for player 1. \\
+\hline
+{\em player2\+Rounds} & Number of rounds for player 2. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/real\+Time.\+hpp\item 
+src/real\+Time.\+cpp\end{DoxyCompactItemize}

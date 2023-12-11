@@ -1,0 +1,201 @@
+\hypertarget{classb2EdgeShape}{}\doxysection{b2\+Edge\+Shape Class Reference}
+\label{classb2EdgeShape}\index{b2EdgeShape@{b2EdgeShape}}
+
+
+{\ttfamily \#include $<$b2\+\_\+edge\+\_\+shape.\+h$>$}
+
+
+
+Inheritance diagram for b2\+Edge\+Shape\+:
+% FIG 0
+
+
+Collaboration diagram for b2\+Edge\+Shape\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classb2EdgeShape_ad2b74e7d57e3144f09f8cd2dccdd21d9}{Set\+One\+Sided}} (const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&v0, const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&v1, const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&v2, const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&v3)
+\item 
+\mbox{\Hypertarget{classb2EdgeShape_ad2c40bb652b4ea1f087580b8c42fcdf2}\label{classb2EdgeShape_ad2c40bb652b4ea1f087580b8c42fcdf2}} 
+void \mbox{\hyperlink{classb2EdgeShape_ad2c40bb652b4ea1f087580b8c42fcdf2}{Set\+Two\+Sided}} (const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&v1, const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&v2)
+\begin{DoxyCompactList}\small\item\em Set this as an isolated edge. Collision is two-\/sided. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2EdgeShape_a99fd092e0f3a4074ad1fba1fa6023451}\label{classb2EdgeShape_a99fd092e0f3a4074ad1fba1fa6023451}} 
+\mbox{\hyperlink{classb2Shape}{b2\+Shape}} $\ast$ \mbox{\hyperlink{classb2EdgeShape_a99fd092e0f3a4074ad1fba1fa6023451}{Clone}} (\mbox{\hyperlink{classb2BlockAllocator}{b2\+Block\+Allocator}} $\ast$allocator) const override
+\begin{DoxyCompactList}\small\item\em Implement \mbox{\hyperlink{classb2Shape}{b2\+Shape}}. \end{DoxyCompactList}\item 
+int32 \mbox{\hyperlink{classb2EdgeShape_ae9dcaa2f4b77fcf182d29159658da82a}{Get\+Child\+Count}} () const override
+\item 
+bool \mbox{\hyperlink{classb2EdgeShape_a15151673cf9ad585779c70363425f470}{Test\+Point}} (const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&transform, const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&p) const override
+\item 
+\mbox{\Hypertarget{classb2EdgeShape_a192cf10bd556a5a90b29a2bcee2ddd75}\label{classb2EdgeShape_a192cf10bd556a5a90b29a2bcee2ddd75}} 
+bool \mbox{\hyperlink{classb2EdgeShape_a192cf10bd556a5a90b29a2bcee2ddd75}{Ray\+Cast}} (\mbox{\hyperlink{structb2RayCastOutput}{b2\+Ray\+Cast\+Output}} $\ast$output, const \mbox{\hyperlink{structb2RayCastInput}{b2\+Ray\+Cast\+Input}} \&input, const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&transform, int32 child\+Index) const override
+\begin{DoxyCompactList}\small\item\em Implement \mbox{\hyperlink{classb2Shape}{b2\+Shape}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classb2EdgeShape_a238139ae1736b457d77443133ff16854}{Compute\+AABB}} (\mbox{\hyperlink{structb2AABB}{b2\+AABB}} $\ast$aabb, const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&transform, int32 child\+Index) const override
+\item 
+void \mbox{\hyperlink{classb2EdgeShape_a2873ebff00737e90ac5d8348c39a37c0}{Compute\+Mass}} (\mbox{\hyperlink{structb2MassData}{b2\+Mass\+Data}} $\ast$mass\+Data, float density) const override
+\item 
+void \mbox{\hyperlink{classb2EdgeShape_ad2b74e7d57e3144f09f8cd2dccdd21d9}{Set\+One\+Sided}} (const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&v0, const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&v1, const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&v2, const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&v3)
+\item 
+\mbox{\Hypertarget{classb2EdgeShape_ad2c40bb652b4ea1f087580b8c42fcdf2}\label{classb2EdgeShape_ad2c40bb652b4ea1f087580b8c42fcdf2}} 
+void \mbox{\hyperlink{classb2EdgeShape_ad2c40bb652b4ea1f087580b8c42fcdf2}{Set\+Two\+Sided}} (const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&v1, const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&v2)
+\begin{DoxyCompactList}\small\item\em Set this as an isolated edge. Collision is two-\/sided. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2EdgeShape_a99fd092e0f3a4074ad1fba1fa6023451}\label{classb2EdgeShape_a99fd092e0f3a4074ad1fba1fa6023451}} 
+\mbox{\hyperlink{classb2Shape}{b2\+Shape}} $\ast$ \mbox{\hyperlink{classb2EdgeShape_a99fd092e0f3a4074ad1fba1fa6023451}{Clone}} (\mbox{\hyperlink{classb2BlockAllocator}{b2\+Block\+Allocator}} $\ast$allocator) const override
+\begin{DoxyCompactList}\small\item\em Implement \mbox{\hyperlink{classb2Shape}{b2\+Shape}}. \end{DoxyCompactList}\item 
+int32 \mbox{\hyperlink{classb2EdgeShape_ae9dcaa2f4b77fcf182d29159658da82a}{Get\+Child\+Count}} () const override
+\item 
+bool \mbox{\hyperlink{classb2EdgeShape_a15151673cf9ad585779c70363425f470}{Test\+Point}} (const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&transform, const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&p) const override
+\item 
+\mbox{\Hypertarget{classb2EdgeShape_a192cf10bd556a5a90b29a2bcee2ddd75}\label{classb2EdgeShape_a192cf10bd556a5a90b29a2bcee2ddd75}} 
+bool \mbox{\hyperlink{classb2EdgeShape_a192cf10bd556a5a90b29a2bcee2ddd75}{Ray\+Cast}} (\mbox{\hyperlink{structb2RayCastOutput}{b2\+Ray\+Cast\+Output}} $\ast$output, const \mbox{\hyperlink{structb2RayCastInput}{b2\+Ray\+Cast\+Input}} \&input, const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&transform, int32 child\+Index) const override
+\begin{DoxyCompactList}\small\item\em Implement \mbox{\hyperlink{classb2Shape}{b2\+Shape}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classb2EdgeShape_a238139ae1736b457d77443133ff16854}{Compute\+AABB}} (\mbox{\hyperlink{structb2AABB}{b2\+AABB}} $\ast$aabb, const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&transform, int32 child\+Index) const override
+\item 
+void \mbox{\hyperlink{classb2EdgeShape_a2873ebff00737e90ac5d8348c39a37c0}{Compute\+Mass}} (\mbox{\hyperlink{structb2MassData}{b2\+Mass\+Data}} $\ast$mass\+Data, float density) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classb2EdgeShape_a916cf02a752ff1a70db35b2edaf19bb4}\label{classb2EdgeShape_a916cf02a752ff1a70db35b2edaf19bb4}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{classb2EdgeShape_a916cf02a752ff1a70db35b2edaf19bb4}{m\+\_\+vertex1}}
+\begin{DoxyCompactList}\small\item\em These are the edge vertices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2EdgeShape_aa218bfe2bf135e4e94028b29aaa32fce}\label{classb2EdgeShape_aa218bfe2bf135e4e94028b29aaa32fce}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+vertex2}
+\item 
+\mbox{\Hypertarget{classb2EdgeShape_a907c9829484cc1ba7527ab368e9fdf93}\label{classb2EdgeShape_a907c9829484cc1ba7527ab368e9fdf93}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{classb2EdgeShape_a907c9829484cc1ba7527ab368e9fdf93}{m\+\_\+vertex0}}
+\begin{DoxyCompactList}\small\item\em Optional adjacent vertices. These are used for smooth collision. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2EdgeShape_a7991fd8b38806a7785748cd991c18452}\label{classb2EdgeShape_a7991fd8b38806a7785748cd991c18452}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+vertex3}
+\item 
+\mbox{\Hypertarget{classb2EdgeShape_a954ce55a70f9cd10d6ad0e2073c5addc}\label{classb2EdgeShape_a954ce55a70f9cd10d6ad0e2073c5addc}} 
+bool \mbox{\hyperlink{classb2EdgeShape_a954ce55a70f9cd10d6ad0e2073c5addc}{m\+\_\+one\+Sided}}
+\begin{DoxyCompactList}\small\item\em Uses m\+\_\+vertex0 and m\+\_\+vertex3 to create smooth collision. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A line segment (edge) shape. These can be connected in chains or loops to other edge shapes. Edges created independently are two-\/sided and do no provide smooth movement across junctions. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classb2EdgeShape_a238139ae1736b457d77443133ff16854}\label{classb2EdgeShape_a238139ae1736b457d77443133ff16854}} 
+\index{b2EdgeShape@{b2EdgeShape}!ComputeAABB@{ComputeAABB}}
+\index{ComputeAABB@{ComputeAABB}!b2EdgeShape@{b2EdgeShape}}
+\doxysubsubsection{\texorpdfstring{ComputeAABB()}{ComputeAABB()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void b2\+Edge\+Shape\+::\+Compute\+AABB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structb2AABB}{b2\+AABB}} $\ast$}]{aabb,  }\item[{const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&}]{transform,  }\item[{int32}]{child\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classb2Shape_a88e9807fab0c8ca9a98d8926e50a1411}{b2\+Shape\+::\+Compute\+AABB}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classb2Shape_a88e9807fab0c8ca9a98d8926e50a1411}{b2\+Shape}}.
+
+\mbox{\Hypertarget{classb2EdgeShape_a238139ae1736b457d77443133ff16854}\label{classb2EdgeShape_a238139ae1736b457d77443133ff16854}} 
+\index{b2EdgeShape@{b2EdgeShape}!ComputeAABB@{ComputeAABB}}
+\index{ComputeAABB@{ComputeAABB}!b2EdgeShape@{b2EdgeShape}}
+\doxysubsubsection{\texorpdfstring{ComputeAABB()}{ComputeAABB()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void b2\+Edge\+Shape\+::\+Compute\+AABB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structb2AABB}{b2\+AABB}} $\ast$}]{aabb,  }\item[{const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&}]{transform,  }\item[{int32}]{child\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classb2Shape_a88e9807fab0c8ca9a98d8926e50a1411}{b2\+Shape\+::\+Compute\+AABB}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classb2Shape_a88e9807fab0c8ca9a98d8926e50a1411}{b2\+Shape}}.
+
+\mbox{\Hypertarget{classb2EdgeShape_a2873ebff00737e90ac5d8348c39a37c0}\label{classb2EdgeShape_a2873ebff00737e90ac5d8348c39a37c0}} 
+\index{b2EdgeShape@{b2EdgeShape}!ComputeMass@{ComputeMass}}
+\index{ComputeMass@{ComputeMass}!b2EdgeShape@{b2EdgeShape}}
+\doxysubsubsection{\texorpdfstring{ComputeMass()}{ComputeMass()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void b2\+Edge\+Shape\+::\+Compute\+Mass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structb2MassData}{b2\+Mass\+Data}} $\ast$}]{mass\+Data,  }\item[{float}]{density }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classb2Shape_a1b9497fd7951fa995df6fe00bcf8581b}{b2\+Shape\+::\+Compute\+Mass}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classb2Shape_a1b9497fd7951fa995df6fe00bcf8581b}{b2\+Shape}}.
+
+\mbox{\Hypertarget{classb2EdgeShape_a2873ebff00737e90ac5d8348c39a37c0}\label{classb2EdgeShape_a2873ebff00737e90ac5d8348c39a37c0}} 
+\index{b2EdgeShape@{b2EdgeShape}!ComputeMass@{ComputeMass}}
+\index{ComputeMass@{ComputeMass}!b2EdgeShape@{b2EdgeShape}}
+\doxysubsubsection{\texorpdfstring{ComputeMass()}{ComputeMass()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void b2\+Edge\+Shape\+::\+Compute\+Mass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structb2MassData}{b2\+Mass\+Data}} $\ast$}]{mass\+Data,  }\item[{float}]{density }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classb2Shape_a1b9497fd7951fa995df6fe00bcf8581b}{b2\+Shape\+::\+Compute\+Mass}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classb2Shape_a1b9497fd7951fa995df6fe00bcf8581b}{b2\+Shape}}.
+
+\mbox{\Hypertarget{classb2EdgeShape_ae9dcaa2f4b77fcf182d29159658da82a}\label{classb2EdgeShape_ae9dcaa2f4b77fcf182d29159658da82a}} 
+\index{b2EdgeShape@{b2EdgeShape}!GetChildCount@{GetChildCount}}
+\index{GetChildCount@{GetChildCount}!b2EdgeShape@{b2EdgeShape}}
+\doxysubsubsection{\texorpdfstring{GetChildCount()}{GetChildCount()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int32 b2\+Edge\+Shape\+::\+Get\+Child\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classb2Shape_a05a3c445017d96df9238ceefe6ce37ab}{b2\+Shape\+::\+Get\+Child\+Count}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classb2Shape_a05a3c445017d96df9238ceefe6ce37ab}{b2\+Shape}}.
+
+\mbox{\Hypertarget{classb2EdgeShape_ae9dcaa2f4b77fcf182d29159658da82a}\label{classb2EdgeShape_ae9dcaa2f4b77fcf182d29159658da82a}} 
+\index{b2EdgeShape@{b2EdgeShape}!GetChildCount@{GetChildCount}}
+\index{GetChildCount@{GetChildCount}!b2EdgeShape@{b2EdgeShape}}
+\doxysubsubsection{\texorpdfstring{GetChildCount()}{GetChildCount()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int32 b2\+Edge\+Shape\+::\+Get\+Child\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classb2Shape_a05a3c445017d96df9238ceefe6ce37ab}{b2\+Shape\+::\+Get\+Child\+Count}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classb2Shape_a05a3c445017d96df9238ceefe6ce37ab}{b2\+Shape}}.
+
+\mbox{\Hypertarget{classb2EdgeShape_ad2b74e7d57e3144f09f8cd2dccdd21d9}\label{classb2EdgeShape_ad2b74e7d57e3144f09f8cd2dccdd21d9}} 
+\index{b2EdgeShape@{b2EdgeShape}!SetOneSided@{SetOneSided}}
+\index{SetOneSided@{SetOneSided}!b2EdgeShape@{b2EdgeShape}}
+\doxysubsubsection{\texorpdfstring{SetOneSided()}{SetOneSided()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void b2\+Edge\+Shape\+::\+Set\+One\+Sided (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&}]{v0,  }\item[{const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&}]{v1,  }\item[{const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&}]{v2,  }\item[{const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&}]{v3 }\end{DoxyParamCaption})}
+
+Set this as a part of a sequence. Vertex v0 precedes the edge and vertex v3 follows. These extra vertices are used to provide smooth movement across junctions. This also makes the collision one-\/sided. The edge normal points to the right looking from v1 to v2. \mbox{\Hypertarget{classb2EdgeShape_ad2b74e7d57e3144f09f8cd2dccdd21d9}\label{classb2EdgeShape_ad2b74e7d57e3144f09f8cd2dccdd21d9}} 
+\index{b2EdgeShape@{b2EdgeShape}!SetOneSided@{SetOneSided}}
+\index{SetOneSided@{SetOneSided}!b2EdgeShape@{b2EdgeShape}}
+\doxysubsubsection{\texorpdfstring{SetOneSided()}{SetOneSided()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void b2\+Edge\+Shape\+::\+Set\+One\+Sided (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&}]{v0,  }\item[{const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&}]{v1,  }\item[{const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&}]{v2,  }\item[{const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&}]{v3 }\end{DoxyParamCaption})}
+
+Set this as a part of a sequence. Vertex v0 precedes the edge and vertex v3 follows. These extra vertices are used to provide smooth movement across junctions. This also makes the collision one-\/sided. The edge normal points to the right looking from v1 to v2. \mbox{\Hypertarget{classb2EdgeShape_a15151673cf9ad585779c70363425f470}\label{classb2EdgeShape_a15151673cf9ad585779c70363425f470}} 
+\index{b2EdgeShape@{b2EdgeShape}!TestPoint@{TestPoint}}
+\index{TestPoint@{TestPoint}!b2EdgeShape@{b2EdgeShape}}
+\doxysubsubsection{\texorpdfstring{TestPoint()}{TestPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool b2\+Edge\+Shape\+::\+Test\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&}]{transform,  }\item[{const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classb2Shape_a6ac968e403e2d93e8ae46d728a2e50fa}{b2\+Shape\+::\+Test\+Point}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classb2Shape_a6ac968e403e2d93e8ae46d728a2e50fa}{b2\+Shape}}.
+
+\mbox{\Hypertarget{classb2EdgeShape_a15151673cf9ad585779c70363425f470}\label{classb2EdgeShape_a15151673cf9ad585779c70363425f470}} 
+\index{b2EdgeShape@{b2EdgeShape}!TestPoint@{TestPoint}}
+\index{TestPoint@{TestPoint}!b2EdgeShape@{b2EdgeShape}}
+\doxysubsubsection{\texorpdfstring{TestPoint()}{TestPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool b2\+Edge\+Shape\+::\+Test\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&}]{transform,  }\item[{const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classb2Shape_a6ac968e403e2d93e8ae46d728a2e50fa}{b2\+Shape\+::\+Test\+Point}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classb2Shape_a6ac968e403e2d93e8ae46d728a2e50fa}{b2\+Shape}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libs/arm64/include/box2d/b2\+\_\+edge\+\_\+shape.\+h\end{DoxyCompactItemize}

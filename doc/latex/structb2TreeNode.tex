@@ -1,0 +1,71 @@
+\hypertarget{structb2TreeNode}{}\doxysection{b2\+Tree\+Node Struct Reference}
+\label{structb2TreeNode}\index{b2TreeNode@{b2TreeNode}}
+
+
+A node in the dynamic tree. The client does not interact with this directly.  
+
+
+
+
+{\ttfamily \#include $<$b2\+\_\+dynamic\+\_\+tree.\+h$>$}
+
+
+
+Collaboration diagram for b2\+Tree\+Node\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structb2TreeNode_a540267ce6fa890822f1eea2d1967f646}\label{structb2TreeNode_a540267ce6fa890822f1eea2d1967f646}} 
+bool {\bfseries Is\+Leaf} () const
+\item 
+\mbox{\Hypertarget{structb2TreeNode_a540267ce6fa890822f1eea2d1967f646}\label{structb2TreeNode_a540267ce6fa890822f1eea2d1967f646}} 
+bool {\bfseries Is\+Leaf} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structb2TreeNode_a798f1a594b33c713be45e76e79912239}\label{structb2TreeNode_a798f1a594b33c713be45e76e79912239}} 
+\mbox{\hyperlink{structb2AABB}{b2\+AABB}} \mbox{\hyperlink{structb2TreeNode_a798f1a594b33c713be45e76e79912239}{aabb}}
+\begin{DoxyCompactList}\small\item\em Enlarged AABB. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2TreeNode_a80040f062051f0f913056aa2a241cae0}\label{structb2TreeNode_a80040f062051f0f913056aa2a241cae0}} 
+void $\ast$ {\bfseries user\+Data}
+\item 
+\mbox{\Hypertarget{structb2TreeNode_a36d0b542ee43d84574bd08879c7033d0}\label{structb2TreeNode_a36d0b542ee43d84574bd08879c7033d0}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>int32 {\bfseries parent}\\
+\>int32 {\bfseries next}\\
+\}; \\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{structb2TreeNode_a3a320f2afc7d223e92ee3629602be5ca}\label{structb2TreeNode_a3a320f2afc7d223e92ee3629602be5ca}} 
+int32 {\bfseries child1}
+\item 
+\mbox{\Hypertarget{structb2TreeNode_aa6774ce329715b20d8b7cc8b6e3d50bc}\label{structb2TreeNode_aa6774ce329715b20d8b7cc8b6e3d50bc}} 
+int32 {\bfseries child2}
+\item 
+\mbox{\Hypertarget{structb2TreeNode_acd183ac94a8d44195c787111be4c22e2}\label{structb2TreeNode_acd183ac94a8d44195c787111be4c22e2}} 
+int32 {\bfseries height}
+\item 
+\mbox{\Hypertarget{structb2TreeNode_a5cef5935aeac831fcacd53e4d01e4027}\label{structb2TreeNode_a5cef5935aeac831fcacd53e4d01e4027}} 
+bool {\bfseries moved}
+\item 
+\mbox{\Hypertarget{structb2TreeNode_adcc8768bea1b6c09f6e6b69f1842f54b}\label{structb2TreeNode_adcc8768bea1b6c09f6e6b69f1842f54b}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>int32 {\bfseries parent}\\
+\>int32 {\bfseries next}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A node in the dynamic tree. The client does not interact with this directly. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libs/arm64/include/box2d/b2\+\_\+dynamic\+\_\+tree.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,134 @@
+\hypertarget{structb2Vec2}{}\doxysection{b2\+Vec2 Struct Reference}
+\label{structb2Vec2}\index{b2Vec2@{b2Vec2}}
+
+
+A 2D column vector.  
+
+
+
+
+{\ttfamily \#include $<$b2\+\_\+math.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structb2Vec2_a9171b31deb83af96872f99689939a12f}\label{structb2Vec2_a9171b31deb83af96872f99689939a12f}} 
+\mbox{\hyperlink{structb2Vec2_a9171b31deb83af96872f99689939a12f}{b2\+Vec2}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor does nothing (for performance). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_ab1e279a69f5c3e7e83c3a51e3b2339c0}\label{structb2Vec2_ab1e279a69f5c3e7e83c3a51e3b2339c0}} 
+\mbox{\hyperlink{structb2Vec2_ab1e279a69f5c3e7e83c3a51e3b2339c0}{b2\+Vec2}} (float x\+In, float y\+In)
+\begin{DoxyCompactList}\small\item\em Construct using coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_a5c6cbe27cfb29c6dbb29b9a3285b88d0}\label{structb2Vec2_a5c6cbe27cfb29c6dbb29b9a3285b88d0}} 
+void \mbox{\hyperlink{structb2Vec2_a5c6cbe27cfb29c6dbb29b9a3285b88d0}{Set\+Zero}} ()
+\begin{DoxyCompactList}\small\item\em Set this vector to all zeros. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_a78f0e635a664a563dd9246397d5f6e7e}\label{structb2Vec2_a78f0e635a664a563dd9246397d5f6e7e}} 
+void \mbox{\hyperlink{structb2Vec2_a78f0e635a664a563dd9246397d5f6e7e}{Set}} (float x\+\_\+, float y\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set this vector to some specified coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_a6cb15514ea571b4ddf73b6829551a127}\label{structb2Vec2_a6cb15514ea571b4ddf73b6829551a127}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{structb2Vec2_a6cb15514ea571b4ddf73b6829551a127}{operator-\/}} () const
+\begin{DoxyCompactList}\small\item\em Negate this vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_a6a45b081724bb89b6cfe3d21ee7d98b7}\label{structb2Vec2_a6a45b081724bb89b6cfe3d21ee7d98b7}} 
+float \mbox{\hyperlink{structb2Vec2_a6a45b081724bb89b6cfe3d21ee7d98b7}{operator()}} (int32 i) const
+\begin{DoxyCompactList}\small\item\em Read from and indexed element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_aedbd9f04609149375add7dea10759669}\label{structb2Vec2_aedbd9f04609149375add7dea10759669}} 
+float \& \mbox{\hyperlink{structb2Vec2_aedbd9f04609149375add7dea10759669}{operator()}} (int32 i)
+\begin{DoxyCompactList}\small\item\em Write to an indexed element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_a590789342e22ac1e7f9c1a63a2778b6d}\label{structb2Vec2_a590789342e22ac1e7f9c1a63a2778b6d}} 
+void \mbox{\hyperlink{structb2Vec2_a590789342e22ac1e7f9c1a63a2778b6d}{operator+=}} (const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&v)
+\begin{DoxyCompactList}\small\item\em Add a vector to this vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_a6b48cab4695a979ae40b7613aedc8b17}\label{structb2Vec2_a6b48cab4695a979ae40b7613aedc8b17}} 
+void \mbox{\hyperlink{structb2Vec2_a6b48cab4695a979ae40b7613aedc8b17}{operator-\/=}} (const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&v)
+\begin{DoxyCompactList}\small\item\em Subtract a vector from this vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_a45b516a561fc43409194fc183c1feb68}\label{structb2Vec2_a45b516a561fc43409194fc183c1feb68}} 
+void \mbox{\hyperlink{structb2Vec2_a45b516a561fc43409194fc183c1feb68}{operator$\ast$=}} (float a)
+\begin{DoxyCompactList}\small\item\em Multiply this vector by a scalar. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_a84f3b0f645f5e6fc6e4a36772a506903}\label{structb2Vec2_a84f3b0f645f5e6fc6e4a36772a506903}} 
+float \mbox{\hyperlink{structb2Vec2_a84f3b0f645f5e6fc6e4a36772a506903}{Length}} () const
+\begin{DoxyCompactList}\small\item\em Get the length of this vector (the norm). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structb2Vec2_adb7d6b9fdf5b0e5b74fd347ec0b98575}{Length\+Squared}} () const
+\item 
+\mbox{\Hypertarget{structb2Vec2_ae0128c95454ebf5dfe152c5644f06d21}\label{structb2Vec2_ae0128c95454ebf5dfe152c5644f06d21}} 
+float \mbox{\hyperlink{structb2Vec2_ae0128c95454ebf5dfe152c5644f06d21}{Normalize}} ()
+\begin{DoxyCompactList}\small\item\em Convert this vector into a unit vector. Returns the length. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_abad59bf9a0269f02cda9dc919592c0ee}\label{structb2Vec2_abad59bf9a0269f02cda9dc919592c0ee}} 
+bool \mbox{\hyperlink{structb2Vec2_abad59bf9a0269f02cda9dc919592c0ee}{Is\+Valid}} () const
+\begin{DoxyCompactList}\small\item\em Does this vector contain finite coordinates? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_aaf36e082a20368b24edb635511872a74}\label{structb2Vec2_aaf36e082a20368b24edb635511872a74}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{structb2Vec2_aaf36e082a20368b24edb635511872a74}{Skew}} () const
+\begin{DoxyCompactList}\small\item\em Get the skew vector such that dot(skew\+\_\+vec, other) == cross(vec, other) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_a114aad159648f6d535e9dcae0e0e4e7d}\label{structb2Vec2_a114aad159648f6d535e9dcae0e0e4e7d}} 
+\mbox{\hyperlink{structb2Vec2_a114aad159648f6d535e9dcae0e0e4e7d}{b2\+Vec2}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor does nothing (for performance). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_ab1e279a69f5c3e7e83c3a51e3b2339c0}\label{structb2Vec2_ab1e279a69f5c3e7e83c3a51e3b2339c0}} 
+\mbox{\hyperlink{structb2Vec2_ab1e279a69f5c3e7e83c3a51e3b2339c0}{b2\+Vec2}} (float x\+In, float y\+In)
+\begin{DoxyCompactList}\small\item\em Construct using coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_a5c6cbe27cfb29c6dbb29b9a3285b88d0}\label{structb2Vec2_a5c6cbe27cfb29c6dbb29b9a3285b88d0}} 
+void \mbox{\hyperlink{structb2Vec2_a5c6cbe27cfb29c6dbb29b9a3285b88d0}{Set\+Zero}} ()
+\begin{DoxyCompactList}\small\item\em Set this vector to all zeros. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_a78f0e635a664a563dd9246397d5f6e7e}\label{structb2Vec2_a78f0e635a664a563dd9246397d5f6e7e}} 
+void \mbox{\hyperlink{structb2Vec2_a78f0e635a664a563dd9246397d5f6e7e}{Set}} (float x\+\_\+, float y\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set this vector to some specified coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_a6cb15514ea571b4ddf73b6829551a127}\label{structb2Vec2_a6cb15514ea571b4ddf73b6829551a127}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{structb2Vec2_a6cb15514ea571b4ddf73b6829551a127}{operator-\/}} () const
+\begin{DoxyCompactList}\small\item\em Negate this vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_a6a45b081724bb89b6cfe3d21ee7d98b7}\label{structb2Vec2_a6a45b081724bb89b6cfe3d21ee7d98b7}} 
+float \mbox{\hyperlink{structb2Vec2_a6a45b081724bb89b6cfe3d21ee7d98b7}{operator()}} (int32 i) const
+\begin{DoxyCompactList}\small\item\em Read from and indexed element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_aedbd9f04609149375add7dea10759669}\label{structb2Vec2_aedbd9f04609149375add7dea10759669}} 
+float \& \mbox{\hyperlink{structb2Vec2_aedbd9f04609149375add7dea10759669}{operator()}} (int32 i)
+\begin{DoxyCompactList}\small\item\em Write to an indexed element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_a590789342e22ac1e7f9c1a63a2778b6d}\label{structb2Vec2_a590789342e22ac1e7f9c1a63a2778b6d}} 
+void \mbox{\hyperlink{structb2Vec2_a590789342e22ac1e7f9c1a63a2778b6d}{operator+=}} (const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&v)
+\begin{DoxyCompactList}\small\item\em Add a vector to this vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_a6b48cab4695a979ae40b7613aedc8b17}\label{structb2Vec2_a6b48cab4695a979ae40b7613aedc8b17}} 
+void \mbox{\hyperlink{structb2Vec2_a6b48cab4695a979ae40b7613aedc8b17}{operator-\/=}} (const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&v)
+\begin{DoxyCompactList}\small\item\em Subtract a vector from this vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_a45b516a561fc43409194fc183c1feb68}\label{structb2Vec2_a45b516a561fc43409194fc183c1feb68}} 
+void \mbox{\hyperlink{structb2Vec2_a45b516a561fc43409194fc183c1feb68}{operator$\ast$=}} (float a)
+\begin{DoxyCompactList}\small\item\em Multiply this vector by a scalar. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_a84f3b0f645f5e6fc6e4a36772a506903}\label{structb2Vec2_a84f3b0f645f5e6fc6e4a36772a506903}} 
+float \mbox{\hyperlink{structb2Vec2_a84f3b0f645f5e6fc6e4a36772a506903}{Length}} () const
+\begin{DoxyCompactList}\small\item\em Get the length of this vector (the norm). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structb2Vec2_adb7d6b9fdf5b0e5b74fd347ec0b98575}{Length\+Squared}} () const
+\item 
+\mbox{\Hypertarget{structb2Vec2_ae0128c95454ebf5dfe152c5644f06d21}\label{structb2Vec2_ae0128c95454ebf5dfe152c5644f06d21}} 
+float \mbox{\hyperlink{structb2Vec2_ae0128c95454ebf5dfe152c5644f06d21}{Normalize}} ()
+\begin{DoxyCompactList}\small\item\em Convert this vector into a unit vector. Returns the length. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_abad59bf9a0269f02cda9dc919592c0ee}\label{structb2Vec2_abad59bf9a0269f02cda9dc919592c0ee}} 
+bool \mbox{\hyperlink{structb2Vec2_abad59bf9a0269f02cda9dc919592c0ee}{Is\+Valid}} () const
+\begin{DoxyCompactList}\small\item\em Does this vector contain finite coordinates? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2Vec2_aaf36e082a20368b24edb635511872a74}\label{structb2Vec2_aaf36e082a20368b24edb635511872a74}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{structb2Vec2_aaf36e082a20368b24edb635511872a74}{Skew}} () const
+\begin{DoxyCompactList}\small\item\em Get the skew vector such that dot(skew\+\_\+vec, other) == cross(vec, other) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structb2Vec2_a7922601d8b8ad0550c2082ebaf74c78a}\label{structb2Vec2_a7922601d8b8ad0550c2082ebaf74c78a}} 
+float {\bfseries x}
+\item 
+\mbox{\Hypertarget{structb2Vec2_a3bbbbf0925b982a044fef8b3517a61c7}\label{structb2Vec2_a3bbbbf0925b982a044fef8b3517a61c7}} 
+float {\bfseries y}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A 2D column vector. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structb2Vec2_adb7d6b9fdf5b0e5b74fd347ec0b98575}\label{structb2Vec2_adb7d6b9fdf5b0e5b74fd347ec0b98575}} 
+\index{b2Vec2@{b2Vec2}!LengthSquared@{LengthSquared}}
+\index{LengthSquared@{LengthSquared}!b2Vec2@{b2Vec2}}
+\doxysubsubsection{\texorpdfstring{LengthSquared()}{LengthSquared()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float b2\+Vec2\+::\+Length\+Squared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the length squared. For performance, use this instead of \mbox{\hyperlink{structb2Vec2_a84f3b0f645f5e6fc6e4a36772a506903}{b2\+Vec2\+::\+Length}} (if possible). \mbox{\Hypertarget{structb2Vec2_adb7d6b9fdf5b0e5b74fd347ec0b98575}\label{structb2Vec2_adb7d6b9fdf5b0e5b74fd347ec0b98575}} 
+\index{b2Vec2@{b2Vec2}!LengthSquared@{LengthSquared}}
+\index{LengthSquared@{LengthSquared}!b2Vec2@{b2Vec2}}
+\doxysubsubsection{\texorpdfstring{LengthSquared()}{LengthSquared()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float b2\+Vec2\+::\+Length\+Squared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the length squared. For performance, use this instead of \mbox{\hyperlink{structb2Vec2_a84f3b0f645f5e6fc6e4a36772a506903}{b2\+Vec2\+::\+Length}} (if possible). 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libs/arm64/include/box2d/b2\+\_\+math.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,305 @@
+\hypertarget{classb2PrismaticJoint}{}\doxysection{b2\+Prismatic\+Joint Class Reference}
+\label{classb2PrismaticJoint}\index{b2PrismaticJoint@{b2PrismaticJoint}}
+
+
+{\ttfamily \#include $<$b2\+\_\+prismatic\+\_\+joint.\+h$>$}
+
+
+
+Inheritance diagram for b2\+Prismatic\+Joint\+:
+% FIG 0
+
+
+Collaboration diagram for b2\+Prismatic\+Joint\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_abb6649d2a18abb209f68d5255cd6c606}\label{classb2PrismaticJoint_abb6649d2a18abb209f68d5255cd6c606}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{classb2PrismaticJoint_abb6649d2a18abb209f68d5255cd6c606}{Get\+AnchorA}} () const override
+\begin{DoxyCompactList}\small\item\em Get the anchor point on bodyA in world coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a7e1d328bfd05895fd228c07bac41b9e5}\label{classb2PrismaticJoint_a7e1d328bfd05895fd228c07bac41b9e5}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{classb2PrismaticJoint_a7e1d328bfd05895fd228c07bac41b9e5}{Get\+AnchorB}} () const override
+\begin{DoxyCompactList}\small\item\em Get the anchor point on bodyB in world coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a2012f13891e6703c3c1262c8a5b87344}\label{classb2PrismaticJoint_a2012f13891e6703c3c1262c8a5b87344}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{classb2PrismaticJoint_a2012f13891e6703c3c1262c8a5b87344}{Get\+Reaction\+Force}} (float inv\+\_\+dt) const override
+\begin{DoxyCompactList}\small\item\em Get the reaction force on bodyB at the joint anchor in Newtons. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a0d5958f2a8f0ab7562b18ef7f3c898b1}\label{classb2PrismaticJoint_a0d5958f2a8f0ab7562b18ef7f3c898b1}} 
+float \mbox{\hyperlink{classb2PrismaticJoint_a0d5958f2a8f0ab7562b18ef7f3c898b1}{Get\+Reaction\+Torque}} (float inv\+\_\+dt) const override
+\begin{DoxyCompactList}\small\item\em Get the reaction torque on bodyB in N$\ast$m. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a0a4812486867f4c7507bb8c29e860997}\label{classb2PrismaticJoint_a0a4812486867f4c7507bb8c29e860997}} 
+const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \& \mbox{\hyperlink{classb2PrismaticJoint_a0a4812486867f4c7507bb8c29e860997}{Get\+Local\+AnchorA}} () const
+\begin{DoxyCompactList}\small\item\em The local anchor point relative to bodyA\textquotesingle{}s origin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_ab9c2a0fbf075454320e87648750668b0}\label{classb2PrismaticJoint_ab9c2a0fbf075454320e87648750668b0}} 
+const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \& \mbox{\hyperlink{classb2PrismaticJoint_ab9c2a0fbf075454320e87648750668b0}{Get\+Local\+AnchorB}} () const
+\begin{DoxyCompactList}\small\item\em The local anchor point relative to bodyB\textquotesingle{}s origin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a54d51d09f3c327c5c4238e054e2a3a76}\label{classb2PrismaticJoint_a54d51d09f3c327c5c4238e054e2a3a76}} 
+const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \& \mbox{\hyperlink{classb2PrismaticJoint_a54d51d09f3c327c5c4238e054e2a3a76}{Get\+Local\+AxisA}} () const
+\begin{DoxyCompactList}\small\item\em The local joint axis relative to bodyA. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a2b29bdf26fd584ce0aaedd0015878cb3}\label{classb2PrismaticJoint_a2b29bdf26fd584ce0aaedd0015878cb3}} 
+float \mbox{\hyperlink{classb2PrismaticJoint_a2b29bdf26fd584ce0aaedd0015878cb3}{Get\+Reference\+Angle}} () const
+\begin{DoxyCompactList}\small\item\em Get the reference angle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_afac0f3a0d2ad169428c3c78b20575bad}\label{classb2PrismaticJoint_afac0f3a0d2ad169428c3c78b20575bad}} 
+float \mbox{\hyperlink{classb2PrismaticJoint_afac0f3a0d2ad169428c3c78b20575bad}{Get\+Joint\+Translation}} () const
+\begin{DoxyCompactList}\small\item\em Get the current joint translation, usually in meters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a8a485e77f09e2c2d664b832941b4e0ab}\label{classb2PrismaticJoint_a8a485e77f09e2c2d664b832941b4e0ab}} 
+float \mbox{\hyperlink{classb2PrismaticJoint_a8a485e77f09e2c2d664b832941b4e0ab}{Get\+Joint\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Get the current joint translation speed, usually in meters per second. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a22e2442a17832f718447c63c9c6263c8}\label{classb2PrismaticJoint_a22e2442a17832f718447c63c9c6263c8}} 
+bool \mbox{\hyperlink{classb2PrismaticJoint_a22e2442a17832f718447c63c9c6263c8}{Is\+Limit\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Is the joint limit enabled? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a6d419afe7bd4b0e36d2e4607df7f79f2}\label{classb2PrismaticJoint_a6d419afe7bd4b0e36d2e4607df7f79f2}} 
+void \mbox{\hyperlink{classb2PrismaticJoint_a6d419afe7bd4b0e36d2e4607df7f79f2}{Enable\+Limit}} (bool flag)
+\begin{DoxyCompactList}\small\item\em Enable/disable the joint limit. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_aab4719f61c3ad092890608156a635e84}\label{classb2PrismaticJoint_aab4719f61c3ad092890608156a635e84}} 
+float \mbox{\hyperlink{classb2PrismaticJoint_aab4719f61c3ad092890608156a635e84}{Get\+Lower\+Limit}} () const
+\begin{DoxyCompactList}\small\item\em Get the lower joint limit, usually in meters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a7137a9fb5fa5a161a248abfb2eba022d}\label{classb2PrismaticJoint_a7137a9fb5fa5a161a248abfb2eba022d}} 
+float \mbox{\hyperlink{classb2PrismaticJoint_a7137a9fb5fa5a161a248abfb2eba022d}{Get\+Upper\+Limit}} () const
+\begin{DoxyCompactList}\small\item\em Get the upper joint limit, usually in meters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a1f066e458852ee0728330d9413e57003}\label{classb2PrismaticJoint_a1f066e458852ee0728330d9413e57003}} 
+void \mbox{\hyperlink{classb2PrismaticJoint_a1f066e458852ee0728330d9413e57003}{Set\+Limits}} (float lower, float upper)
+\begin{DoxyCompactList}\small\item\em Set the joint limits, usually in meters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a06492dabf33439efdebceb29899c7fc9}\label{classb2PrismaticJoint_a06492dabf33439efdebceb29899c7fc9}} 
+bool \mbox{\hyperlink{classb2PrismaticJoint_a06492dabf33439efdebceb29899c7fc9}{Is\+Motor\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Is the joint motor enabled? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a4a7fd079de49f7ed5aa4a5d8d90be2a2}\label{classb2PrismaticJoint_a4a7fd079de49f7ed5aa4a5d8d90be2a2}} 
+void \mbox{\hyperlink{classb2PrismaticJoint_a4a7fd079de49f7ed5aa4a5d8d90be2a2}{Enable\+Motor}} (bool flag)
+\begin{DoxyCompactList}\small\item\em Enable/disable the joint motor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_aa2274e38ed0d6667cc2dd7f769bbdc02}\label{classb2PrismaticJoint_aa2274e38ed0d6667cc2dd7f769bbdc02}} 
+void \mbox{\hyperlink{classb2PrismaticJoint_aa2274e38ed0d6667cc2dd7f769bbdc02}{Set\+Motor\+Speed}} (float speed)
+\begin{DoxyCompactList}\small\item\em Set the motor speed, usually in meters per second. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a1135c06e3047fe90b09efcb3268c781e}\label{classb2PrismaticJoint_a1135c06e3047fe90b09efcb3268c781e}} 
+float \mbox{\hyperlink{classb2PrismaticJoint_a1135c06e3047fe90b09efcb3268c781e}{Get\+Motor\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Get the motor speed, usually in meters per second. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a94ce7073bb3c8098a7fef85f3bceb11d}\label{classb2PrismaticJoint_a94ce7073bb3c8098a7fef85f3bceb11d}} 
+void \mbox{\hyperlink{classb2PrismaticJoint_a94ce7073bb3c8098a7fef85f3bceb11d}{Set\+Max\+Motor\+Force}} (float force)
+\begin{DoxyCompactList}\small\item\em Set the maximum motor force, usually in N. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_ad70ba2b1c0cf4645e4454562b9944078}\label{classb2PrismaticJoint_ad70ba2b1c0cf4645e4454562b9944078}} 
+float {\bfseries Get\+Max\+Motor\+Force} () const
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a74de30b8ac04a879ccaebe69dffd1095}\label{classb2PrismaticJoint_a74de30b8ac04a879ccaebe69dffd1095}} 
+float \mbox{\hyperlink{classb2PrismaticJoint_a74de30b8ac04a879ccaebe69dffd1095}{Get\+Motor\+Force}} (float inv\+\_\+dt) const
+\begin{DoxyCompactList}\small\item\em Get the current motor force given the inverse time step, usually in N. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a843ddb0f912085f3deb3ee7320d7ddc7}\label{classb2PrismaticJoint_a843ddb0f912085f3deb3ee7320d7ddc7}} 
+void \mbox{\hyperlink{classb2PrismaticJoint_a843ddb0f912085f3deb3ee7320d7ddc7}{Dump}} () override
+\begin{DoxyCompactList}\small\item\em Dump to b2\+Log. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a36d9629a8ac5f10d51af72977672d802}\label{classb2PrismaticJoint_a36d9629a8ac5f10d51af72977672d802}} 
+void \mbox{\hyperlink{classb2PrismaticJoint_a36d9629a8ac5f10d51af72977672d802}{Draw}} (\mbox{\hyperlink{classb2Draw}{b2\+Draw}} $\ast$draw) const override
+\begin{DoxyCompactList}\small\item\em Debug draw this joint. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_abb6649d2a18abb209f68d5255cd6c606}\label{classb2PrismaticJoint_abb6649d2a18abb209f68d5255cd6c606}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{classb2PrismaticJoint_abb6649d2a18abb209f68d5255cd6c606}{Get\+AnchorA}} () const override
+\begin{DoxyCompactList}\small\item\em Get the anchor point on bodyA in world coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a7e1d328bfd05895fd228c07bac41b9e5}\label{classb2PrismaticJoint_a7e1d328bfd05895fd228c07bac41b9e5}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{classb2PrismaticJoint_a7e1d328bfd05895fd228c07bac41b9e5}{Get\+AnchorB}} () const override
+\begin{DoxyCompactList}\small\item\em Get the anchor point on bodyB in world coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a2012f13891e6703c3c1262c8a5b87344}\label{classb2PrismaticJoint_a2012f13891e6703c3c1262c8a5b87344}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{classb2PrismaticJoint_a2012f13891e6703c3c1262c8a5b87344}{Get\+Reaction\+Force}} (float inv\+\_\+dt) const override
+\begin{DoxyCompactList}\small\item\em Get the reaction force on bodyB at the joint anchor in Newtons. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a0d5958f2a8f0ab7562b18ef7f3c898b1}\label{classb2PrismaticJoint_a0d5958f2a8f0ab7562b18ef7f3c898b1}} 
+float \mbox{\hyperlink{classb2PrismaticJoint_a0d5958f2a8f0ab7562b18ef7f3c898b1}{Get\+Reaction\+Torque}} (float inv\+\_\+dt) const override
+\begin{DoxyCompactList}\small\item\em Get the reaction torque on bodyB in N$\ast$m. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a0a4812486867f4c7507bb8c29e860997}\label{classb2PrismaticJoint_a0a4812486867f4c7507bb8c29e860997}} 
+const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \& \mbox{\hyperlink{classb2PrismaticJoint_a0a4812486867f4c7507bb8c29e860997}{Get\+Local\+AnchorA}} () const
+\begin{DoxyCompactList}\small\item\em The local anchor point relative to bodyA\textquotesingle{}s origin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_ab9c2a0fbf075454320e87648750668b0}\label{classb2PrismaticJoint_ab9c2a0fbf075454320e87648750668b0}} 
+const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \& \mbox{\hyperlink{classb2PrismaticJoint_ab9c2a0fbf075454320e87648750668b0}{Get\+Local\+AnchorB}} () const
+\begin{DoxyCompactList}\small\item\em The local anchor point relative to bodyB\textquotesingle{}s origin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a54d51d09f3c327c5c4238e054e2a3a76}\label{classb2PrismaticJoint_a54d51d09f3c327c5c4238e054e2a3a76}} 
+const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \& \mbox{\hyperlink{classb2PrismaticJoint_a54d51d09f3c327c5c4238e054e2a3a76}{Get\+Local\+AxisA}} () const
+\begin{DoxyCompactList}\small\item\em The local joint axis relative to bodyA. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a2b29bdf26fd584ce0aaedd0015878cb3}\label{classb2PrismaticJoint_a2b29bdf26fd584ce0aaedd0015878cb3}} 
+float \mbox{\hyperlink{classb2PrismaticJoint_a2b29bdf26fd584ce0aaedd0015878cb3}{Get\+Reference\+Angle}} () const
+\begin{DoxyCompactList}\small\item\em Get the reference angle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_afac0f3a0d2ad169428c3c78b20575bad}\label{classb2PrismaticJoint_afac0f3a0d2ad169428c3c78b20575bad}} 
+float \mbox{\hyperlink{classb2PrismaticJoint_afac0f3a0d2ad169428c3c78b20575bad}{Get\+Joint\+Translation}} () const
+\begin{DoxyCompactList}\small\item\em Get the current joint translation, usually in meters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a8a485e77f09e2c2d664b832941b4e0ab}\label{classb2PrismaticJoint_a8a485e77f09e2c2d664b832941b4e0ab}} 
+float \mbox{\hyperlink{classb2PrismaticJoint_a8a485e77f09e2c2d664b832941b4e0ab}{Get\+Joint\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Get the current joint translation speed, usually in meters per second. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a22e2442a17832f718447c63c9c6263c8}\label{classb2PrismaticJoint_a22e2442a17832f718447c63c9c6263c8}} 
+bool \mbox{\hyperlink{classb2PrismaticJoint_a22e2442a17832f718447c63c9c6263c8}{Is\+Limit\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Is the joint limit enabled? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a6d419afe7bd4b0e36d2e4607df7f79f2}\label{classb2PrismaticJoint_a6d419afe7bd4b0e36d2e4607df7f79f2}} 
+void \mbox{\hyperlink{classb2PrismaticJoint_a6d419afe7bd4b0e36d2e4607df7f79f2}{Enable\+Limit}} (bool flag)
+\begin{DoxyCompactList}\small\item\em Enable/disable the joint limit. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_aab4719f61c3ad092890608156a635e84}\label{classb2PrismaticJoint_aab4719f61c3ad092890608156a635e84}} 
+float \mbox{\hyperlink{classb2PrismaticJoint_aab4719f61c3ad092890608156a635e84}{Get\+Lower\+Limit}} () const
+\begin{DoxyCompactList}\small\item\em Get the lower joint limit, usually in meters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a7137a9fb5fa5a161a248abfb2eba022d}\label{classb2PrismaticJoint_a7137a9fb5fa5a161a248abfb2eba022d}} 
+float \mbox{\hyperlink{classb2PrismaticJoint_a7137a9fb5fa5a161a248abfb2eba022d}{Get\+Upper\+Limit}} () const
+\begin{DoxyCompactList}\small\item\em Get the upper joint limit, usually in meters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a1f066e458852ee0728330d9413e57003}\label{classb2PrismaticJoint_a1f066e458852ee0728330d9413e57003}} 
+void \mbox{\hyperlink{classb2PrismaticJoint_a1f066e458852ee0728330d9413e57003}{Set\+Limits}} (float lower, float upper)
+\begin{DoxyCompactList}\small\item\em Set the joint limits, usually in meters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a06492dabf33439efdebceb29899c7fc9}\label{classb2PrismaticJoint_a06492dabf33439efdebceb29899c7fc9}} 
+bool \mbox{\hyperlink{classb2PrismaticJoint_a06492dabf33439efdebceb29899c7fc9}{Is\+Motor\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Is the joint motor enabled? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a4a7fd079de49f7ed5aa4a5d8d90be2a2}\label{classb2PrismaticJoint_a4a7fd079de49f7ed5aa4a5d8d90be2a2}} 
+void \mbox{\hyperlink{classb2PrismaticJoint_a4a7fd079de49f7ed5aa4a5d8d90be2a2}{Enable\+Motor}} (bool flag)
+\begin{DoxyCompactList}\small\item\em Enable/disable the joint motor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_aa2274e38ed0d6667cc2dd7f769bbdc02}\label{classb2PrismaticJoint_aa2274e38ed0d6667cc2dd7f769bbdc02}} 
+void \mbox{\hyperlink{classb2PrismaticJoint_aa2274e38ed0d6667cc2dd7f769bbdc02}{Set\+Motor\+Speed}} (float speed)
+\begin{DoxyCompactList}\small\item\em Set the motor speed, usually in meters per second. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a1135c06e3047fe90b09efcb3268c781e}\label{classb2PrismaticJoint_a1135c06e3047fe90b09efcb3268c781e}} 
+float \mbox{\hyperlink{classb2PrismaticJoint_a1135c06e3047fe90b09efcb3268c781e}{Get\+Motor\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Get the motor speed, usually in meters per second. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a94ce7073bb3c8098a7fef85f3bceb11d}\label{classb2PrismaticJoint_a94ce7073bb3c8098a7fef85f3bceb11d}} 
+void \mbox{\hyperlink{classb2PrismaticJoint_a94ce7073bb3c8098a7fef85f3bceb11d}{Set\+Max\+Motor\+Force}} (float force)
+\begin{DoxyCompactList}\small\item\em Set the maximum motor force, usually in N. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_ad70ba2b1c0cf4645e4454562b9944078}\label{classb2PrismaticJoint_ad70ba2b1c0cf4645e4454562b9944078}} 
+float {\bfseries Get\+Max\+Motor\+Force} () const
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a74de30b8ac04a879ccaebe69dffd1095}\label{classb2PrismaticJoint_a74de30b8ac04a879ccaebe69dffd1095}} 
+float \mbox{\hyperlink{classb2PrismaticJoint_a74de30b8ac04a879ccaebe69dffd1095}{Get\+Motor\+Force}} (float inv\+\_\+dt) const
+\begin{DoxyCompactList}\small\item\em Get the current motor force given the inverse time step, usually in N. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a843ddb0f912085f3deb3ee7320d7ddc7}\label{classb2PrismaticJoint_a843ddb0f912085f3deb3ee7320d7ddc7}} 
+void \mbox{\hyperlink{classb2PrismaticJoint_a843ddb0f912085f3deb3ee7320d7ddc7}{Dump}} () override
+\begin{DoxyCompactList}\small\item\em Dump to b2\+Log. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a36d9629a8ac5f10d51af72977672d802}\label{classb2PrismaticJoint_a36d9629a8ac5f10d51af72977672d802}} 
+void \mbox{\hyperlink{classb2PrismaticJoint_a36d9629a8ac5f10d51af72977672d802}{Draw}} (\mbox{\hyperlink{classb2Draw}{b2\+Draw}} $\ast$draw) const override
+\begin{DoxyCompactList}\small\item\em Debug draw this joint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_ab1586a2334f7e32137fbd7f807e249ca}\label{classb2PrismaticJoint_ab1586a2334f7e32137fbd7f807e249ca}} 
+{\bfseries b2\+Prismatic\+Joint} (const \mbox{\hyperlink{structb2PrismaticJointDef}{b2\+Prismatic\+Joint\+Def}} $\ast$def)
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a840e9885d49bf621c46df79733df21dc}\label{classb2PrismaticJoint_a840e9885d49bf621c46df79733df21dc}} 
+void {\bfseries Init\+Velocity\+Constraints} (const \mbox{\hyperlink{structb2SolverData}{b2\+Solver\+Data}} \&data) override
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a028c0ca03ca8437606d1175ca8de63d6}\label{classb2PrismaticJoint_a028c0ca03ca8437606d1175ca8de63d6}} 
+void {\bfseries Solve\+Velocity\+Constraints} (const \mbox{\hyperlink{structb2SolverData}{b2\+Solver\+Data}} \&data) override
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_ac841608a56e83f709e08b805ed8c92e3}\label{classb2PrismaticJoint_ac841608a56e83f709e08b805ed8c92e3}} 
+bool {\bfseries Solve\+Position\+Constraints} (const \mbox{\hyperlink{structb2SolverData}{b2\+Solver\+Data}} \&data) override
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_ab1586a2334f7e32137fbd7f807e249ca}\label{classb2PrismaticJoint_ab1586a2334f7e32137fbd7f807e249ca}} 
+{\bfseries b2\+Prismatic\+Joint} (const \mbox{\hyperlink{structb2PrismaticJointDef}{b2\+Prismatic\+Joint\+Def}} $\ast$def)
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a840e9885d49bf621c46df79733df21dc}\label{classb2PrismaticJoint_a840e9885d49bf621c46df79733df21dc}} 
+void {\bfseries Init\+Velocity\+Constraints} (const \mbox{\hyperlink{structb2SolverData}{b2\+Solver\+Data}} \&data) override
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a028c0ca03ca8437606d1175ca8de63d6}\label{classb2PrismaticJoint_a028c0ca03ca8437606d1175ca8de63d6}} 
+void {\bfseries Solve\+Velocity\+Constraints} (const \mbox{\hyperlink{structb2SolverData}{b2\+Solver\+Data}} \&data) override
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_ac841608a56e83f709e08b805ed8c92e3}\label{classb2PrismaticJoint_ac841608a56e83f709e08b805ed8c92e3}} 
+bool {\bfseries Solve\+Position\+Constraints} (const \mbox{\hyperlink{structb2SolverData}{b2\+Solver\+Data}} \&data) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_aeec29d80cc57252702fd645c31ca7889}\label{classb2PrismaticJoint_aeec29d80cc57252702fd645c31ca7889}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+local\+AnchorA}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_ae9cb63f225e4b4dcc287ab475868d044}\label{classb2PrismaticJoint_ae9cb63f225e4b4dcc287ab475868d044}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+local\+AnchorB}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_ab68f8bb2a8012e4646dc274db1723fbf}\label{classb2PrismaticJoint_ab68f8bb2a8012e4646dc274db1723fbf}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+local\+XAxisA}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a6885a7d60a2596883660183bcf721ea9}\label{classb2PrismaticJoint_a6885a7d60a2596883660183bcf721ea9}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+local\+YAxisA}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_af4899b245976a48a0906328fd8570d19}\label{classb2PrismaticJoint_af4899b245976a48a0906328fd8570d19}} 
+float {\bfseries m\+\_\+reference\+Angle}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a4a347fcb1b248bc02684e5a55757cc46}\label{classb2PrismaticJoint_a4a347fcb1b248bc02684e5a55757cc46}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+impulse}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a82d4ccbb97d1862bfa7c076addf42d9a}\label{classb2PrismaticJoint_a82d4ccbb97d1862bfa7c076addf42d9a}} 
+float {\bfseries m\+\_\+motor\+Impulse}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a716bd5ea1b6745a95def00605b701faf}\label{classb2PrismaticJoint_a716bd5ea1b6745a95def00605b701faf}} 
+float {\bfseries m\+\_\+lower\+Impulse}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a5fdc463f41ebfc4e2f322db71ef594ff}\label{classb2PrismaticJoint_a5fdc463f41ebfc4e2f322db71ef594ff}} 
+float {\bfseries m\+\_\+upper\+Impulse}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a0932421f5d2eff34f714a3ed8f30712f}\label{classb2PrismaticJoint_a0932421f5d2eff34f714a3ed8f30712f}} 
+float {\bfseries m\+\_\+lower\+Translation}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a66243820cadc463ab2f59d2252510ec9}\label{classb2PrismaticJoint_a66243820cadc463ab2f59d2252510ec9}} 
+float {\bfseries m\+\_\+upper\+Translation}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a8597d870455eb0d7a394684d489cbd70}\label{classb2PrismaticJoint_a8597d870455eb0d7a394684d489cbd70}} 
+float {\bfseries m\+\_\+max\+Motor\+Force}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a2bc1af3feec40da71e33234075b7ce02}\label{classb2PrismaticJoint_a2bc1af3feec40da71e33234075b7ce02}} 
+float {\bfseries m\+\_\+motor\+Speed}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_ace469adee4132fb1de01fe5ab3d26389}\label{classb2PrismaticJoint_ace469adee4132fb1de01fe5ab3d26389}} 
+bool {\bfseries m\+\_\+enable\+Limit}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_af36c993314f8ae833f5f3b3aebd66497}\label{classb2PrismaticJoint_af36c993314f8ae833f5f3b3aebd66497}} 
+bool {\bfseries m\+\_\+enable\+Motor}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a2cd142bc49ea7eb475e0811f11932e64}\label{classb2PrismaticJoint_a2cd142bc49ea7eb475e0811f11932e64}} 
+int32 {\bfseries m\+\_\+indexA}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a6a555684a2112f2a2f4f0ab91a2b5ed4}\label{classb2PrismaticJoint_a6a555684a2112f2a2f4f0ab91a2b5ed4}} 
+int32 {\bfseries m\+\_\+indexB}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_ad705cb8cdc92f23185e8f3af728bf0bb}\label{classb2PrismaticJoint_ad705cb8cdc92f23185e8f3af728bf0bb}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+local\+CenterA}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_afd0f5412cb44f84a30224fbfedf7af84}\label{classb2PrismaticJoint_afd0f5412cb44f84a30224fbfedf7af84}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+local\+CenterB}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a6717bb5668a0620de5974ba117bee53d}\label{classb2PrismaticJoint_a6717bb5668a0620de5974ba117bee53d}} 
+float {\bfseries m\+\_\+inv\+MassA}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a3b874ddb75e65a1eed34f3e2eafd2884}\label{classb2PrismaticJoint_a3b874ddb75e65a1eed34f3e2eafd2884}} 
+float {\bfseries m\+\_\+inv\+MassB}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_af4b43c4be320435123579600cc83393f}\label{classb2PrismaticJoint_af4b43c4be320435123579600cc83393f}} 
+float {\bfseries m\+\_\+inv\+IA}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_abf06c44d3d61974db73984d3ee50fd79}\label{classb2PrismaticJoint_abf06c44d3d61974db73984d3ee50fd79}} 
+float {\bfseries m\+\_\+inv\+IB}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_af487c98feb16d19d5d1b320ad2aefb49}\label{classb2PrismaticJoint_af487c98feb16d19d5d1b320ad2aefb49}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+axis}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a560f7177fbc3db1916e076a755b406e5}\label{classb2PrismaticJoint_a560f7177fbc3db1916e076a755b406e5}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+perp}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_ad1117642fbdcac770916122c1f33f9f5}\label{classb2PrismaticJoint_ad1117642fbdcac770916122c1f33f9f5}} 
+float {\bfseries m\+\_\+s1}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_ac4ad85abea74d878d62e4fb4154357cd}\label{classb2PrismaticJoint_ac4ad85abea74d878d62e4fb4154357cd}} 
+float {\bfseries m\+\_\+s2}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a70ee9a42aee5c88b3e650194ec9e23fc}\label{classb2PrismaticJoint_a70ee9a42aee5c88b3e650194ec9e23fc}} 
+float {\bfseries m\+\_\+a1}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a6cce050e7462ef4f117ef1d90906b138}\label{classb2PrismaticJoint_a6cce050e7462ef4f117ef1d90906b138}} 
+float {\bfseries m\+\_\+a2}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a2f07317904c17e947c3ba2bde2fadb3e}\label{classb2PrismaticJoint_a2f07317904c17e947c3ba2bde2fadb3e}} 
+\mbox{\hyperlink{structb2Mat22}{b2\+Mat22}} {\bfseries m\+\_\+K}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a8c802f17939795ee281b8c0cc2365172}\label{classb2PrismaticJoint_a8c802f17939795ee281b8c0cc2365172}} 
+float {\bfseries m\+\_\+translation}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a61a8058d21a0ea42bf5402995c5c0acc}\label{classb2PrismaticJoint_a61a8058d21a0ea42bf5402995c5c0acc}} 
+float {\bfseries m\+\_\+axial\+Mass}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_a2f8aeb7f12b8fbe115431953a4926eed}\label{classb2PrismaticJoint_a2f8aeb7f12b8fbe115431953a4926eed}} 
+class {\bfseries b2\+Joint}
+\item 
+\mbox{\Hypertarget{classb2PrismaticJoint_ad10f779c9d5766655fce7233bbc4a554}\label{classb2PrismaticJoint_ad10f779c9d5766655fce7233bbc4a554}} 
+class {\bfseries b2\+Gear\+Joint}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A prismatic joint. This joint provides one degree of freedom\+: translation along an axis fixed in bodyA. Relative rotation is prevented. You can use a joint limit to restrict the range of motion and a joint motor to drive the motion or to model joint friction. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libs/arm64/include/box2d/b2\+\_\+prismatic\+\_\+joint.\+h\end{DoxyCompactItemize}

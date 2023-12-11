@@ -1,0 +1,42 @@
+\hypertarget{classb2ContactFilter}{}\doxysection{b2\+Contact\+Filter Class Reference}
+\label{classb2ContactFilter}\index{b2ContactFilter@{b2ContactFilter}}
+
+
+{\ttfamily \#include $<$b2\+\_\+world\+\_\+callbacks.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classb2ContactFilter_a0e33d4fc90a9345160a07cc494b45ecd}{Should\+Collide}} (\mbox{\hyperlink{classb2Fixture}{b2\+Fixture}} $\ast$fixtureA, \mbox{\hyperlink{classb2Fixture}{b2\+Fixture}} $\ast$fixtureB)
+\item 
+virtual bool \mbox{\hyperlink{classb2ContactFilter_a0e33d4fc90a9345160a07cc494b45ecd}{Should\+Collide}} (\mbox{\hyperlink{classb2Fixture}{b2\+Fixture}} $\ast$fixtureA, \mbox{\hyperlink{classb2Fixture}{b2\+Fixture}} $\ast$fixtureB)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implement this class to provide collision filtering. In other words, you can implement this class if you want finer control over contact creation. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classb2ContactFilter_a0e33d4fc90a9345160a07cc494b45ecd}\label{classb2ContactFilter_a0e33d4fc90a9345160a07cc494b45ecd}} 
+\index{b2ContactFilter@{b2ContactFilter}!ShouldCollide@{ShouldCollide}}
+\index{ShouldCollide@{ShouldCollide}!b2ContactFilter@{b2ContactFilter}}
+\doxysubsubsection{\texorpdfstring{ShouldCollide()}{ShouldCollide()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool b2\+Contact\+Filter\+::\+Should\+Collide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classb2Fixture}{b2\+Fixture}} $\ast$}]{fixtureA,  }\item[{\mbox{\hyperlink{classb2Fixture}{b2\+Fixture}} $\ast$}]{fixtureB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return true if contact calculations should be performed between these two shapes. \begin{DoxyWarning}{Warning}
+for performance reasons this is only called when the AABBs begin to overlap. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classb2ContactFilter_a0e33d4fc90a9345160a07cc494b45ecd}\label{classb2ContactFilter_a0e33d4fc90a9345160a07cc494b45ecd}} 
+\index{b2ContactFilter@{b2ContactFilter}!ShouldCollide@{ShouldCollide}}
+\index{ShouldCollide@{ShouldCollide}!b2ContactFilter@{b2ContactFilter}}
+\doxysubsubsection{\texorpdfstring{ShouldCollide()}{ShouldCollide()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool b2\+Contact\+Filter\+::\+Should\+Collide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classb2Fixture}{b2\+Fixture}} $\ast$}]{fixtureA,  }\item[{\mbox{\hyperlink{classb2Fixture}{b2\+Fixture}} $\ast$}]{fixtureB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return true if contact calculations should be performed between these two shapes. \begin{DoxyWarning}{Warning}
+for performance reasons this is only called when the AABBs begin to overlap. 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libs/arm64/include/box2d/b2\+\_\+world\+\_\+callbacks.\+h\end{DoxyCompactItemize}

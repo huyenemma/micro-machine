@@ -1,0 +1,22 @@
+digraph "sf::priv::GlContext"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="sf::priv::GlContext",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Abstract class representing an OpenGL context."];
+  Node2 -> Node1 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="sf::NonCopyable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1NonCopyable.html",tooltip="Utility class that makes any derived class non-copyable."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="sf::priv::DRMContext",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1priv_1_1DRMContext.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="sf::priv::EaglContext",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1priv_1_1EaglContext.html",tooltip="iOS (EAGL) implementation of OpenGL contexts"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="sf::priv::EglContext",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1priv_1_1EglContext.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="sf::priv::GlxContext",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1priv_1_1GlxContext.html",tooltip="Linux (GLX) implementation of OpenGL contexts."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="sf::priv::SFContext",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1priv_1_1SFContext.html",tooltip="OSX (Cocoa) implementation of OpenGL contexts."];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="sf::priv::WglContext",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1priv_1_1WglContext.html",tooltip="Windows (WGL) implementation of OpenGL contexts."];
+}

@@ -1,0 +1,103 @@
+\hypertarget{classWinnerBoard}{}\doxysection{Winner\+Board Class Reference}
+\label{classWinnerBoard}\index{WinnerBoard@{WinnerBoard}}
+
+
+A class to manage and display the winning screen of the game.  
+
+
+
+
+{\ttfamily \#include $<$winner\+Board.\+hpp$>$}
+
+
+
+Inheritance diagram for Winner\+Board\+:
+% FIG 0
+
+
+Collaboration diagram for Winner\+Board\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWinnerBoard_a3c272cc962c0a6765630c3a81c1eeff1}\label{classWinnerBoard_a3c272cc962c0a6765630c3a81c1eeff1}} 
+enum \mbox{\hyperlink{classWinnerBoard_a3c272cc962c0a6765630c3a81c1eeff1}{Menu\+Option}} \{ {\bfseries REPLAY}
+, {\bfseries EXIT}
+, {\bfseries NUM\+\_\+\+ITEMS}
+ \}
+\begin{DoxyCompactList}\small\item\em Menu options for the \mbox{\hyperlink{classWinnerBoard}{Winner\+Board}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWinnerBoard_a003751ac71d0b372310e92db0d8df410}{Winner\+Board}} (\mbox{\hyperlink{classsf_1_1RenderWindow}{sf\+::\+Render\+Window}} \&window, const \mbox{\hyperlink{classsf_1_1Font}{sf\+::\+Font}} \&font, const \mbox{\hyperlink{classsf_1_1Texture}{sf\+::\+Texture}} \&texture)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classWinnerBoard}{Winner\+Board}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWinnerBoard_aa55a9c93392b4bdae31e0f21bc25b02f}{Set\+Winner}} (int player\+Number)
+\begin{DoxyCompactList}\small\item\em Sets the winner\textquotesingle{}s information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWinnerBoard_a346569108e3ffc105fe6f0491e2c1ba2}{draw}} () override
+\begin{DoxyCompactList}\small\item\em Draws the winner board on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A class to manage and display the winning screen of the game. 
+
+\mbox{\hyperlink{classWinnerBoard}{Winner\+Board}} is a subclass of \mbox{\hyperlink{classBaseMenu}{Base\+Menu}}. It manages the display of the winner\textquotesingle{}s information and provides menu options for replaying the game or exiting. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWinnerBoard_a003751ac71d0b372310e92db0d8df410}\label{classWinnerBoard_a003751ac71d0b372310e92db0d8df410}} 
+\index{WinnerBoard@{WinnerBoard}!WinnerBoard@{WinnerBoard}}
+\index{WinnerBoard@{WinnerBoard}!WinnerBoard@{WinnerBoard}}
+\doxysubsubsection{\texorpdfstring{WinnerBoard()}{WinnerBoard()}}
+{\footnotesize\ttfamily Winner\+Board\+::\+Winner\+Board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1RenderWindow}{sf\+::\+Render\+Window}} \&}]{window,  }\item[{const \mbox{\hyperlink{classsf_1_1Font}{sf\+::\+Font}} \&}]{font,  }\item[{const \mbox{\hyperlink{classsf_1_1Texture}{sf\+::\+Texture}} \&}]{texture }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classWinnerBoard}{Winner\+Board}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Reference to the SFML Render\+Window. \\
+\hline
+{\em font} & The font used for displaying text. \\
+\hline
+{\em texture} & The background texture for the winner board. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWinnerBoard_a346569108e3ffc105fe6f0491e2c1ba2}\label{classWinnerBoard_a346569108e3ffc105fe6f0491e2c1ba2}} 
+\index{WinnerBoard@{WinnerBoard}!draw@{draw}}
+\index{draw@{draw}!WinnerBoard@{WinnerBoard}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Winner\+Board\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws the winner board on the screen. 
+
+Overrides the draw method from \mbox{\hyperlink{classBaseMenu}{Base\+Menu}} to include the winner\textquotesingle{}s information and options. 
+
+Reimplemented from \mbox{\hyperlink{classBaseMenu_a59a785cb1eaca1005d466bb616ae87f6}{Base\+Menu}}.
+
+\mbox{\Hypertarget{classWinnerBoard_aa55a9c93392b4bdae31e0f21bc25b02f}\label{classWinnerBoard_aa55a9c93392b4bdae31e0f21bc25b02f}} 
+\index{WinnerBoard@{WinnerBoard}!SetWinner@{SetWinner}}
+\index{SetWinner@{SetWinner}!WinnerBoard@{WinnerBoard}}
+\doxysubsubsection{\texorpdfstring{SetWinner()}{SetWinner()}}
+{\footnotesize\ttfamily void Winner\+Board\+::\+Set\+Winner (\begin{DoxyParamCaption}\item[{int}]{player\+Number }\end{DoxyParamCaption})}
+
+
+
+Sets the winner\textquotesingle{}s information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Number} & The player number of the winner. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/winner\+Board.\+hpp\item 
+src/winner\+Board.\+cpp\end{DoxyCompactItemize}

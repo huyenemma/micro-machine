@@ -1,0 +1,33 @@
+\hypertarget{structb2ManifoldPoint}{}\doxysection{b2\+Manifold\+Point Struct Reference}
+\label{structb2ManifoldPoint}\index{b2ManifoldPoint@{b2ManifoldPoint}}
+
+
+{\ttfamily \#include $<$b2\+\_\+collision.\+h$>$}
+
+
+
+Collaboration diagram for b2\+Manifold\+Point\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structb2ManifoldPoint_ab3616990e7d1644deeeb691246094bfa}\label{structb2ManifoldPoint_ab3616990e7d1644deeeb691246094bfa}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \mbox{\hyperlink{structb2ManifoldPoint_ab3616990e7d1644deeeb691246094bfa}{local\+Point}}
+\begin{DoxyCompactList}\small\item\em usage depends on manifold type \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2ManifoldPoint_a09176fb626391441d9335af818ce51f2}\label{structb2ManifoldPoint_a09176fb626391441d9335af818ce51f2}} 
+float \mbox{\hyperlink{structb2ManifoldPoint_a09176fb626391441d9335af818ce51f2}{normal\+Impulse}}
+\begin{DoxyCompactList}\small\item\em the non-\/penetration impulse \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2ManifoldPoint_a15021bfbefe740207617baf5ba41a74b}\label{structb2ManifoldPoint_a15021bfbefe740207617baf5ba41a74b}} 
+float \mbox{\hyperlink{structb2ManifoldPoint_a15021bfbefe740207617baf5ba41a74b}{tangent\+Impulse}}
+\begin{DoxyCompactList}\small\item\em the friction impulse \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structb2ManifoldPoint_afa7ec272b2b27abe129540f8fbe57fc5}\label{structb2ManifoldPoint_afa7ec272b2b27abe129540f8fbe57fc5}} 
+\mbox{\hyperlink{unionb2ContactID}{b2\+Contact\+ID}} \mbox{\hyperlink{structb2ManifoldPoint_afa7ec272b2b27abe129540f8fbe57fc5}{id}}
+\begin{DoxyCompactList}\small\item\em uniquely identifies a contact point between two shapes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A manifold point is a contact point belonging to a contact manifold. It holds details related to the geometry and dynamics of the contact points. The local point usage depends on the manifold type\+: -\/e\+\_\+circles\+: the local center of circleB -\/e\+\_\+faceA\+: the local center of cirlceB or the clip point of polygonB -\/e\+\_\+faceB\+: the clip point of polygonA This structure is stored across time steps, so we keep it small. Note\+: the impulses are used for internal caching and may not provide reliable contact forces, especially for high speed collisions. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libs/arm64/include/box2d/\mbox{\hyperlink{arm64_2include_2box2d_2b2__collision_8h}{b2\+\_\+collision.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,78 @@
+\hypertarget{classtesting_1_1internal_1_1TestEventRepeater}{}\doxysection{testing\+::internal\+::Test\+Event\+Repeater Class Reference}
+\label{classtesting_1_1internal_1_1TestEventRepeater}\index{testing::internal::TestEventRepeater@{testing::internal::TestEventRepeater}}
+
+
+Inheritance diagram for testing\+::internal\+::Test\+Event\+Repeater\+:
+% FIG 0
+
+
+Collaboration diagram for testing\+::internal\+::Test\+Event\+Repeater\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_ad154ce021881721a5c46994316b14cb1}\label{classtesting_1_1internal_1_1TestEventRepeater_ad154ce021881721a5c46994316b14cb1}} 
+void {\bfseries Append} (\mbox{\hyperlink{classtesting_1_1TestEventListener}{Test\+Event\+Listener}} $\ast$listener)
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_ac77a3d127e4726e11694e4ee9cf3b793}\label{classtesting_1_1internal_1_1TestEventRepeater_ac77a3d127e4726e11694e4ee9cf3b793}} 
+\mbox{\hyperlink{classtesting_1_1TestEventListener}{Test\+Event\+Listener}} $\ast$ {\bfseries Release} (\mbox{\hyperlink{classtesting_1_1TestEventListener}{Test\+Event\+Listener}} $\ast$listener)
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_abaf2bfc453fc0e1005fcfb0f95deac4c}\label{classtesting_1_1internal_1_1TestEventRepeater_abaf2bfc453fc0e1005fcfb0f95deac4c}} 
+bool {\bfseries forwarding\+\_\+enabled} () const
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_a86c52e311b70598a385a0589277e92e0}\label{classtesting_1_1internal_1_1TestEventRepeater_a86c52e311b70598a385a0589277e92e0}} 
+void {\bfseries set\+\_\+forwarding\+\_\+enabled} (bool enable)
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_a85205c7c578a6766ad6b5ee98e789348}\label{classtesting_1_1internal_1_1TestEventRepeater_a85205c7c578a6766ad6b5ee98e789348}} 
+void {\bfseries On\+Test\+Program\+Start} (const \mbox{\hyperlink{classtesting_1_1UnitTest}{Unit\+Test}} \&parameter) override
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_a98fea6c94833db424e083eff337ef370}\label{classtesting_1_1internal_1_1TestEventRepeater_a98fea6c94833db424e083eff337ef370}} 
+void {\bfseries On\+Test\+Iteration\+Start} (const \mbox{\hyperlink{classtesting_1_1UnitTest}{Unit\+Test}} \&unit\+\_\+test, int iteration) override
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_a81471e99f27804c531567ea88be96e9a}\label{classtesting_1_1internal_1_1TestEventRepeater_a81471e99f27804c531567ea88be96e9a}} 
+void {\bfseries On\+Environments\+Set\+Up\+Start} (const \mbox{\hyperlink{classtesting_1_1UnitTest}{Unit\+Test}} \&parameter) override
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_a82deba4c0631274c7a519b15e57b7d8b}\label{classtesting_1_1internal_1_1TestEventRepeater_a82deba4c0631274c7a519b15e57b7d8b}} 
+void {\bfseries On\+Environments\+Set\+Up\+End} (const \mbox{\hyperlink{classtesting_1_1UnitTest}{Unit\+Test}} \&parameter) override
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_a76cf742eacd1c048b81dc3a1138f55ab}\label{classtesting_1_1internal_1_1TestEventRepeater_a76cf742eacd1c048b81dc3a1138f55ab}} 
+void {\bfseries On\+Test\+Case\+Start} (const \mbox{\hyperlink{classtesting_1_1TestSuite}{Test\+Suite}} \&parameter) override
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_aa54fdafe6dfdd46dbac108c17016a5f9}\label{classtesting_1_1internal_1_1TestEventRepeater_aa54fdafe6dfdd46dbac108c17016a5f9}} 
+void {\bfseries On\+Test\+Suite\+Start} (const \mbox{\hyperlink{classtesting_1_1TestSuite}{Test\+Suite}} \&parameter) override
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_a17b0fcb394e3b967230d059fc83f5589}\label{classtesting_1_1internal_1_1TestEventRepeater_a17b0fcb394e3b967230d059fc83f5589}} 
+void {\bfseries On\+Test\+Start} (const \mbox{\hyperlink{classtesting_1_1TestInfo}{Test\+Info}} \&parameter) override
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_ae2573a45c4503fdcd0b064d3c095a4e7}\label{classtesting_1_1internal_1_1TestEventRepeater_ae2573a45c4503fdcd0b064d3c095a4e7}} 
+void {\bfseries On\+Test\+Disabled} (const \mbox{\hyperlink{classtesting_1_1TestInfo}{Test\+Info}} \&parameter) override
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_a68b441d896a923472abbd370b2c31e92}\label{classtesting_1_1internal_1_1TestEventRepeater_a68b441d896a923472abbd370b2c31e92}} 
+void {\bfseries On\+Test\+Part\+Result} (const Test\+Part\+Result \&parameter) override
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_a7865f96e569221c58c06cda243eed55d}\label{classtesting_1_1internal_1_1TestEventRepeater_a7865f96e569221c58c06cda243eed55d}} 
+void {\bfseries On\+Test\+End} (const \mbox{\hyperlink{classtesting_1_1TestInfo}{Test\+Info}} \&parameter) override
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_a93a1095b37efd7315a804a6c18c78c1c}\label{classtesting_1_1internal_1_1TestEventRepeater_a93a1095b37efd7315a804a6c18c78c1c}} 
+void {\bfseries On\+Test\+Case\+End} (const \mbox{\hyperlink{classtesting_1_1TestSuite}{Test\+Case}} \&parameter) override
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_a59e442d1f79ea186499ef99284a60d4c}\label{classtesting_1_1internal_1_1TestEventRepeater_a59e442d1f79ea186499ef99284a60d4c}} 
+void {\bfseries On\+Test\+Suite\+End} (const \mbox{\hyperlink{classtesting_1_1TestSuite}{Test\+Suite}} \&parameter) override
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_a864fbaf2485807c333b9b95a39cf78cf}\label{classtesting_1_1internal_1_1TestEventRepeater_a864fbaf2485807c333b9b95a39cf78cf}} 
+void {\bfseries On\+Environments\+Tear\+Down\+Start} (const \mbox{\hyperlink{classtesting_1_1UnitTest}{Unit\+Test}} \&parameter) override
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_a02007891c9e7efdfc8e17a49172f6792}\label{classtesting_1_1internal_1_1TestEventRepeater_a02007891c9e7efdfc8e17a49172f6792}} 
+void {\bfseries On\+Environments\+Tear\+Down\+End} (const \mbox{\hyperlink{classtesting_1_1UnitTest}{Unit\+Test}} \&parameter) override
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_aa4a52e544380946ff86fc57915aa7152}\label{classtesting_1_1internal_1_1TestEventRepeater_aa4a52e544380946ff86fc57915aa7152}} 
+void {\bfseries On\+Test\+Iteration\+End} (const \mbox{\hyperlink{classtesting_1_1UnitTest}{Unit\+Test}} \&unit\+\_\+test, int iteration) override
+\item 
+\mbox{\Hypertarget{classtesting_1_1internal_1_1TestEventRepeater_a4d10b89935d31698b94015a0eff00ea3}\label{classtesting_1_1internal_1_1TestEventRepeater_a4d10b89935d31698b94015a0eff00ea3}} 
+void {\bfseries On\+Test\+Program\+End} (const \mbox{\hyperlink{classtesting_1_1UnitTest}{Unit\+Test}} \&parameter) override
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+googletest/googletest/src/gtest.\+cc\end{DoxyCompactItemize}

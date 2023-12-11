@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['s_5428',['s',['../structb2Rot.html#a481158564d4e66b742b591cd68575dda',1,'b2Rot']]],
+  ['samplecount_5429',['sampleCount',['../structsf_1_1SoundFileReader_1_1Info.html#a74b40b4693d7000571484736d1367167',1,'sf::SoundFileReader::Info::sampleCount()'],['../structsf_1_1SoundStream_1_1Chunk.html#af47f5d94012acf8b11f056ba77aff97a',1,'sf::SoundStream::Chunk::sampleCount()']]],
+  ['samplerate_5430',['sampleRate',['../structsf_1_1SoundFileReader_1_1Info.html#a06ef71c19e7de190b294ae02c361f752',1,'sf::SoundFileReader::Info']]],
+  ['samples_5431',['samples',['../structsf_1_1SoundStream_1_1Chunk.html#aa3b84d69adbe663a17a7671626076df4',1,'sf::SoundStream::Chunk']]],
+  ['savedprogram_5432',['savedProgram',['../structsf_1_1Shader_1_1UniformBinder.html#a81f2e3635edec67bd8297f283864c4b6',1,'sf::Shader::UniformBinder']]],
+  ['scancode_5433',['scancode',['../structsf_1_1Event_1_1KeyEvent.html#a182706c1c75e73c8fb85b796d1095ae1',1,'sf::Event::KeyEvent']]],
+  ['selecteditemindex_5434',['selectedItemIndex',['../classBaseMenu.html#ad4057a071a443e66ef414f33bcaa739a',1,'BaseMenu']]],
+  ['sensor_5435',['sensor',['../classsf_1_1Event.html#acdeacbb321655b962e27d08eeec5a190',1,'sf::Event']]],
+  ['separations_5436',['separations',['../structb2WorldManifold.html#aa47aec831d193913514c04c844efd6f7',1,'b2WorldManifold']]],
+  ['shader_5437',['shader',['../classsf_1_1RenderStates.html#ad4f79ecdd0c60ed0d24fbe555b221bd8',1,'sf::RenderStates']]],
+  ['shape_5438',['shape',['../structb2FixtureDef.html#afd5c15e1a391333566b0e241ed9e9edf',1,'b2FixtureDef']]],
+  ['shift_5439',['shift',['../structsf_1_1Event_1_1KeyEvent.html#a776af1a3ca79abeeec18ebf1c0065aa9',1,'sf::Event::KeyEvent']]],
+  ['size_5440',['size',['../classsf_1_1Event.html#a85dae56a377eeffd39183c3f6fc96cb9',1,'sf::Event']]],
+  ['socketcount_5441',['socketCount',['../structsf_1_1SocketSelector_1_1SocketSelectorImpl.html#a2d1388b77ff27a192c5ec8f1cc0a5dd7',1,'sf::SocketSelector::SocketSelectorImpl']]],
+  ['socketsready_5442',['socketsReady',['../structsf_1_1SocketSelector_1_1SocketSelectorImpl.html#a2d5250461877c3c527013669d61104b1',1,'sf::SocketSelector::SocketSelectorImpl']]],
+  ['sprite_5f_5443',['sprite_',['../classBaseMenu.html#aa29d34cd6e6edf924022de85c4f4807a',1,'BaseMenu']]],
+  ['srgbcapable_5444',['sRgbCapable',['../structsf_1_1ContextSettings.html#ac93b041bfb6cbd36034997797708a0a3',1,'sf::ContextSettings']]],
+  ['stencilbits_5445',['stencilBits',['../structsf_1_1ContextSettings.html#ac2e788c201ca20e84fd38a28071abd29',1,'sf::ContextSettings']]],
+  ['stiffness_5446',['stiffness',['../structb2DistanceJointDef.html#a858640393f567a2aca1b40cbe534b4e2',1,'b2DistanceJointDef::stiffness()'],['../structb2MouseJointDef.html#ae44cee9f187989e20dfa4346970391ce',1,'b2MouseJointDef::stiffness()'],['../structb2WeldJointDef.html#aeb881c0408c9674b2a1869b491fdc6a0',1,'b2WeldJointDef::stiffness()'],['../structb2WheelJointDef.html#a4a93efb807f7ab44d51941748b42f038',1,'b2WheelJointDef::stiffness()']]],
+  ['string_5fbuffer_5447',['string_buffer',['../classdetail_1_1serializer.html#a27a61728ed0fbc65de009286531a6e70',1,'detail::serializer']]],
+  ['system_5448',['system',['../structsf_1_1Event_1_1KeyEvent.html#ac0557f7edc2a608ec65175fdd843afc5',1,'sf::Event::KeyEvent']]]
+];

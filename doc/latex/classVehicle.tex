@@ -1,0 +1,326 @@
+\hypertarget{classVehicle}{}\doxysection{Vehicle Class Reference}
+\label{classVehicle}\index{Vehicle@{Vehicle}}
+
+
+Class representing a simple vehicle in a 2D physics world using Box2D.  
+
+
+
+
+{\ttfamily \#include $<$vehicle.\+hpp$>$}
+
+
+
+Inheritance diagram for Vehicle\+:
+% FIG 0
+
+
+Collaboration diagram for Vehicle\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVehicle_a72fea5abb7cc86d6be61f630c57d32b8}{Vehicle}} (\mbox{\hyperlink{classb2World}{b2\+World}} $\ast$world, float x, float y, const \mbox{\hyperlink{classsf_1_1Texture}{sf\+::\+Texture}} \&texture)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classVehicle}{Vehicle}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVehicle_a61ab140c755b8e0e824d54117cf4546f}{$\sim$\+Vehicle}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classVehicle}{Vehicle}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVehicle_abfa4d41cf15f7df2ca8d01d3e9c47b31}\label{classVehicle_abfa4d41cf15f7df2ca8d01d3e9c47b31}} 
+void \mbox{\hyperlink{classVehicle_abfa4d41cf15f7df2ca8d01d3e9c47b31}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Update function for the vehicle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVehicle_ae00ae1d6e9ee67705ab2d391164f5968}\label{classVehicle_ae00ae1d6e9ee67705ab2d391164f5968}} 
+void \mbox{\hyperlink{classVehicle_ae00ae1d6e9ee67705ab2d391164f5968}{Update\+Lateral\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em Update the lateral velocity of the vehicle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVehicle_a2b17517520aae9f1ea2366d34511a5f1}\label{classVehicle_a2b17517520aae9f1ea2366d34511a5f1}} 
+void \mbox{\hyperlink{classVehicle_a2b17517520aae9f1ea2366d34511a5f1}{Update\+Speed}} ()
+\begin{DoxyCompactList}\small\item\em Update the speed of the vehicle based on applied force. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVehicle_ae2298128e782cf74a6201209bbc85638}{Rotate}} (float angle=1)
+\begin{DoxyCompactList}\small\item\em Rotate the vehicle by applying angular impulse. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVehicle_a6394d484426261aa9fb823e7e19f57fc}\label{classVehicle_a6394d484426261aa9fb823e7e19f57fc}} 
+void \mbox{\hyperlink{classVehicle_a6394d484426261aa9fb823e7e19f57fc}{Update\+Cool\+Down}} ()
+\begin{DoxyCompactList}\small\item\em Update the cooldown for the super skill. \end{DoxyCompactList}\item 
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classVehicle_aa685e7c487f95003f6c6a847f24711c2}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get the current position of the vehicle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVehicle_a34014bf8a68875adb3e4338d8b8abcd7}{Toggle\+Force}} (bool value)
+\begin{DoxyCompactList}\small\item\em Toggle the force applied to the vehicle on/off. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classVehicle_a7b9f01b43e1ea5e7b4551176fd186f30}{Get\+Angle}} ()
+\begin{DoxyCompactList}\small\item\em Get the current angle of the vehicle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVehicle_a1f7ea4ac0b7bceeec4be1534b81703f9}\label{classVehicle_a1f7ea4ac0b7bceeec4be1534b81703f9}} 
+void \mbox{\hyperlink{classVehicle_a1f7ea4ac0b7bceeec4be1534b81703f9}{Process\+Item}} ()
+\begin{DoxyCompactList}\small\item\em Placeholder function for processing items (to be implemented as needed). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classVehicle_a306fe0ee9bfead7cf8bbc273eb1e3f1e}{draw}} (\mbox{\hyperlink{classsf_1_1RenderTarget}{sf\+::\+Render\+Target}} \&target, \mbox{\hyperlink{classsf_1_1RenderStates}{sf\+::\+Render\+States}} states) const
+\begin{DoxyCompactList}\small\item\em Draw the vehicle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVehicle_adfdbd9f5ab2a4c8035199dcceab3684f}{Crazy\+Rotate}} (float degree, float intensity)
+\begin{DoxyCompactList}\small\item\em Apply a rotating buff to the vehicle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVehicle_a10468dad35905b33843ae5ce8f5351db}{Magnetic\+Pull}} (float radius)
+\begin{DoxyCompactList}\small\item\em Apply a magnetic pull buff to the vehicle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVehicle_a85be53ece43ec06613c0528d46a9e319}\label{classVehicle_a85be53ece43ec06613c0528d46a9e319}} 
+void \mbox{\hyperlink{classVehicle_a85be53ece43ec06613c0528d46a9e319}{Reverse\+Magnetic\+Pull}} ()
+\begin{DoxyCompactList}\small\item\em Reverse the magnetic pull buff. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVehicle_a1b0488dc2c9f03c91a4f9f5d5e564c50}{Apply\+Buff}} (float force\+Mu=1.\+0f, float Max\+Speed\+Mul=1.\+0f, float Size\+Mul=1.\+0f, float Torque\+Mul=1.\+0f)
+\begin{DoxyCompactList}\small\item\em Multiply various attributes of the vehicle by the specified factors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVehicle_afb5e9b18074510604ced450cac3893b2}{Add\+Buff}} (\mbox{\hyperlink{classBuff}{Buff}} $\ast$buff)
+\begin{DoxyCompactList}\small\item\em Add a buff to the vehicle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVehicle_aecc470b68fd6d5be73cbbac3b0cf00a7}\label{classVehicle_aecc470b68fd6d5be73cbbac3b0cf00a7}} 
+void \mbox{\hyperlink{classVehicle_aecc470b68fd6d5be73cbbac3b0cf00a7}{Update\+Buff}} ()
+\begin{DoxyCompactList}\small\item\em Update active buffs on the vehicle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVehicle_ae59431e8c2d64a6457e8a46996317e0b}\label{classVehicle_ae59431e8c2d64a6457e8a46996317e0b}} 
+virtual void \mbox{\hyperlink{classVehicle_ae59431e8c2d64a6457e8a46996317e0b}{Super\+Skill}} ()
+\begin{DoxyCompactList}\small\item\em Virtual function representing the super skill of the vehicle. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classVehicle_afcf2805dd30654d9c2bd272ec59d03e9}{Get\+Force}} ()
+\begin{DoxyCompactList}\small\item\em Get the state of the force applied to the vehicle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classVehicle_a538b6f4c7dd89a1005cca688a90894ea}\label{classVehicle_a538b6f4c7dd89a1005cca688a90894ea}} 
+bool \mbox{\hyperlink{classVehicle_a538b6f4c7dd89a1005cca688a90894ea}{force\+On}}
+\begin{DoxyCompactList}\small\item\em Flag indicating whether a force is applied to the vehicle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVehicle_a48ee2f0b1cac9a1e9c6e2be512d92171}\label{classVehicle_a48ee2f0b1cac9a1e9c6e2be512d92171}} 
+\mbox{\hyperlink{classb2Body}{b2\+Body}} $\ast$ \mbox{\hyperlink{classVehicle_a48ee2f0b1cac9a1e9c6e2be512d92171}{m\+\_\+body}}
+\begin{DoxyCompactList}\small\item\em Box2D body representing the vehicle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVehicle_a5b91cc73cb2a657e9582031d32655ccb}\label{classVehicle_a5b91cc73cb2a657e9582031d32655ccb}} 
+float \mbox{\hyperlink{classVehicle_a5b91cc73cb2a657e9582031d32655ccb}{max\+Speed}}
+\begin{DoxyCompactList}\small\item\em Maximum speed of the vehicle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVehicle_a2c540c0863396424c40a9afa0b0f7d79}\label{classVehicle_a2c540c0863396424c40a9afa0b0f7d79}} 
+\mbox{\hyperlink{classsf_1_1Sprite}{sf\+::\+Sprite}} {\bfseries sprite\+\_\+}
+\item 
+\mbox{\Hypertarget{classVehicle_a108c7bd5e54040d3aa869781f940d09d}\label{classVehicle_a108c7bd5e54040d3aa869781f940d09d}} 
+\mbox{\hyperlink{classsf_1_1Texture}{sf\+::\+Texture}} {\bfseries texture\+\_\+}
+\item 
+\mbox{\Hypertarget{classVehicle_ad99f552f2224c4956d48ff907220430d}\label{classVehicle_ad99f552f2224c4956d48ff907220430d}} 
+int {\bfseries super\+Skill\+Cool\+Down} = 0
+\item 
+\mbox{\Hypertarget{classVehicle_aa9806e5710f5d17ee4c638e7506aa57f}\label{classVehicle_aa9806e5710f5d17ee4c638e7506aa57f}} 
+\mbox{\hyperlink{classb2PolygonShape}{b2\+Polygon\+Shape}} {\bfseries dynamic\+Box}
+\item 
+\mbox{\Hypertarget{classVehicle_a84e9dd672c23774f504dba709d085a6d}\label{classVehicle_a84e9dd672c23774f504dba709d085a6d}} 
+\mbox{\hyperlink{classb2Body}{b2\+Body}} $\ast$ {\bfseries m\+\_\+front\+Tire}
+\item 
+\mbox{\Hypertarget{classVehicle_a3da3d9728b7b0e839e74b561ca85cf76}\label{classVehicle_a3da3d9728b7b0e839e74b561ca85cf76}} 
+\mbox{\hyperlink{classb2Body}{b2\+Body}} $\ast$ {\bfseries m\+\_\+rear\+Tire}
+\item 
+\mbox{\Hypertarget{classVehicle_a3ae508b11bacf446f2e8af6f0569ddef}\label{classVehicle_a3ae508b11bacf446f2e8af6f0569ddef}} 
+float {\bfseries force\+Buff} = 1.\+0f
+\item 
+\mbox{\Hypertarget{classVehicle_a2b7dc779a295f117b1fa701bb3429cc6}\label{classVehicle_a2b7dc779a295f117b1fa701bb3429cc6}} 
+float {\bfseries Max\+Speed\+Buff} = 1.\+0f
+\item 
+\mbox{\Hypertarget{classVehicle_a42e3f9d37ed4153cab8ea79a21065946}\label{classVehicle_a42e3f9d37ed4153cab8ea79a21065946}} 
+float {\bfseries Size\+Buff} = 1.\+0f
+\item 
+\mbox{\Hypertarget{classVehicle_a48880a742e8d2c31340f43107cf63a46}\label{classVehicle_a48880a742e8d2c31340f43107cf63a46}} 
+float {\bfseries Torque\+Buff} = 1.\+0f
+\item 
+\mbox{\Hypertarget{classVehicle_a94982ae064915fc6c3a79233c2a9c07e}\label{classVehicle_a94982ae064915fc6c3a79233c2a9c07e}} 
+std\+::vector$<$ \mbox{\hyperlink{classBuff}{Buff}} $\ast$ $>$ {\bfseries buffs}
+\item 
+\mbox{\Hypertarget{classVehicle_a4848c0212422fb14c47a96aed8dd3cd2}\label{classVehicle_a4848c0212422fb14c47a96aed8dd3cd2}} 
+\mbox{\hyperlink{classsf_1_1SoundBuffer}{sf\+::\+Sound\+Buffer}} {\bfseries run\+Buffer}
+\item 
+\mbox{\Hypertarget{classVehicle_a257e8934e2dbb0934457bf7e4d380f15}\label{classVehicle_a257e8934e2dbb0934457bf7e4d380f15}} 
+\mbox{\hyperlink{classsf_1_1Sound}{sf\+::\+Sound}} {\bfseries run}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class representing a simple vehicle in a 2D physics world using Box2D. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVehicle_a72fea5abb7cc86d6be61f630c57d32b8}\label{classVehicle_a72fea5abb7cc86d6be61f630c57d32b8}} 
+\index{Vehicle@{Vehicle}!Vehicle@{Vehicle}}
+\index{Vehicle@{Vehicle}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{Vehicle()}{Vehicle()}}
+{\footnotesize\ttfamily Vehicle\+::\+Vehicle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classb2World}{b2\+World}} $\ast$}]{world,  }\item[{float}]{x,  }\item[{float}]{y,  }\item[{const \mbox{\hyperlink{classsf_1_1Texture}{sf\+::\+Texture}} \&}]{texture }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classVehicle}{Vehicle}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world} & Pointer to the Box2D world. \\
+\hline
+{\em x} & Initial x-\/coordinate of the vehicle. \\
+\hline
+{\em y} & Initial y-\/coordinate of the vehicle. \\
+\hline
+{\em texture} & Reference to the SFML texture for the vehicle. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVehicle_a61ab140c755b8e0e824d54117cf4546f}\label{classVehicle_a61ab140c755b8e0e824d54117cf4546f}} 
+\index{Vehicle@{Vehicle}!````~Vehicle@{$\sim$Vehicle}}
+\index{````~Vehicle@{$\sim$Vehicle}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{$\sim$Vehicle()}{~Vehicle()}}
+{\footnotesize\ttfamily Vehicle\+::$\sim$\+Vehicle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for \mbox{\hyperlink{classVehicle}{Vehicle}}. 
+
+Destroys the Box2D body associated with the vehicle. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVehicle_afb5e9b18074510604ced450cac3893b2}\label{classVehicle_afb5e9b18074510604ced450cac3893b2}} 
+\index{Vehicle@{Vehicle}!AddBuff@{AddBuff}}
+\index{AddBuff@{AddBuff}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{AddBuff()}{AddBuff()}}
+{\footnotesize\ttfamily void Vehicle\+::\+Add\+Buff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuff}{Buff}} $\ast$}]{buff }\end{DoxyParamCaption})}
+
+
+
+Add a buff to the vehicle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buff} & Pointer to the buff to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVehicle_a1b0488dc2c9f03c91a4f9f5d5e564c50}\label{classVehicle_a1b0488dc2c9f03c91a4f9f5d5e564c50}} 
+\index{Vehicle@{Vehicle}!ApplyBuff@{ApplyBuff}}
+\index{ApplyBuff@{ApplyBuff}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{ApplyBuff()}{ApplyBuff()}}
+{\footnotesize\ttfamily void Vehicle\+::\+Apply\+Buff (\begin{DoxyParamCaption}\item[{float}]{force\+Mu = {\ttfamily 1.0f},  }\item[{float}]{Max\+Speed\+Mul = {\ttfamily 1.0f},  }\item[{float}]{Size\+Mul = {\ttfamily 1.0f},  }\item[{float}]{Torque\+Mul = {\ttfamily 1.0f} }\end{DoxyParamCaption})}
+
+
+
+Multiply various attributes of the vehicle by the specified factors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em force\+Mu} & Force multiplication factor. \\
+\hline
+{\em Max\+Speed\+Mul} & Maximum speed multiplication factor. \\
+\hline
+{\em Size\+Mul} & Size multiplication factor. \\
+\hline
+{\em Torque\+Mul} & Torque multiplication factor. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVehicle_adfdbd9f5ab2a4c8035199dcceab3684f}\label{classVehicle_adfdbd9f5ab2a4c8035199dcceab3684f}} 
+\index{Vehicle@{Vehicle}!CrazyRotate@{CrazyRotate}}
+\index{CrazyRotate@{CrazyRotate}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{CrazyRotate()}{CrazyRotate()}}
+{\footnotesize\ttfamily void Vehicle\+::\+Crazy\+Rotate (\begin{DoxyParamCaption}\item[{float}]{degree,  }\item[{float}]{intensity }\end{DoxyParamCaption})}
+
+
+
+Apply a rotating buff to the vehicle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em degree} & The rotation degree. \\
+\hline
+{\em intensity} & The intensity of the rotation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVehicle_a306fe0ee9bfead7cf8bbc273eb1e3f1e}\label{classVehicle_a306fe0ee9bfead7cf8bbc273eb1e3f1e}} 
+\index{Vehicle@{Vehicle}!draw@{draw}}
+\index{draw@{draw}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Vehicle\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1RenderTarget}{sf\+::\+Render\+Target}} \&}]{target,  }\item[{\mbox{\hyperlink{classsf_1_1RenderStates}{sf\+::\+Render\+States}}}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Draw the vehicle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Render target. \\
+\hline
+{\em states} & Render states. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1Drawable_a90d2c88bba9b035a0844eccb380ef631}{sf\+::\+Drawable}}.
+
+\mbox{\Hypertarget{classVehicle_a7b9f01b43e1ea5e7b4551176fd186f30}\label{classVehicle_a7b9f01b43e1ea5e7b4551176fd186f30}} 
+\index{Vehicle@{Vehicle}!GetAngle@{GetAngle}}
+\index{GetAngle@{GetAngle}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{GetAngle()}{GetAngle()}}
+{\footnotesize\ttfamily float Vehicle\+::\+Get\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the current angle of the vehicle. 
+
+\begin{DoxyReturn}{Returns}
+The current angle of the vehicle. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVehicle_afcf2805dd30654d9c2bd272ec59d03e9}\label{classVehicle_afcf2805dd30654d9c2bd272ec59d03e9}} 
+\index{Vehicle@{Vehicle}!GetForce@{GetForce}}
+\index{GetForce@{GetForce}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{GetForce()}{GetForce()}}
+{\footnotesize\ttfamily bool Vehicle\+::\+Get\+Force (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the state of the force applied to the vehicle. 
+
+\begin{DoxyReturn}{Returns}
+True if force is applied, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVehicle_aa685e7c487f95003f6c6a847f24711c2}\label{classVehicle_aa685e7c487f95003f6c6a847f24711c2}} 
+\index{Vehicle@{Vehicle}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily std\+::pair$<$ float, float $>$ Vehicle\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the current position of the vehicle. 
+
+\begin{DoxyReturn}{Returns}
+A pair representing the x and y coordinates of the vehicle. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVehicle_a10468dad35905b33843ae5ce8f5351db}\label{classVehicle_a10468dad35905b33843ae5ce8f5351db}} 
+\index{Vehicle@{Vehicle}!MagneticPull@{MagneticPull}}
+\index{MagneticPull@{MagneticPull}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{MagneticPull()}{MagneticPull()}}
+{\footnotesize\ttfamily void Vehicle\+::\+Magnetic\+Pull (\begin{DoxyParamCaption}\item[{float}]{radius }\end{DoxyParamCaption})}
+
+
+
+Apply a magnetic pull buff to the vehicle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & The radius of the magnetic pull. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVehicle_ae2298128e782cf74a6201209bbc85638}\label{classVehicle_ae2298128e782cf74a6201209bbc85638}} 
+\index{Vehicle@{Vehicle}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void Vehicle\+::\+Rotate (\begin{DoxyParamCaption}\item[{float}]{angle = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Rotate the vehicle by applying angular impulse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & The angular impulse (default is 1). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVehicle_a34014bf8a68875adb3e4338d8b8abcd7}\label{classVehicle_a34014bf8a68875adb3e4338d8b8abcd7}} 
+\index{Vehicle@{Vehicle}!ToggleForce@{ToggleForce}}
+\index{ToggleForce@{ToggleForce}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{ToggleForce()}{ToggleForce()}}
+{\footnotesize\ttfamily void Vehicle\+::\+Toggle\+Force (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Toggle the force applied to the vehicle on/off. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & True to enable the force, false to disable. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/vehicle.\+hpp\item 
+src/vehicle.\+cpp\end{DoxyCompactItemize}

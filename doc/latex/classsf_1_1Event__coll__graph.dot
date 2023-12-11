@@ -1,0 +1,32 @@
+digraph "sf::Event"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="sf::Event",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Defines a system event and its parameters."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mouseWheel" ];
+  Node2 [label="sf::Event::MouseWheelEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsf_1_1Event_1_1MouseWheelEvent.html",tooltip="Mouse wheel events parameters (MouseWheelMoved)"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" key" ];
+  Node3 [label="sf::Event::KeyEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsf_1_1Event_1_1KeyEvent.html",tooltip="Keyboard event parameters (KeyPressed, KeyReleased)"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" size" ];
+  Node4 [label="sf::Event::SizeEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsf_1_1Event_1_1SizeEvent.html",tooltip="Size events parameters (Resized)"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" touch" ];
+  Node5 [label="sf::Event::TouchEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsf_1_1Event_1_1TouchEvent.html",tooltip="Touch events parameters (TouchBegan, TouchMoved, TouchEnded)"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mouseWheelScroll" ];
+  Node6 [label="sf::Event::MouseWheelScroll\lEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsf_1_1Event_1_1MouseWheelScrollEvent.html",tooltip="Mouse wheel events parameters (MouseWheelScrolled)"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" text" ];
+  Node7 [label="sf::Event::TextEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsf_1_1Event_1_1TextEvent.html",tooltip="Text event parameters (TextEntered)"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mouseButton" ];
+  Node8 [label="sf::Event::MouseButtonEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsf_1_1Event_1_1MouseButtonEvent.html",tooltip="Mouse buttons events parameters (MouseButtonPressed, MouseButtonReleased)"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" joystickConnect" ];
+  Node9 [label="sf::Event::JoystickConnect\lEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsf_1_1Event_1_1JoystickConnectEvent.html",tooltip="Joystick connection events parameters (JoystickConnected, JoystickDisconnected)"];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" joystickButton" ];
+  Node10 [label="sf::Event::JoystickButton\lEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsf_1_1Event_1_1JoystickButtonEvent.html",tooltip="Joystick buttons events parameters (JoystickButtonPressed, JoystickButtonReleased)"];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mouseMove" ];
+  Node11 [label="sf::Event::MouseMoveEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsf_1_1Event_1_1MouseMoveEvent.html",tooltip="Mouse move event parameters (MouseMoved)"];
+  Node12 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sensor" ];
+  Node12 [label="sf::Event::SensorEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsf_1_1Event_1_1SensorEvent.html",tooltip="Sensor event parameters (SensorChanged)"];
+  Node13 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" joystickMove" ];
+  Node13 [label="sf::Event::JoystickMoveEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsf_1_1Event_1_1JoystickMoveEvent.html",tooltip="Joystick axis move event parameters (JoystickMoved)"];
+}

@@ -1,0 +1,82 @@
+\hypertarget{classMyContactListener}{}\doxysection{My\+Contact\+Listener Class Reference}
+\label{classMyContactListener}\index{MyContactListener@{MyContactListener}}
+
+
+A custom contact listener class for handling Box2D contact events.  
+
+
+
+
+{\ttfamily \#include $<$Contact\+Listener.\+hpp$>$}
+
+
+
+Inheritance diagram for My\+Contact\+Listener\+:
+% FIG 0
+
+
+Collaboration diagram for My\+Contact\+Listener\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMyContactListener_a71bc8ae709b202ecde2cace25fa90b64}\label{classMyContactListener_a71bc8ae709b202ecde2cace25fa90b64}} 
+\mbox{\hyperlink{classMyContactListener_a71bc8ae709b202ecde2cace25fa90b64}{My\+Contact\+Listener}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classMyContactListener}{My\+Contact\+Listener}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMyContactListener_a3a263f821cd82c13d5b15df514bcdbee}{Begin\+Contact}} (\mbox{\hyperlink{classb2Contact}{b2\+Contact}} $\ast$contact) override
+\begin{DoxyCompactList}\small\item\em Called when two fixtures start to touch. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMyContactListener_aaf1342f3cc58951b186b687b687b5bff}{End\+Contact}} (\mbox{\hyperlink{classb2Contact}{b2\+Contact}} $\ast$contact) override
+\begin{DoxyCompactList}\small\item\em Called when two fixtures cease to touch. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMyContactListener_ae2a667afb8cbd7571fed2d372f052331}\label{classMyContactListener_ae2a667afb8cbd7571fed2d372f052331}} 
+\mbox{\hyperlink{classMyContactListener_ae2a667afb8cbd7571fed2d372f052331}{$\sim$\+My\+Contact\+Listener}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classMyContactListener}{My\+Contact\+Listener}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A custom contact listener class for handling Box2D contact events. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMyContactListener_a3a263f821cd82c13d5b15df514bcdbee}\label{classMyContactListener_a3a263f821cd82c13d5b15df514bcdbee}} 
+\index{MyContactListener@{MyContactListener}!BeginContact@{BeginContact}}
+\index{BeginContact@{BeginContact}!MyContactListener@{MyContactListener}}
+\doxysubsubsection{\texorpdfstring{BeginContact()}{BeginContact()}}
+{\footnotesize\ttfamily void My\+Contact\+Listener\+::\+Begin\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classb2Contact}{b2\+Contact}} $\ast$}]{contact }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when two fixtures start to touch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contact} & The contact object containing information about the contact. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classb2ContactListener_a35148fc56fb9eac12077200fbd928f65}{b2\+Contact\+Listener}}.
+
+\mbox{\Hypertarget{classMyContactListener_aaf1342f3cc58951b186b687b687b5bff}\label{classMyContactListener_aaf1342f3cc58951b186b687b687b5bff}} 
+\index{MyContactListener@{MyContactListener}!EndContact@{EndContact}}
+\index{EndContact@{EndContact}!MyContactListener@{MyContactListener}}
+\doxysubsubsection{\texorpdfstring{EndContact()}{EndContact()}}
+{\footnotesize\ttfamily void My\+Contact\+Listener\+::\+End\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classb2Contact}{b2\+Contact}} $\ast$}]{contact }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when two fixtures cease to touch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contact} & The contact object containing information about the contact. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classb2ContactListener_afb3059058e5c47903a3947c2eef5826b}{b2\+Contact\+Listener}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/Contact\+Listener.\+hpp\item 
+src/Contact\+Listener.\+cpp\end{DoxyCompactItemize}

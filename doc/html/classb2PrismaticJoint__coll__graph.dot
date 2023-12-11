@@ -1,0 +1,25 @@
+digraph "b2PrismaticJoint"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="b2PrismaticJoint",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="b2Joint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classb2Joint.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_bodyA\nm_bodyB" ,fontname="Helvetica"];
+  Node3 [label="b2Body",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classb2Body.html",tooltip="A rigid body. These are created via b2World::CreateBody."];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_edgeA\nm_edgeB" ,fontname="Helvetica"];
+  Node4 [label="b2JointEdge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structb2JointEdge.html",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" other" ,fontname="Helvetica"];
+  Node4 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next\nprev" ,fontname="Helvetica"];
+  Node2 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" joint" ,fontname="Helvetica"];
+  Node2 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_next\nm_prev" ,fontname="Helvetica"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_userData" ,fontname="Helvetica"];
+  Node5 [label="b2JointUserData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structb2JointUserData.html",tooltip="You can define this to inject whatever data you want in b2Joint."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_axis\nm_impulse\nm_localAnchorA\nm_localAnchorB\nm_localCenterA\nm_localCenterB\nm_localXAxisA\nm_localYAxisA\nm_perp" ,fontname="Helvetica"];
+  Node6 [label="b2Vec2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structb2Vec2.html",tooltip="A 2D column vector."];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_K" ,fontname="Helvetica"];
+  Node7 [label="b2Mat22",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structb2Mat22.html",tooltip="A 2-by-2 matrix. Stored in column-major order."];
+  Node6 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ex\ney" ,fontname="Helvetica"];
+}

@@ -1,0 +1,166 @@
+\hypertarget{classsf_1_1TcpListener}{}\doxysection{sf\+::Tcp\+Listener Class Reference}
+\label{classsf_1_1TcpListener}\index{sf::TcpListener@{sf::TcpListener}}
+
+
+\mbox{\hyperlink{classsf_1_1Socket}{Socket}} that listens to new TCP connections.  
+
+
+
+
+{\ttfamily \#include $<$Tcp\+Listener.\+hpp$>$}
+
+
+
+Inheritance diagram for sf\+::Tcp\+Listener\+:
+% FIG 0
+
+
+Collaboration diagram for sf\+::Tcp\+Listener\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsf_1_1TcpListener_a59a1db5b6f4711a3e57390da2f8d9630}\label{classsf_1_1TcpListener_a59a1db5b6f4711a3e57390da2f8d9630}} 
+\mbox{\hyperlink{classsf_1_1TcpListener_a59a1db5b6f4711a3e57390da2f8d9630}{Tcp\+Listener}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{classsf_1_1TcpListener_a784b9a9c59d4cdbae1795e90b8015780}{get\+Local\+Port}} () const
+\begin{DoxyCompactList}\small\item\em Get the port to which the socket is bound locally. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1Socket_a51bf0fd51057b98a10fbb866246176dc}{Status}} \mbox{\hyperlink{classsf_1_1TcpListener_af1e065dd02b8237384683267f3506365}{listen}} (unsigned short port, const \mbox{\hyperlink{classsf_1_1IpAddress}{Ip\+Address}} \&address=\mbox{\hyperlink{classsf_1_1IpAddress_a3dbc10b0dc6804cc69e29342f7406907}{Ip\+Address\+::\+Any}})
+\begin{DoxyCompactList}\small\item\em Start listening for incoming connection attempts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1TcpListener_a3a00a850506bd0f9f48867a0fe59556b}{close}} ()
+\begin{DoxyCompactList}\small\item\em Stop listening and close the socket. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1Socket_a51bf0fd51057b98a10fbb866246176dc}{Status}} \mbox{\hyperlink{classsf_1_1TcpListener_a62c5818679eb7a1702a89e94a935d704}{accept}} (\mbox{\hyperlink{classsf_1_1TcpSocket}{Tcp\+Socket}} \&socket)
+\begin{DoxyCompactList}\small\item\em Accept a new connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classsf_1_1Socket}{Socket}} that listens to new TCP connections. 
+
+A listener socket is a special type of socket that listens to a given port and waits for connections on that port. This is all it can do.
+
+When a new connection is received, you must call accept and the listener returns a new instance of \mbox{\hyperlink{classsf_1_1TcpSocket}{sf\+::\+Tcp\+Socket}} that is properly initialized and can be used to communicate with the new client.
+
+\mbox{\hyperlink{classsf_1_1Listener}{Listener}} sockets are specific to the TCP protocol, UDP sockets are connectionless and can therefore communicate directly. As a consequence, a listener socket will always return the new connections as \mbox{\hyperlink{classsf_1_1TcpSocket}{sf\+::\+Tcp\+Socket}} instances.
+
+A listener is automatically closed on destruction, like all other types of socket. However if you want to stop listening before the socket is destroyed, you can call its \mbox{\hyperlink{classsf_1_1TcpListener_a3a00a850506bd0f9f48867a0fe59556b}{close()}} function.
+
+Usage example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Create a listener socket and make it wait for new}}
+\DoxyCodeLine{\textcolor{comment}{// connections on port 55001}}
+\DoxyCodeLine{\mbox{\hyperlink{classsf_1_1TcpListener}{sf::TcpListener}} listener;}
+\DoxyCodeLine{listener.\mbox{\hyperlink{classsf_1_1TcpListener_af1e065dd02b8237384683267f3506365}{listen}}(55001);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Endless loop that waits for new connections}}
+\DoxyCodeLine{\textcolor{keywordflow}{while} (running)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \mbox{\hyperlink{classsf_1_1TcpSocket}{sf::TcpSocket}} client;}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (listener.\mbox{\hyperlink{classsf_1_1TcpListener_a62c5818679eb7a1702a89e94a935d704}{accept}}(client) == \mbox{\hyperlink{classsf_1_1Socket_a51bf0fd51057b98a10fbb866246176dca1de3a85bc56d3ae85b3d0f3cfd04ae90}{sf::Socket::Done}})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// A new client just connected!}}
+\DoxyCodeLine{        std::cout << \textcolor{stringliteral}{"{}New connection received from "{}} << client.\mbox{\hyperlink{classsf_1_1TcpSocket_aa8579c203b1fd21beb74d7f76444a94c}{getRemoteAddress}}() << std::endl;}
+\DoxyCodeLine{        doSomethingWith(client);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsf_1_1TcpSocket}{sf\+::\+Tcp\+Socket}}, \mbox{\hyperlink{classsf_1_1Socket}{sf\+::\+Socket}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsf_1_1TcpListener_a62c5818679eb7a1702a89e94a935d704}\label{classsf_1_1TcpListener_a62c5818679eb7a1702a89e94a935d704}} 
+\index{sf::TcpListener@{sf::TcpListener}!accept@{accept}}
+\index{accept@{accept}!sf::TcpListener@{sf::TcpListener}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1Socket_a51bf0fd51057b98a10fbb866246176dc}{Socket\+::\+Status}} sf\+::\+Tcp\+Listener\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1TcpSocket}{Tcp\+Socket}} \&}]{socket }\end{DoxyParamCaption})}
+
+
+
+Accept a new connection. 
+
+If the socket is in blocking mode, this function will not return until a connection is actually received.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & \mbox{\hyperlink{classsf_1_1Socket}{Socket}} that will hold the new connection\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status code
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsf_1_1TcpListener_af1e065dd02b8237384683267f3506365}{listen}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsf_1_1TcpListener_a3a00a850506bd0f9f48867a0fe59556b}\label{classsf_1_1TcpListener_a3a00a850506bd0f9f48867a0fe59556b}} 
+\index{sf::TcpListener@{sf::TcpListener}!close@{close}}
+\index{close@{close}!sf::TcpListener@{sf::TcpListener}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void sf\+::\+Tcp\+Listener\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stop listening and close the socket. 
+
+This function gracefully stops the listener. If the socket is not listening, this function has no effect.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsf_1_1TcpListener_af1e065dd02b8237384683267f3506365}{listen}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsf_1_1TcpListener_a784b9a9c59d4cdbae1795e90b8015780}\label{classsf_1_1TcpListener_a784b9a9c59d4cdbae1795e90b8015780}} 
+\index{sf::TcpListener@{sf::TcpListener}!getLocalPort@{getLocalPort}}
+\index{getLocalPort@{getLocalPort}!sf::TcpListener@{sf::TcpListener}}
+\doxysubsubsection{\texorpdfstring{getLocalPort()}{getLocalPort()}}
+{\footnotesize\ttfamily unsigned short sf\+::\+Tcp\+Listener\+::get\+Local\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the port to which the socket is bound locally. 
+
+If the socket is not listening to a port, this function returns 0.
+
+\begin{DoxyReturn}{Returns}
+Port to which the socket is bound
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsf_1_1TcpListener_af1e065dd02b8237384683267f3506365}{listen}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsf_1_1TcpListener_af1e065dd02b8237384683267f3506365}\label{classsf_1_1TcpListener_af1e065dd02b8237384683267f3506365}} 
+\index{sf::TcpListener@{sf::TcpListener}!listen@{listen}}
+\index{listen@{listen}!sf::TcpListener@{sf::TcpListener}}
+\doxysubsubsection{\texorpdfstring{listen()}{listen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1Socket_a51bf0fd51057b98a10fbb866246176dc}{Socket\+::\+Status}} sf\+::\+Tcp\+Listener\+::listen (\begin{DoxyParamCaption}\item[{unsigned short}]{port,  }\item[{const \mbox{\hyperlink{classsf_1_1IpAddress}{Ip\+Address}} \&}]{address = {\ttfamily \mbox{\hyperlink{classsf_1_1IpAddress_a3dbc10b0dc6804cc69e29342f7406907}{Ip\+Address\+::\+Any}}} }\end{DoxyParamCaption})}
+
+
+
+Start listening for incoming connection attempts. 
+
+This function makes the socket start listening on the specified port, waiting for incoming connection attempts.
+
+If the socket is already listening on a port when this function is called, it will stop listening on the old port before starting to listen on the new port.
+
+When providing \mbox{\hyperlink{classsf_1_1Socket_a3918217fcefb05a0a6fa03ebf0fed370a5a3c30fd128895403afc11076f461b19}{sf\+::\+Socket\+::\+Any\+Port}} as port, the listener will request an available port from the system. The chosen port can be retrieved by calling \mbox{\hyperlink{classsf_1_1TcpListener_a784b9a9c59d4cdbae1795e90b8015780}{get\+Local\+Port()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Port to listen on for incoming connection attempts \\
+\hline
+{\em address} & Address of the interface to listen on\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status code
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsf_1_1TcpListener_a62c5818679eb7a1702a89e94a935d704}{accept}}, \mbox{\hyperlink{classsf_1_1TcpListener_a3a00a850506bd0f9f48867a0fe59556b}{close}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/arm64/include/\+SFML/\+Network/Tcp\+Listener.\+hpp\item 
+libs/unix/include/\+SFML/\+Network/Tcp\+Listener.\+cpp\end{DoxyCompactItemize}

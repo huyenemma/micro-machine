@@ -1,0 +1,330 @@
+\hypertarget{classb2PolygonShape}{}\doxysection{b2\+Polygon\+Shape Class Reference}
+\label{classb2PolygonShape}\index{b2PolygonShape@{b2PolygonShape}}
+
+
+{\ttfamily \#include $<$b2\+\_\+polygon\+\_\+shape.\+h$>$}
+
+
+
+Inheritance diagram for b2\+Polygon\+Shape\+:
+% FIG 0
+
+
+Collaboration diagram for b2\+Polygon\+Shape\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classb2PolygonShape_ab3409517e0e6ae926998f78238a38954}\label{classb2PolygonShape_ab3409517e0e6ae926998f78238a38954}} 
+\mbox{\hyperlink{classb2Shape}{b2\+Shape}} $\ast$ \mbox{\hyperlink{classb2PolygonShape_ab3409517e0e6ae926998f78238a38954}{Clone}} (\mbox{\hyperlink{classb2BlockAllocator}{b2\+Block\+Allocator}} $\ast$allocator) const override
+\begin{DoxyCompactList}\small\item\em Implement \mbox{\hyperlink{classb2Shape}{b2\+Shape}}. \end{DoxyCompactList}\item 
+int32 \mbox{\hyperlink{classb2PolygonShape_aa8bb0d5a88624104425cdee0b2f4427a}{Get\+Child\+Count}} () const override
+\item 
+void \mbox{\hyperlink{classb2PolygonShape_a4d7b35550509f570814b97325a68966b}{Set}} (const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} $\ast$points, int32 count)
+\item 
+void \mbox{\hyperlink{classb2PolygonShape_ae356d825f51f7b827edb0c71fec781f8}{Set\+As\+Box}} (float hx, float hy)
+\item 
+void \mbox{\hyperlink{classb2PolygonShape_af80eb52027ffe85dd4d0a3110eae9d1b}{Set\+As\+Box}} (float hx, float hy, const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&center, float angle)
+\item 
+bool \mbox{\hyperlink{classb2PolygonShape_a129c4ac76727fe02724f675e3fef7fe5}{Test\+Point}} (const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&transform, const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&p) const override
+\item 
+bool \mbox{\hyperlink{classb2PolygonShape_a41f20072763688f1745f12f67f40e904}{Ray\+Cast}} (\mbox{\hyperlink{structb2RayCastOutput}{b2\+Ray\+Cast\+Output}} $\ast$output, const \mbox{\hyperlink{structb2RayCastInput}{b2\+Ray\+Cast\+Input}} \&input, const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&transform, int32 child\+Index) const override
+\item 
+void \mbox{\hyperlink{classb2PolygonShape_ae9bcc185caf4a030003cefc4576e4717}{Compute\+AABB}} (\mbox{\hyperlink{structb2AABB}{b2\+AABB}} $\ast$aabb, const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&transform, int32 child\+Index) const override
+\item 
+void \mbox{\hyperlink{classb2PolygonShape_ab9b7bf3fb10c6995b6ac3648919dfd36}{Compute\+Mass}} (\mbox{\hyperlink{structb2MassData}{b2\+Mass\+Data}} $\ast$mass\+Data, float density) const override
+\item 
+bool \mbox{\hyperlink{classb2PolygonShape_a135f4c20e17f10479e08f7befbd4d1f0}{Validate}} () const
+\item 
+\mbox{\Hypertarget{classb2PolygonShape_ab3409517e0e6ae926998f78238a38954}\label{classb2PolygonShape_ab3409517e0e6ae926998f78238a38954}} 
+\mbox{\hyperlink{classb2Shape}{b2\+Shape}} $\ast$ \mbox{\hyperlink{classb2PolygonShape_ab3409517e0e6ae926998f78238a38954}{Clone}} (\mbox{\hyperlink{classb2BlockAllocator}{b2\+Block\+Allocator}} $\ast$allocator) const override
+\begin{DoxyCompactList}\small\item\em Implement \mbox{\hyperlink{classb2Shape}{b2\+Shape}}. \end{DoxyCompactList}\item 
+int32 \mbox{\hyperlink{classb2PolygonShape_aa8bb0d5a88624104425cdee0b2f4427a}{Get\+Child\+Count}} () const override
+\item 
+bool \mbox{\hyperlink{classb2PolygonShape_a4833611e098e945b2b563cb422eb349b}{Set}} (const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} $\ast$points, int32 count)
+\item 
+void \mbox{\hyperlink{classb2PolygonShape_abce8f80d0a8416ab59e73672ed4f355f}{Set}} (const \mbox{\hyperlink{structb2Hull}{b2\+Hull}} \&hull)
+\item 
+void \mbox{\hyperlink{classb2PolygonShape_ae356d825f51f7b827edb0c71fec781f8}{Set\+As\+Box}} (float hx, float hy)
+\item 
+void \mbox{\hyperlink{classb2PolygonShape_af80eb52027ffe85dd4d0a3110eae9d1b}{Set\+As\+Box}} (float hx, float hy, const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&center, float angle)
+\item 
+bool \mbox{\hyperlink{classb2PolygonShape_a129c4ac76727fe02724f675e3fef7fe5}{Test\+Point}} (const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&transform, const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&p) const override
+\item 
+bool \mbox{\hyperlink{classb2PolygonShape_a41f20072763688f1745f12f67f40e904}{Ray\+Cast}} (\mbox{\hyperlink{structb2RayCastOutput}{b2\+Ray\+Cast\+Output}} $\ast$output, const \mbox{\hyperlink{structb2RayCastInput}{b2\+Ray\+Cast\+Input}} \&input, const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&transform, int32 child\+Index) const override
+\item 
+void \mbox{\hyperlink{classb2PolygonShape_ae9bcc185caf4a030003cefc4576e4717}{Compute\+AABB}} (\mbox{\hyperlink{structb2AABB}{b2\+AABB}} $\ast$aabb, const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&transform, int32 child\+Index) const override
+\item 
+void \mbox{\hyperlink{classb2PolygonShape_ab9b7bf3fb10c6995b6ac3648919dfd36}{Compute\+Mass}} (\mbox{\hyperlink{structb2MassData}{b2\+Mass\+Data}} $\ast$mass\+Data, float density) const override
+\item 
+bool \mbox{\hyperlink{classb2PolygonShape_a135f4c20e17f10479e08f7befbd4d1f0}{Validate}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classb2PolygonShape_ae8f5bd2f13f1e9b741c33350ba19cd9f}\label{classb2PolygonShape_ae8f5bd2f13f1e9b741c33350ba19cd9f}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+centroid}
+\item 
+\mbox{\Hypertarget{classb2PolygonShape_aee48e090859b247f645169f8f0bd246c}\label{classb2PolygonShape_aee48e090859b247f645169f8f0bd246c}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+vertices} \mbox{[}\mbox{\hyperlink{unix_2include_2box2d_2b2__settings_8h_a09d71ee1993bee28b5b2e6d893b41884}{b2\+\_\+max\+Polygon\+Vertices}}\mbox{]}
+\item 
+\mbox{\Hypertarget{classb2PolygonShape_a4d2348daae125b232ad5bd04bed534c7}\label{classb2PolygonShape_a4d2348daae125b232ad5bd04bed534c7}} 
+\mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} {\bfseries m\+\_\+normals} \mbox{[}\mbox{\hyperlink{unix_2include_2box2d_2b2__settings_8h_a09d71ee1993bee28b5b2e6d893b41884}{b2\+\_\+max\+Polygon\+Vertices}}\mbox{]}
+\item 
+\mbox{\Hypertarget{classb2PolygonShape_a2c8cfdc15267f282e66f7bda7369b79f}\label{classb2PolygonShape_a2c8cfdc15267f282e66f7bda7369b79f}} 
+int32 {\bfseries m\+\_\+count}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A solid convex polygon. It is assumed that the interior of the polygon is to the left of each edge. Polygons have a maximum number of vertices equal to b2\+\_\+max\+Polygon\+Vertices. In most cases you should not need many vertices for a convex polygon. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classb2PolygonShape_ae9bcc185caf4a030003cefc4576e4717}\label{classb2PolygonShape_ae9bcc185caf4a030003cefc4576e4717}} 
+\index{b2PolygonShape@{b2PolygonShape}!ComputeAABB@{ComputeAABB}}
+\index{ComputeAABB@{ComputeAABB}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{ComputeAABB()}{ComputeAABB()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void b2\+Polygon\+Shape\+::\+Compute\+AABB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structb2AABB}{b2\+AABB}} $\ast$}]{aabb,  }\item[{const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&}]{transform,  }\item[{int32}]{child\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classb2Shape_a88e9807fab0c8ca9a98d8926e50a1411}{b2\+Shape\+::\+Compute\+AABB}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classb2Shape_a88e9807fab0c8ca9a98d8926e50a1411}{b2\+Shape}}.
+
+\mbox{\Hypertarget{classb2PolygonShape_ae9bcc185caf4a030003cefc4576e4717}\label{classb2PolygonShape_ae9bcc185caf4a030003cefc4576e4717}} 
+\index{b2PolygonShape@{b2PolygonShape}!ComputeAABB@{ComputeAABB}}
+\index{ComputeAABB@{ComputeAABB}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{ComputeAABB()}{ComputeAABB()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void b2\+Polygon\+Shape\+::\+Compute\+AABB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structb2AABB}{b2\+AABB}} $\ast$}]{aabb,  }\item[{const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&}]{transform,  }\item[{int32}]{child\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classb2Shape_a88e9807fab0c8ca9a98d8926e50a1411}{b2\+Shape\+::\+Compute\+AABB}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classb2Shape_a88e9807fab0c8ca9a98d8926e50a1411}{b2\+Shape}}.
+
+\mbox{\Hypertarget{classb2PolygonShape_ab9b7bf3fb10c6995b6ac3648919dfd36}\label{classb2PolygonShape_ab9b7bf3fb10c6995b6ac3648919dfd36}} 
+\index{b2PolygonShape@{b2PolygonShape}!ComputeMass@{ComputeMass}}
+\index{ComputeMass@{ComputeMass}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{ComputeMass()}{ComputeMass()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void b2\+Polygon\+Shape\+::\+Compute\+Mass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structb2MassData}{b2\+Mass\+Data}} $\ast$}]{mass\+Data,  }\item[{float}]{density }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classb2Shape_a1b9497fd7951fa995df6fe00bcf8581b}{b2\+Shape\+::\+Compute\+Mass}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classb2Shape_a1b9497fd7951fa995df6fe00bcf8581b}{b2\+Shape}}.
+
+\mbox{\Hypertarget{classb2PolygonShape_ab9b7bf3fb10c6995b6ac3648919dfd36}\label{classb2PolygonShape_ab9b7bf3fb10c6995b6ac3648919dfd36}} 
+\index{b2PolygonShape@{b2PolygonShape}!ComputeMass@{ComputeMass}}
+\index{ComputeMass@{ComputeMass}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{ComputeMass()}{ComputeMass()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void b2\+Polygon\+Shape\+::\+Compute\+Mass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structb2MassData}{b2\+Mass\+Data}} $\ast$}]{mass\+Data,  }\item[{float}]{density }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classb2Shape_a1b9497fd7951fa995df6fe00bcf8581b}{b2\+Shape\+::\+Compute\+Mass}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classb2Shape_a1b9497fd7951fa995df6fe00bcf8581b}{b2\+Shape}}.
+
+\mbox{\Hypertarget{classb2PolygonShape_aa8bb0d5a88624104425cdee0b2f4427a}\label{classb2PolygonShape_aa8bb0d5a88624104425cdee0b2f4427a}} 
+\index{b2PolygonShape@{b2PolygonShape}!GetChildCount@{GetChildCount}}
+\index{GetChildCount@{GetChildCount}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{GetChildCount()}{GetChildCount()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int32 b2\+Polygon\+Shape\+::\+Get\+Child\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classb2Shape_a05a3c445017d96df9238ceefe6ce37ab}{b2\+Shape\+::\+Get\+Child\+Count}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classb2Shape_a05a3c445017d96df9238ceefe6ce37ab}{b2\+Shape}}.
+
+\mbox{\Hypertarget{classb2PolygonShape_aa8bb0d5a88624104425cdee0b2f4427a}\label{classb2PolygonShape_aa8bb0d5a88624104425cdee0b2f4427a}} 
+\index{b2PolygonShape@{b2PolygonShape}!GetChildCount@{GetChildCount}}
+\index{GetChildCount@{GetChildCount}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{GetChildCount()}{GetChildCount()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int32 b2\+Polygon\+Shape\+::\+Get\+Child\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classb2Shape_a05a3c445017d96df9238ceefe6ce37ab}{b2\+Shape\+::\+Get\+Child\+Count}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classb2Shape_a05a3c445017d96df9238ceefe6ce37ab}{b2\+Shape}}.
+
+\mbox{\Hypertarget{classb2PolygonShape_a41f20072763688f1745f12f67f40e904}\label{classb2PolygonShape_a41f20072763688f1745f12f67f40e904}} 
+\index{b2PolygonShape@{b2PolygonShape}!RayCast@{RayCast}}
+\index{RayCast@{RayCast}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{RayCast()}{RayCast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool b2\+Polygon\+Shape\+::\+Ray\+Cast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structb2RayCastOutput}{b2\+Ray\+Cast\+Output}} $\ast$}]{output,  }\item[{const \mbox{\hyperlink{structb2RayCastInput}{b2\+Ray\+Cast\+Input}} \&}]{input,  }\item[{const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&}]{transform,  }\item[{int32}]{child\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Implement \mbox{\hyperlink{classb2Shape}{b2\+Shape}}. \begin{DoxyNote}{Note}
+because the polygon is solid, rays that start inside do not hit because the normal is not defined. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{classb2Shape_aee53a926f4fe64cd03693f6211ef6335}{b2\+Shape}}.
+
+\mbox{\Hypertarget{classb2PolygonShape_a41f20072763688f1745f12f67f40e904}\label{classb2PolygonShape_a41f20072763688f1745f12f67f40e904}} 
+\index{b2PolygonShape@{b2PolygonShape}!RayCast@{RayCast}}
+\index{RayCast@{RayCast}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{RayCast()}{RayCast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool b2\+Polygon\+Shape\+::\+Ray\+Cast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structb2RayCastOutput}{b2\+Ray\+Cast\+Output}} $\ast$}]{output,  }\item[{const \mbox{\hyperlink{structb2RayCastInput}{b2\+Ray\+Cast\+Input}} \&}]{input,  }\item[{const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&}]{transform,  }\item[{int32}]{child\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Implement \mbox{\hyperlink{classb2Shape}{b2\+Shape}}. \begin{DoxyNote}{Note}
+because the polygon is solid, rays that start inside do not hit because the normal is not defined. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{classb2Shape_aee53a926f4fe64cd03693f6211ef6335}{b2\+Shape}}.
+
+\mbox{\Hypertarget{classb2PolygonShape_abce8f80d0a8416ab59e73672ed4f355f}\label{classb2PolygonShape_abce8f80d0a8416ab59e73672ed4f355f}} 
+\index{b2PolygonShape@{b2PolygonShape}!Set@{Set}}
+\index{Set@{Set}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void b2\+Polygon\+Shape\+::\+Set (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structb2Hull}{b2\+Hull}} \&}]{hull }\end{DoxyParamCaption})}
+
+Create a polygon from a given convex hull (see b2\+Compute\+Hull). \begin{DoxyWarning}{Warning}
+the hull must be valid or this will crash or have unexpected behavior 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classb2PolygonShape_a4d7b35550509f570814b97325a68966b}\label{classb2PolygonShape_a4d7b35550509f570814b97325a68966b}} 
+\index{b2PolygonShape@{b2PolygonShape}!Set@{Set}}
+\index{Set@{Set}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void b2\+Polygon\+Shape\+::\+Set (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} $\ast$}]{points,  }\item[{int32}]{count }\end{DoxyParamCaption})}
+
+Create a convex hull from the given array of local points. The count must be in the range \mbox{[}3, b2\+\_\+max\+Polygon\+Vertices\mbox{]}. \begin{DoxyWarning}{Warning}
+the points may be re-\/ordered, even if they form a convex polygon 
+
+collinear points are handled but not removed. Collinear points may lead to poor stacking behavior. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classb2PolygonShape_a4833611e098e945b2b563cb422eb349b}\label{classb2PolygonShape_a4833611e098e945b2b563cb422eb349b}} 
+\index{b2PolygonShape@{b2PolygonShape}!Set@{Set}}
+\index{Set@{Set}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool b2\+Polygon\+Shape\+::\+Set (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} $\ast$}]{points,  }\item[{int32}]{count }\end{DoxyParamCaption})}
+
+Create a convex hull from the given array of local points. The count must be in the range \mbox{[}3, b2\+\_\+max\+Polygon\+Vertices\mbox{]}. \begin{DoxyWarning}{Warning}
+the points may be re-\/ordered, even if they form a convex polygon 
+
+if this fails then the polygon is invalid 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+true if valid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classb2PolygonShape_ae356d825f51f7b827edb0c71fec781f8}\label{classb2PolygonShape_ae356d825f51f7b827edb0c71fec781f8}} 
+\index{b2PolygonShape@{b2PolygonShape}!SetAsBox@{SetAsBox}}
+\index{SetAsBox@{SetAsBox}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{SetAsBox()}{SetAsBox()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void b2\+Polygon\+Shape\+::\+Set\+As\+Box (\begin{DoxyParamCaption}\item[{float}]{hx,  }\item[{float}]{hy }\end{DoxyParamCaption})}
+
+Build vertices to represent an axis-\/aligned box centered on the local origin. 
+\begin{DoxyParams}{Parameters}
+{\em hx} & the half-\/width. \\
+\hline
+{\em hy} & the half-\/height. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classb2PolygonShape_ae356d825f51f7b827edb0c71fec781f8}\label{classb2PolygonShape_ae356d825f51f7b827edb0c71fec781f8}} 
+\index{b2PolygonShape@{b2PolygonShape}!SetAsBox@{SetAsBox}}
+\index{SetAsBox@{SetAsBox}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{SetAsBox()}{SetAsBox()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void b2\+Polygon\+Shape\+::\+Set\+As\+Box (\begin{DoxyParamCaption}\item[{float}]{hx,  }\item[{float}]{hy }\end{DoxyParamCaption})}
+
+Build vertices to represent an axis-\/aligned box centered on the local origin. 
+\begin{DoxyParams}{Parameters}
+{\em hx} & the half-\/width. \\
+\hline
+{\em hy} & the half-\/height. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classb2PolygonShape_af80eb52027ffe85dd4d0a3110eae9d1b}\label{classb2PolygonShape_af80eb52027ffe85dd4d0a3110eae9d1b}} 
+\index{b2PolygonShape@{b2PolygonShape}!SetAsBox@{SetAsBox}}
+\index{SetAsBox@{SetAsBox}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{SetAsBox()}{SetAsBox()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void b2\+Polygon\+Shape\+::\+Set\+As\+Box (\begin{DoxyParamCaption}\item[{float}]{hx,  }\item[{float}]{hy,  }\item[{const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&}]{center,  }\item[{float}]{angle }\end{DoxyParamCaption})}
+
+Build vertices to represent an oriented box. 
+\begin{DoxyParams}{Parameters}
+{\em hx} & the half-\/width. \\
+\hline
+{\em hy} & the half-\/height. \\
+\hline
+{\em center} & the center of the box in local coordinates. \\
+\hline
+{\em angle} & the rotation of the box in local coordinates. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classb2PolygonShape_af80eb52027ffe85dd4d0a3110eae9d1b}\label{classb2PolygonShape_af80eb52027ffe85dd4d0a3110eae9d1b}} 
+\index{b2PolygonShape@{b2PolygonShape}!SetAsBox@{SetAsBox}}
+\index{SetAsBox@{SetAsBox}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{SetAsBox()}{SetAsBox()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void b2\+Polygon\+Shape\+::\+Set\+As\+Box (\begin{DoxyParamCaption}\item[{float}]{hx,  }\item[{float}]{hy,  }\item[{const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&}]{center,  }\item[{float}]{angle }\end{DoxyParamCaption})}
+
+Build vertices to represent an oriented box. 
+\begin{DoxyParams}{Parameters}
+{\em hx} & the half-\/width. \\
+\hline
+{\em hy} & the half-\/height. \\
+\hline
+{\em center} & the center of the box in local coordinates. \\
+\hline
+{\em angle} & the rotation of the box in local coordinates. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classb2PolygonShape_a129c4ac76727fe02724f675e3fef7fe5}\label{classb2PolygonShape_a129c4ac76727fe02724f675e3fef7fe5}} 
+\index{b2PolygonShape@{b2PolygonShape}!TestPoint@{TestPoint}}
+\index{TestPoint@{TestPoint}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{TestPoint()}{TestPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool b2\+Polygon\+Shape\+::\+Test\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&}]{transform,  }\item[{const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classb2Shape_a6ac968e403e2d93e8ae46d728a2e50fa}{b2\+Shape\+::\+Test\+Point}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classb2Shape_a6ac968e403e2d93e8ae46d728a2e50fa}{b2\+Shape}}.
+
+\mbox{\Hypertarget{classb2PolygonShape_a129c4ac76727fe02724f675e3fef7fe5}\label{classb2PolygonShape_a129c4ac76727fe02724f675e3fef7fe5}} 
+\index{b2PolygonShape@{b2PolygonShape}!TestPoint@{TestPoint}}
+\index{TestPoint@{TestPoint}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{TestPoint()}{TestPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool b2\+Polygon\+Shape\+::\+Test\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structb2Transform}{b2\+Transform}} \&}]{transform,  }\item[{const \mbox{\hyperlink{structb2Vec2}{b2\+Vec2}} \&}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classb2Shape_a6ac968e403e2d93e8ae46d728a2e50fa}{b2\+Shape\+::\+Test\+Point}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classb2Shape_a6ac968e403e2d93e8ae46d728a2e50fa}{b2\+Shape}}.
+
+\mbox{\Hypertarget{classb2PolygonShape_a135f4c20e17f10479e08f7befbd4d1f0}\label{classb2PolygonShape_a135f4c20e17f10479e08f7befbd4d1f0}} 
+\index{b2PolygonShape@{b2PolygonShape}!Validate@{Validate}}
+\index{Validate@{Validate}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool b2\+Polygon\+Shape\+::\+Validate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Validate convexity. This is a very time consuming operation. \begin{DoxyReturn}{Returns}
+true if valid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classb2PolygonShape_a135f4c20e17f10479e08f7befbd4d1f0}\label{classb2PolygonShape_a135f4c20e17f10479e08f7befbd4d1f0}} 
+\index{b2PolygonShape@{b2PolygonShape}!Validate@{Validate}}
+\index{Validate@{Validate}!b2PolygonShape@{b2PolygonShape}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool b2\+Polygon\+Shape\+::\+Validate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Validate convexity. This is a very time consuming operation. \begin{DoxyReturn}{Returns}
+true if valid 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libs/arm64/include/box2d/b2\+\_\+polygon\+\_\+shape.\+h\end{DoxyCompactItemize}

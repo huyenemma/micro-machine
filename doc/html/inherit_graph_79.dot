@@ -1,0 +1,12 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node910 [label="TestWithParam",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node910 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="CommentTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCommentTest.html",tooltip=" "];
+  Node910 -> Node912 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node912 [label="CustomStructNamingTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCustomStructNamingTest.html",tooltip=" "];
+}

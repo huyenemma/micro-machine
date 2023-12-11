@@ -1,0 +1,38 @@
+digraph "sf::Drawable"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="sf::Drawable",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Abstract base class for objects that can be drawn to a render target."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Collectable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCollectable.html",tooltip="Represents a collectable item in the game."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Obstacle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classObstacle.html",tooltip="Class representing an Obstacle that can interact with vehicles."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Vehicle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classVehicle.html",tooltip="Class representing a simple vehicle in a 2D physics world using Box2D."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Cat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCat.html",tooltip="Class representing a Cat, derived from Vehicle."];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Dog",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDog.html",tooltip="Class representing a Dog, derived from Vehicle."];
+  Node4 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Horse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classHorse.html",tooltip="Class representing a Horse, derived from Vehicle."];
+  Node4 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Ox",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOx.html",tooltip="Class representing an Ox, derived from Vehicle."];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="sf::Shape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1Shape.html",tooltip="Base class for textured shapes with outline."];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="sf::CircleShape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1CircleShape.html",tooltip="Specialized shape representing a circle."];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="sf::ConvexShape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1ConvexShape.html",tooltip="Specialized shape representing a convex polygon."];
+  Node9 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="sf::RectangleShape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1RectangleShape.html",tooltip="Specialized shape representing a rectangle."];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="sf::Sprite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1Sprite.html",tooltip="Drawable representation of a texture, with its own transformations, color, etc."];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="sf::Text",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1Text.html",tooltip="Graphical text that can be drawn to a render target."];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="sf::VertexArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1VertexArray.html",tooltip="Define a set of one or more 2D primitives."];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="sf::VertexBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1VertexBuffer.html",tooltip="Vertex buffer storage for one or more 2D primitives."];
+}

@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['b_5560',['B',['../classsf_1_1Keyboard.html#acb4cacd7cc5802dec45724cf3314a142aca3142235e5c4199f0b8b45d8368ef94',1,'sf::Keyboard::B()'],['../structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875a5a277726531303b8ba5212999e9664cb',1,'sf::Keyboard::Scan::B()']]],
+  ['b2_5faddstate_5561',['b2_addState',['../unix_2include_2box2d_2b2__collision_8h.html#a0a894e3715ce8c61b7958dd6e083663dac60dc479bee2089a695b37948179b3d4',1,'b2_addState():&#160;b2_collision.h'],['../arm64_2include_2box2d_2b2__collision_8h.html#a0a894e3715ce8c61b7958dd6e083663dac60dc479bee2089a695b37948179b3d4',1,'b2_addState():&#160;b2_collision.h']]],
+  ['b2_5fnullstate_5562',['b2_nullState',['../unix_2include_2box2d_2b2__collision_8h.html#a0a894e3715ce8c61b7958dd6e083663da7ce77ce1a592f49d92939997976c217b',1,'b2_nullState():&#160;b2_collision.h'],['../arm64_2include_2box2d_2b2__collision_8h.html#a0a894e3715ce8c61b7958dd6e083663da7ce77ce1a592f49d92939997976c217b',1,'b2_nullState():&#160;b2_collision.h']]],
+  ['b2_5fpersiststate_5563',['b2_persistState',['../unix_2include_2box2d_2b2__collision_8h.html#a0a894e3715ce8c61b7958dd6e083663dafb032f2175741fa95361e55d1c069e0a',1,'b2_persistState():&#160;b2_collision.h'],['../arm64_2include_2box2d_2b2__collision_8h.html#a0a894e3715ce8c61b7958dd6e083663dafb032f2175741fa95361e55d1c069e0a',1,'b2_persistState():&#160;b2_collision.h']]],
+  ['b2_5fremovestate_5564',['b2_removeState',['../unix_2include_2box2d_2b2__collision_8h.html#a0a894e3715ce8c61b7958dd6e083663da42ca6d7de57b948c8c895cd6f51ee8be',1,'b2_removeState():&#160;b2_collision.h'],['../arm64_2include_2box2d_2b2__collision_8h.html#a0a894e3715ce8c61b7958dd6e083663da42ca6d7de57b948c8c895cd6f51ee8be',1,'b2_removeState():&#160;b2_collision.h']]],
+  ['back_5565',['Back',['../structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875ae5c30910d66a7706ec731fff17e552d2',1,'sf::Keyboard::Scan']]],
+  ['backslash_5566',['Backslash',['../classsf_1_1Keyboard.html#acb4cacd7cc5802dec45724cf3314a142adbd7d6f90a1009e91acf7bb1dc068512',1,'sf::Keyboard::Backslash()'],['../structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875a01ce415ff140d34d25a7bdbbbb785287',1,'sf::Keyboard::Scan::Backslash()']]],
+  ['backslash_5567',['BackSlash',['../classsf_1_1Keyboard.html#acb4cacd7cc5802dec45724cf3314a142a536df84e73859aa44e11e192459470b6',1,'sf::Keyboard']]],
+  ['backspace_5568',['BackSpace',['../classsf_1_1Keyboard.html#acb4cacd7cc5802dec45724cf3314a142a33aeaab900abcd01eebf2fcc4f6d97e2',1,'sf::Keyboard']]],
+  ['backspace_5569',['Backspace',['../classsf_1_1Keyboard.html#acb4cacd7cc5802dec45724cf3314a142aa7c1581bac0f20164512572e6c60e98e',1,'sf::Keyboard::Backspace()'],['../structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875a6621384ae8e5b8f0faf0b879c7813817',1,'sf::Keyboard::Scan::Backspace()']]],
+  ['badcommandsequence_5570',['BadCommandSequence',['../classsf_1_1Ftp_1_1Response.html#af81738f06b6f571761696291276acb3bad0c7ab07f01c1f7af16a1852650d7c47',1,'sf::Ftp::Response']]],
+  ['badgateway_5571',['BadGateway',['../classsf_1_1Http_1_1Response.html#a663e071978e30fbbeb20ed045be874d8aad0cbad4cdaf448beb763e86bc1f747c',1,'sf::Http::Response']]],
+  ['badrequest_5572',['BadRequest',['../classsf_1_1Http_1_1Response.html#a663e071978e30fbbeb20ed045be874d8a3f88a714cf5483ee22f9051e5a3c080a',1,'sf::Http::Response']]],
+  ['begin_5farray_5573',['begin_array',['../classdetail_1_1lexer__base.html#add65fa7a85aa15052963809fbcc04540a16c226b4425b68560fea322b46dabe01',1,'detail::lexer_base']]],
+  ['begin_5fobject_5574',['begin_object',['../classdetail_1_1lexer__base.html#add65fa7a85aa15052963809fbcc04540a9a9ffd53b6869d4eca271b1ed5b57fe8',1,'detail::lexer_base']]],
+  ['binary_5575',['binary',['../namespacedetail.html#a917c3efabea8a20dc72d9ae2c673d632a9d7183f16acce70658f686ae7f1a4d20',1,'detail']]],
+  ['binary_5576',['Binary',['../classsf_1_1Ftp.html#a1cd6b89ad23253f6d97e6d4ca4d558cba6f253b362639fb5e059dc292762a21ee',1,'sf::Ftp']]],
+  ['bold_5577',['Bold',['../classsf_1_1Text.html#aa8add4aef484c6e6b20faff07452bd82af1b47f98fb1e10509ba930a596987171',1,'sf::Text']]],
+  ['boolean_5578',['boolean',['../namespacedetail.html#a917c3efabea8a20dc72d9ae2c673d632a84e2c64f38f78ba3ea5c905ab5a2da27',1,'detail']]],
+  ['buttoncount_5579',['ButtonCount',['../classsf_1_1Mouse.html#a4fb128be433f9aafe66bc0c605daaa90a52a1d434289774240ddaa22496762402',1,'sf::Mouse::ButtonCount()'],['../classsf_1_1Joystick.html#a89411eeb10e32638c080bb45488296e2a2f1b8a0a59f2c12a4775c0e1e69e1816',1,'sf::Joystick::ButtonCount()']]]
+];

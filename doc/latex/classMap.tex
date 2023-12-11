@@ -1,0 +1,69 @@
+\hypertarget{classMap}{}\doxysection{Map Class Reference}
+\label{classMap}\index{Map@{Map}}
+
+
+Manages the game map\textquotesingle{}s graphical representation.  
+
+
+
+
+{\ttfamily \#include $<$map.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMap_a455dde6863022eeb51c5aeda2a16fada}{Map}} (const \mbox{\hyperlink{classsf_1_1Texture}{sf\+::\+Texture}} \&texture)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classMap}{Map}} object with a given texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMap_a9cc03062b618ec82cb56e83e0034f431}{Draw}} (\mbox{\hyperlink{classsf_1_1RenderWindow}{sf\+::\+Render\+Window}} \&window)
+\begin{DoxyCompactList}\small\item\em Draws the map onto the game window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the game map\textquotesingle{}s graphical representation. 
+
+The \mbox{\hyperlink{classMap}{Map}} class is responsible for handling the visual aspects of the game map. It loads the map texture, handles its scaling, and provides functionality for rendering the map on the game window. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMap_a455dde6863022eeb51c5aeda2a16fada}\label{classMap_a455dde6863022eeb51c5aeda2a16fada}} 
+\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily Map\+::\+Map (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1Texture}{sf\+::\+Texture}} \&}]{texture }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classMap}{Map}} object with a given texture. 
+
+Loads the texture for the map and prepares it for rendering.
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & The SFML texture object representing the game map. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMap_a9cc03062b618ec82cb56e83e0034f431}\label{classMap_a9cc03062b618ec82cb56e83e0034f431}} 
+\index{Map@{Map}!Draw@{Draw}}
+\index{Draw@{Draw}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Map\+::\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1RenderWindow}{sf\+::\+Render\+Window}} \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Draws the map onto the game window. 
+
+Renders the map onto the provided SFML Render\+Window object. This method should be called every frame to display the map in the game window.
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The SFML Render\+Window object where the map will be drawn. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/map.\+hpp\item 
+src/map.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,37 @@
+digraph "GameMenu"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="GameMenu",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Manages the main game menu interface."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="BaseMenu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBaseMenu.html",tooltip="A base class for creating menus in an SFML application."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" texture_" ,fontname="Helvetica"];
+  Node3 [label="sf::Texture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1Texture.html",tooltip="Image living on the graphics card that can be used for drawing."];
+  Node4 -> Node3 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="sf::GlResource",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1GlResource.html",tooltip="Base class for classes that require an OpenGL context."];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" window_" ,fontname="Helvetica"];
+  Node5 [label="sf::RenderWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1RenderWindow.html",tooltip="Window that can serve as a target for 2D drawing."];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="sf::Window",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1Window.html",tooltip="Window that serves as a target for OpenGL rendering."];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="sf::WindowBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1WindowBase.html",tooltip="Window that serves as a base for other windows."];
+  Node8 -> Node7 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="sf::NonCopyable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1NonCopyable.html",tooltip="Utility class that makes any derived class non-copyable."];
+  Node4 -> Node6 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="sf::RenderTarget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1RenderTarget.html",tooltip="Base class for all render targets (window, texture, ...)"];
+  Node8 -> Node9 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" font_" ,fontname="Helvetica"];
+  Node10 [label="sf::Font",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1Font.html",tooltip="Class for loading and manipulating character fonts."];
+  Node11 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sprite_" ,fontname="Helvetica"];
+  Node11 [label="sf::Sprite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1Sprite.html",tooltip="Drawable representation of a texture, with its own transformations, color, etc."];
+  Node12 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="sf::Drawable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1Drawable.html",tooltip="Abstract base class for objects that can be drawn to a render target."];
+  Node13 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="sf::Transformable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1Transformable.html",tooltip="Decomposed transform defined by a position, a rotation and a scale."];
+  Node14 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" menuItems_" ,fontname="Helvetica"];
+  Node14 [label="sf::Text",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1Text.html",tooltip="Graphical text that can be drawn to a render target."];
+  Node12 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

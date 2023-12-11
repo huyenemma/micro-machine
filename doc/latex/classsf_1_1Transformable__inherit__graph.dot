@@ -1,0 +1,19 @@
+digraph "sf::Transformable"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="sf::Transformable",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Decomposed transform defined by a position, a rotation and a scale."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="sf::Shape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1Shape.html",tooltip="Base class for textured shapes with outline."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="sf::CircleShape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1CircleShape.html",tooltip="Specialized shape representing a circle."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="sf::ConvexShape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1ConvexShape.html",tooltip="Specialized shape representing a convex polygon."];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="sf::RectangleShape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1RectangleShape.html",tooltip="Specialized shape representing a rectangle."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="sf::Sprite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1Sprite.html",tooltip="Drawable representation of a texture, with its own transformations, color, etc."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="sf::Text",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsf_1_1Text.html",tooltip="Graphical text that can be drawn to a render target."];
+}

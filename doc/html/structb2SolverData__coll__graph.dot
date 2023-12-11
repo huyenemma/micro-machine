@@ -1,0 +1,16 @@
+digraph "b2SolverData"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="b2SolverData",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Solver Data."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" step" ,fontname="Helvetica"];
+  Node2 [label="b2TimeStep",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structb2TimeStep.html",tooltip="This is an internal structure."];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" velocities" ,fontname="Helvetica"];
+  Node3 [label="b2Velocity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structb2Velocity.html",tooltip="This is an internal structure."];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" v" ,fontname="Helvetica"];
+  Node4 [label="b2Vec2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structb2Vec2.html",tooltip="A 2D column vector."];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" positions" ,fontname="Helvetica"];
+  Node5 [label="b2Position",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structb2Position.html",tooltip="This is an internal structure."];
+  Node4 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" c" ,fontname="Helvetica"];
+}

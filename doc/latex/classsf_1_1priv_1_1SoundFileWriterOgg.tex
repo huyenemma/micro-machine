@@ -1,0 +1,114 @@
+\hypertarget{classsf_1_1priv_1_1SoundFileWriterOgg}{}\doxysection{sf\+::priv\+::Sound\+File\+Writer\+Ogg Class Reference}
+\label{classsf_1_1priv_1_1SoundFileWriterOgg}\index{sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}}
+
+
+Implementation of sound file writer that handles OGG/\+Vorbis files.  
+
+
+
+
+{\ttfamily \#include $<$Sound\+File\+Writer\+Ogg.\+hpp$>$}
+
+
+
+Inheritance diagram for sf\+::priv\+::Sound\+File\+Writer\+Ogg\+:
+% FIG 0
+
+
+Collaboration diagram for sf\+::priv\+::Sound\+File\+Writer\+Ogg\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsf_1_1priv_1_1SoundFileWriterOgg_ab410a4d0a617717571e343ce60e279ce}\label{classsf_1_1priv_1_1SoundFileWriterOgg_ab410a4d0a617717571e343ce60e279ce}} 
+\mbox{\hyperlink{classsf_1_1priv_1_1SoundFileWriterOgg_ab410a4d0a617717571e343ce60e279ce}{Sound\+File\+Writer\+Ogg}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsf_1_1priv_1_1SoundFileWriterOgg_aa48c82f7c8c6dae41c47f90da64e3f03}\label{classsf_1_1priv_1_1SoundFileWriterOgg_aa48c82f7c8c6dae41c47f90da64e3f03}} 
+\mbox{\hyperlink{classsf_1_1priv_1_1SoundFileWriterOgg_aa48c82f7c8c6dae41c47f90da64e3f03}{$\sim$\+Sound\+File\+Writer\+Ogg}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsf_1_1priv_1_1SoundFileWriterOgg_acc278a42330d792ac8ad078981ac61b6}{open}} (const std\+::string \&filename, unsigned int sample\+Rate, unsigned int channel\+Count)
+\begin{DoxyCompactList}\small\item\em Open a sound file for writing. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1SoundFileWriterOgg_a307e4e42e46072fb04e18391a82971bb}{write}} (const Int16 $\ast$samples, Uint64 count)
+\begin{DoxyCompactList}\small\item\em Write audio samples to the open file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1SoundFileWriterOgg_a7d4fee03e56749daf43959f93a18a721}{check}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Check if this writer can handle a file on disk. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of sound file writer that handles OGG/\+Vorbis files. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsf_1_1priv_1_1SoundFileWriterOgg_a7d4fee03e56749daf43959f93a18a721}\label{classsf_1_1priv_1_1SoundFileWriterOgg_a7d4fee03e56749daf43959f93a18a721}} 
+\index{sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}!check@{check}}
+\index{check@{check}!sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Sound\+File\+Writer\+Ogg\+::check (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if this writer can handle a file on disk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path of the sound file to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the file can be written by this writer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsf_1_1priv_1_1SoundFileWriterOgg_acc278a42330d792ac8ad078981ac61b6}\label{classsf_1_1priv_1_1SoundFileWriterOgg_acc278a42330d792ac8ad078981ac61b6}} 
+\index{sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}!open@{open}}
+\index{open@{open}!sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool sf\+::priv\+::\+Sound\+File\+Writer\+Ogg\+::open (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{unsigned int}]{sample\+Rate,  }\item[{unsigned int}]{channel\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Open a sound file for writing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path of the file to open \\
+\hline
+{\em sample\+Rate} & Sample rate of the sound \\
+\hline
+{\em channel\+Count} & Number of channels of the sound\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the file was successfully opened 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsf_1_1SoundFileWriter_a5c92bcaaa880ef4d3eaab18dae1d3d07}{sf\+::\+Sound\+File\+Writer}}.
+
+\mbox{\Hypertarget{classsf_1_1priv_1_1SoundFileWriterOgg_a307e4e42e46072fb04e18391a82971bb}\label{classsf_1_1priv_1_1SoundFileWriterOgg_a307e4e42e46072fb04e18391a82971bb}} 
+\index{sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}!write@{write}}
+\index{write@{write}!sf::priv::SoundFileWriterOgg@{sf::priv::SoundFileWriterOgg}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void sf\+::priv\+::\+Sound\+File\+Writer\+Ogg\+::write (\begin{DoxyParamCaption}\item[{const Int16 $\ast$}]{samples,  }\item[{Uint64}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Write audio samples to the open file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em samples} & Pointer to the sample array to write \\
+\hline
+{\em count} & Number of samples to write \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1SoundFileWriter_a4ce597e7682d22c5b2c98d77e931a1da}{sf\+::\+Sound\+File\+Writer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libs/unix/include/\+SFML/\+Audio/Sound\+File\+Writer\+Ogg.\+hpp\item 
+libs/unix/include/\+SFML/\+Audio/Sound\+File\+Writer\+Ogg.\+cpp\end{DoxyCompactItemize}

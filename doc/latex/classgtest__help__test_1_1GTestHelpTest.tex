@@ -1,0 +1,64 @@
+\hypertarget{classgtest__help__test_1_1GTestHelpTest}{}\doxysection{gtest\+\_\+help\+\_\+test.\+GTest\+Help\+Test Class Reference}
+\label{classgtest__help__test_1_1GTestHelpTest}\index{gtest\_help\_test.GTestHelpTest@{gtest\_help\_test.GTestHelpTest}}
+
+
+Inheritance diagram for gtest\+\_\+help\+\_\+test.\+GTest\+Help\+Test\+:
+% FIG 0
+
+
+Collaboration diagram for gtest\+\_\+help\+\_\+test.\+GTest\+Help\+Test\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classgtest__help__test_1_1GTestHelpTest_a74c433add31ea93060668aff46eaf9bc}{test\+\_\+prints\+\_\+help\+\_\+with\+\_\+full\+\_\+flag}} (self)
+\item 
+def \mbox{\hyperlink{classgtest__help__test_1_1GTestHelpTest_a1f9a5c73e25e66f9b8bf42f7dee11be9}{test\+\_\+runs\+\_\+tests\+\_\+without\+\_\+help\+\_\+flag}} (self)
+\item 
+def \mbox{\hyperlink{classgtest__help__test_1_1GTestHelpTest_ad15939700d2896b93127c78b6b0d7655}{test\+\_\+runs\+\_\+tests\+\_\+with\+\_\+gtest\+\_\+internal\+\_\+flag}} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Tests the --help flag and its equivalent forms.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgtest__help__test_1_1GTestHelpTest_a74c433add31ea93060668aff46eaf9bc}\label{classgtest__help__test_1_1GTestHelpTest_a74c433add31ea93060668aff46eaf9bc}} 
+\index{gtest\_help\_test.GTestHelpTest@{gtest\_help\_test.GTestHelpTest}!test\_prints\_help\_with\_full\_flag@{test\_prints\_help\_with\_full\_flag}}
+\index{test\_prints\_help\_with\_full\_flag@{test\_prints\_help\_with\_full\_flag}!gtest\_help\_test.GTestHelpTest@{gtest\_help\_test.GTestHelpTest}}
+\doxysubsubsection{\texorpdfstring{test\_prints\_help\_with\_full\_flag()}{test\_prints\_help\_with\_full\_flag()}}
+{\footnotesize\ttfamily def gtest\+\_\+help\+\_\+test.\+GTest\+Help\+Test.\+test\+\_\+prints\+\_\+help\+\_\+with\+\_\+full\+\_\+flag (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Verifies correct behavior when help flag is specified.
+
+The right message must be printed and the tests must
+skipped when the given flag is specified.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classgtest__help__test_1_1GTestHelpTest_ad15939700d2896b93127c78b6b0d7655}\label{classgtest__help__test_1_1GTestHelpTest_ad15939700d2896b93127c78b6b0d7655}} 
+\index{gtest\_help\_test.GTestHelpTest@{gtest\_help\_test.GTestHelpTest}!test\_runs\_tests\_with\_gtest\_internal\_flag@{test\_runs\_tests\_with\_gtest\_internal\_flag}}
+\index{test\_runs\_tests\_with\_gtest\_internal\_flag@{test\_runs\_tests\_with\_gtest\_internal\_flag}!gtest\_help\_test.GTestHelpTest@{gtest\_help\_test.GTestHelpTest}}
+\doxysubsubsection{\texorpdfstring{test\_runs\_tests\_with\_gtest\_internal\_flag()}{test\_runs\_tests\_with\_gtest\_internal\_flag()}}
+{\footnotesize\ttfamily def gtest\+\_\+help\+\_\+test.\+GTest\+Help\+Test.\+test\+\_\+runs\+\_\+tests\+\_\+with\+\_\+gtest\+\_\+internal\+\_\+flag (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Verifies correct behavior when internal testing flag is specified.
+
+Verifies that the tests are run and no help message is printed when
+a flag starting with Google Test prefix and 'internal_' is supplied.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classgtest__help__test_1_1GTestHelpTest_a1f9a5c73e25e66f9b8bf42f7dee11be9}\label{classgtest__help__test_1_1GTestHelpTest_a1f9a5c73e25e66f9b8bf42f7dee11be9}} 
+\index{gtest\_help\_test.GTestHelpTest@{gtest\_help\_test.GTestHelpTest}!test\_runs\_tests\_without\_help\_flag@{test\_runs\_tests\_without\_help\_flag}}
+\index{test\_runs\_tests\_without\_help\_flag@{test\_runs\_tests\_without\_help\_flag}!gtest\_help\_test.GTestHelpTest@{gtest\_help\_test.GTestHelpTest}}
+\doxysubsubsection{\texorpdfstring{test\_runs\_tests\_without\_help\_flag()}{test\_runs\_tests\_without\_help\_flag()}}
+{\footnotesize\ttfamily def gtest\+\_\+help\+\_\+test.\+GTest\+Help\+Test.\+test\+\_\+runs\+\_\+tests\+\_\+without\+\_\+help\+\_\+flag (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Verifies correct behavior when no help flag is specified.
+
+Verifies that when no help flag is specified, the tests are run
+and the help message is not printed.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+googletest/googletest/test/gtest\+\_\+help\+\_\+test.\+py\end{DoxyCompactItemize}
