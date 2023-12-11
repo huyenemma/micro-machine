@@ -7,9 +7,7 @@ In this folder, you can create your own unit test files to validate the operatio
   report these in the final report.
 
 # Unit Tests
-Timer class test
-## Test of MyClass
-Timer
+## Test of Timer class
 **Involved Classes:**
 Timer
 **Test File:**
@@ -17,11 +15,7 @@ timerTest.cpp
 **Results:**
 1/1 Test passed
 
-
-# Unit Tests
-Vehicle class test
-## Test of MyClass
-Timer
+## Test of Vehicle class
 **Involved Classes:**
 b2World
 b2Vec
