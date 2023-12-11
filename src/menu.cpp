@@ -1,12 +1,11 @@
 #include "./include/menu.hpp"
 
-GameMenu::GameMenu(sf::RenderWindow& window, const sf::Font& font, const sf::Texture& texture): 
-window_(window), font_(font), texture_(texture) {
+GameMenu::GameMenu(sf::RenderWindow& window, const sf::Font& font, const sf::Texture& texture)
+: BaseMenu(window, font, texture) {
+    sf::Text menuItem; 
     
-    sprite_.setTexture(texture_);
-
     // Initialize menu items
-    menuItems_[0].setFont(font_);
+    menuItems_[0].setFont(font);
     menuItems_[0].setCharacterSize(50); 
     menuItems_[0].setFillColor(sf::Color::Red); // Highlighted by default
     menuItems_[0].setOutlineColor(sf::Color::Black); // Black outline
@@ -15,7 +14,7 @@ window_(window), font_(font), texture_(texture) {
     menuItems_[0].setStyle(sf::Text::Bold); 
     menuItems_[0].setPosition(sf::Vector2f(320, 300));
 
-    menuItems_[1].setFont(font_);
+    menuItems_[1].setFont(font);
     menuItems_[1].setCharacterSize(50); 
     menuItems_[1].setFillColor(sf::Color::White);
     menuItems_[1].setOutlineColor(sf::Color::Black); // Black outline
@@ -24,7 +23,7 @@ window_(window), font_(font), texture_(texture) {
     menuItems_[1].setStyle(sf::Text::Bold); 
     menuItems_[1].setPosition(sf::Vector2f(320, 350));
 
-    menuItems_[2].setFont(font_);
+    menuItems_[2].setFont(font);
     menuItems_[2].setCharacterSize(50); 
     menuItems_[2].setFillColor(sf::Color::White);
     menuItems_[2].setOutlineColor(sf::Color::Black); // Black outline
@@ -34,33 +33,4 @@ window_(window), font_(font), texture_(texture) {
     menuItems_[2].setPosition(sf::Vector2f(320, 400));
 
     selectedItemIndex = 0;
-}
-
-void GameMenu::draw() {
-    window_.draw(sprite_); 
-
-    for (int i = 0; i < NUM_ITEMS; ++i) {
-        window_.draw(menuItems_[i]);
-    }
-    window_.draw(startText_); 
-}
-
-void GameMenu::MoveUp() {
-    if (selectedItemIndex - 1 >= 0) {
-        menuItems_[selectedItemIndex].setFillColor(sf::Color::White);
-        selectedItemIndex--;
-        menuItems_[selectedItemIndex].setFillColor(sf::Color::Red);
-    }
-}
-
-void GameMenu::MoveDown() {
-    if (selectedItemIndex + 1 < NUM_ITEMS) {
-        menuItems_[selectedItemIndex].setFillColor(sf::Color::White);
-        selectedItemIndex++;
-        menuItems_[selectedItemIndex].setFillColor(sf::Color::Red);
-    }
-}
-
-int GameMenu::GetPressedItem() const {
-    return selectedItemIndex;
 }

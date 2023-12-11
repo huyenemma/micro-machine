@@ -19,6 +19,7 @@
 #include "vehicle.hpp"
 #include "winnerBoard.hpp"
 #include "world.hpp"
+#include "baseMenu.hpp"
 
 enum class GameState { MENU, MENU2, PLAYING, PAUSED, GAME_OVER };
 
@@ -42,7 +43,7 @@ class Game {
 
   GameState currentState_;
   GameMenu* menu_;
-  GameMenu2 menu2_;
+  GameMenu2* menu2_;
   WinnerBoard* winnerBoard_;
 
  public:
@@ -60,9 +61,6 @@ class Game {
 
   /// Handle input
   void HandleInput();
-
-  // Handle SFML events
-  void ProcessEvents();
 
   // Update game state
   void Update(sf::Time deltaTime);
@@ -87,15 +85,10 @@ class Game {
   // Handle menu input
   void HandleMenuInput();
   void HandleMenuInput2();
+  void HandleWinningBoard(); 
 
   // Render the menu
-  void RenderMenu();
-
-  // Render menu2
-  void RenderMenu2();
-
-  // Render winning board
-  void RenderWinningBoard();
+  void RenderBaseMenu(BaseMenu& menu);\
 };
 
 #endif  // GAME_H

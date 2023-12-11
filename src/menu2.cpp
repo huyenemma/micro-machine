@@ -1,14 +1,8 @@
 #include "./include/menu2.hpp"
 
-GameMenu2::GameMenu2(sf::RenderWindow& window) : window_(window) {
-  resourceManager_ = new ResourceManager();
-
-  resourceManager_->LoadFromJson("../src/resources.json");
-  const sf::Font& font_ = resourceManager_->GetFont("clockFont");
-
-  const sf::Texture& texture = resourceManager_->GetImage("menu");
-  sprite_.setTexture(texture);
-
+GameMenu2::GameMenu2(sf::RenderWindow& window, const sf::Font& font, const sf::Texture& texture)
+: BaseMenu(window, font, texture) {
+    
   // Initialize menu items
   menuItems_[0].setFont(font_);
   menuItems_[0].setCharacterSize(50);
@@ -39,30 +33,3 @@ GameMenu2::GameMenu2(sf::RenderWindow& window) : window_(window) {
 
   selectedItemIndex = 0;
 }
-
-void GameMenu2::draw() {
-  window_.draw(sprite_);
-
-  for (int i = 0; i < NUM_ITEMS; ++i) {
-    window_.draw(menuItems_[i]);
-  }
-  window_.draw(startText_);
-}
-
-void GameMenu2::MoveUp() {
-  if (selectedItemIndex - 1 >= 0) {
-    menuItems_[selectedItemIndex].setFillColor(sf::Color::White);
-    selectedItemIndex--;
-    menuItems_[selectedItemIndex].setFillColor(sf::Color::Red);
-  }
-}
-
-void GameMenu2::MoveDown() {
-  if (selectedItemIndex + 1 < NUM_ITEMS) {
-    menuItems_[selectedItemIndex].setFillColor(sf::Color::White);
-    selectedItemIndex++;
-    menuItems_[selectedItemIndex].setFillColor(sf::Color::Red);
-  }
-}
-
-int GameMenu2::GetPressedItem() const { return selectedItemIndex; }

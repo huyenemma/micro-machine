@@ -1,22 +1,14 @@
+#ifndef GAMEMENU2_HPP
+#define GAMEMENU2_HPP
+
 #include <SFML/Graphics.hpp>
+#include "baseMenu.hpp"
 
-#include "resourceManager.hpp"
-
-class GameMenu2 {
- public:
+class GameMenu2: public BaseMenu {
+public:
   enum MenuOption { FOREST, TWO_PLAYER, EXIT, NUM_ITEMS };
 
-  GameMenu2(sf::RenderWindow& window);
-  void draw();
-  void MoveUp();
-  void MoveDown();
-  int GetPressedItem() const;
-
- private:
-  int selectedItemIndex;
-  sf::Text menuItems_[NUM_ITEMS];
-  sf::Text startText_;
-  sf::RenderWindow& window_;
-  ResourceManager* resourceManager_;
-  sf::Sprite sprite_;
+  GameMenu2(sf::RenderWindow& window, const sf::Font& font, const sf::Texture& texture);
 };
+
+#endif

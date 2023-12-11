@@ -1,19 +1,37 @@
 #include "winnerBoard.hpp"
 
-WinnerBoard::WinnerBoard(sf::RenderWindow& window, const sf::Font& font, const sf::Texture& texture): 
-    window_(window), font_(font), texture_(texture) {
+WinnerBoard::WinnerBoard(sf::RenderWindow& window, const sf::Font& font, const sf::Texture& texture)
+: BaseMenu(window, font, texture) {
     
-    sprite_.setTexture(texture_);
     rescaleSprite(sprite_, 800.0f, 800.0f);
-    text_.setFont(font_);
+    
+    text_.setFont(font);
     text_.setCharacterSize(35);
     text_.setFillColor(sf::Color::White);
     text_.setOutlineColor(sf::Color::Black);
     text_.setOutlineThickness(2); 
     text_.setStyle(sf::Text::Bold);
+
+    menuItems_[0].setFont(font);
+    menuItems_[0].setCharacterSize(40);
+    menuItems_[0].setFillColor(sf::Color::Red);// Highlighted by default
+    menuItems_[0].setOutlineColor(sf::Color::Black);
+    menuItems_[0].setOutlineThickness(2); 
+    menuItems_[0].setStyle(sf::Text::Bold);
+    menuItems_[0].setString("Replay");
+    menuItems_[0].setPosition(350, 650);
+
+    menuItems_[1].setFont(font);
+    menuItems_[1].setCharacterSize(40);
+    menuItems_[1].setFillColor(sf::Color::White);
+    menuItems_[1].setOutlineColor(sf::Color::Black);
+    menuItems_[1].setOutlineThickness(2); 
+    menuItems_[1].setStyle(sf::Text::Bold);
+    menuItems_[1].setString("Exit");
+    menuItems_[1].setPosition(350, 700);
 }
 
-void WinnerBoard::SetWinner(int playerNumber, int player1Score, int player2Score) {
+void WinnerBoard::SetWinner(int playerNumber) {
 
     std::string player = playerNumber == 1 ? "BUFFALO" : "GOAT";
     std::string winnerMessage = "Player " + player + " Wins!";
@@ -26,7 +44,7 @@ void WinnerBoard::SetWinner(int playerNumber, int player1Score, int player2Score
 
 }
 
-void WinnerBoard::Draw() {
+void WinnerBoard::draw() {
 
     sf::RectangleShape backgroundBox;
     backgroundBox.setSize(sf::Vector2f(300, 35 + 20)); 
@@ -39,4 +57,9 @@ void WinnerBoard::Draw() {
     window_.draw(sprite_); 
     window_.draw(backgroundBox);
     window_.draw(text_);
+
+    for (int i = 0; i < 2; ++i) {
+        window_.draw(menuItems_[i]);
+    }
 }
+
