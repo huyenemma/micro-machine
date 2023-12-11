@@ -11,7 +11,7 @@ const float timeStep =
     1.0f / FPS;  // the length of time passed to simulate (seconds)
 const int velocityIterations = 8;  // how strongly to correct velocity
 const int positionIterations = 3;  // how strongly to correct position
-const float zoomCoef = 1;
+const float zoomCoef = 0.2;
 const int winCondition = 3;
 
 // VEHICLE
