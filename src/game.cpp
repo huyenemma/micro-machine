@@ -180,15 +180,15 @@ void Game::Initialize() {
     OutsideArea *center = new OutsideArea(
         world_->GetPhysicWorld(), b2Vec2(400.0f / SCALE, 450.0f / SCALE),
         100.0f / SCALE, 100.0f / SCALE);
-    StartLine *startLine =
-        new StartLine(world_->GetPhysicWorld(),
-                      b2Vec2(136.0f / SCALE, 120.0f / SCALE), 20.0f, 20.0f);
-    CheckPoint *checkPoint1 =
-        new CheckPoint(world_->GetPhysicWorld(),
-                       b2Vec2(685.0f / SCALE, 120.0f / SCALE), 50.0f, 50.0f);
-    CheckPoint *checkPoint2 =
-        new CheckPoint(world_->GetPhysicWorld(),
-                       b2Vec2(200.0f / SCALE, 650.0f / SCALE), 50.0f, 50.0f);
+    StartLine *startLine = new StartLine(world_->GetPhysicWorld(),
+                                         b2Vec2(136.0f / SCALE, 120.0f / SCALE),
+                                         20.0f / SCALE, 20.0f / SCALE);
+    CheckPoint *checkPoint1 = new CheckPoint(
+        world_->GetPhysicWorld(), b2Vec2(685.0f / SCALE, 120.0f / SCALE),
+        50.0f / SCALE, 50.0f / SCALE);
+    CheckPoint *checkPoint2 = new CheckPoint(
+        world_->GetPhysicWorld(), b2Vec2(200.0f / SCALE, 650.0f / SCALE),
+        50.0f / SCALE, 50.0f / SCALE);
     startLine->AddCheckPoint(checkPoint1);
     startLine->AddCheckPoint(checkPoint2);
     world_->SetRacingTrack(startLine);
