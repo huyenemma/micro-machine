@@ -124,7 +124,10 @@ void Game::Initialize()
                                       20.0f / SCALE, rock);
     world_->AddObstacle(obstacle);
 
-    StartLine *startLine =
+    OutsideArea* center = new OutsideArea(
+        world_->GetPhysicWorld(), b2Vec2(400.0f / SCALE, 400.0f / SCALE),
+        150.0f / SCALE, 150.0f / SCALE);
+    StartLine* startLine =
         new StartLine(world_->GetPhysicWorld(),
                       b2Vec2(200.0f / SCALE, 120.0f / SCALE), 5.0f, 5.0f);
     CheckPoint *checkPoint1 =

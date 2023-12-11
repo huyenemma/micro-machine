@@ -28,12 +28,9 @@ class RealTime {
    * @param duration The duration of the countdown timer.
    * @param font The font used for rendering the time text.
    * @param color The color of the time text (default is sf::Color::White).
-   * @param position The position of the time text (default is sf::Vector2f(10,
-   * 10)).
+   * @param position The position of the time text (default is sf::Vector2f(10, 10)).
    */
-  RealTime(int duration, const sf::Font& font,
-           sf::Color color = sf::Color::White,
-           sf::Vector2f position = sf::Vector2f(10, 10));
+  RealTime(int duration, const sf::Font& font, sf::Color color = sf::Color::White, sf::Vector2f position = sf::Vector2f(10, 10));
 
   /**
    * @brief Sets up the initial state of the countdown timer.
@@ -48,11 +45,22 @@ class RealTime {
 
   /**
    * @brief Updates the countdown timer.
+   * @param player1Rounds Number of rounds for player 1.
+   * @param player2Rounds Number of rounds for player 2.
    */
   void Update(int player1Rounds, int player2Rounds);
 
+  /**
+   * @brief Sets the game mode (1 for one player, 2 for two players).
+   * @param mode The game mode to set.
+   */
   void SetGameMode(int mode);
-  
+
+  /**
+   * @brief Sets the number of rounds for both players.
+   * @param player1Rounds Number of rounds for player 1.
+   * @param player2Rounds Number of rounds for player 2.
+   */
   void SetPlayerRounds(int player1Rounds, int player2Rounds);
 
   /**
