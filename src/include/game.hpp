@@ -5,6 +5,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "ContactListener.hpp"
+#include "baseMenu.hpp"
 #include "checkpoint.hpp"
 #include "constant.hpp"
 #include "map.hpp"
@@ -19,7 +20,6 @@
 #include "vehicle.hpp"
 #include "winnerBoard.hpp"
 #include "world.hpp"
-#include "baseMenu.hpp"
 
 enum class GameState { MENU, MENU2, PLAYING, PAUSED, GAME_OVER };
 
@@ -85,10 +85,10 @@ class Game {
   // Handle menu input
   void HandleMenuInput();
   void HandleMenuInput2();
-  void HandleWinningBoard(); 
+  void HandleWinningBoard();
 
   // Render the menu
-  void RenderBaseMenu(BaseMenu& menu);\
+  void RenderBaseMenu(BaseMenu& menu);
 };
 
 #endif  // GAME_H
