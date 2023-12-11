@@ -188,7 +188,7 @@ void Game::Initialize() {
         100.0f / SCALE, 200.0f / SCALE);
     CheckPoint *checkPoint2 = new CheckPoint(
         world_->GetPhysicWorld(), b2Vec2(200.0f / SCALE, 650.0f / SCALE),
-        200.0f / SCALE, 100.0f / SCALE);
+        200.0f / SCALE, 200.0f / SCALE);
     startLine->AddCheckPoint(checkPoint1);
     startLine->AddCheckPoint(checkPoint2);
     world_->SetRacingTrack(startLine);
