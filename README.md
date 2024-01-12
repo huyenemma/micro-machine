@@ -49,7 +49,7 @@ This game is a tribute to classic micro machine racing, utilizing Box2D for phys
 
 ### Credit
 
-This project is developed as a group project of Aalto University ELEC-A7151 Object-oriented Programming with C++ course in 2023. The responsible teacher for the course was Yusein Ali, and the project advisor was Niilo Heinonen.
+This project was developed as a group project of Aalto University ELEC-A7151 Object-oriented Programming with C++ course in 2023. The responsible teacher for the course was Yusein Ali, and the project advisor was Tuukka Himanka.
 
 The project was developed by
 
