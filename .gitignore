@@ -44,3 +44,16 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#documentation 
+*.toc
+*.aux
+*.log
+
+#build folder 
+build/
+```
+
+## 2.2.2. Gitignore for C/C++ projects
+
+```bash
