@@ -55,5 +55,5 @@ The project was developed by
 
 - Huyen Do ([@huyenemma](https://github.com/huyenemma))
 - Quan Hoang ([@qqUAnH](https://github.com/qqUAnH))
-- Linh Nguyen 
-- Duy To ([@Julian](https://github.com/ponyo19))
+- Linh Nguyen ([@nghlinh](https://github.com/nghlinh))
+- Duy To ([@ponyo19](https://github.com/ponyo19))
