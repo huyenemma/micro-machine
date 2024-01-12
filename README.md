@@ -1,57 +1,59 @@
-# Project Name (replace here!)
+# Micro Machine game
 
-This is the template for the projects. Please copy the project description here. 
-You can use Markdown language to render it as formatted **HTML** file.
+This game is a tribute to classic micro machine racing, utilizing Box2D for physics and SFML for graphics. It offers a mix of fun, challenge, and competitive spirit with both single and multiplayer modes.
 
-# Group
-- Member 1
-- Member 2
-- Member 3
-- Member 4
+### Installation Instructions:
 
-# Repository organization
-Your project implementation should follow the skelaton organization in this repository.
-See readme.md files in each folder.
+1. **Install SFML on Your Computer:**
+   - Visit the [SFML website](https://www.sfml-dev.org/download.php) and download the version compatible with your operating system.
+   - Follow the installation guide provided on their website to properly set up SFML on your system.
 
-# Project Implementation 
-You must use git repository for the work on the project, making frequent enough commits so 
-that the project group (and course staff) can follow the progress.
+2. **Clone the Game from Git**
 
-The completed project work will be demonstrated to the group's advisor at a demo session. 
-The final demonstrations are arranged on week 50. After the final demonstrations project group 
-evaluates another project, and self-evaluates own project. In addition, project members will 
-give a confidential individual assessment of each group member
+3. **Set Up the Build Environment:**
+   - Delete the existing build folder (if any) in the cloned directory.
+   - Open your terminal or command prompt.
+   - Navigate to the game's root directory.
+   - Run the following commands:
+     ```
+     mkdir build         # Creates a new build folder
+     cd build            # Changes the directory to the build folder
+     cmake ..            # Runs the CMake file to configure the project
+     make                # Compiles and builds the game
+     ```
 
-The course staff should be able to easily compile the project work using makefile and related 
-instructions provided in the git repository. The final output should be in the **master branch** of the git repository.
+4. **Running the Game:**
+   - Inside the build folder, execute `./MicroMachine` to start the game.
 
-# Working practices
-Each project group is assigned an advisor from the project teaching personnel. 
-There will be a dedicated Teams channel for each project topic to facilitate discussion between 
-the groups in the same topic and the advisor. 
+5. **For Subsequent Builds:**
+   - If you make any changes to the game, or after the first build, start from step 3(d) (`make`) to rebuild and run the game.
 
-**The group should meet weekly.** The weekly meeting does not need to be long if there are no special issues 
-to discuss, and can be taken remotely as voice/video chat on the group Teams channel (or Zoom or other similar tool), 
-preferably at a regular weekly time. In the meeting the group updates:
+### How to Play:
 
-- What each member has done during the week
-- Are there challenges or problems? Discuss the possible solutions
-- Plan for the next week for everyone
-- Deviations and changes to the project plan, if any
-- After the meetings, the meeting notes will be committed to the project repository in the `Meeting-notes.md` file. 
-    * The commits within the week should have some commit messages referring to the meeting notes so 
-      that the project advisor can follow the progress.  
-    * **The meeting notes should be in English.**
+1. **Starting the Game:**
+   - After building the game, a menu will appear.
+   - Use the `Up` and `Down` arrow keys to choose between `One Player` and `Two Players` mode.
+   - Press `Enter` to confirm your choice.
 
-> Everyone may not be able to participate to all meetings, but at least a couple of members should be present in each meeting. 
-> Regular absence from meetings will affect in individual evaluation.
+2. **Selecting a Map:**
+   - Choose your desired map using the arrow keys.
+   - Press `Enter` to start the game.
 
-# Source code documentation
-It is strongly recommended to use Doxygen to document your source code.
-Please go over the *Project Guidelines* for details.
+3. **Game Controls:**
+   - Control your vehicle using the arrow keys (`Up`, `Left`, `Right`) for one player, and `W`, `A`, `D` keys for the second player in two-player mode.
+   - Press `Enter` to activate your super skill.
 
-# TODOs (Date)
-You can create a list of TODOs in this file.
-The recommended format is:
-- Complete class implementation **foo**. Assigned to \<Member 1\>
-- Test ...
+4. **Objective and Time Limit:**
+   - The objective is to complete 3 laps around the track before your opponent.
+   - The game has a 15-minute time limit. The session will end automatically when the time is up.
+
+### Credit
+
+This project is developed as a group project of Aalto University ELEC-A7151 Object-oriented Programming with C++ course in 2023. The responsible teacher for the course was Yusein Ali, and the project advisor was Niilo Heinonen.
+
+The project was developed by
+
+- Huyen Do ([@huyenemma](https://github.com/huyenemma))
+- Quan Hoang ([@QuanHoangGitHub](https://github.com/qqUAnH))
+- Linh Nguyen
+- Duy To
