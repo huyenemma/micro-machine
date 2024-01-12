@@ -54,6 +54,6 @@ This project is developed as a group project of Aalto University ELEC-A7151 Obje
 The project was developed by
 
 - Huyen Do ([@huyenemma](https://github.com/huyenemma))
-- Quan Hoang ([@QuanHoangGitHub](https://github.com/qqUAnH))
-- Linh Nguyen
-- Duy To
+- Quan Hoang ([@qqUAnH](https://github.com/qqUAnH))
+- Linh Nguyen 
+- Duy To ([@Julian](https://github.com/ponyo19))
